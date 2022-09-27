@@ -15,7 +15,6 @@ Background
 
 The following figure shows the process of creating a data disk image from an external image file.
 
-.. _en-us_topic_0084064672__fig986818435164:
 
 .. figure:: /_static/images/en-us_image_0254985106.png
    :alt: **Figure 1** Creating a data disk image from an external image file
@@ -49,7 +48,6 @@ Procedure
 
    c. Select **Image File** for **Source**. Select the bucket storing the image file from the list and then select the image file.
 
-      .. _en-us_topic_0084064672__fig4234441141414:
 
       .. figure:: /_static/images/en-us_image_0120595887.png
          :alt: **Figure 2** Creating a data disk image

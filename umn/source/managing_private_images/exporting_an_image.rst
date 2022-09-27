@@ -15,7 +15,6 @@ Background
 
 -  You can reproduce cloud servers and their running environments in on-promises clusters or private clouds by exporting their images from the cloud platform. The following figure shows the process of exporting an image.
 
-   .. _en-us_topic_0034011241__fig1790119251562:
 
    .. figure:: /_static/images/en-us_image_0255101497.png
       :alt: **Figure 1** Exporting an image
@@ -85,4 +84,3 @@ Follow-up Procedure
 After the image is exported successfully, you can download it from the OBS bucket through the management console or OBS Browser+.
 
 .. |image1| image:: /_static/images/en-us_image_0180986761.png
-

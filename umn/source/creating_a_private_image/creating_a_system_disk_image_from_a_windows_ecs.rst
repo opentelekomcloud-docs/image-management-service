@@ -17,7 +17,6 @@ Background
 
 The following figure shows the process of creating a system disk image from an ECS.
 
-.. _en-us_topic_0030713149__fig197515154713:
 
 .. figure:: /_static/images/en-us_image_0254928267.png
    :alt: **Figure 1** Creating a system disk image and using it to create ECSs

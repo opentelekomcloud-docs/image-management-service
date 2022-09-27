@@ -76,7 +76,6 @@ Install Cloudbase-Init
 
       The version number shown in the figure is for reference only.
 
-   .. _en-us_topic_0030730602__fig416499174516:
 
    .. figure:: /_static/images/en-us_image_0087083593.png
       :alt: **Figure 1** Configuring parameters
@@ -99,7 +98,6 @@ Install Cloudbase-Init
 
    In the **Completed the Cloudbase-Init Setup Wizard** window, ensure that neither option is selected.
 
-   .. _en-us_topic_0030730602__fig515010583213:
 
    .. figure:: /_static/images/en-us_image_0085074510.png
       :alt: **Figure 2** Completing the Cloudbase-Init installation

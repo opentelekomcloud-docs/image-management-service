@@ -223,7 +223,6 @@ For Linux ECSs, which run CentOS 7.4 as an example, perform the following operat
 
       If the **Active** value in the command output contains **active (running)**, irqbalance has been enabled.
 
-      .. _en-us_topic_0085214115__en-us_topic_0058758453_fig165114253253:
 
       .. figure:: /_static/images/en-us_image_0196045692.png
          :alt: **Figure 2** Enabled irqbalance

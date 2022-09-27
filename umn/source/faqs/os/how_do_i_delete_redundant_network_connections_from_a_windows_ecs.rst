@@ -33,7 +33,6 @@ Method 2
 
 #. Delete the directories shown in the following figure.
 
-   .. _en-us_topic_0106312064__fig6468173217348:
 
    .. figure:: /_static/images/en-us_image_0207581512.png
       :alt: **Figure 1** Registry directory

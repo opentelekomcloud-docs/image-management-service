@@ -88,7 +88,6 @@ Procedure
 
    e. Select **Enable Fast Create**, and select the sentence following **Image File Preparation**.
 
-      .. _en-us_topic_0174703579__en-us_topic_0133773660_fig91021219113612:
 
       .. figure:: /_static/images/en-us_image_0210228327.png
          :alt: **Figure 1** Quickly importing an image file

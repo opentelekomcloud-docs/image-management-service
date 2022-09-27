@@ -60,7 +60,6 @@ Procedure
 
       The **/etc/fstab** file contains information about the file systems and storage devices automatically attached to the ECS when the ECS starts. The configuration about data disks automatically attached to the ECS needs to be deleted, for example, the last line shown in the following figure.
 
-      .. _en-us_topic_0030713179__en-us_topic_0029124569_fig2831914985830:
 
       .. figure:: /_static/images/en-us_image_0203254718.png
          :alt: **Figure 1** EVS disk configuration in the **fstab** file

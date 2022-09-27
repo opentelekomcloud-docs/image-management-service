@@ -62,7 +62,6 @@ Configure Cloud-Init
 
    This step is only for Cloud-Init 18.3 or later.
 
-   .. _en-us_topic_0122876047__fig1561411173116:
 
    .. figure:: /_static/images/en-us_image_0000001082321842.png
       :alt: **Figure 1** Example configuration
@@ -191,7 +190,6 @@ Configure Cloud-Init
 
       The added content must be in the YAML format.
 
-   .. _en-us_topic_0122876047__en-us_topic_0029124465_fig29429713194459:
 
    .. figure:: /_static/images/en-us_image_0122875972.png
       :alt: **Figure 2** Preventing Cloud-Init from taking over the network
@@ -203,7 +201,6 @@ Configure Cloud-Init
 
    Move **ssh** from the bottom to the top to speed up the SSH login.
 
-   .. _en-us_topic_0122876047__fig13129356171:
 
    .. figure:: /_static/images/en-us_image_0122875976.png
       :alt: **Figure 3** Speeding up the SSH login to the ECS
@@ -241,7 +238,6 @@ Configure Cloud-Init
 
       After the modification is complete, press **Esc** to exit the editing mode and enter **:wq!** to save the configuration and exit.
 
-      .. _en-us_topic_0122876047__fig19153219195017:
 
       .. figure:: /_static/images/en-us_image_0125515202.png
          :alt: **Figure 4** Modifying the **\__init__.py** file
@@ -269,7 +265,6 @@ Configure Cloud-Init
 
    **vim /etc/cloud/cloud.cfg.d/05_logging.cfg**
 
-   .. _en-us_topic_0122876047__fig105971433389:
 
    .. figure:: /_static/images/en-us_image_0141888758.png
       :alt: **Figure 5** Setting the parameter value to **cloudLogHandler**

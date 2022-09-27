@@ -15,7 +15,6 @@ If the value of **Hypervisor vendor** is **Xen**, the ECS uses Xen. If KVM is re
 
    If the ECS uses KVM, you are also advised to optimize the private image to prevent any exceptions with the ECSs created from the image.
 
-.. _en-us_topic_0037352185__fig19508525221:
 
 .. figure:: /_static/images/en-us_image_0125146639.png
    :alt: **Figure 1** Viewing the virtualization type of a Linux ECS

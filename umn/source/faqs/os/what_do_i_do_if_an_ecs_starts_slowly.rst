@@ -23,7 +23,6 @@ Solution
 
    **rpm -qa \| grep grub**
 
-   .. _en-us_topic_0117142739__fig456441819223:
 
    .. figure:: /_static/images/en-us_image_0251959651.png
       :alt: **Figure 1** Querying the GRUB file version
@@ -41,7 +40,6 @@ Solution
 
       Open **/boot/grub2/grub.cfg** and set the value of **timeout** to **0**.
 
-      .. _en-us_topic_0117142739__fig6468173217348:
 
       .. figure:: /_static/images/en-us_image_0207619609.jpg
          :alt: **Figure 2** Modifying the timeout duration

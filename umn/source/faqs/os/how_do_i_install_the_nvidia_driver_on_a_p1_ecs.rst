@@ -103,7 +103,6 @@ The procedure for installing the NVIDIA driver varies according to the OS.
 
       To download the GPU driver, log in at http://www.nvidia.com/Download/index.aspx?lang=en.
 
-      .. _en-us_topic_0093842586__en-us_topic_0093345963_fig3284155103612:
 
       .. figure:: /_static/images/en-us_image_0099872706.png
          :alt: **Figure 1** Downloading the GPU driver
@@ -256,7 +255,6 @@ The procedure for installing the NVIDIA driver varies according to the OS.
 
       To download the GPU driver, log in at http://www.nvidia.com/Download/index.aspx?lang=en.
 
-      .. _en-us_topic_0093842586__en-us_topic_0093345963_en-us_topic_0093345963_fig3284155103612:
 
       .. figure:: /_static/images/en-us_image_0099872707.png
          :alt: **Figure 2** Downloading the driver installation package
@@ -413,7 +411,6 @@ The procedure for installing the NVIDIA driver varies according to the OS.
 
       To download the GPU driver, log in at http://www.nvidia.com/Download/index.aspx?lang=en.
 
-      .. _en-us_topic_0093842586__en-us_topic_0093345963_fig14536376291:
 
       .. figure:: /_static/images/en-us_image_0099872708.png
          :alt: **Figure 3** Downloading the GPU driver

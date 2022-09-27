@@ -93,7 +93,6 @@ Procedure
 
    c. Select **ECS** for **Source** and then select an ECS from the list.
 
-      .. _en-us_topic_0116125142__fig19378142718496:
 
       .. figure:: /_static/images/en-us_image_0118549088.png
          :alt: **Figure 2** Creating a full-ECS image using an ECS
@@ -121,7 +120,6 @@ Procedure
 
       In this case, the full-ECS image can be used to provision ECSs only in the specified AZ. If you want to use this image to provision ECSs in other AZs of the region, you need to wait until **Available in AZ**\ *X* disappears from under **Normal**, which indicates that the ECS backup has been successfully created. This process takes about 10 minutes, depending on the data volume of the source ECS.
 
-      .. _en-us_topic_0116125142__fig61721352467:
 
       .. figure:: /_static/images/en-us_image_0000001147047376.png
          :alt: **Figure 3** Full-ECS image status
