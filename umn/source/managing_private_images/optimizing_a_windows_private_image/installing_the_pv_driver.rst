@@ -37,7 +37,6 @@ Prerequisites
 
 .. _en-us_topic_0037352182__en-us_topic_0036684067_section46181951:
 
-.. _installing-the-pv-driver-1:
 
 Installing the PV Driver
 ------------------------

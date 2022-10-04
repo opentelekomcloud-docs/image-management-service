@@ -108,4 +108,3 @@ Procedure
       The time required for image registration is determined by the image file size. You may need to wait a long period of time for the image file to be successfully registered as a private image.
 
 .. |image1| image:: /_static/images/en-us_image_0000001211409095.png
-

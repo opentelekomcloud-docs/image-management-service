@@ -34,7 +34,6 @@ This section uses Ubuntu 14.04 as an example to describe how to query and config
 
    -  If DHCP has been configured on all NICs, enter **:q** to exit the vi editor.
 
-      .. _en-us_topic_0030713176__en-us_topic_0029124465_fig56651987173613:
 
       .. figure:: /_static/images/en-us_image_0030714279.png
          :alt: **Figure 1** DHCP IP address obtaining mode
@@ -44,7 +43,6 @@ This section uses Ubuntu 14.04 as an example to describe how to query and config
 
    -  If static IP addresses are set on the NICs, go to :ref:`2 <en-us_topic_0030713176__en-us_topic_0029124465_li47654828194142>`.
 
-      .. _en-us_topic_0030713176__en-us_topic_0029124465_fig4727523517369:
 
       .. figure:: /_static/images/en-us_image_0030714282.png
          :alt: **Figure 2** Static IP address obtaining mode
@@ -60,7 +58,6 @@ This section uses Ubuntu 14.04 as an example to describe how to query and config
 
    You can insert a number sign (#) in front of each line of static IP address configuration to comment it out.
 
-   .. _en-us_topic_0030713176__en-us_topic_0029124465_fig9449703194420:
 
    .. figure:: /_static/images/en-us_image_0030714285.png
       :alt: **Figure 3** Configuring DHCP on a NIC
@@ -70,7 +67,6 @@ This section uses Ubuntu 14.04 as an example to describe how to query and config
 
    If the ECS has multiple NICs, you must configure DHCP for all the NICs.
 
-   .. _en-us_topic_0030713176__en-us_topic_0029124465_fig29429713194459:
 
    .. figure:: /_static/images/en-us_image_0030714288.png
       :alt: **Figure 4** Configuring DHCP on multiple NICs

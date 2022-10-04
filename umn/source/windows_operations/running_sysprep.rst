@@ -29,7 +29,6 @@ Prerequisites
 
    If the value of **Remaining Windows rearm count** is **0**, you cannot run Sysprep.
 
-   .. _en-us_topic_0093887081__fig6211922154010:
 
    .. figure:: /_static/images/en-us_image_0125452070.png
       :alt: **Figure 1** Windows Script Host
@@ -58,7 +57,6 @@ Procedure
       -  If a domain account is required for logins, run Sysprep on the ECS before using it to create a private image. For details about the impact of running Sysprep, see :ref:`Why Is Sysprep Required for Creating a Private Image from a Windows ECS? <en-us_topic_0030742197>`
       -  The Cloudbase-Init account of a Windows ECS is an internal account of the Cloudbase-Init agent. This account is used for obtaining metadata and completing relevant configuration when the Windows ECS starts. If you modify or delete this account, or uninstall the Cloudbase-Init agent, you will be unable to inject initial custom information into an ECS created from a Windows private image. Therefore, you are not advised to modify or delete the Cloudbase-Init account.
 
-   .. _en-us_topic_0093887081__fig6590344163610:
 
    .. figure:: /_static/images/en-us_image_0125511073.png
       :alt: **Figure 2** Running Sysprep
@@ -77,7 +75,6 @@ Follow-up Procedure
 
    **whoami /user**
 
-   .. _en-us_topic_0093887081__fig1442820462495:
 
    .. figure:: /_static/images/en-us_image_0203204308.png
       :alt: **Figure 3** ECS SID before Sysprep is executed
@@ -85,7 +82,6 @@ Follow-up Procedure
 
       **Figure 3** ECS SID before Sysprep is executed
 
-   .. _en-us_topic_0093887081__fig1428124614493:
 
    .. figure:: /_static/images/en-us_image_0203204309.png
       :alt: **Figure 4** ECS SID after Sysprep is executed

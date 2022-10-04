@@ -37,7 +37,6 @@ Procedure
 
    c. Select **CSBS Backup** for **Source** and then select a backup from the list.
 
-      .. _en-us_topic_0093344231__fig19378142718496:
 
       .. figure:: /_static/images/en-us_image_0120595964.png
          :alt: **Figure 1** Creating a full-ECS image using a CSBS backup

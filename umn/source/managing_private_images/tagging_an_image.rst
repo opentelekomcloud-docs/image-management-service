@@ -75,4 +75,3 @@ Search for Private Images by Tag
    The system searches for private images based on tag keys or tag values.
 
 .. |image1| image:: /_static/images/en-us_image_0187517327.png
-

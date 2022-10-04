@@ -61,7 +61,6 @@ You can use **qemu-img-hw** or the open-source tool **qemu-img** to convert the 
 
    You are advised to use an EulerOS ECS to convert the file format.
 
-   .. _en-us_topic_0133773658__fig1082719127448:
 
    .. figure:: /_static/images/en-us_image_0210189238.png
       :alt: **Figure 1** Import process
@@ -79,7 +78,6 @@ You can use **qemu-img-hw** or the open-source tool **qemu-img** to convert the 
 
       **qemu-img** cannot convert image files to the ZVHD2 format. You need to convert an image file to the RAW format and then use **CreateMF.jar** to generate a bitmap file.
 
-   .. _en-us_topic_0133773658__fig0232738181819:
 
    .. figure:: /_static/images/en-us_image_0210206922.png
       :alt: **Figure 2** Import process (Windows)

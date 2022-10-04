@@ -15,7 +15,6 @@ If the values of **System Manufacturer** and **BIOS Version** are **Xen**, the E
 
    If the ECS uses KVM, you are also advised to optimize the private image to prevent any exceptions with the ECSs created from the image.
 
-.. _en-us_topic_0125075471__fig167731211184410:
 
 .. figure:: /_static/images/en-us_image_0125154453.png
    :alt: **Figure 1** Viewing the virtualization type of a Windows ECS

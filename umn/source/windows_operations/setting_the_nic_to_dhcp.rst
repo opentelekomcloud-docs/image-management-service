@@ -32,7 +32,6 @@ Procedure
 
 #. Click **Network and Sharing Center**.
 
-   .. _en-us_topic_0030713152__en-us_topic_0029124575_fig1407258219309:
 
    .. figure:: /_static/images/en-us_image_0208136139.png
       :alt: **Figure 1** Network and Sharing Center
@@ -42,7 +41,6 @@ Procedure
 
 #. Select the connection configured with the static IP address. For example, click **Local Area Connection 2**.
 
-   .. _en-us_topic_0030713152__en-us_topic_0029124575_fig23460484193025:
 
    .. figure:: /_static/images/en-us_image_0208136140.png
       :alt: **Figure 2** Local Area Connection 2 Status

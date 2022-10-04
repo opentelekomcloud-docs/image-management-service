@@ -42,7 +42,6 @@ Procedure
 
 #. Select programs and features that are allowed by the Windows firewall for **Remote Desktop** based on your network requirements and click **OK** in the lower part.
 
-   .. _en-us_topic_0030713155__fig33349279102033:
 
    .. figure:: /_static/images/en-us_image_0208552567.jpg
       :alt: **Figure 1** Configuring remote desktop

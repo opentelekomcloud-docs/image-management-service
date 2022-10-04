@@ -17,7 +17,6 @@ Background
 
 The following figure shows the process of creating a data disk image from an ECS.
 
-.. _en-us_topic_0102644450__fig776414944511:
 
 .. figure:: /_static/images/en-us_image_0254963039.png
    :alt: **Figure 1** Creating a data disk image and using it to create data disks
@@ -53,7 +52,6 @@ Procedure
 
    c. Select **ECS** for **Source** and then select a data disk of the ECS.
 
-      .. _en-us_topic_0102644450__fig197535202193:
 
       .. figure:: /_static/images/en-us_image_0120595879.png
          :alt: **Figure 2** Creating a data disk image

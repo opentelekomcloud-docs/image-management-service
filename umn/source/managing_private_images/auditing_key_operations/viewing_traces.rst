@@ -46,4 +46,3 @@ Procedure
 #. Click **View Trace** in the upper right corner of the trace details area.
 
 .. |image1| image:: /_static/images/en-us_image_0285376505.png
-

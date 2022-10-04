@@ -35,7 +35,6 @@ Prerequisites
 
 .. _en-us_topic_0037352061__en-us_topic_0036684065_section12153337:
 
-.. _installing-uvp-vmtools-1:
 
 Installing UVP VMTools
 ----------------------
@@ -58,7 +57,6 @@ The following operations describe how to install UVP VMTools. **vmtools-WIN2008R
 
 #. In the displayed dialog box, select **I accept the terms in the License Agreement** and click **Install**.
 
-   .. _en-us_topic_0037352061__fig61031420184018:
 
    .. figure:: /_static/images/en-us_image_0089766015.png
       :alt: **Figure 1** Installing UVP VMTools
