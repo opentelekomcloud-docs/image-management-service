@@ -1,0 +1,423 @@
+:original_name: en-us_topic_0000001361039228.html
+
+.. _en-us_topic_0000001361039228:
+
+Creating an Image
+=================
+
+Function
+--------
+
+This API is used to create a private image. The following methods are supported:
+
+-  Create a private image from an ECS.
+-  Create a private image from an external image file uploaded to an OBS bucket.
+
+The API is an asynchronous one. If it is successfully called, the cloud service system receives the request. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`.
+
+You cannot export public images (such as Windows, SUSE Linux, Red Hat Linux, Oracle Linux, and Ubuntu) or private images created using these public images.
+
+URI
+---
+
+POST /v2/cloudimages/action
+
+Request
+-------
+
+-  Parameters for creating an image from an ECS
+
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                                                                                                                                                                                |
+   +=================+=================+==================+============================================================================================================================================================================================================================================================================================================================================+
+   | name            | Yes             | String           | Specifies the name of the system disk image. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`.                                                                                                                                                                                  |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description     | No              | String           | Specifies the image description. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`. The value contains a maximum of 1024 characters and consists of only letters and digits. Carriage returns and angle brackets (< >) are not allowed. This parameter is left blank by default. |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | instance_id     | Yes             | String           | Specifies the ID of the ECS used to create the image.                                                                                                                                                                                                                                                                                      |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | To obtain the ECS ID, perform the following operations:                                                                                                                                                                                                                                                                                    |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | #. Log in to management console.                                                                                                                                                                                                                                                                                                           |
+   |                 |                 |                  | #. Under **Computing**, click **Elastic Cloud Server**.                                                                                                                                                                                                                                                                                    |
+   |                 |                 |                  | #. In the ECS list, click the name of the ECS and view its ID.                                                                                                                                                                                                                                                                             |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | data_images     | No              | Array of objects | Specifies the data disk information to be converted. This parameter is mandatory when the data disk of an ECS is used to create a private data disk image. For details, see :ref:`Table 1 <en-us_topic_0000001361039228__table19600131217507>`.                                                                                            |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | If the ECS data disk is not used to create a data disk image, the parameter is empty by default.                                                                                                                                                                                                                                           |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | .. note::                                                                                                                                                                                                                                                                                                                                  |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    When you create a data disk image using a data disk, if other parameters (such as **name**, **description**, and **tags**) in this table have values, the system uses the value of **data_images**. You cannot specify **instance_id**.                                                                                                 |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags            | No              | Array of strings | Specifies tags of the image. This parameter is left blank by default.                                                                                                                                                                                                                                                                      |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                                                                                                                     |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | image_tags      | No              | Array of objects | Specifies tags of the image. This parameter is left blank by default.                                                                                                                                                                                                                                                                      |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                                                                                                                     |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | max_ram         | No              | Integer          | Specifies the maximum memory of the image in the unit of MB.                                                                                                                                                                                                                                                                               |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | min_ram         | No              | Integer          | Specifies the minimum memory of the image in the unit of MB. The default value is **0**, indicating that the memory is not restricted.                                                                                                                                                                                                     |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   .. _en-us_topic_0000001361039228__table19600131217507:
+
+   .. table:: **Table 1** Data structure description of the data_images field
+
+      +-------------+-----------+------------------+------------------------------------------+
+      | Parameter   | Mandatory | Type             | Description                              |
+      +=============+===========+==================+==========================================+
+      | name        | Yes       | String           | Specifies the name of a data disk image. |
+      +-------------+-----------+------------------+------------------------------------------+
+      | volume_id   | Yes       | String           | Specifies the data disk ID.              |
+      +-------------+-----------+------------------+------------------------------------------+
+      | description | No        | String           | Specifies the data disk description.     |
+      +-------------+-----------+------------------+------------------------------------------+
+      | tags        | No        | Array of strings | Specifies the data disk image tag.       |
+      +-------------+-----------+------------------+------------------------------------------+
+
+-  Parameters for creating an image using an image file uploaded to the OBS bucket
+
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                                                                                                                                                                                |
+   +=================+=================+==================+============================================================================================================================================================================================================================================================================================================================================+
+   | name            | Yes             | String           | Specifies the image name. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`.                                                                                                                                                                                                     |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description     | No              | String           | Specifies the image description. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`. The value contains a maximum of 1024 characters and consists of only letters and digits. Carriage returns and angle brackets (< >) are not allowed. This parameter is left blank by default. |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | os_type         | No              | String           | Specifies the OS type.                                                                                                                                                                                                                                                                                                                     |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | The value can be **Linux**, **Windows**, or **Other**.                                                                                                                                                                                                                                                                                     |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | os_version      | No              | String           | Specifies the OS version.                                                                                                                                                                                                                                                                                                                  |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | This parameter is valid if an external image file uploaded to the OBS bucket is used to create an image. For its value, see :ref:`Values of Related Parameters <en-us_topic_0000001411239237>`.                                                                                                                                            |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | .. note::                                                                                                                                                                                                                                                                                                                                  |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    This parameter is mandatory when the value of **is_quick_import** is **true**, that is, a system disk image is imported using the quick import method.                                                                                                                                                                                  |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | image_url       | Yes             | String           | Specifies the URL of the external image file in the OBS bucket.                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | This parameter is mandatory if an external image file in the OBS bucket is used to create an image. The format is *OBS bucket name*:*Image file name*.                                                                                                                                                                                     |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | -  To obtain an OBS bucket name:                                                                                                                                                                                                                                                                                                           |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    #. Log in to the management console and choose **Storage** > **Object Storage Service**.                                                                                                                                                                                                                                                |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |       All OBS buckets are displayed in the list.                                                                                                                                                                                                                                                                                           |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    #. Filter the OBS buckets by region and locate the target bucket in the current region.                                                                                                                                                                                                                                                 |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | -  To obtain an OBS image file name:                                                                                                                                                                                                                                                                                                       |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    #. Log in to the management console and choose **Storage** > **Object Storage Service**.                                                                                                                                                                                                                                                |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |       All OBS buckets are displayed in the list.                                                                                                                                                                                                                                                                                           |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    #. Filter the OBS buckets by region and check the OBS buckets in the current region.                                                                                                                                                                                                                                                    |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    #. Click the name of the target bucket to go to the bucket details page.                                                                                                                                                                                                                                                                |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    #. In the navigation pane on the left, choose **Objects** to display objects in the OBS bucket and then locate the external image file used to create an image.                                                                                                                                                                         |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | .. note::                                                                                                                                                                                                                                                                                                                                  |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    The storage class of the OBS bucket must be **Standard**.                                                                                                                                                                                                                                                                               |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | min_disk        | Yes             | Integer          | Specifies the minimum size of the system disk in the unit of GB.                                                                                                                                                                                                                                                                           |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | This parameter is mandatory if an external image file in the OBS bucket is used to create an image. The value ranges from 1 GB to 1024 GB.                                                                                                                                                                                                 |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | is_config       | No              | Boolean          | Specifies whether automatic configuration is enabled.                                                                                                                                                                                                                                                                                      |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | The value can be **true** or **false**.                                                                                                                                                                                                                                                                                                    |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | If automatic configuration is required, set the value to **true**. Otherwise, set the value to **false** The default value is **false**.                                                                                                                                                                                                   |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | For details about automatic configuration, see **Creating a Linux System Disk Image from an External Image File** > **Registering an External Image File as a Private Image (Linux)** in *Image Management Service User Guide*.                                                                                                            |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | cmk_id          | No              | String           | Specifies the master key used for encrypting an image. For its value, see the *Key Management Service User Guide*.                                                                                                                                                                                                                         |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags            | No              | Array of strings | Specifies tags of the image. The value is left blank by default.                                                                                                                                                                                                                                                                           |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                                                                                                                     |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | image_tags      | No              | Array of objects | Specifies tags of the image. This parameter is left blank by default. Use either **tags** or **image_tags**.                                                                                                                                                                                                                               |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | type            | No              | String           | Specifies the image type.                                                                                                                                                                                                                                                                                                                  |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | The value can be **ECS**, **BMS**, **FusionCompute**, or **Ironic**. The default value is **ECS**.                                                                                                                                                                                                                                         |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | -  **ECS** and **FusionCompute**: indicate an ECS image.                                                                                                                                                                                                                                                                                   |
+   |                 |                 |                  | -  **BMS** and **Ironic**: indicate a BMS image.                                                                                                                                                                                                                                                                                           |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | max_ram         | No              | Integer          | Specifies the maximum memory of the image in the unit of MB.                                                                                                                                                                                                                                                                               |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | min_ram         | No              | Integer          | Specifies the minimum memory required by the image in the unit of MB. The default value is **0**, indicating that the memory is not restricted.                                                                                                                                                                                            |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | data_images     | No              | Array of objects | Specifies the data disk information to be imported.                                                                                                                                                                                                                                                                                        |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | An external image file can contain a maximum of three data disks. In this case, one system disk and three data disks will be created.                                                                                                                                                                                                      |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | For details, see :ref:`Table 2 <en-us_topic_0000001361039228__table1719811465261>`.                                                                                                                                                                                                                                                        |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | .. note::                                                                                                                                                                                                                                                                                                                                  |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |    -  If a data disk image file is used to create a data disk image, the OS type of the data disk image must be the same as that of the system disk image.                                                                                                                                                                                 |
+   |                 |                 |                  |    -  If other parameters (such as **name**, **description**, and **tags**) in :ref:`Table 2 <en-us_topic_0000001361039228__table1719811465261>` are set, the system uses the values in **data_images**.                                                                                                                                   |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | is_quick_import | No              | Boolean          | Specifies whether to use the quick import method to import a system disk image.                                                                                                                                                                                                                                                            |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | -  If yes, set the value to **true**.                                                                                                                                                                                                                                                                                                      |
+   |                 |                 |                  | -  If no, set the value to **false**.                                                                                                                                                                                                                                                                                                      |
+   |                 |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                 |                 |                  | For details about the restrictions on quick import of image files, see :ref:`Importing an Image File Quickly <en-us_topic_0000001411239209>`.                                                                                                                                                                                              |
+   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   .. _en-us_topic_0000001361039228__table1719811465261:
+
+   .. table:: **Table 2** Data structure description of the images field
+
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type             | Description                                                                                                                                                        |
+      +=================+=================+==================+====================================================================================================================================================================+
+      | name            | No              | String           | Specifies the image name.                                                                                                                                          |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | For more details, see :ref:`Image Attributes <en-us_topic_0000001361199252>`.                                                                                      |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | description     | No              | String           | Specifies the enterprise project that the image belongs to. The value is left blank by default.                                                                    |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | The value contains a maximum of 1024 characters and consists of only letters and digits. Carriage returns and angle brackets (< >) are not allowed.                |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | For more details, see :ref:`Image Attributes <en-us_topic_0000001361199252>`.                                                                                      |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | image_url       | Yes             | String           | Specifies the URL of the external image file in the OBS bucket.                                                                                                    |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | The format is *OBS bucket name*:*Image file name*.                                                                                                                 |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | -  To obtain an OBS bucket name:                                                                                                                                   |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    #. Log in to the management console and choose **Storage** > **Object Storage Service**.                                                                        |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |       All OBS buckets are displayed in the list.                                                                                                                   |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    #. Filter the OBS buckets by region and locate the target bucket in the current region.                                                                         |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | -  To obtain an OBS image file name:                                                                                                                               |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    #. Log in to the management console and choose **Storage** > **Object Storage Service**.                                                                        |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |       All OBS buckets are displayed in the list.                                                                                                                   |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    #. Filter the OBS buckets by region and check the OBS buckets in the current region.                                                                            |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    #. Click the name of the target bucket to go to the bucket details page.                                                                                        |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    #. In the navigation pane on the left, choose **Objects** to display objects in the OBS bucket and then locate the external image file used to create an image. |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | .. note::                                                                                                                                                          |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  |    The storage class of the OBS bucket must be **Standard**.                                                                                                       |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | min_disk        | Yes             | Integer          | Specifies the minimum size of the data disk.                                                                                                                       |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | Unit: GB                                                                                                                                                           |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | Value range: 1–2048                                                                                                                                                |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | is_quick_import | No              | Boolean          | Specifies whether an image file is imported quickly to create a data disk image.                                                                                   |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | -  If yes, set the value to **true**.                                                                                                                              |
+      |                 |                 |                  | -  If no, set the value to **false**.                                                                                                                              |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | For details about the restrictions on quick import of image files, see :ref:`Importing an Image File Quickly <en-us_topic_0000001411239209>`.                      |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | tags            | No              | Array of strings | Specifies tags of the image. The value is left blank by default.                                                                                                   |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | For detailed parameter descriptions, see :ref:`Image Tag Data Formats <en-us_topic_0000001411479433>`.                                                             |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                             |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | image_tags      | No              | Array of objects | Specifies tags of the image. The value is left blank by default.                                                                                                   |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | For detailed parameter descriptions, see :ref:`Image Tag Data Formats <en-us_topic_0000001411479433>`.                                                             |
+      |                 |                 |                  |                                                                                                                                                                    |
+      |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                             |
+      +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+-  Example requests
+
+   -  Request for creating a system disk image with parameter **tags** using an ECS
+
+      .. code-block:: text
+
+         POST https://{Endpoint}/v2/cloudimages/action
+
+      .. code-block::
+
+         {
+             "name": "ims_test",
+                "description": "Create a system disk image from an ECS",
+             "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
+             "tags": [
+                 "aaa.111",
+                 "bbb.333",
+                 "ccc.444"
+                  ]
+         }
+
+   -  Request for creating a data disk image with parameter **tags** using the data disk of an ECS
+
+      .. code-block:: text
+
+         POST https://{Endpoint}/v2/cloudimages/action
+
+      ::
+
+         {
+                "data_images": [{"name": "ims_data_image_test",
+                "description": "Create a data disk image from the data disk of an ECS",
+                "volume_id": "c5dfbd0c-bf0a-4798-a453-61dc6b54aa30",
+                "tags": [
+                           "aaa.111",
+                           "bbb.333",
+                           "ccc.444"
+                       ]
+                }]
+         }
+
+   -  Request for creating an image with parameter **tags** using an external image file uploaded to the OBS bucket
+
+      .. code-block:: text
+
+         POST https://{Endpoint}/v2/cloudimages/action
+
+      ::
+
+         {
+               "name": "ims_test_file",
+           "description": "Create an image from a file in the OBS bucket",
+               "image_url": "ims-image:centos70.qcow2",
+               "os_version": "CentOS 7.0 64bit",
+               "is_config_init": true,
+               "min_disk": 40,
+               "is_config": true,
+               "tags": [
+                     "aaa.111",
+                     "bbb.333",
+                     "ccc.444"
+               ]
+         }
+
+   -  Request for creating a system disk image with parameter **image_tags** using an ECS
+
+      .. code-block:: text
+
+         POST https://{Endpoint}/v2/cloudimages/action
+
+      .. code-block::
+
+         {
+             "name": "ims_test",
+             "description": "Create a system disk image from an ECS",
+             "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
+             "image_tags": [
+         {
+                     "key": "key2",
+                     "value": "value2"
+                 },
+         {
+                     "key": "key1",
+                     "value": "value1"
+         }
+                  ]
+         }
+
+   -  Request for creating a data disk image with parameter **image_tags** using the data disk of an ECS
+
+      .. code-block:: text
+
+         POST /v2/cloudimages/action
+
+      ::
+
+         {
+                "data_images": [{"name": "ims_data_image_test",
+                "description": "Create a data disk image from the data disk of an ECS",
+                "volume_id": "c5dfbd0c-bf0a-4798-a453-61dc6b54aa30",
+                "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
+                }]
+         }
+
+   -  Request for creating an image with parameter **image_tags** using an external image file uploaded to the OBS bucket
+
+      .. code-block:: text
+
+         POST https://{Endpoint}/v2/cloudimages/action
+
+      ::
+
+         {
+                "name": "ims_test_file",
+                "description": "Create an image from a file in the OBS bucket",
+                "image_url": "ims-image:centos70.qcow2",
+                "os_version": "CentOS 7.0 64bit",
+                "is_config_init": true,
+                "min_disk": 40,
+
+                "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
+         }
+
+Response
+--------
+
+-  Response parameters
+
+   +-----------------------+-----------------------+--------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                    |
+   +=======================+=======================+================================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                             |
+   |                       |                       |                                                                                |
+   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`. |
+   +-----------------------+-----------------------+--------------------------------------------------------------------------------+
+
+-  Example response
+
+   .. code-block:: text
+
+      STATUS CODE 200
+
+   ::
+
+      {
+          "job_id": "8a12fc664fb4daa3014fb4e581380005"
+      }
+
+Returned Values
+---------------
+
+-  Normal
+
+   200
+
+-  Abnormal
+
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   | Returned Value            | Description                                                                                                      |
+   +===========================+==================================================================================================================+
+   | 400 Bad Request           | Request error. For details about the returned error code, see :ref:`Error Codes <en-us_topic_0000001411239233>`. |
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   | 401 Unauthorized          | Authentication failed.                                                                                           |
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   | 403 Forbidden             | You do not have the rights to perform the operation.                                                             |
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   | 404 Not Found             | The requested resource was not found.                                                                            |
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   | 500 Internal Server Error | Internal service error.                                                                                          |
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   | 503 Service Unavailable   | The service is unavailable.                                                                                      |
+   +---------------------------+------------------------------------------------------------------------------------------------------------------+
