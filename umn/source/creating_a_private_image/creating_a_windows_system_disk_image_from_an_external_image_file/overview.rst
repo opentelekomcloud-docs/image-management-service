@@ -17,7 +17,6 @@ Creation Process
 .. figure:: /_static/images/en-us_image_0208252825.png
    :alt: **Figure 1** Creating a Windows system disk image
 
-
    **Figure 1** Creating a Windows system disk image
 
 As shown in the figure, the following steps are required to register an external image file as a private image:

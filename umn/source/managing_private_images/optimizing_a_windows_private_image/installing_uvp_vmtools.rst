@@ -61,7 +61,6 @@ The following operations describe how to install UVP VMTools. **vmtools-WIN2008R
    .. figure:: /_static/images/en-us_image_0089766015.png
       :alt: **Figure 1** Installing UVP VMTools
 
-
       **Figure 1** Installing UVP VMTools
 
 #. Install UVP VMTools as prompted.
@@ -74,7 +73,6 @@ The following operations describe how to install UVP VMTools. **vmtools-WIN2008R
 
       .. figure:: /_static/images/en-us_image_0115573259.png
          :alt: **Figure 2** Windows Security
-
 
          **Figure 2** Windows Security
 
@@ -99,6 +97,5 @@ Perform the following steps to verify the installation of UVP VMTools:
 
    .. figure:: /_static/images/en-us_image_0127506675.png
       :alt: **Figure 3** Verifying the installation
-
 
       **Figure 3** Verifying the installation

@@ -20,7 +20,6 @@ The following figure shows the process of creating an image from an entire ECS, 
 .. figure:: /_static/images/en-us_image_0255035033.png
    :alt: **Figure 1** Creating a full-ECS image from an ECS
 
-
    **Figure 1** Creating a full-ECS image from an ECS
 
 -  The time required for creating a full-ECS image depends on the disk size, network quality, and the number of concurrent tasks.
@@ -97,7 +96,6 @@ Procedure
       .. figure:: /_static/images/en-us_image_0118549088.png
          :alt: **Figure 2** Creating a full-ECS image using an ECS
 
-
          **Figure 2** Creating a full-ECS image using an ECS
 
    d. Specify **Server Backup Vault** to store backups.
@@ -123,7 +121,6 @@ Procedure
 
       .. figure:: /_static/images/en-us_image_0000001147047376.png
          :alt: **Figure 3** Full-ECS image status
-
 
          **Figure 3** Full-ECS image status
 
