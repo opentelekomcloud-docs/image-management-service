@@ -19,5 +19,4 @@ If the value of **Hypervisor vendor** is **Xen**, the ECS uses Xen. If KVM is re
 .. figure:: /_static/images/en-us_image_0125146639.png
    :alt: **Figure 1** Viewing the virtualization type of a Linux ECS
 
-
    **Figure 1** Viewing the virtualization type of a Linux ECS

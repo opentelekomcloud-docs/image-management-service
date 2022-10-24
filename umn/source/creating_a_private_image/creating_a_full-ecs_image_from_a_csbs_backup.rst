@@ -41,7 +41,6 @@ Procedure
       .. figure:: /_static/images/en-us_image_0120595964.png
          :alt: **Figure 1** Creating a full-ECS image using a CSBS backup
 
-
          **Figure 1** Creating a full-ECS image using a CSBS backup
 
    d. In the **Image Information** area, configure basic image details, such as the image name and description.

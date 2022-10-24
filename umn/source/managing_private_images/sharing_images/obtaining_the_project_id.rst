@@ -29,5 +29,4 @@ Procedure
    .. figure:: /_static/images/en-us_image_0180992674.png
       :alt: **Figure 1** Viewing the project ID
 
-
       **Figure 1** Viewing the project ID

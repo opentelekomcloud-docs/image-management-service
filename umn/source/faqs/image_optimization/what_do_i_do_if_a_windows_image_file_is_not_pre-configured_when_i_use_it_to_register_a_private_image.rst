@@ -19,7 +19,6 @@ If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0
 .. figure:: /_static/images/en-us_image_0208476701.png
    :alt: **Figure 1** Image creation process
 
-
    **Figure 1** Image creation process
 
 .. _en-us_topic_0030713185__section1049514242043:

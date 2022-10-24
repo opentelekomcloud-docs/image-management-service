@@ -80,7 +80,6 @@ Install Cloudbase-Init
    .. figure:: /_static/images/en-us_image_0087083593.png
       :alt: **Figure 1** Configuring parameters
 
-
       **Figure 1** Configuring parameters
 
 #. Click **Next**.
@@ -101,7 +100,6 @@ Install Cloudbase-Init
 
    .. figure:: /_static/images/en-us_image_0085074510.png
       :alt: **Figure 2** Completing the Cloudbase-Init installation
-
 
       **Figure 2** Completing the Cloudbase-Init installation
 

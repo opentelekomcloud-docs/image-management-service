@@ -19,7 +19,6 @@ The following figure shows the process of creating a data disk image from an ext
 .. figure:: /_static/images/en-us_image_0254985106.png
    :alt: **Figure 1** Creating a data disk image from an external image file
 
-
    **Figure 1** Creating a data disk image from an external image file
 
 #. Prepare an external image file. The file must be in VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVHD, or ZVHD2 format. If you want to use an image file in other formats, convert the file into any of the listed formats before importing it to the cloud platform.
@@ -51,7 +50,6 @@ Procedure
 
       .. figure:: /_static/images/en-us_image_0120595887.png
          :alt: **Figure 2** Creating a data disk image
-
 
          **Figure 2** Creating a data disk image
 

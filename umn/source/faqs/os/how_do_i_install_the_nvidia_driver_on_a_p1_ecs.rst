@@ -107,7 +107,6 @@ The procedure for installing the NVIDIA driver varies according to the OS.
       .. figure:: /_static/images/en-us_image_0099872706.png
          :alt: **Figure 1** Downloading the GPU driver
 
-
          **Figure 1** Downloading the GPU driver
 
    b. Run the following command to install the GPU driver:
@@ -258,7 +257,6 @@ The procedure for installing the NVIDIA driver varies according to the OS.
 
       .. figure:: /_static/images/en-us_image_0099872707.png
          :alt: **Figure 2** Downloading the driver installation package
-
 
          **Figure 2** Downloading the driver installation package
 
@@ -414,7 +412,6 @@ The procedure for installing the NVIDIA driver varies according to the OS.
 
       .. figure:: /_static/images/en-us_image_0099872708.png
          :alt: **Figure 3** Downloading the GPU driver
-
 
          **Figure 3** Downloading the GPU driver
 

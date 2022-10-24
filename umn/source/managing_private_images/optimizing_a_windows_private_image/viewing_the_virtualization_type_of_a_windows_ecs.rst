@@ -19,5 +19,4 @@ If the values of **System Manufacturer** and **BIOS Version** are **Xen**, the E
 .. figure:: /_static/images/en-us_image_0125154453.png
    :alt: **Figure 1** Viewing the virtualization type of a Windows ECS
 
-
    **Figure 1** Viewing the virtualization type of a Windows ECS

@@ -36,7 +36,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0208136139.png
       :alt: **Figure 1** Network and Sharing Center
 
-
       **Figure 1** Network and Sharing Center
 
 #. Select the connection configured with the static IP address. For example, click **Local Area Connection 2**.
@@ -44,7 +43,6 @@ Procedure
 
    .. figure:: /_static/images/en-us_image_0208136140.png
       :alt: **Figure 2** Local Area Connection 2 Status
-
 
       **Figure 2** Local Area Connection 2 Status
 
@@ -60,7 +58,6 @@ Procedure
 
    .. figure:: /_static/images/en-us_image_0208136141.png
       :alt: **Figure 3** Configuring the IP address obtaining mode
-
 
       **Figure 3** Configuring the IP address obtaining mode
 

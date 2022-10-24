@@ -92,7 +92,6 @@ Procedure
       .. figure:: /_static/images/en-us_image_0210228327.png
          :alt: **Figure 1** Quickly importing an image file
 
-
          **Figure 1** Quickly importing an image file
 
    f. Set parameters as prompted.
