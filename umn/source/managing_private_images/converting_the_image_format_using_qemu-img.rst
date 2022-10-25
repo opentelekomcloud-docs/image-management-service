@@ -29,18 +29,18 @@ Windows
 #. Install qemu-img.
 
    a. Download the qemu-img installation package from https://qemu.weilnetz.de/w64/.
-   b. Double-click the setup file to install qemu-img in **D:\Program Files\qemu** (an example installation path).
+   b. Double-click the setup file to install qemu-img in **D:\\Program Files\\qemu** (an example installation path).
 
 #. Configure environment variables.
 
    a. Choose **Start** > **Computer** and right-click **Properties**.
    b. Click **Advanced system settings**.
    c. In the **System Properties** dialog box, click **Advanced** > **Environment Variables**.
-   d. In the **Environment Variables** dialog box, search for **Path** in the **System Variable** area and click **Edit**. Add **D:\Program Files\qemu** to **Variable Value**. Use semicolons (;) to separate variable values.
+   d. In the **Environment Variables** dialog box, search for **Path** in the **System Variable** area and click **Edit**. Add **D:\\Program Files\\qemu** to **Variable Value**. Use semicolons (;) to separate variable values.
 
       .. note::
 
-         If **Path** does not exist, add it and set its value to **D:\Program Files\qemu**.
+         If **Path** does not exist, add it and set its value to **D:\\Program Files\\qemu**.
 
    e. Click **OK**.
 
@@ -50,11 +50,11 @@ Windows
 
 #. Convert the image format.
 
-   a. In the **cmd** window, run the following commands to switch to **D:\Program Files\qemu**:
+   a. In the **cmd** window, run the following commands to switch to **D:\\Program Files\\qemu**:
 
       **d:**
 
-      **cd** **D:\Program** **Files\qemu**
+      **cd** **D:\\Program** **Files\\qemu**
 
    b. Run the following command to convert the image file format from VMDK to QCOW2:
 

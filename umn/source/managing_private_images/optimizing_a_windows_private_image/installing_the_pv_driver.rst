@@ -18,7 +18,7 @@ The PV driver has been installed by default when you use a public image to creat
 
 Open the **version** configuration file to check whether the PV driver is the latest:
 
-**C:\Program Files (x86)\Xen PV Drivers\bin\version**
+**C:\\Program Files (x86)\\Xen PV Drivers\\bin\\version**
 
 -  If the PV driver version is later than 2.5, you do not need to install the PV driver.
 -  If the PV driver version is not displayed or the version is 2.5 or earlier, perform operations in :ref:`Installing the PV Driver <en-us_topic_0037352182__en-us_topic_0036684067_section46181951>`.

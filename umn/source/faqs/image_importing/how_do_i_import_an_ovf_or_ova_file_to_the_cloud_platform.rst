@@ -38,7 +38,7 @@ Manually extract VMDK files from an OVF or OVA template and upload them to an OB
          │       ├MyVm.mf
          │       ├MyVm-disk1.vmdk
 
-   -  If you choose to export an OVA template and name it **MyVm**, the **C:\MyVm.ova** file will be generated. The VMDK file extracted from **MyVm.ova** can be uploaded to the cloud platform.
+   -  If you choose to export an OVA template and name it **MyVm**, the **C:\\MyVm.ova** file will be generated. The VMDK file extracted from **MyVm.ova** can be uploaded to the cloud platform.
 
       .. note::
 

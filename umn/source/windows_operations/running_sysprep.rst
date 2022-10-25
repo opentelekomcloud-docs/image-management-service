@@ -19,7 +19,7 @@ Prerequisites
 
 -  For a newly activated Windows ECS, you can run Sysprep only once at a time.
 
--  If an ECS is created from an image file, only Sysprep provided by the image file can be used. In addition, Sysprep must always reside in the **%WINDIR%\system32\sysprep** directory.
+-  If an ECS is created from an image file, only Sysprep provided by the image file can be used. In addition, Sysprep must always reside in the **%WINDIR%\\system32\\sysprep** directory.
 
 -  Windows must be in the activated state, and the remaining Windows rearm count must be greater than or equal to 1. Otherwise, the Sysprep encapsulation cannot be executed.
 
@@ -41,13 +41,13 @@ Procedure
 
 #. Enter the Cloudbase-Init installation directory.
 
-   **C:\Program Files\Cloudbase Solutions\\** is used as an example of the Cloudbase-Init installation directory. Switch to the root directory of drive C and run the following command to enter the installation directory:
+   **C:\\Program Files\\Cloudbase Solutions\\** is used as an example of the Cloudbase-Init installation directory. Switch to the root directory of drive C and run the following command to enter the installation directory:
 
-   **cd C:\Program Files\Cloudbase Solutions\Cloudbase-Init\conf**
+   **cd C:\\Program Files\\Cloudbase Solutions\\Cloudbase-Init\\conf**
 
 #. Run the following command to encapsulate Windows:
 
-   **C:\Windows\System32\sysprep\sysprep.exe /generalize /oobe /unattend:Unattend.xml**
+   **C:\\Windows\\System32\\sysprep\\sysprep.exe /generalize /oobe /unattend:Unattend.xml**
 
    .. caution::
 
