@@ -101,13 +101,13 @@ Configure Cloud-Init
 
    -  After you log in to the ECS, run the following commands to add a user-friendly prompt "Please change password for user linux after first login."
 
-      **echo -e '\e[1;31m#################################\\e[0m' > /etc/motd**
+      **echo -e '\\e[1;31m#################################\\\\e[0m' > /etc/motd**
 
-      **echo -e '\e[1;31m# Important !!! #\e[0m' >> /etc/motd**
+      **echo -e '\\e[1;31m# Important !!! #\\e[0m' >> /etc/motd**
 
-      **echo -e '\e[1;31m# Please change password for user linux after first login. #\e[0m' >> /etc/motd**
+      **echo -e '\\e[1;31m# Please change password for user linux after first login. #\\e[0m' >> /etc/motd**
 
-      **echo -e '\e[1;31m#################################\e[0m' >> /etc/motd**
+      **echo -e '\\e[1;31m#################################\\e[0m' >> /etc/motd**
 
       **echo -e '' >> /etc/motd**
 

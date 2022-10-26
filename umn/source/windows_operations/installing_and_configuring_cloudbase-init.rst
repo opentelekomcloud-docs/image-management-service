@@ -118,7 +118,7 @@ Install Cloudbase-Init
 Configure Cloudbase-Init
 ------------------------
 
-#. Edit the configuration file **C:\Program Files\Cloudbase Solutions\Cloudbase-Init\conf\cloudbase-init.conf** in the Cloudbase-Init installation path.
+#. Edit the configuration file **C:\\Program Files\\Cloudbase Solutions\\Cloudbase-Init\\conf\\cloudbase-init.conf** in the Cloudbase-Init installation path.
 
    a. Add **netbios_host_name_compatibility=false** to the last line of the file so that the hostname supports a maximum of 63 characters.
 

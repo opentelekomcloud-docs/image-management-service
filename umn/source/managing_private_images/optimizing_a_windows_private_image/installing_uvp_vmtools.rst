@@ -18,7 +18,7 @@ UVP VMTools has been installed by default when you use a public image to create 
 
 Open the **version** configuration file to check whether UVP VMTools is the latest:
 
-**C:\Program Files (x86)\virtio\bin\version**
+**C:\\Program Files (x86)\\virtio\\bin\\version**
 
 If the version is 2.5.0 or later, the current UVP VMTools can be used. Otherwise, perform operations in :ref:`Installing UVP VMTools <en-us_topic_0037352061__en-us_topic_0036684065_section12153337>` to install UVP VMTools.
 
