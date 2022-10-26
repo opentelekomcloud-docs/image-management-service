@@ -15,7 +15,6 @@ Generally, this is because the xen-blkfront.ko module is not loaded during the s
 .. figure:: /_static/images/en-us_image_0207619456.png
    :alt: **Figure 1** Startup screen
 
-
    **Figure 1** Startup screen
 
 Solution

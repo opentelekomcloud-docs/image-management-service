@@ -66,7 +66,6 @@ Configure Cloud-Init
    .. figure:: /_static/images/en-us_image_0000001082321842.png
       :alt: **Figure 1** Example configuration
 
-
       **Figure 1** Example configuration
 
 #. Disable the SSH permissions of user **root** in **/etc/cloud/cloud.cfg**, add a common user (which is used for logging in to the ECS using VNC), and configure a password for the added user and assign sudo permissions to it.
@@ -194,7 +193,6 @@ Configure Cloud-Init
    .. figure:: /_static/images/en-us_image_0122875972.png
       :alt: **Figure 2** Preventing Cloud-Init from taking over the network
 
-
       **Figure 2** Preventing Cloud-Init from taking over the network
 
 #. Modify the **cloud_init_modules** configuration file.
@@ -204,7 +202,6 @@ Configure Cloud-Init
 
    .. figure:: /_static/images/en-us_image_0122875976.png
       :alt: **Figure 3** Speeding up the SSH login to the ECS
-
 
       **Figure 3** Speeding up the SSH login to the ECS
 
@@ -242,7 +239,6 @@ Configure Cloud-Init
       .. figure:: /_static/images/en-us_image_0125515202.png
          :alt: **Figure 4** Modifying the **\__init__.py** file
 
-
          **Figure 4** Modifying the **\__init__.py** file
 
    b. Run the following command to switch to the **cloudinit/sources** folder:
@@ -268,7 +264,6 @@ Configure Cloud-Init
 
    .. figure:: /_static/images/en-us_image_0141888758.png
       :alt: **Figure 5** Setting the parameter value to **cloudLogHandler**
-
 
       **Figure 5** Setting the parameter value to **cloudLogHandler**
 

@@ -27,7 +27,6 @@ Solution
    .. figure:: /_static/images/en-us_image_0251959651.png
       :alt: **Figure 1** Querying the GRUB file version
 
-
       **Figure 1** Querying the GRUB file version
 
 #. Set **timeout** in the GRUB file to **0**.
@@ -43,6 +42,5 @@ Solution
 
       .. figure:: /_static/images/en-us_image_0207619609.jpg
          :alt: **Figure 2** Modifying the timeout duration
-
 
          **Figure 2** Modifying the timeout duration

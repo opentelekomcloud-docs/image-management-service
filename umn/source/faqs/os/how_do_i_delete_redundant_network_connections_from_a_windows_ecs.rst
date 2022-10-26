@@ -37,5 +37,4 @@ Method 2
    .. figure:: /_static/images/en-us_image_0207581512.png
       :alt: **Figure 1** Registry directory
 
-
       **Figure 1** Registry directory

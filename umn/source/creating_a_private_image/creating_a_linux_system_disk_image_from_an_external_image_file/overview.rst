@@ -17,7 +17,6 @@ Creation Process
 .. figure:: /_static/images/en-us_image_0214265355.png
    :alt: **Figure 1** Creating a Linux system disk image
 
-
    **Figure 1** Creating a Linux system disk image
 
 The procedure is as follows:

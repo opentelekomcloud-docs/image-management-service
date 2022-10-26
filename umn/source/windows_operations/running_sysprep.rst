@@ -33,7 +33,6 @@ Prerequisites
    .. figure:: /_static/images/en-us_image_0125452070.png
       :alt: **Figure 1** Windows Script Host
 
-
       **Figure 1** Windows Script Host
 
 Procedure
@@ -61,7 +60,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0125511073.png
       :alt: **Figure 2** Running Sysprep
 
-
       **Figure 2** Running Sysprep
 
 Follow-up Procedure
@@ -79,12 +77,10 @@ Follow-up Procedure
    .. figure:: /_static/images/en-us_image_0203204308.png
       :alt: **Figure 3** ECS SID before Sysprep is executed
 
-
       **Figure 3** ECS SID before Sysprep is executed
 
 
    .. figure:: /_static/images/en-us_image_0203204309.png
       :alt: **Figure 4** ECS SID after Sysprep is executed
-
 
       **Figure 4** ECS SID after Sysprep is executed

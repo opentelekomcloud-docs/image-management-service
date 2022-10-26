@@ -21,7 +21,6 @@ The following figure shows the process of creating a system disk image from an E
 .. figure:: /_static/images/en-us_image_0254928267.png
    :alt: **Figure 1** Creating a system disk image and using it to create ECSs
 
-
    **Figure 1** Creating a system disk image and using it to create ECSs
 
 -  System disk images are often used for application scale-out. They can also be used for hybrid cloud deployment. You can create system disk images for resource synchronization on and off cloud. The procedure is as follows:

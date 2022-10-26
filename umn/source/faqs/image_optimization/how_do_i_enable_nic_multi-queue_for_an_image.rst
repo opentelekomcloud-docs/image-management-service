@@ -158,7 +158,6 @@ Use either of the following methods to set NIC multi-queue.
    .. figure:: /_static/images/en-us_image_0196045691.png
       :alt: **Figure 1** Example request body
 
-
       **Figure 1** Example request body
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section1841681225617:
@@ -226,7 +225,6 @@ For Linux ECSs, which run CentOS 7.4 as an example, perform the following operat
 
       .. figure:: /_static/images/en-us_image_0196045692.png
          :alt: **Figure 2** Enabled irqbalance
-
 
          **Figure 2** Enabled irqbalance
 

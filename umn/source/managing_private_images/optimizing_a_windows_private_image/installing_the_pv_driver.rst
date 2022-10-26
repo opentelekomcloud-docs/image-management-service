@@ -85,5 +85,4 @@ Perform the following steps to verify the installation of the PV driver:
    .. figure:: /_static/images/en-us_image_0219481382.png
       :alt: **Figure 1** Verifying the installation
 
-
       **Figure 1** Verifying the installation

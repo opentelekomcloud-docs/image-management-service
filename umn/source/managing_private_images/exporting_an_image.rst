@@ -19,7 +19,6 @@ Background
    .. figure:: /_static/images/en-us_image_0255101497.png
       :alt: **Figure 1** Exporting an image
 
-
       **Figure 1** Exporting an image
 
 -  The time required for exporting an image depends on the image size and the number of concurrent export tasks.

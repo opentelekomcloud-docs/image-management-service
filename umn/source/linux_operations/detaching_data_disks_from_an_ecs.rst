@@ -64,7 +64,6 @@ Procedure
       .. figure:: /_static/images/en-us_image_0203254718.png
          :alt: **Figure 1** EVS disk configuration in the **fstab** file
 
-
          **Figure 1** EVS disk configuration in the **fstab** file
 
 #. Run the following command to detach data disks from the ECS:

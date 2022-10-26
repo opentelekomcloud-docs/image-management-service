@@ -193,7 +193,6 @@ Procedure
       .. figure:: /_static/images/en-us_image_0210228327.png
          :alt: **Figure 1** Quickly importing an image file
 
-
          **Figure 1** Quickly importing an image file
 
    f. Set parameters as prompted.
@@ -235,7 +234,7 @@ Appendix 1: Common qemu-img-hw Commands
 
    An example command is **qemu-img-hw info test.zvhd2**.
 
--  Viewing help information: **qemu-img-hw –help**
+-  Viewing help information: **qemu-img-hw -help**
 
 Appendix 2: Common Errors During qemu-img-hw Running
 ----------------------------------------------------

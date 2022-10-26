@@ -24,7 +24,7 @@ For details about how to log in to an ECS, see *Elastic Cloud Server User Guide*
 Procedure
 ---------
 
-#. Before enabling this function, you are advised to set the resolution of the ECS to 1920×1080.
+#. Before enabling this function, you are advised to set the resolution of the ECS to 1920x1080.
 
    On the ECS, choose **Start** > **Control Panel**. Under **Appearance and Personalization**, click **Adjust screen resolution**. Then select a proper value from the **Resolution** drop-down list box.
 
@@ -45,6 +45,5 @@ Procedure
 
    .. figure:: /_static/images/en-us_image_0208552567.jpg
       :alt: **Figure 1** Configuring remote desktop
-
 
       **Figure 1** Configuring remote desktop

@@ -65,7 +65,6 @@ You can use **qemu-img-hw** or the open-source tool **qemu-img** to convert the 
    .. figure:: /_static/images/en-us_image_0210189238.png
       :alt: **Figure 1** Import process
 
-
       **Figure 1** Import process
 
    For details, see :ref:`Quickly Importing an Image File (Linux) <en-us_topic_0133773660>`.
@@ -81,7 +80,6 @@ You can use **qemu-img-hw** or the open-source tool **qemu-img** to convert the 
 
    .. figure:: /_static/images/en-us_image_0210206922.png
       :alt: **Figure 2** Import process (Windows)
-
 
       **Figure 2** Import process (Windows)
 
