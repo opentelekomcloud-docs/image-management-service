@@ -30,7 +30,7 @@ Exporting Private Image Information
 
    .. note::
 
-      The file name is in the format of **private-images-**\ *Region ID*-*Export time*.
+      The file name is in the format of **private-images-**\ *Region ID*\ ``-``\ *Export time*.
 
 Exporting Public Image Information
 ----------------------------------
@@ -49,7 +49,7 @@ Exporting Public Image Information
 
    .. note::
 
-      The file name is in the format of **public-images-**\ *Region ID*-*Export time*.
+      The file name is in the format of **public-images-**\ *Region ID*\ ``-``\ *Export time*.
 
 .. |image1| image:: /_static/images/en-us_image_0142360062.png
 .. |image2| image:: /_static/images/en-us_image_0144424631.png
