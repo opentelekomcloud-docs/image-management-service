@@ -77,4 +77,4 @@ Procedure
 
 #. Refer to "Updating Image Information" in the *Image Management Service API Reference* for details about the request response parameters.
 
-   For details about status codes for request exceptions, see :ref:`Status Codes <en-us_topic_0124290300>`.
+   For details about status codes for request errors, see :ref:`Status Codes <en-us_topic_0124290300>`.

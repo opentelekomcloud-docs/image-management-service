@@ -47,7 +47,7 @@ Procedure
         "image_url": "ims-image:centos70.qcow2",  //Image file address (mandatory, string)
         "os_version": "CentOS 7.0 64bit",  //OS version (optional, string)
         "is_config_init":true,  //Initialized or not (optional, boolean)
-        "min_disk": 40,  //Minimum system disk space (mandatory, integer)
+        "min_disk": 40,  //Minimum system disk size (mandatory, integer)
         "is_config":true,  //Whether to enable automatic configuration (optional, boolean)
         "tags": [
                   "aaa.111",
@@ -67,6 +67,6 @@ Procedure
 
    If the job status is **SUCCESS**, the private image is successfully created.
 
-   For details about status codes for request exceptions, see :ref:`Status Codes <en-us_topic_0124290300>`.
+   For details about status codes for request errors, see :ref:`Status Codes <en-us_topic_0124290300>`.
 
 #. Obtain the image ID from the job body. You can query for image details based on the image ID. For details, see :ref:`Queries Details About an Image <en-us_topic_0109822404>`.
