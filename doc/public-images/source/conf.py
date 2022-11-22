@@ -81,7 +81,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Image Management Service - API Reference"
+html_title = "Image Management Service - Public Image Introduction"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -92,7 +92,7 @@ html_static_path = ['_static']
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'ims-api-ref.tex',
-     u'Image Management Service - API Reference',
+     'ims-public-images.tex',
+     u'Image Management Service - Public Image Introduction',
      u'OpenTelekomCloud', 'manual'),
 ]
