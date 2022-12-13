@@ -12,7 +12,7 @@ A Windows or Linux ECS can be used to create a private image.
 
 .. note::
 
-   -  Before creating the image, ensure that the ECS is stopped.
+   -  Before creating an image, ensure that the ECS is stopped.
    -  The token obtained from Identity and Access Management (IAM) is valid for only 24 hours. If you want to use a token for authentication, you can cache it to avoid frequently calling the IAM API.
 
 Involved APIs
@@ -59,6 +59,6 @@ Procedure
 
    If the job status is **SUCCESS**, the private image is successfully created.
 
-   For details about status codes for request exceptions, see :ref:`Status Codes <en-us_topic_0124290300>`.
+   For details about status codes for request errors, see :ref:`Status Codes <en-us_topic_0124290300>`.
 
 6. Obtain the image ID from the job body and query, delete, and export the private image using the image ID.
