@@ -9,4 +9,4 @@ This document describes how to make calls to APIs designed for Image Management 
 
 .. note::
 
-   For how to call APIs, see the *Image Management Service API Reference*.
+   For how to call APIs, see `Image Management Service API Reference <https://docs.otc.t-systems.com/en-us/api/ims/en-us_topic_0020507759.html>`__.

@@ -41,12 +41,12 @@ Procedure
    .. code-block::
 
       {
-          "status": "accepted",  //Sharing status (accepted indicates that the shared image will be accepted.)
+          "status": "accepted",  //Sharing status (value: accepted or rejected)
           "created_at": "2016-09-01T02:05:14Z",  //Time when the image is shared
-          "updated_at": "2016-09-01T02:37:11Z",  //Time when the image is updated
+          "updated_at": "2016-09-01T02:37:11Z",  //Time when the image status is updated
           "image_id": "d164b5df-1bc3-4c3f-893e-3e471fd16e64",  //Image ID
           "member_id": "edc89b490d7d4392898e19b2deb34797"  //Member ID (that is, project ID of the image recipient)
           "schema": "/v2/schemas/member"  //Image sharing schema
       }
 
-   For details about status codes for request exceptions, see :ref:`Status Codes <en-us_topic_0124290300>`.
+   For details about status codes for request errors, see :ref:`Status Codes <en-us_topic_0124290300>`.

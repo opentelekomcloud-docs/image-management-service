@@ -38,4 +38,4 @@ Procedure
 
    If the request is successful, status code 204 is returned.
 
-   For details about status codes for request exceptions, see :ref:`Status Codes <en-us_topic_0124290300>`.
+   For details about status codes for request errors, see :ref:`Status Codes <en-us_topic_0124290300>`.
