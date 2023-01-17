@@ -104,16 +104,20 @@ As part of that we recently migrated to new debmirrors (and also
 vendordata servers => required at the first boot of an ECS/BMS server)
 in a different IP address range.
 
-!! Currently there are two ip address blocks, which contain OTC
-services: 100.64.0.0/10 and 198.19.0.0/16. **Whitelisting** both blocks
-is sufficient for the foreseeable future, since we do not plan to use
-any addresses outside these ranges. Please do not whitelist single ip
-addresses out of these ranges, because it is possible that we migrate to
-different ip addresses within these ranges without any prior warning.
+.. warning::
 
-!! Also please note that the other package repositories (rhui, smt,
-wsus/kms) and the Nvidia licence servers are destined to be migrated to
-the 198.19.0.0/16 range.
+   Currently there are two ip address blocks, which contain OTC
+   services: 100.64.0.0/10 and 198.19.0.0/16. **Whitelisting** both blocks
+   is sufficient for the foreseeable future, since we do not plan to use
+   any addresses outside these ranges. Please do not whitelist single ip
+   addresses out of these ranges, because it is possible that we migrate to
+   different ip addresses within these ranges without any prior warning.
+
+.. warning::
+
+   Also please note that the other package repositories (rhui, smt,
+   wsus/kms) and the Nvidia licence servers are destined to be migrated to
+   the 198.19.0.0/16 range.
 
 Image types and naming convention
 ---------------------------------
