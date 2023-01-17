@@ -312,652 +312,237 @@ endpoint names.
 
     openstack endpoint list -f json | jq 'map( { service: ."Service Name" | ascii_downcase, region: .Region, endpoint: .URL}) | map(select(.region != null)) | unique_by({service, region, endpoint}) | sort_by(.service, .region)'
 
-+---------------------------+------------+---------------------------+
-| **service**               | **region** | **endpoint**              |
-+===========================+============+===========================+
-| anti-ddos                 | eu-de      | `https://antiddos.eu-     |
-|                           |            | de.otc.t-systems.com/v1/$ |
-|                           |            | (tenant_id)s <https://ant |
-|                           |            | iddos.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| anti-ddos                 | eu-nl      | `https://antiddos.eu-     |
-|                           |            | nl.otc.t-systems.com/v1/$ |
-|                           |            | (tenant_id)s <https://ant |
-|                           |            | iddos.eu-nl.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| antiddos                  | eu-de      | `https://antiddos.eu      |
-|                           |            | -de.otc.t-systems.com/v1/ |
-|                           |            |  <https://antiddos.eu-de. |
-|                           |            | otc.t-systems.com/v1/>`__ |
-+---------------------------+------------+---------------------------+
-| antiddos                  | eu-nl      | `https://antiddos.eu      |
-|                           |            | -nl.otc.t-systems.com/v1/ |
-|                           |            |  <https://antiddos.eu-nl. |
-|                           |            | otc.t-systems.com/v1/>`__ |
-+---------------------------+------------+---------------------------+
-| asv1                      | eu-de      | `https://as.eu-d          |
-|                           |            | e.otc.t-systems.com/autos |
-|                           |            | caling-api/v1/$(tenant_id |
-|                           |            | )s <https://as.eu-de.otc. |
-|                           |            | t-systems.com/autoscaling |
-|                           |            | -api/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| asv1                      | eu-nl      | `https://as.eu-n          |
-|                           |            | l.otc.t-systems.com/autos |
-|                           |            | caling-api/v1/$(tenant_id |
-|                           |            | )s <https://as.eu-nl.otc. |
-|                           |            | t-systems.com/autoscaling |
-|                           |            | -api/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| autoscaling               | eu-de      | `https://as.e             |
-|                           |            | u-de.otc.t-systems.com/au |
-|                           |            | toscaling-api/v1 <https:/ |
-|                           |            | /as.eu-de.otc.t-systems.c |
-|                           |            | om/autoscaling-api/v1>`__ |
-+---------------------------+------------+---------------------------+
-| autoscaling               | eu-nl      | `https://as.e             |
-|                           |            | u-nl.otc.t-systems.com/au |
-|                           |            | toscaling-api/v1 <https:/ |
-|                           |            | /as.eu-nl.otc.t-systems.c |
-|                           |            | om/autoscaling-api/v1>`__ |
-+---------------------------+------------+---------------------------+
-| bms                       | eu-de      | `https://bm               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //bms.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cbr                       | eu-de      | `https://cb               |
-|                           |            | r.eu-de.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //cbr.eu-de.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cbr                       | eu-nl      | `https://cb               |
-|                           |            | r.eu-nl.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //cbr.eu-nl.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ccev2.0                   | eu-de      | `h                        |
-|                           |            | ttps://cce.eu-de.otc.t-sy |
-|                           |            | stems.com <https://cce.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| ccev2.0                   | eu-nl      | `h                        |
-|                           |            | ttps://cce.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://cce.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| cesv1                     | eu-de      | `https://ces.eu           |
-|                           |            | -de.otc.t-systems.com/V1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | ces.eu-de.otc.t-systems.c |
-|                           |            | om/V1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cesv1                     | eu-nl      | `https://ces.eu           |
-|                           |            | -nl.otc.t-systems.com/V1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | ces.eu-nl.otc.t-systems.c |
-|                           |            | om/V1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cinder                    | eu-de      | `https://ev               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //evs.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cinder                    | eu-nl      | `https://ev               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //evs.eu-nl.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cinderv2                  | eu-de      | `https://ev               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //evs.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cinderv2                  | eu-nl      | `https://ev               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //evs.eu-nl.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cinderv3                  | eu-de      | `https://ev               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //evs.eu-de.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cinderv3                  | eu-nl      | `https://ev               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //evs.eu-nl.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cloudeye                  | eu-de      | `https://ces.e            |
-|                           |            | u-de.otc.t-systems.com/V1 |
-|                           |            | .0/ <https://ces.eu-de.ot |
-|                           |            | c.t-systems.com/V1.0/>`__ |
-+---------------------------+------------+---------------------------+
-| cloudeye                  | eu-nl      | `https://ces.e            |
-|                           |            | u-nl.otc.t-systems.com/V1 |
-|                           |            | .0/ <https://ces.eu-nl.ot |
-|                           |            | c.t-systems.com/V1.0/>`__ |
-+---------------------------+------------+---------------------------+
-| containerengine           | eu-de      | `https://cce.eu-          |
-|                           |            | de.otc.t-systems.com/api/ |
-|                           |            | v1 <https://cce.eu-de.otc |
-|                           |            | .t-systems.com/api/v1>`__ |
-+---------------------------+------------+---------------------------+
-| containerengine           | eu-nl      | `https://cce.eu-          |
-|                           |            | nl.otc.t-systems.com/api/ |
-|                           |            | v1 <https://cce.eu-nl.otc |
-|                           |            | .t-systems.com/api/v1>`__ |
-+---------------------------+------------+---------------------------+
-| css                       | eu-de      | `https://css.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | css.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| css                       | eu-nl      | `https://css.eu           |
-|                           |            | -nl.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | css.eu-nl.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cts                       | eu-de      | `https://cts.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | cts.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| cts                       | eu-nl      | `https://cts.eu           |
-|                           |            | -nl.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | cts.eu-nl.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ctsv2                     | eu-de      | `https://cts.eu           |
-|                           |            | -de.otc.t-systems.com/v2. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | cts.eu-de.otc.t-systems.c |
-|                           |            | om/v2.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ctsv2                     | eu-nl      | `https://cts.eu           |
-|                           |            | -nl.otc.t-systems.com/v2. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | cts.eu-nl.otc.t-systems.c |
-|                           |            | om/v2.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| data ingestion service    | eu-de      | `h                        |
-|                           |            | ttps://dis.eu-de.otc.t-sy |
-|                           |            | stems.com <https://dis.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| datawarehouseservice      | eu-de      | `h                        |
-|                           |            | ttps://dws.eu-de.otc.t-sy |
-|                           |            | stems.com <https://dws.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| dcsv1                     | eu-de      | `https://dcs.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | dcs.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| dcsv1                     | eu-nl      | `https://dcs.eu           |
-|                           |            | -nl.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | dcs.eu-nl.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ddsv3                     | eu-de      | `https://dd               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //dds.eu-de.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ddsv3                     | eu-nl      | `https://dd               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //dds.eu-nl.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| deh                       | eu-de      | `https://deh.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | deh.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| deh                       | eu-nl      | `https://deh.eu           |
-|                           |            | -nl.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | deh.eu-nl.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| designate                 | eu-de      | `h                        |
-|                           |            | ttps://dns.eu-de.otc.t-sy |
-|                           |            | stems.com <https://dns.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| designate                 | eu-nl      | `h                        |
-|                           |            | ttps://dns.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://dns.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| direct-connect            | eu-de      | `https://dcaas.e          |
-|                           |            | u-de.otc.t-systems.com/v2 |
-|                           |            | .0 <https://dcaas.eu-de.o |
-|                           |            | tc.t-systems.com/v2.0>`__ |
-+---------------------------+------------+---------------------------+
-| distributed cache service | eu-de      | `https://dcs.e            |
-|                           |            | u-de.otc.t-systems.com/v1 |
-|                           |            | .0/ <https://dcs.eu-de.ot |
-|                           |            | c.t-systems.com/v1.0/>`__ |
-+---------------------------+------------+---------------------------+
-| distributed cache service | eu-nl      | `https://dcs.e            |
-|                           |            | u-nl.otc.t-systems.com/v1 |
-|                           |            | .0/ <https://dcs.eu-nl.ot |
-|                           |            | c.t-systems.com/v1.0/>`__ |
-+---------------------------+------------+---------------------------+
-| distributedmessageservice | eu-de      | `https://dms              |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1.0 <https://dms.eu-de.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| distributedmessageservice | eu-nl      | `https://dms              |
-|                           |            | .eu-nl.otc.t-systems.com/ |
-|                           |            | v1.0 <https://dms.eu-nl.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| disv2                     | eu-de      | `https://di               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //dis.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| dmsv1                     | eu-de      | `https://dms.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | dms.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| dmsv1                     | eu-nl      | `https://dms.eu           |
-|                           |            | -nl.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | dms.eu-nl.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| dwsv1                     | eu-de      | `https://dws.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | dws.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ecs                       | eu-de      | `https://ec               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //ecs.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| ecs                       | eu-nl      | `https://ec               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //ecs.eu-nl.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| elbv1                     | eu-de      | `https://elb.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | elb.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| elbv3                     | eu-de      | `https://el               |
-|                           |            | b.eu-de.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //elb.eu-de.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| elbv3                     | eu-nl      | `https://el               |
-|                           |            | b.eu-nl.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //elb.eu-nl.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| evs                       | eu-de      | `https://ev               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //evs.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| evs                       | eu-nl      | `https://ev               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //evs.eu-nl.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| glance                    | eu-de      | `h                        |
-|                           |            | ttps://ims.eu-de.otc.t-sy |
-|                           |            | stems.com <https://ims.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| glance                    | eu-nl      | `h                        |
-|                           |            | ttps://ims.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://ims.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| heat                      | eu-de      | `https://rt               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //rts.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| heat                      | eu-nl      | `https://rt               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //rts.eu-nl.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| karbor                    | eu-de      | `https://csbs             |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1/$(tenant_id)s <https:/ |
-|                           |            | /csbs.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| key-management            | eu-de      | `https://kms.e            |
-|                           |            | u-de.otc.t-systems.com/v1 |
-|                           |            | .0/ <https://kms.eu-de.ot |
-|                           |            | c.t-systems.com/v1.0/>`__ |
-+---------------------------+------------+---------------------------+
-| key-management            | eu-nl      | `https://kms.e            |
-|                           |            | u-nl.otc.t-systems.com/v1 |
-|                           |            | .0/ <https://kms.eu-nl.ot |
-|                           |            | c.t-systems.com/v1.0/>`__ |
-+---------------------------+------------+---------------------------+
-| keystone                  | eu-de      | `https:/                  |
-|                           |            | /iam.eu-de.otc.t-systems. |
-|                           |            | com/v3 <https://iam.eu-de |
-|                           |            | .otc.t-systems.com/v3>`__ |
-+---------------------------+------------+---------------------------+
-| keystone                  | eu-nl      | `https:/                  |
-|                           |            | /iam.eu-nl.otc.t-systems. |
-|                           |            | com/v3 <https://iam.eu-nl |
-|                           |            | .otc.t-systems.com/v3>`__ |
-+---------------------------+------------+---------------------------+
-| kmsv1                     | eu-de      | `https://kms.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | kms.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| kmsv1                     | eu-nl      | `https://kms.eu           |
-|                           |            | -nl.otc.t-systems.com/v1. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | kms.eu-nl.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| loadbalance               | eu-de      | `https://elb              |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1.0 <https://elb.eu-de.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| loadbalance               | eu-nl      | `h                        |
-|                           |            | ttps://elb.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://elb.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| manilav2                  | eu-de      | `https://sf               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //sfs.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| manilav2                  | eu-nl      | `https://sf               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //sfs.eu-nl.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| mapreduce                 | eu-de      | `https://mrs              |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1.1 <https://mrs.eu-de.o |
-|                           |            | tc.t-systems.com/v1.1>`__ |
-+---------------------------+------------+---------------------------+
-| modelarts                 | eu-de      | `https://modelarts.eu-d   |
-|                           |            | e.otc.t-systems.com/v1/$( |
-|                           |            | tenant_id)s <https://mode |
-|                           |            | larts.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| modelarts                 | eu-de      | `https://modelarts.eu-d   |
-|                           |            | e.otc.t-systems.com/v2/$( |
-|                           |            | tenant_id)s <https://mode |
-|                           |            | larts.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| mrsv1                     | eu-de      | `https://mrs.eu           |
-|                           |            | -de.otc.t-systems.com/v1. |
-|                           |            | 1/$(tenant_id)s <https:// |
-|                           |            | mrs.eu-de.otc.t-systems.c |
-|                           |            | om/v1.1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| nat                       | eu-de      | `https://nat              |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v2.0 <https://nat.eu-de.o |
-|                           |            | tc.t-systems.com/v2.0>`__ |
-+---------------------------+------------+---------------------------+
-| nat                       | eu-nl      | `https://nat              |
-|                           |            | .eu-nl.otc.t-systems.com/ |
-|                           |            | v2.0 <https://nat.eu-nl.o |
-|                           |            | tc.t-systems.com/v2.0>`__ |
-+---------------------------+------------+---------------------------+
-| neutron                   | eu-de      | `h                        |
-|                           |            | ttps://vpc.eu-de.otc.t-sy |
-|                           |            | stems.com <https://vpc.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| neutron                   | eu-nl      | `h                        |
-|                           |            | ttps://vpc.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://vpc.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| nova                      | eu-de      | `https://ecs.eu           |
-|                           |            | -de.otc.t-systems.com/v2. |
-|                           |            | 1/$(tenant_id)s <https:// |
-|                           |            | ecs.eu-de.otc.t-systems.c |
-|                           |            | om/v2.1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| nova                      | eu-nl      | `https://ecs.eu           |
-|                           |            | -nl.otc.t-systems.com/v2. |
-|                           |            | 1/$(tenant_id)s <https:// |
-|                           |            | ecs.eu-nl.otc.t-systems.c |
-|                           |            | om/v2.1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| objectstorage             | eu-de      | `h                        |
-|                           |            | ttps://obs.eu-de.otc.t-sy |
-|                           |            | stems.com <https://obs.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| objectstorage             | eu-nl      | `h                        |
-|                           |            | ttps://obs.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://obs.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| octavia                   | eu-nl      | `https://o                |
-|                           |            | ctavia.eu-nl.otc.t-system |
-|                           |            | s.com <https://octavia.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| rdsv1                     | eu-de      | `https://rds.eu-de.       |
-|                           |            | otc.t-systems.com/rds/v1/ |
-|                           |            | $(tenant_id)s <https://rd |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /rds/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| rdsv1                     | eu-nl      | `https://rds.eu-nl.       |
-|                           |            | otc.t-systems.com/rds/v1/ |
-|                           |            | $(tenant_id)s <https://rd |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /rds/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| rdsv3                     | eu-de      | `https://rd               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //rds.eu-de.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| rdsv3                     | eu-nl      | `https://rd               |
-|                           |            | s.eu-nl.otc.t-systems.com |
-|                           |            | /v3/$(tenant_id)s <https: |
-|                           |            | //rds.eu-nl.otc.t-systems |
-|                           |            | .com/v3/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| relationaldatabase        | eu-de      | `https://rds.eu-          |
-|                           |            | de.otc.t-systems.com/rds/ |
-|                           |            | v1 <https://rds.eu-de.otc |
-|                           |            | .t-systems.com/rds/v1>`__ |
-+---------------------------+------------+---------------------------+
-| relationaldatabase        | eu-nl      | `https://rds.eu-          |
-|                           |            | nl.otc.t-systems.com/rds/ |
-|                           |            | v1 <https://rds.eu-nl.otc |
-|                           |            | .t-systems.com/rds/v1>`__ |
-+---------------------------+------------+---------------------------+
-| sdrs                      | eu-de      | `https://sdrs             |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1/$(tenant_id)s <https:/ |
-|                           |            | /sdrs.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| sfs                       | eu-de      | `https://sf               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //sfs.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| sfsturbo                  | eu-de      | `https://sfs-turbo.eu-d   |
-|                           |            | e.otc.t-systems.com/v1/$( |
-|                           |            | tenant_id)s <https://sfs- |
-|                           |            | turbo.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| sfsturbo                  | eu-nl      | `https://sfs-turbo.eu-n   |
-|                           |            | l.otc.t-systems.com/v1/$( |
-|                           |            | tenant_id)s <https://sfs- |
-|                           |            | turbo.eu-nl.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| simplemessagenotification | eu-de      | `https://s                |
-|                           |            | mn.eu-de.otc.t-systems.co |
-|                           |            | m/v2/ <https://smn.eu-de. |
-|                           |            | otc.t-systems.com/v2/>`__ |
-+---------------------------+------------+---------------------------+
-| simplemessagenotification | eu-nl      | `https://s                |
-|                           |            | mn.eu-nl.otc.t-systems.co |
-|                           |            | m/v2/ <https://smn.eu-nl. |
-|                           |            | otc.t-systems.com/v2/>`__ |
-+---------------------------+------------+---------------------------+
-| smnv2                     | eu-de      | `https://sm               |
-|                           |            | n.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //smn.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| smnv2                     | eu-nl      | `https://sm               |
-|                           |            | n.eu-nl.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //smn.eu-nl.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| swift                     | eu-de      | `https://swift.eu-de.otc. |
-|                           |            | t-systems.com/v1/AUTH_$(t |
-|                           |            | enant_id)s <https://swift |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1/AUTH_$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| tag-management            | eu-de      | `https://tms              |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1.0 <https://tms.eu-de.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| tag-management            | eu-nl      | `https://tms              |
-|                           |            | .eu-nl.otc.t-systems.com/ |
-|                           |            | v1.0 <https://tms.eu-nl.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| trove                     | eu-de      | `https://rds              |
-|                           |            | .eu-de.otc.t-systems.com/ |
-|                           |            | v1.0 <https://rds.eu-de.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| trove                     | eu-nl      | `https://rds              |
-|                           |            | .eu-nl.otc.t-systems.com/ |
-|                           |            | v1.0 <https://rds.eu-nl.o |
-|                           |            | tc.t-systems.com/v1.0>`__ |
-+---------------------------+------------+---------------------------+
-| vbsv2                     | eu-de      | `https://vb               |
-|                           |            | s.eu-de.otc.t-systems.com |
-|                           |            | /v2/$(tenant_id)s <https: |
-|                           |            | //vbs.eu-de.otc.t-systems |
-|                           |            | .com/v2/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| volume-backup             | eu-de      | `https://v                |
-|                           |            | bs.eu-de.otc.t-systems.co |
-|                           |            | m/v2/ <https://vbs.eu-de. |
-|                           |            | otc.t-systems.com/v2/>`__ |
-+---------------------------+------------+---------------------------+
-| vpc                       | eu-de      | `https://vp               |
-|                           |            | c.eu-de.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //vpc.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| vpc                       | eu-nl      | `https://vp               |
-|                           |            | c.eu-nl.otc.t-systems.com |
-|                           |            | /v1/$(tenant_id)s <https: |
-|                           |            | //vpc.eu-nl.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| vpc2.0                    | eu-de      | `https://vpc.eu           |
-|                           |            | -de.otc.t-systems.com/v2. |
-|                           |            | 0/$(tenant_id)s <https:// |
-|                           |            | vpc.eu-de.otc.t-systems.c |
-|                           |            | om/v2.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| vpcep                     | eu-de      | `https://vpcep.           |
-|                           |            | eu-de.otc.t-systems.com/v |
-|                           |            | 1/$(tenant_id)s <https:// |
-|                           |            | vpcep.eu-de.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| vpcep                     | eu-nl      | `https://vpcep.           |
-|                           |            | eu-nl.otc.t-systems.com/v |
-|                           |            | 1/$(tenant_id)s <https:// |
-|                           |            | vpcep.eu-nl.otc.t-systems |
-|                           |            | .com/v1/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
-| waf                       | eu-de      | `h                        |
-|                           |            | ttps://waf.eu-de.otc.t-sy |
-|                           |            | stems.com <https://waf.eu |
-|                           |            | -de.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| waf                       | eu-nl      | `h                        |
-|                           |            | ttps://waf.eu-nl.otc.t-sy |
-|                           |            | stems.com <https://waf.eu |
-|                           |            | -nl.otc.t-systems.com>`__ |
-+---------------------------+------------+---------------------------+
-| workspace                 | eu-de      | `h                        |
-|                           |            | ttps://workspace.eu-de.ot |
-|                           |            | c.t-systems.com/v1.0/$(te |
-|                           |            | nant_id)s <https://worksp |
-|                           |            | ace.eu-de.otc.t-systems.c |
-|                           |            | om/v1.0/$(tenant_id)s>`__ |
-+---------------------------+------------+---------------------------+
++----------------------------+---------+----------------------------------------------------------------------+
+| service                    | region  | endpoint                                                             |
++============================+=========+======================================================================+
+| anti-ddos                  | eu-de   | https://antiddos.eu-de.otc.t-systems.com/v1/$(tenant_id)s            |
++----------------------------+---------+----------------------------------------------------------------------+
+| anti-ddos                  | eu-nl   | https://antiddos.eu-nl.otc.t-systems.com/v1/$(tenant_id)s            |
++----------------------------+---------+----------------------------------------------------------------------+
+| antiddos                   | eu-de   | https://antiddos.eu-de.otc.t-systems.com/v1/                         |
++----------------------------+---------+----------------------------------------------------------------------+
+| antiddos                   | eu-nl   | https://antiddos.eu-nl.otc.t-systems.com/v1/                         |
++----------------------------+---------+----------------------------------------------------------------------+
+| asv1                       | eu-de   | https://as.eu-de.otc.t-systems.com/autoscaling-api/v1/$(tenant_id)s  |
++----------------------------+---------+----------------------------------------------------------------------+
+| asv1                       | eu-nl   | https://as.eu-nl.otc.t-systems.com/autoscaling-api/v1/$(tenant_id)s  |
++----------------------------+---------+----------------------------------------------------------------------+
+| autoscaling                | eu-de   | https://as.eu-de.otc.t-systems.com/autoscaling-api/v1                |
++----------------------------+---------+----------------------------------------------------------------------+
+| autoscaling                | eu-nl   | https://as.eu-nl.otc.t-systems.com/autoscaling-api/v1                |
++----------------------------+---------+----------------------------------------------------------------------+
+| bms                        | eu-de   | https://bms.eu-de.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cbr                        | eu-de   | https://cbr.eu-de.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cbr                        | eu-nl   | https://cbr.eu-nl.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| ccev2.0                    | eu-de   | https://cce.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| ccev2.0                    | eu-nl   | https://cce.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| cesv1                      | eu-de   | https://ces.eu-de.otc.t-systems.com/V1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| cesv1                      | eu-nl   | https://ces.eu-nl.otc.t-systems.com/V1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| cinder                     | eu-de   | https://evs.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cinder                     | eu-nl   | https://evs.eu-nl.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cinderv2                   | eu-de   | https://evs.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cinderv2                   | eu-nl   | https://evs.eu-nl.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cinderv3                   | eu-de   | https://evs.eu-de.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cinderv3                   | eu-nl   | https://evs.eu-nl.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| cloudeye                   | eu-de   | https://ces.eu-de.otc.t-systems.com/V1.0/                            |
++----------------------------+---------+----------------------------------------------------------------------+
+| cloudeye                   | eu-nl   | https://ces.eu-nl.otc.t-systems.com/V1.0/                            |
++----------------------------+---------+----------------------------------------------------------------------+
+| containerengine            | eu-de   | https://cce.eu-de.otc.t-systems.com/api/v1                           |
++----------------------------+---------+----------------------------------------------------------------------+
+| containerengine            | eu-nl   | https://cce.eu-nl.otc.t-systems.com/api/v1                           |
++----------------------------+---------+----------------------------------------------------------------------+
+| css                        | eu-de   | https://css.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| css                        | eu-nl   | https://css.eu-nl.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| cts                        | eu-de   | https://cts.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| cts                        | eu-nl   | https://cts.eu-nl.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| ctsv2                      | eu-de   | https://cts.eu-de.otc.t-systems.com/v2.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| ctsv2                      | eu-nl   | https://cts.eu-nl.otc.t-systems.com/v2.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| data ingestion service     | eu-de   | https://dis.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| datawarehouseservice       | eu-de   | https://dws.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| dcsv1                      | eu-de   | https://dcs.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| dcsv1                      | eu-nl   | https://dcs.eu-nl.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| ddsv3                      | eu-de   | https://dds.eu-de.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| ddsv3                      | eu-nl   | https://dds.eu-nl.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| deh                        | eu-de   | https://deh.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| deh                        | eu-nl   | https://deh.eu-nl.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| designate                  | eu-de   | https://dns.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| designate                  | eu-nl   | https://dns.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| direct-connect             | eu-de   | https://dcaas.eu-de.otc.t-systems.com/v2.0                           |
++----------------------------+---------+----------------------------------------------------------------------+
+| distributed cache service  | eu-de   | https://dcs.eu-de.otc.t-systems.com/v1.0/                            |
++----------------------------+---------+----------------------------------------------------------------------+
+| distributed cache service  | eu-nl   | https://dcs.eu-nl.otc.t-systems.com/v1.0/                            |
++----------------------------+---------+----------------------------------------------------------------------+
+| distributedmessageservice  | eu-de   | https://dms.eu-de.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| distributedmessageservice  | eu-nl   | https://dms.eu-nl.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| disv2                      | eu-de   | https://dis.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| dmsv1                      | eu-de   | https://dms.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| dmsv1                      | eu-nl   | https://dms.eu-nl.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| dwsv1                      | eu-de   | https://dws.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| ecs                        | eu-de   | https://ecs.eu-de.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| ecs                        | eu-nl   | https://ecs.eu-nl.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| elbv1                      | eu-de   | https://elb.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| elbv3                      | eu-de   | https://elb.eu-de.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| elbv3                      | eu-nl   | https://elb.eu-nl.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| evs                        | eu-de   | https://evs.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| evs                        | eu-nl   | https://evs.eu-nl.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| glance                     | eu-de   | https://ims.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| glance                     | eu-nl   | https://ims.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| heat                       | eu-de   | https://rts.eu-de.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| heat                       | eu-nl   | https://rts.eu-nl.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| karbor                     | eu-de   | https://csbs.eu-de.otc.t-systems.com/v1/$(tenant_id)s                |
++----------------------------+---------+----------------------------------------------------------------------+
+| key-management             | eu-de   | https://kms.eu-de.otc.t-systems.com/v1.0/                            |
++----------------------------+---------+----------------------------------------------------------------------+
+| key-management             | eu-nl   | https://kms.eu-nl.otc.t-systems.com/v1.0/                            |
++----------------------------+---------+----------------------------------------------------------------------+
+| keystone                   | eu-de   | https://iam.eu-de.otc.t-systems.com/v3                               |
++----------------------------+---------+----------------------------------------------------------------------+
+| keystone                   | eu-nl   | https://iam.eu-nl.otc.t-systems.com/v3                               |
++----------------------------+---------+----------------------------------------------------------------------+
+| kmsv1                      | eu-de   | https://kms.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| kmsv1                      | eu-nl   | https://kms.eu-nl.otc.t-systems.com/v1.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| loadbalance                | eu-de   | https://elb.eu-de.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| loadbalance                | eu-nl   | https://elb.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| manilav2                   | eu-de   | https://sfs.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| manilav2                   | eu-nl   | https://sfs.eu-nl.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| mapreduce                  | eu-de   | https://mrs.eu-de.otc.t-systems.com/v1.1                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| modelarts                  | eu-de   | https://modelarts.eu-de.otc.t-systems.com/v1/$(tenant_id)s           |
++----------------------------+---------+----------------------------------------------------------------------+
+| modelarts                  | eu-de   | https://modelarts.eu-de.otc.t-systems.com/v2/$(tenant_id)s           |
++----------------------------+---------+----------------------------------------------------------------------+
+| mrsv1                      | eu-de   | https://mrs.eu-de.otc.t-systems.com/v1.1/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| nat                        | eu-de   | https://nat.eu-de.otc.t-systems.com/v2.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| nat                        | eu-nl   | https://nat.eu-nl.otc.t-systems.com/v2.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| neutron                    | eu-de   | https://vpc.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| neutron                    | eu-nl   | https://vpc.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| nova                       | eu-de   | https://ecs.eu-de.otc.t-systems.com/v2.1/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| nova                       | eu-nl   | https://ecs.eu-nl.otc.t-systems.com/v2.1/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| objectstorage              | eu-de   | https://obs.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| objectstorage              | eu-nl   | https://obs.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| octavia                    | eu-nl   | https://octavia.eu-nl.otc.t-systems.com                              |
++----------------------------+---------+----------------------------------------------------------------------+
+| rdsv1                      | eu-de   | https://rds.eu-de.otc.t-systems.com/rds/v1/$(tenant_id)s             |
++----------------------------+---------+----------------------------------------------------------------------+
+| rdsv1                      | eu-nl   | https://rds.eu-nl.otc.t-systems.com/rds/v1/$(tenant_id)s             |
++----------------------------+---------+----------------------------------------------------------------------+
+| rdsv3                      | eu-de   | https://rds.eu-de.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| rdsv3                      | eu-nl   | https://rds.eu-nl.otc.t-systems.com/v3/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| relationaldatabase         | eu-de   | https://rds.eu-de.otc.t-systems.com/rds/v1                           |
++----------------------------+---------+----------------------------------------------------------------------+
+| relationaldatabase         | eu-nl   | https://rds.eu-nl.otc.t-systems.com/rds/v1                           |
++----------------------------+---------+----------------------------------------------------------------------+
+| sdrs                       | eu-de   | https://sdrs.eu-de.otc.t-systems.com/v1/$(tenant_id)s                |
++----------------------------+---------+----------------------------------------------------------------------+
+| sfs                        | eu-de   | https://sfs.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| sfsturbo                   | eu-de   | https://sfs-turbo.eu-de.otc.t-systems.com/v1/$(tenant_id)s           |
++----------------------------+---------+----------------------------------------------------------------------+
+| sfsturbo                   | eu-nl   | https://sfs-turbo.eu-nl.otc.t-systems.com/v1/$(tenant_id)s           |
++----------------------------+---------+----------------------------------------------------------------------+
+| simplemessagenotification  | eu-de   | https://smn.eu-de.otc.t-systems.com/v2/                              |
++----------------------------+---------+----------------------------------------------------------------------+
+| simplemessagenotification  | eu-nl   | https://smn.eu-nl.otc.t-systems.com/v2/                              |
++----------------------------+---------+----------------------------------------------------------------------+
+| smnv2                      | eu-de   | https://smn.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| smnv2                      | eu-nl   | https://smn.eu-nl.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| swift                      | eu-de   | https://swift.eu-de.otc.t-systems.com/v1/AUTH_$(tenant_id)s          |
++----------------------------+---------+----------------------------------------------------------------------+
+| tag-management             | eu-de   | https://tms.eu-de.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| tag-management             | eu-nl   | https://tms.eu-nl.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| trove                      | eu-de   | https://rds.eu-de.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| trove                      | eu-nl   | https://rds.eu-nl.otc.t-systems.com/v1.0                             |
++----------------------------+---------+----------------------------------------------------------------------+
+| vbsv2                      | eu-de   | https://vbs.eu-de.otc.t-systems.com/v2/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| volume-backup              | eu-de   | https://vbs.eu-de.otc.t-systems.com/v2/                              |
++----------------------------+---------+----------------------------------------------------------------------+
+| vpc                        | eu-de   | https://vpc.eu-de.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| vpc                        | eu-nl   | https://vpc.eu-nl.otc.t-systems.com/v1/$(tenant_id)s                 |
++----------------------------+---------+----------------------------------------------------------------------+
+| vpc2.0                     | eu-de   | https://vpc.eu-de.otc.t-systems.com/v2.0/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| vpcep                      | eu-de   | https://vpcep.eu-de.otc.t-systems.com/v1/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| vpcep                      | eu-nl   | https://vpcep.eu-nl.otc.t-systems.com/v1/$(tenant_id)s               |
++----------------------------+---------+----------------------------------------------------------------------+
+| waf                        | eu-de   | https://waf.eu-de.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| waf                        | eu-nl   | https://waf.eu-nl.otc.t-systems.com                                  |
++----------------------------+---------+----------------------------------------------------------------------+
+| workspace                  | eu-de   | https://workspace.eu-de.otc.t-systems.com/v1.0/$(tenant_id)s         |
++----------------------------+---------+----------------------------------------------------------------------+
 
 We again recommend to not hardcode the IP addresses as we do reserve the
 right to change them.
