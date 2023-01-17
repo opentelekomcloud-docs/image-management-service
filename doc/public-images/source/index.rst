@@ -54,49 +54,49 @@ without the need for an external IP address (EIP / Floating-IP).
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
 | IP                   | DNS Name                            | Type of Service              | Notes                                                                    |
 +======================+=====================================+==============================+==========================================================================+
-| **100.125.4.25**     |                                     | DNS                          | HA Setup                                                                 |
+| 100.125.4.25         |                                     | DNS                          | HA Setup                                                                 |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.129.199**  |                                     | DNS                          | HA Setup                                                                 |
+| 100.125.129.199      |                                     | DNS                          | HA Setup                                                                 |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.4.28**     | ntp01.eu-de.otc-service.com         | NTP                          | AZ1                                                                      |
+| 100.125.4.28         | ntp01.eu-de.otc-service.com         | NTP                          | AZ1                                                                      |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.4.29**     | ntp02.eu-de.otc-service.com         | NTP                          | AZ2                                                                      |
+| 100.125.4.29         | ntp02.eu-de.otc-service.com         | NTP                          | AZ2                                                                      |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.0.15**     | ntp01.eu-nl.otc-service.com         | NTP                          | AZ1                                                                      |
+| 100.125.0.15         | ntp01.eu-nl.otc-service.com         | NTP                          | AZ1                                                                      |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.0.16**     | ntp02.eu-nl.otc-service.com         | NTP                          | AZ2                                                                      |
+| 100.125.0.16         | ntp02.eu-nl.otc-service.com         | NTP                          | AZ2                                                                      |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.33.237**    | vendordata.eu-de.otc-service.com    | Vendordata OpenStack (HTTP)  | first boot provisioning                                                  |
+| 198.19.33.237        | vendordata.eu-de.otc-service.com    | Vendordata OpenStack (HTTP)  | first boot provisioning                                                  |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.10**     | vendordata.eu-nl.otc-service.com    | Vendordata OpenStack (HTTP)  | first boot provisioning                                                  |
+| 100.125.1.10         | vendordata.eu-nl.otc-service.com    | Vendordata OpenStack (HTTP)  | first boot provisioning                                                  |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.4.20**     | smt.eu-de.otc-service.com           | Repo (HTTP)                  | openSUSE, SLES, EulerOS, OpenEuler, CentOS, Oracle, Fedora, Alma, Rocky  |
+| 100.125.4.20         | smt.eu-de.otc-service.com           | Repo (HTTP)                  | openSUSE, SLES, EulerOS, OpenEuler, CentOS, Oracle, Fedora, Alma, Rocky  |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.15**     | smt.eu-nl.otc-service.com           | Repo (HTTP)                  | openSUSE, SLES, EulerOS, OpenEuler, CentOS, Oracle, Fedora, Alma, Rocky  |
+| 100.125.1.15         | smt.eu-nl.otc-service.com           | Repo (HTTP)                  | openSUSE, SLES, EulerOS, OpenEuler, CentOS, Oracle, Fedora, Alma, Rocky  |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.61.228**    | debmirror.eu-de.otc-service.com     | Repo (HTTP)                  | Debian, Ubuntu                                                           |
+| 198.19.61.228        | debmirror.eu-de.otc-service.com     | Repo (HTTP)                  | Debian, Ubuntu                                                           |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.11**     | debmirror.eu-nl.otc-service.com     | Repo (HTTP)                  | Debian, Ubuntu                                                           |
+| 100.125.1.11         | debmirror.eu-nl.otc-service.com     | Repo (HTTP)                  | Debian, Ubuntu                                                           |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.41.19**     | rhui.eu-de.otc-service.com          | RHUI (HTTPS)                 | RedHat 6/7/8/9 Update Infra                                              |
+| 198.19.41.19         | rhui.eu-de.otc-service.com          | RHUI (HTTPS)                 | RedHat 6/7/8/9 Update Infra                                              |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.25**     | rhui.eu-nl.otc-service.com          | RHUI (HTTPS)                 | RedHat 6/7/8/9 Update Infra                                              |
+| 100.125.1.25         | rhui.eu-nl.otc-service.com          | RHUI (HTTPS)                 | RedHat 6/7/8/9 Update Infra                                              |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.55.230**    | kms.eu-de.otc-service.com           | KMS                          | Windows activation                                                       |
+| 198.19.55.230        | kms.eu-de.otc-service.com           | KMS                          | Windows activation                                                       |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.17**     | kms.eu-nl.otc-service.com           | KMS                          | Windows activation                                                       |
+| 100.125.1.17         | kms.eu-nl.otc-service.com           | KMS                          | Windows activation                                                       |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.35.231**    | wsus.eu-de.otc-service.com          | WSUS                         | Windows updates (WSUS)                                                   |
+| 198.19.35.231        | wsus.eu-de.otc-service.com          | WSUS                         | Windows updates (WSUS)                                                   |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.18**     | wsus.eu-nl.otc-service.com          | WSUS                         | Windows updates (WSUS)                                                   |
+| 100.125.1.18         | wsus.eu-nl.otc-service.com          | WSUS                         | Windows updates (WSUS)                                                   |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.34.77**     | gpulicence01.eu-de.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
+| 198.19.34.77         | gpulicence01.eu-de.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **198.19.44.221**    | gpulicence02.eu-de.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
+| 198.19.44.221        | gpulicence02.eu-de.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.27**     | gpulicence01.eu-nl.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
+| 100.125.1.27         | gpulicence01.eu-nl.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
-| **100.125.1.28**     | gpulicence02.eu-nl.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
+| 100.125.1.28         | gpulicence02.eu-nl.otc-service.com  | NLS                          | NVIDIA License Server                                                    |
 +----------------------+-------------------------------------+------------------------------+--------------------------------------------------------------------------+
 
 
@@ -229,9 +229,11 @@ stay up to date with updates; we highly recommend installing at least
 security updates regularly and promptly -- it is the single most
 important activity to keep your VMs secure.
 
-**Important: Do not override bootcmd in ``user_data`` nor disable
-``vendor_data`` if you need working update repositories in your VM
-created from public images in OTC!**
+.. note::
+
+   Important: Do not override bootcmd in ``user_data`` nor disable
+   ``vendor_data`` if you need working update repositories in your VM
+   created from public images in OTC!
 
 For BYOL VMs, it is the customers responsibility to ensure license
 compliance and to provide and configure working update repositories for
@@ -251,6 +253,7 @@ Windows
 ~~~~~~~
 
 Timezone: UTC +01:00 (Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna)
+
 Keyboard: English (United States) and German (Germany)
 
 .. _linux-1:
@@ -258,7 +261,9 @@ Keyboard: English (United States) and German (Germany)
 Linux
 ~~~~~
 
-Timezone: UTC Keyboard: en_US
+Timezone: UTC 
+
+Keyboard: en_US
 
 API Endpoints
 -------------
