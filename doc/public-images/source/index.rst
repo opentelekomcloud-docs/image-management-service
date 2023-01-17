@@ -3,7 +3,7 @@ Image Management Service - Public Image Introduction
 ====================================================
 
 Customer documentation for public images at OpenTelekomCloud
-===========================================================
+============================================================
 
 The Image Management Service (IMS) provides a mandatory Elastic Cloud
 Server (ECS) template and software, including at least OS, application
