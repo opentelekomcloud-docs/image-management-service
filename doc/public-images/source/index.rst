@@ -2,7 +2,7 @@
 Image Management Service - Public Image Introduction
 ====================================================
 
-Customer documentation for public image at OpenTelekomCloud
+Customer documentation for public images at OpenTelekomCloud
 ===========================================================
 
 The Image Management Service (IMS) provides a mandatory Elastic Cloud
@@ -116,7 +116,7 @@ in a different IP address range.
 .. warning::
 
    Also please note that the other package repositories (rhui, smt,
-   wsus/kms) and the Nvidia licence servers are destined to be migrated to
+   wsus/kms) and the Nvidia license servers are destined to be migrated to
    the 198.19.0.0/16 range.
 
 Image types and naming convention
