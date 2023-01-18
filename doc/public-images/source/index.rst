@@ -125,6 +125,15 @@ Image types and naming convention
 On the Open Telekom Cloud platform the following public images are
 provided.
 
+Preview/Beta
+~~~~~~~~~~~~
+
+These are free self-managed images, which have been build within the 
+T-Systems OTC Image Factory and not yet ready for GA. It is intended 
+to test the customer's requirements for later live operation and to 
+improve performance. They have received some general OTC related settings 
+and basic hardening.
+
 Community
 ~~~~~~~~~
 
@@ -166,6 +175,14 @@ REGULAR IMAGE BUILD FOR LINUX AND WINDOWS
 Self-managed images / User management / Login
 ---------------------------------------------
 
+Preview/Beta
+~~~~~~~~~~~~
+
+Password login: Only possible on the console. Default user is ``linux``.
+A random password is generated during ECS creation. The Password is
+shown on the noVNC console. SSH login: With default user ``linux``. For
+Ubuntu related images only SSH login with user ``ubuntu`` will work.
+
 .. _community-1:
 
 Community
@@ -181,7 +198,7 @@ Standard
 
 Password login: Only possible on the console. Default user is ``linux``.
 A random password is generated during ECS creation. The Password is
-shown on the noVNC console. SSH login: With default user ``linux`` For
+shown on the noVNC console. SSH login: With default user ``linux``. For
 Ubuntu images only SSH login with user ``ubuntu`` will work.
 
 Enterprise Linux
