@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411399145.html
+:original_name: en-us_topic_0066978722.html
 
-.. _en-us_topic_0000001411399145:
+.. _en-us_topic_0066978722:
 
 Deleting an Image (Native OpenStack API v1.1 - Abandoned and Not Recommended)
 =============================================================================
@@ -10,16 +10,16 @@ Function
 
 This API is used to delete an image. If you soft delete the image with a specified ID, the image persists in the database, but in the **deleted** status.
 
-This API has been discarded. :ref:`Deleting an Image (Native OpenStack API) <en-us_topic_0000001360879684>` is recommended.
+This API has been discarded. :ref:`Deleting an Image (Native OpenStack API) <en-us_topic_0020092108>` is recommended.
 
 URI
 ---
 
 DELETE /v1.1/images/{image_id}
 
-:ref:`Table 1 <en-us_topic_0000001411399145__table27262282>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0066978722__table27262282>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001411399145__table27262282:
+.. _en-us_topic_0066978722__table27262282:
 
 .. table:: **Table 1** Parameter description
 

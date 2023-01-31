@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411479433.html
+:original_name: en-us_topic_0020092110.html
 
-.. _en-us_topic_0000001411479433:
+.. _en-us_topic_0020092110:
 
 Image Tag Data Formats
 ======================

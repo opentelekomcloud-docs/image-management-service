@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411239237.html
+:original_name: en-us_topic_0031617666.html
 
-.. _en-us_topic_0000001411239237:
+.. _en-us_topic_0031617666:
 
 Values of Related Parameters
 ============================
@@ -16,6 +16,10 @@ Values of Related Parameters
    | Windows                           | Windows 10 64bit                          |
    |                                   |                                           |
    |                                   | Windows 7 Enterprise 64bit                |
+   |                                   |                                           |
+   |                                   | Windows 7 Professional 64bit              |
+   |                                   |                                           |
+   |                                   | Windows 7 Professional 32bit              |
    |                                   |                                           |
    |                                   | Windows Server 2016 Standard 64bit        |
    |                                   |                                           |
@@ -44,6 +48,8 @@ Values of Related Parameters
    |                                   | SUSE Linux Enterprise Server 15 64bit     |
    |                                   |                                           |
    |                                   | SUSE Linux Enterprise Server 12 SP5 64bit |
+   |                                   |                                           |
+   |                                   | SUSE Linux Enterprise Server 12 SP4 64bit |
    |                                   |                                           |
    |                                   | SUSE Linux Enterprise Server 12 SP3 64bit |
    |                                   |                                           |
@@ -217,6 +223,8 @@ Values of Related Parameters
    |                                   |                                           |
    |                                   | Debian GNU/Linux 9.0.0 64bit              |
    |                                   |                                           |
+   |                                   | Debian GNU/Linux 8.10.0 64bit             |
+   |                                   |                                           |
    |                                   | Debian GNU/Linux 8.8.0 64bit              |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 8.7.0 64bit              |
@@ -275,7 +283,7 @@ Values of Related Parameters
 \__support_xen_gpu_type Values
 ------------------------------
 
-.. _en-us_topic_0000001411239237__table65768383152758:
+.. _en-us_topic_0031617666__table65768383152758:
 
 .. table:: **Table 2** Supported GPU types
 
@@ -288,15 +296,13 @@ Values of Related Parameters
 \__support_kvm_gpu_type Values
 ------------------------------
 
-.. _en-us_topic_0000001411239237__table282523154017:
+.. _en-us_topic_0031617666__table282523154017:
 
 .. table:: **Table 3** Supported GPU types
 
    +----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Supported GPU (__support_kvm_gpu_type) | Description                                                                                                                                            |
    +========================================+========================================================================================================================================================+
-   | P4                                     | The image has a hardware virtualization driver with the P4 video card installed and supports **pi1.2xlarge.4** and **pi1.4xlarge.4** ECSs.             |
-   +----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
    | M60                                    | The image has a hardware virtualization drive with the M60 video card installed and supports **g1.xlarge**, **g1.2xlarge**, and **g3.4xlarge.4** ECSs. |
    +----------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
    | V100_vGPU                              | The image has a hardware virtualization drive with the V100 video card installed and supports **g5.8xlarge.4** ECSs.                                   |
@@ -311,7 +317,7 @@ Values of Related Parameters
 Special Images and Supported OSs
 --------------------------------
 
-.. _en-us_topic_0000001411239237__table48545918250:
+.. _en-us_topic_0031617666__table48545918250:
 
 .. table:: **Table 4** Special image types and supported OSs
 

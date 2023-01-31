@@ -1,12 +1,12 @@
-:original_name: en-us_topic_0000001411399153.html
+:original_name: en-us_topic_0170918587.html
 
-.. _en-us_topic_0000001411399153:
+.. _en-us_topic_0170918587:
 
 API Version Query (Native OpenStack API)
 ========================================
 
--  :ref:`Querying API Versions (Native OpenStack API) <en-us_topic_0000001411479461>`
--  :ref:`Querying an API Version (Native OpenStack API) <en-us_topic_0000001411479457>`
+-  :ref:`Querying API Versions (Native OpenStack API) <en-us_topic_0066978719>`
+-  :ref:`Querying an API Version (Native OpenStack API) <en-us_topic_0170918588>`
 
 .. toctree::
    :maxdepth: 1

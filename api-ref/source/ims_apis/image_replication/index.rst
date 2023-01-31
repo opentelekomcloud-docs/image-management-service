@@ -1,11 +1,11 @@
-:original_name: en-us_topic_0000001361199268.html
+:original_name: en-us_topic_0049147855.html
 
-.. _en-us_topic_0000001361199268:
+.. _en-us_topic_0049147855:
 
 Image Replication
 =================
 
--  :ref:`Replicating an Image Within a Region <en-us_topic_0000001411479505>`
+-  :ref:`Replicating an Image Within a Region <en-us_topic_0049147856>`
 
 .. toctree::
    :maxdepth: 1

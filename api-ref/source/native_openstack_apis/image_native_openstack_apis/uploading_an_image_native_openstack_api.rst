@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411479437.html
+:original_name: en-us_topic_0031615566.html
 
-.. _en-us_topic_0000001411479437:
+.. _en-us_topic_0031615566:
 
 Uploading an Image (Native OpenStack API)
 =========================================
@@ -16,20 +16,20 @@ The following describes how to use this API:
 
 #. Prepare the image to be uploaded. The image can be in QCOW2, VMDK, VHD, RAW, VHDX, QED, VDI, QCOW, ZVHD2, or ZVHD format.
 
-#. .. _en-us_topic_0000001411479437__li57474254155728:
+#. .. _en-us_topic_0031615566__li57474254155728:
 
-   Create metadata for the image by performing the operations in :ref:`Creating Image Metadata (Native OpenStack API) <en-us_topic_0000001411119517>`. After the API is invoked successfully, save the image ID.
+   Create metadata for the image by performing the operations in :ref:`Creating Image Metadata (Native OpenStack API) <en-us_topic_0031615565>`. After the API is invoked successfully, save the image ID.
 
-#. Upload the image file with the image ID obtained in :ref:`2 <en-us_topic_0000001411479437__li57474254155728>`.
+#. Upload the image file with the image ID obtained in :ref:`2 <en-us_topic_0031615566__li57474254155728>`.
 
 URI
 ---
 
 PUT /v2/images/{image_id}/file
 
-:ref:`Table 1 <en-us_topic_0000001411479437__table23910047154747>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0031615566__table23910047154747>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001411479437__table23910047154747:
+.. _en-us_topic_0031615566__table23910047154747:
 
 .. table:: **Table 1** Parameter description
 
@@ -89,18 +89,18 @@ Returned Values
 
 -  Abnormal
 
-   +------------------+------------------------------------------------------------------------------------+
-   | Returned Value   | Description                                                                        |
-   +==================+====================================================================================+
-   | 400 Bad Request  | Request error. For details, see :ref:`Error Codes <en-us_topic_0000001411239233>`. |
-   +------------------+------------------------------------------------------------------------------------+
-   | 401 Unauthorized | Authentication failed.                                                             |
-   +------------------+------------------------------------------------------------------------------------+
-   | 403 Forbidden    | You do not have the rights to perform the operation.                               |
-   +------------------+------------------------------------------------------------------------------------+
-   | 404 Not Found    | The requested resource was not found.                                              |
-   +------------------+------------------------------------------------------------------------------------+
-   | 409 Conflict     | Request conflict.                                                                  |
-   +------------------+------------------------------------------------------------------------------------+
-   | 500 System Error | System error.                                                                      |
-   +------------------+------------------------------------------------------------------------------------+
+   +------------------+------------------------------------------------------------------------------+
+   | Returned Value   | Description                                                                  |
+   +==================+==============================================================================+
+   | 400 Bad Request  | Request error. For details, see :ref:`Error Codes <en-us_topic_0022473689>`. |
+   +------------------+------------------------------------------------------------------------------+
+   | 401 Unauthorized | Authentication failed.                                                       |
+   +------------------+------------------------------------------------------------------------------+
+   | 403 Forbidden    | You do not have the rights to perform the operation.                         |
+   +------------------+------------------------------------------------------------------------------+
+   | 404 Not Found    | The requested resource was not found.                                        |
+   +------------------+------------------------------------------------------------------------------+
+   | 409 Conflict     | Request conflict.                                                            |
+   +------------------+------------------------------------------------------------------------------+
+   | 500 System Error | System error.                                                                |
+   +------------------+------------------------------------------------------------------------------+

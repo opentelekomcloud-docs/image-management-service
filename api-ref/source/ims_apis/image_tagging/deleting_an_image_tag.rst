@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411399169.html
+:original_name: en-us_topic_0102682864.html
 
-.. _en-us_topic_0000001411399169:
+.. _en-us_topic_0102682864:
 
 Deleting an Image Tag
 =====================
@@ -21,9 +21,9 @@ URI
 
 DELETE /v2/{project_id}/images/{image_id}/tags/{key}
 
-:ref:`Table 1 <en-us_topic_0000001411399169__table33665774183714>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0102682864__table33665774183714>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001411399169__table33665774183714:
+.. _en-us_topic_0102682864__table33665774183714:
 
 .. table:: **Table 1** Parameter description
 
@@ -61,8 +61,8 @@ Response
 
       STATUS CODE 204
 
-Returned Value
---------------
+Returned Values
+---------------
 
 -  Normal
 

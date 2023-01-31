@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411119577.html
+:original_name: en-us_topic_0036994322.html
 
-.. _en-us_topic_0000001411119577:
+.. _en-us_topic_0036994322:
 
 Adding Image Members in Batches
 ===============================
@@ -10,7 +10,12 @@ Function
 
 This API is an extension one and used to share more than one image with multiple tenants.
 
-This API is an asynchronous one. If **job_id** is returned, the task is successfully delivered. You need to query the status of the asynchronous task. If the status is **success**, the task is successfully executed. If the status is **failed**, the task fails. For details about how to query the status of an asynchronous task, see :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`.
+This API is an asynchronous one. If **job_id** is returned, the task is successfully delivered. You need to query the status of the asynchronous task. If the status is **success**, the task is successfully executed. If the status is **failed**, the task fails. For details about how to query the status of an asynchronous task, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
+
+Constraints
+-----------
+
+For encrypted images, you need to authorize the keys used by the images before adding members for them. For details, see "How Do I Authorize a Key?" in *Image Management Service User Guide*.
 
 URI
 ---
@@ -53,13 +58,13 @@ Response
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                    |
-   +=======================+=======================+================================================================================+
-   | job_id                | String                | Specifies the asynchronous task ID.                                            |
-   |                       |                       |                                                                                |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                              |
+   +=======================+=======================+==========================================================================+
+   | job_id                | String                | Specifies the asynchronous task ID.                                      |
+   |                       |                       |                                                                          |
+   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+--------------------------------------------------------------------------+
 
 -  Example response
 
@@ -73,8 +78,8 @@ Response
           "job_id": "edc89b490d7d4392898e19b2deb34797"
       }
 
-Returned Value
---------------
+Returned Values
+---------------
 
 -  Normal
 
@@ -82,18 +87,18 @@ Returned Value
 
 -  Abnormal
 
-   +---------------------------+------------------------------------------------------------------------------------+
-   | Returned Value            | Description                                                                        |
-   +===========================+====================================================================================+
-   | 400 Bad Request           | Request error. For details, see :ref:`Error Codes <en-us_topic_0000001411239233>`. |
-   +---------------------------+------------------------------------------------------------------------------------+
-   | 401 Unauthorized          | Authentication failed.                                                             |
-   +---------------------------+------------------------------------------------------------------------------------+
-   | 403 Forbidden             | You do not have the rights to perform the operation.                               |
-   +---------------------------+------------------------------------------------------------------------------------+
-   | 404 Not Found             | The requested resource was not found.                                              |
-   +---------------------------+------------------------------------------------------------------------------------+
-   | 500 Internal Server Error | Internal service error.                                                            |
-   +---------------------------+------------------------------------------------------------------------------------+
-   | 503 Service Unavailable   | The service is unavailable.                                                        |
-   +---------------------------+------------------------------------------------------------------------------------+
+   +---------------------------+------------------------------------------------------------------------------+
+   | Returned Value            | Description                                                                  |
+   +===========================+==============================================================================+
+   | 400 Bad Request           | Request error. For details, see :ref:`Error Codes <en-us_topic_0022473689>`. |
+   +---------------------------+------------------------------------------------------------------------------+
+   | 401 Unauthorized          | Authentication failed.                                                       |
+   +---------------------------+------------------------------------------------------------------------------+
+   | 403 Forbidden             | You do not have the rights to perform the operation.                         |
+   +---------------------------+------------------------------------------------------------------------------+
+   | 404 Not Found             | The requested resource was not found.                                        |
+   +---------------------------+------------------------------------------------------------------------------+
+   | 500 Internal Server Error | Internal service error.                                                      |
+   +---------------------------+------------------------------------------------------------------------------+
+   | 503 Service Unavailable   | The service is unavailable.                                                  |
+   +---------------------------+------------------------------------------------------------------------------+

@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001361039236.html
+:original_name: en-us_topic_0066978721.html
 
-.. _en-us_topic_0000001361039236:
+.. _en-us_topic_0066978721:
 
 Querying Image Metadata (Native OpenStack API v1 - Abandoned and Not Recommended)
 =================================================================================
@@ -10,16 +10,16 @@ Function
 
 This API is used to query image metadata.
 
-This API has been discarded. The API for querying image details (:ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0000001411399181>`) is recommended.
+This API has been discarded. The API for querying image details (:ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0020091566>`) is recommended.
 
 URI
 ---
 
 HEAD /v1/images/{image_id}
 
-:ref:`Table 1 <en-us_topic_0000001361039236__table27262282>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0066978721__table27262282>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001361039236__table27262282:
+.. _en-us_topic_0066978721__table27262282:
 
 .. table:: **Table 1** Parameter description
 

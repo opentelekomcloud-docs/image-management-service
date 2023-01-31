@@ -1,13 +1,13 @@
-:original_name: en-us_topic_0000001411399137.html
+:original_name: en-us_topic_0135482660.html
 
-.. _en-us_topic_0000001411399137:
+.. _en-us_topic_0135482660:
 
 Image Sharing
 =============
 
--  :ref:`Deleting Image Members in Batches <en-us_topic_0000001360879740>`
--  :ref:`Adding Image Members in Batches <en-us_topic_0000001411119577>`
--  :ref:`Updating the Status of Image Members in Batches <en-us_topic_0000001361039284>`
+-  :ref:`Deleting Image Members in Batches <en-us_topic_0036994324>`
+-  :ref:`Adding Image Members in Batches <en-us_topic_0036994322>`
+-  :ref:`Updating the Status of Image Members in Batches <en-us_topic_0036994323>`
 
 .. toctree::
    :maxdepth: 1

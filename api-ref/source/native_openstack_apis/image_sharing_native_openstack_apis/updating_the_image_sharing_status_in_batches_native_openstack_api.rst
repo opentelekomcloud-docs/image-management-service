@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001361039252.html
+:original_name: en-us_topic_0036994318.html
 
-.. _en-us_topic_0000001361039252:
+.. _en-us_topic_0036994318:
 
 Updating the Image Sharing Status in Batches (Native OpenStack API)
 ===================================================================
@@ -15,9 +15,9 @@ URI
 
 PUT /v2/images/{image_id}/members/{member_id}
 
-:ref:`Table 1 <en-us_topic_0000001361039252__table37590215162351>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0036994318__table37590215162351>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001361039252__table37590215162351:
+.. _en-us_topic_0036994318__table37590215162351:
 
 .. table:: **Table 1** Parameter description
 

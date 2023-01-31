@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411479493.html
+:original_name: en-us_topic_0020091553.html
 
-.. _en-us_topic_0000001411479493:
+.. _en-us_topic_0020091553:
 
 Deleting a Tag (Native OpenStack API)
 =====================================
@@ -15,9 +15,9 @@ URI
 
 DELETE /v2/images/{image_id}/tags/{tag}
 
-:ref:`Table 1 <en-us_topic_0000001411479493__table25869170205722>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0020091553__table25869170205722>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001411479493__table25869170205722:
+.. _en-us_topic_0020091553__table25869170205722:
 
 .. table:: **Table 1** Parameter description
 
