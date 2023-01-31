@@ -1,18 +1,18 @@
-:original_name: en-us_topic_0000001361199212.html
+:original_name: en-us_topic_0135460761.html
 
-.. _en-us_topic_0000001361199212:
+.. _en-us_topic_0135460761:
 
 Image
 =====
 
--  :ref:`Querying Images <en-us_topic_0000001360879728>`
--  :ref:`Updating Image Information <en-us_topic_0000001361039272>`
--  :ref:`Creating an Image <en-us_topic_0000001361039228>`
--  :ref:`Importing an Image File Quickly <en-us_topic_0000001411239209>`
--  :ref:`Creating a Data Disk Image Using an External Image File <en-us_topic_0000001411239225>`
--  :ref:`Creating a Full-ECS Image <en-us_topic_0000001411239213>`
--  :ref:`Registering an Image <en-us_topic_0000001411119529>`
--  :ref:`Exporting an Image <en-us_topic_0000001411479465>`
+-  :ref:`Querying Images <en-us_topic_0020091565>`
+-  :ref:`Updating Image Information <en-us_topic_0020091567>`
+-  :ref:`Creating an Image <en-us_topic_0020092109>`
+-  :ref:`Importing an Image File Quickly <en-us_topic_0133188204>`
+-  :ref:`Creating a Data Disk Image Using an External Image File <en-us_topic_0083905788>`
+-  :ref:`Creating a Full-ECS Image <en-us_topic_0092380109>`
+-  :ref:`Registering an Image <en-us_topic_0037131984>`
+-  :ref:`Exporting an Image <en-us_topic_0036994315>`
 
 .. toctree::
    :maxdepth: 1

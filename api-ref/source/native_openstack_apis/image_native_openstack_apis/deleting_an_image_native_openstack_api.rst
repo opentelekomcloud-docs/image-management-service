@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001360879684.html
+:original_name: en-us_topic_0020092108.html
 
-.. _en-us_topic_0000001360879684:
+.. _en-us_topic_0020092108:
 
 Deleting an Image (Native OpenStack API)
 ========================================
@@ -15,9 +15,9 @@ URI
 
 DELETE /v2/images/{image_id}
 
-:ref:`Table 1 <en-us_topic_0000001360879684__table27262282>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0020092108__table27262282>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001360879684__table27262282:
+.. _en-us_topic_0020092108__table27262282:
 
 .. table:: **Table 1** Parameter description
 
@@ -32,14 +32,14 @@ Request
 
 -  Request parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                      |
-   +=================+=================+=================+==================================================================================================================================================+
-   | delete_backup   | No              | Boolean         | Specifies whether to delete the CSBS backups associated with a full-ECS image when the image is deleted. The value can be **true** or **false**. |
-   |                 |                 |                 |                                                                                                                                                  |
-   |                 |                 |                 | -  **true**: When a full-ECS image is deleted, its CSBS backups are also deleted.                                                                |
-   |                 |                 |                 | -  **false**: When a full-ECS image is deleted, its CSBS backups are not deleted.                                                                |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                     |
+   +=================+=================+=================+=================================================================================================================================================================+
+   | delete_backup   | No              | Boolean         | Specifies whether to delete the CSBS backups or CBR backups associated with a full-ECS image when the image is deleted. The value can be **true** or **false**. |
+   |                 |                 |                 |                                                                                                                                                                 |
+   |                 |                 |                 | -  **true**: When a full-ECS image is deleted, its CSBS backups or CBR backups are also deleted.                                                                |
+   |                 |                 |                 | -  **false**: When a full-ECS image is deleted, its CSBS backups or CBR backups are not deleted.                                                                |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example request
 

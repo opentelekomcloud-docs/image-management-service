@@ -1,12 +1,12 @@
-:original_name: en-us_topic_0000001360879704.html
+:original_name: en-us_topic_0122410335.html
 
-.. _en-us_topic_0000001360879704:
+.. _en-us_topic_0122410335:
 
 Image Tagging (Native OpenStack APIs)
 =====================================
 
--  :ref:`Adding a Tag (Native OpenStack API) <en-us_topic_0000001360879672>`
--  :ref:`Deleting a Tag (Native OpenStack API) <en-us_topic_0000001411479493>`
+-  :ref:`Adding a Tag (Native OpenStack API) <en-us_topic_0020092111>`
+-  :ref:`Deleting a Tag (Native OpenStack API) <en-us_topic_0020091553>`
 
 .. toctree::
    :maxdepth: 1

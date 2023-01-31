@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001360879708.html
+:original_name: en-us_topic_0036994319.html
 
-.. _en-us_topic_0000001360879708:
+.. _en-us_topic_0036994319:
 
 Querying Image Member Details (Native OpenStack API)
 ====================================================
@@ -15,9 +15,9 @@ URI
 
 GET /v2/images/{image_id}/members/{member_id}
 
-:ref:`Table 1 <en-us_topic_0000001360879708__table30282311>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0036994319__table30282311>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001360879708__table30282311:
+.. _en-us_topic_0036994319__table30282311:
 
 .. table:: **Table 1** Parameter description
 

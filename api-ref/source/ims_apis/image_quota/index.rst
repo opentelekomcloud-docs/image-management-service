@@ -1,11 +1,11 @@
-:original_name: en-us_topic_0000001411479501.html
+:original_name: en-us_topic_0093967371.html
 
-.. _en-us_topic_0000001411479501:
+.. _en-us_topic_0093967371:
 
 Image Quota
 ===========
 
--  :ref:`Querying the Image Quota <en-us_topic_0000001411119581>`
+-  :ref:`Querying the Image Quota <en-us_topic_0093967372>`
 
 .. toctree::
    :maxdepth: 1

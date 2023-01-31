@@ -1,15 +1,15 @@
-:original_name: en-us_topic_0000001411119541.html
+:original_name: en-us_topic_0160121770.html
 
-.. _en-us_topic_0000001411119541:
+.. _en-us_topic_0160121770:
 
 Native OpenStack APIs
 =====================
 
--  :ref:`Image (Native OpenStack APIs) <en-us_topic_0000001411479469>`
--  :ref:`Image Tagging (Native OpenStack APIs) <en-us_topic_0000001360879704>`
--  :ref:`Image Schema (Native OpenStack APIs) <en-us_topic_0000001411399189>`
--  :ref:`Image Sharing (Native OpenStack APIs) <en-us_topic_0000001361039248>`
--  :ref:`API Version Query (Native OpenStack API) <en-us_topic_0000001411399153>`
+-  :ref:`Image (Native OpenStack APIs) <en-us_topic_0122410334>`
+-  :ref:`Image Tagging (Native OpenStack APIs) <en-us_topic_0122410335>`
+-  :ref:`Image Schema (Native OpenStack APIs) <en-us_topic_0020091554>`
+-  :ref:`Image Sharing (Native OpenStack APIs) <en-us_topic_0122410336>`
+-  :ref:`API Version Query (Native OpenStack API) <en-us_topic_0170918587>`
 
 .. toctree::
    :maxdepth: 1

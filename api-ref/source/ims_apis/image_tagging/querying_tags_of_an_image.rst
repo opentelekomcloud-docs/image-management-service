@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001361039260.html
+:original_name: en-us_topic_0102682865.html
 
-.. _en-us_topic_0000001361039260:
+.. _en-us_topic_0102682865:
 
 Querying Tags of an Image
 =========================
@@ -15,9 +15,9 @@ URI
 
 GET /v2/{project_id}/images/{image_id}/tags
 
-:ref:`Table 1 <en-us_topic_0000001361039260__table16231211183747>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0102682865__table16231211183747>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001361039260__table16231211183747:
+.. _en-us_topic_0102682865__table16231211183747:
 
 .. table:: **Table 1** Parameter description
 
@@ -46,13 +46,13 @@ Response
 
 -  Response parameters
 
-   +-----------+------------------+---------------------------------------------------------------------------------------------------------------+
-   | Parameter | Type             | Description                                                                                                   |
-   +===========+==================+===============================================================================================================+
-   | tags      | Array of objects | Lists the returned tags. For details, see :ref:`Table 2 <en-us_topic_0000001361039260__table47961066183747>`. |
-   +-----------+------------------+---------------------------------------------------------------------------------------------------------------+
+   +-----------+------------------+---------------------------------------------------------------------------------------------------------+
+   | Parameter | Type             | Description                                                                                             |
+   +===========+==================+=========================================================================================================+
+   | tags      | Array of objects | Lists the returned tags. For details, see :ref:`Table 2 <en-us_topic_0102682865__table47961066183747>`. |
+   +-----------+------------------+---------------------------------------------------------------------------------------------------------+
 
-   .. _en-us_topic_0000001361039260__table47961066183747:
+   .. _en-us_topic_0102682865__table47961066183747:
 
    .. table:: **Table 2** Data structure description of the tags field
 
@@ -82,8 +82,8 @@ Response
          }]
       }
 
-Returned Value
---------------
+Returned Values
+---------------
 
 -  Normal
 

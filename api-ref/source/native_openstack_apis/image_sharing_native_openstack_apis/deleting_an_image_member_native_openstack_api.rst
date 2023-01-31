@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001361199260.html
+:original_name: en-us_topic_0036994321.html
 
-.. _en-us_topic_0000001361199260:
+.. _en-us_topic_0036994321:
 
 Deleting an Image Member (Native OpenStack API)
 ===============================================
@@ -15,9 +15,9 @@ URI
 
 DELETE /v2/images/{image_id}/members/{member_id}
 
-:ref:`Table 1 <en-us_topic_0000001361199260__table6209770492526>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0036994321__table6209770492526>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001361199260__table6209770492526:
+.. _en-us_topic_0036994321__table6209770492526:
 
 .. table:: **Table 1** Parameter description
 

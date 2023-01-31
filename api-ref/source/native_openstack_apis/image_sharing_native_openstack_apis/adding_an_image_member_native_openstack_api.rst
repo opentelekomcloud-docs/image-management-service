@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411119549.html
+:original_name: en-us_topic_0036994317.html
 
-.. _en-us_topic_0000001411119549:
+.. _en-us_topic_0036994317:
 
 Adding an Image Member (Native OpenStack API)
 =============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to add a project ID of a tenant with whom the image is to be shared.
+
+Constraints
+-----------
+
+For an encrypted image, you need to authorize the key used by the image before adding a member for it. For details, see "How Do I Authorize a Key?" in *Image Management Service User Guide*.
 
 URI
 ---

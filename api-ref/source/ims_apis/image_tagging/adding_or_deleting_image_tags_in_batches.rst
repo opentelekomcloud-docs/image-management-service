@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411239245.html
+:original_name: en-us_topic_0102682862.html
 
-.. _en-us_topic_0000001411239245:
+.. _en-us_topic_0102682862:
 
 Adding or Deleting Image Tags in Batches
 ========================================
@@ -34,9 +34,9 @@ URI
 
 POST /v2/{project_id}/images/{image_id}/tags/action
 
-:ref:`Table 1 <en-us_topic_0000001411239245__table1543205183533>` lists the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0102682862__table1543205183533>` lists the parameters in the URI.
 
-.. _en-us_topic_0000001411239245__table1543205183533:
+.. _en-us_topic_0102682862__table1543205183533:
 
 .. table:: **Table 1** Parameter description
 
@@ -55,12 +55,12 @@ Request
    +-----------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter | Mandatory | Type             | Description                                                                                                                                                                                                                  |
    +===========+===========+==================+==============================================================================================================================================================================================================================+
-   | tags      | Yes       | Array of objects | Lists the tags to be added or deleted. For details, see :ref:`Table 2 <en-us_topic_0000001411239245__table107083563918>`.                                                                                                    |
+   | tags      | Yes       | Array of objects | Lists the tags to be added or deleted. For details, see :ref:`Table 2 <en-us_topic_0102682862__table107083563918>`.                                                                                                          |
    +-----------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | action    | Yes       | String           | Specifies the tag operation to be performed. The value is case sensitive and can be **create** or **delete**. **create** indicates that tags will be added or updated, while **delete** indicates that tags will be deleted. |
    +-----------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. _en-us_topic_0000001411239245__table107083563918:
+   .. _en-us_topic_0102682862__table107083563918:
 
    .. table:: **Table 2** Data structure description of the tags field
 
@@ -69,7 +69,7 @@ Request
       +===========+===========+========+==========================================================+
       | key       | Yes       | String | Specifies the tag key. The tag key cannot be left blank. |
       +-----------+-----------+--------+----------------------------------------------------------+
-      | value     | Yes       | String | Specifies the tag value.This parameter is optional.      |
+      | value     | Yes       | String | Specifies the tag value.                                 |
       +-----------+-----------+--------+----------------------------------------------------------+
 
 -  Example request

@@ -1,16 +1,16 @@
-:original_name: en-us_topic_0000001411399165.html
+:original_name: en-us_topic_0122410333.html
 
-.. _en-us_topic_0000001411399165:
+.. _en-us_topic_0122410333:
 
 IMS APIs
 ========
 
--  :ref:`Image <en-us_topic_0000001361199212>`
--  :ref:`Image Tagging <en-us_topic_0000001411479477>`
--  :ref:`Image Sharing <en-us_topic_0000001411399137>`
--  :ref:`Image Replication <en-us_topic_0000001361199268>`
--  :ref:`Image Quota <en-us_topic_0000001411479501>`
--  :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`
+-  :ref:`Image <en-us_topic_0135460761>`
+-  :ref:`Image Tagging <en-us_topic_0135481402>`
+-  :ref:`Image Sharing <en-us_topic_0135482660>`
+-  :ref:`Image Replication <en-us_topic_0049147855>`
+-  :ref:`Image Quota <en-us_topic_0093967371>`
+-  :ref:`Image Jobs <en-us_topic_0000001311190309>`
 
 .. toctree::
    :maxdepth: 1
@@ -21,4 +21,4 @@ IMS APIs
    image_sharing/index
    image_replication/index
    image_quota/index
-   asynchronous_job_query
+   image_jobs/index

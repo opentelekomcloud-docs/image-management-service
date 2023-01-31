@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001360879732.html
+:original_name: en-us_topic_0020091555.html
 
-.. _en-us_topic_0000001360879732:
+.. _en-us_topic_0020091555:
 
 Querying an Image Schema (Native OpenStack API)
 ===============================================
@@ -33,25 +33,25 @@ Response
 
 -  Response parameters
 
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                                   |
-   +=======================+=======================+===============================================================================================+
-   | additionalProperties  | Object                | Specifies the additional attributes.                                                          |
-   |                       |                       |                                                                                               |
-   |                       |                       | For details, see :ref:`Table 1 <en-us_topic_0000001360879732__table5423151115912>`.           |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------+
-   | name                  | String                | Specifies the schema name.                                                                    |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------+
-   | links                 | Array of objects      | Specifies the URL for accessing the schema.                                                   |
-   |                       |                       |                                                                                               |
-   |                       |                       | For details, see :ref:`Table 2 <en-us_topic_0000001360879732__table15641103183416>`.          |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------+
-   | properties            | Object                | Describes basic image attributes, including the type and usage of each attribute.             |
-   |                       |                       |                                                                                               |
-   |                       |                       | For details about the parameters, see :ref:`Image Attributes <en-us_topic_0000001361199252>`. |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                             |
+   +=======================+=======================+=========================================================================================+
+   | additionalProperties  | Object                | Specifies the additional attributes.                                                    |
+   |                       |                       |                                                                                         |
+   |                       |                       | For details, see :ref:`Table 1 <en-us_topic_0020091555__table5423151115912>`.           |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
+   | name                  | String                | Specifies the schema name.                                                              |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
+   | links                 | Array of objects      | Specifies the URL for accessing the schema.                                             |
+   |                       |                       |                                                                                         |
+   |                       |                       | For details, see :ref:`Table 2 <en-us_topic_0020091555__table15641103183416>`.          |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
+   | properties            | Object                | Describes basic image attributes, including the type and usage of each attribute.       |
+   |                       |                       |                                                                                         |
+   |                       |                       | For details about the parameters, see :ref:`Image Attributes <en-us_topic_0020091562>`. |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
 
-   .. _en-us_topic_0000001360879732__table5423151115912:
+   .. _en-us_topic_0020091555__table5423151115912:
 
    .. table:: **Table 1** Data structure description of the additionalProperties field
 
@@ -61,7 +61,7 @@ Response
       type      String Type
       ========= ====== ===========
 
-   .. _en-us_topic_0000001360879732__table15641103183416:
+   .. _en-us_topic_0020091555__table15641103183416:
 
    .. table:: **Table 2** Data structure description of the links field
 

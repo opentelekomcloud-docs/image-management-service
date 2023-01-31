@@ -1,15 +1,15 @@
-:original_name: en-us_topic_0000001361039248.html
+:original_name: en-us_topic_0122410336.html
 
-.. _en-us_topic_0000001361039248:
+.. _en-us_topic_0122410336:
 
 Image Sharing (Native OpenStack APIs)
 =====================================
 
--  :ref:`Adding an Image Member (Native OpenStack API) <en-us_topic_0000001411119549>`
--  :ref:`Updating the Image Sharing Status in Batches (Native OpenStack API) <en-us_topic_0000001361039252>`
--  :ref:`Querying Image Member Details (Native OpenStack API) <en-us_topic_0000001360879708>`
--  :ref:`Querying Image Members (Native OpenStack API) <en-us_topic_0000001411479497>`
--  :ref:`Deleting an Image Member (Native OpenStack API) <en-us_topic_0000001361199260>`
+-  :ref:`Adding an Image Member (Native OpenStack API) <en-us_topic_0036994317>`
+-  :ref:`Updating the Image Sharing Status in Batches (Native OpenStack API) <en-us_topic_0036994318>`
+-  :ref:`Querying Image Member Details (Native OpenStack API) <en-us_topic_0036994319>`
+-  :ref:`Querying Image Members (Native OpenStack API) <en-us_topic_0036994320>`
+-  :ref:`Deleting an Image Member (Native OpenStack API) <en-us_topic_0036994321>`
 
 .. toctree::
    :maxdepth: 1

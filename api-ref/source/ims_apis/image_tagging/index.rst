@@ -1,18 +1,18 @@
-:original_name: en-us_topic_0000001411479477.html
+:original_name: en-us_topic_0135481402.html
 
-.. _en-us_topic_0000001411479477:
+.. _en-us_topic_0135481402:
 
 Image Tagging
 =============
 
--  :ref:`Adding or Modifying a Tag <en-us_topic_0000001411239269>`
--  :ref:`Querying Tags <en-us_topic_0000001360879736>`
--  :ref:`Querying Images by Tag <en-us_topic_0000001411119557>`
--  :ref:`Adding or Deleting Image Tags in Batches <en-us_topic_0000001411239245>`
--  :ref:`Adding an Image Tag <en-us_topic_0000001411479473>`
--  :ref:`Deleting an Image Tag <en-us_topic_0000001411399169>`
--  :ref:`Querying Tags of an Image <en-us_topic_0000001361039260>`
--  :ref:`Querying All Image Tags <en-us_topic_0000001360879712>`
+-  :ref:`Adding or Modifying a Tag <en-us_topic_0067360381>`
+-  :ref:`Querying Tags <en-us_topic_0067360382>`
+-  :ref:`Querying Images by Tag <en-us_topic_0102682861>`
+-  :ref:`Adding or Deleting Image Tags in Batches <en-us_topic_0102682862>`
+-  :ref:`Adding an Image Tag <en-us_topic_0102682863>`
+-  :ref:`Deleting an Image Tag <en-us_topic_0102682864>`
+-  :ref:`Querying Tags of an Image <en-us_topic_0102682865>`
+-  :ref:`Querying All Image Tags <en-us_topic_0102682866>`
 
 .. toctree::
    :maxdepth: 1

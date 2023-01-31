@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001411239213.html
+:original_name: en-us_topic_0092380109.html
 
-.. _en-us_topic_0000001411239213:
+.. _en-us_topic_0092380109:
 
 Creating a Full-ECS Image
 =========================
@@ -8,7 +8,7 @@ Creating a Full-ECS Image
 Function
 --------
 
-This API is used to create a full-ECS image from an ECS, Cloud Server Backup Service (CSBS) backup, or Cloud Backup and Recovery (CBR) backup. The API is an asynchronous one. If it is successfully called, the cloud system receives the request to create a full-ECS image. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`.
+This API is used to create a full-ECS image from an ECS, Cloud Server Backup Service (CSBS) backup, or Cloud Backup and Recovery (CBR) backup. The API is an asynchronous one. If it is successfully called, the cloud system receives the request to create a full-ECS image. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
 
 Constraints (Creating a Full-ECS Image Using an ECS)
 ----------------------------------------------------
@@ -47,9 +47,9 @@ Constraints (Creating a Full-ECS Image Using an ECS)
 
       -  If the SAN policy is **OnlineAll**, run the **exit** command to exit DiskPart.
 
-      -  If the SAN policy is not **OnlineAll**, go to :ref:`3 <en-us_topic_0000001411239213__en-us_topic_0116125142_en-us_topic_0089178278_li15110228143312>`.
+      -  If the SAN policy is not **OnlineAll**, go to :ref:`3 <en-us_topic_0092380109__en-us_topic_0116125142_en-us_topic_0089178278_li15110228143312>`.
 
-   #. .. _en-us_topic_0000001411239213__en-us_topic_0116125142_en-us_topic_0089178278_li15110228143312:
+   #. .. _en-us_topic_0092380109__en-us_topic_0116125142_en-us_topic_0089178278_li15110228143312:
 
       Run the following command to change the SAN policy of the ECS to **OnlineAll**:
 
@@ -59,6 +59,7 @@ Constraints (Creating a Full-ECS Image Using a CSBS Backup)
 -----------------------------------------------------------
 
 -  When creating a full-ECS image from a CSBS backup, ensure that the source ECS of the CSBS backup has been properly configured, or the image creation may fail.
+-  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
 -  A CSBS backup used to create a full-ECS image cannot have shared disks.
 -  Only an available CSBS backup can be used to create a full-ECS image. A CSBS backup can be used to create only one full-ECS image.
 -  A full-ECS image cannot be exported or replicated.
@@ -68,6 +69,7 @@ Constraints (Creating a Full-ECS Image Using a CBR Backup)
 
 -  When creating a full-ECS image from a CBR backup, ensure that the source ECS of the CBR backup has been properly configured, or the image creation may fail.
 -  A CBR backup can be used to create only one full-ECS image.
+-  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
 -  A full-ECS image created from a CBR backup can be shared with other tenants. However, if it is a shared CBR backup, the full-ECS image created from it cannot be shared.
 -  A full-ECS image cannot be exported or replicated.
 
@@ -81,81 +83,96 @@ Request
 
 -  Parameters for creating a full-ECS image using an ECS
 
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                                                                            |
-   +=================+=================+==================+========================================================================================================================================================================================================================================+
-   | name            | Yes             | String           | Specifies the image name. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`.                                                                                                 |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | description     | No              | String           | Provides supplementary information about the image. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`.                                                                       |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags            | No              | Array of strings | Lists the image tags. The value is left blank by default.                                                                                                                                                                              |
-   |                 |                 |                  |                                                                                                                                                                                                                                        |
-   |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_tags      | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                                                              |
-   |                 |                 |                  |                                                                                                                                                                                                                                        |
-   |                 |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | instance_id     | Yes             | String           | Specifies the ECS ID. This parameter is required when an ECS is used to create a full-ECS image.                                                                                                                                       |
-   |                 |                 |                  |                                                                                                                                                                                                                                        |
-   |                 |                 |                  | To obtain the ECS ID, perform the following operations:                                                                                                                                                                                |
-   |                 |                 |                  |                                                                                                                                                                                                                                        |
-   |                 |                 |                  | #. Log in to management console.                                                                                                                                                                                                       |
-   |                 |                 |                  | #. Under **Computing**, click **Elastic Cloud Server**.                                                                                                                                                                                |
-   |                 |                 |                  | #. In the ECS list, click the name of the ECS and view its ID.                                                                                                                                                                         |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | max_ram         | No              | Integer          | Specifies the maximum memory of the image in the unit of MB. This parameter is not configured by default.                                                                                                                              |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | min_ram         | No              | Integer          | Specifies the minimum memory of the image in the unit of MB. The default value is **0**.                                                                                                                                               |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | vault_id        | No              | String           | Specifies the ID of the vault to which an ECS is to be added or has been added.                                                                                                                                                        |
-   |                 |                 |                  |                                                                                                                                                                                                                                        |
-   |                 |                 |                  | To create a full-ECS image from an ECS, create a backup from the ECS and then use the backup to create a full-ECS image. If a CBR backup is created, **vault_id** is mandatory. If a CSBS backup is created, **vault_id** is optional. |
-   |                 |                 |                  |                                                                                                                                                                                                                                        |
-   |                 |                 |                  | You can obtain the vault ID from the CBR console or section "Querying the Vault List" in *Cloud Backup and Recovery API Reference*.                                                                                                    |
-   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type             | Description                                                                                                                                                                                                                            |
+   +=======================+=================+==================+========================================================================================================================================================================================================================================+
+   | name                  | Yes             | String           | Specifies the image name. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`.                                                                                                       |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description           | No              | String           | Provides supplementary information about the image. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`.                                                                             |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags                  | No              | Array of strings | Lists the image tags. The value is left blank by default.                                                                                                                                                                              |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | image_tags            | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                                                              |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | instance_id           | Yes             | String           | Specifies the ECS ID. This parameter is required when an ECS is used to create a full-ECS image.                                                                                                                                       |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | To obtain the ECS ID, perform the following operations:                                                                                                                                                                                |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | #. Log in to management console.                                                                                                                                                                                                       |
+   |                       |                 |                  | #. Under **Computing**, click **Elastic Cloud Server**.                                                                                                                                                                                |
+   |                       |                 |                  | #. In the ECS list, click the name of the ECS and view its ID.                                                                                                                                                                         |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id | No              | String           | Specifies the enterprise project that the image belongs to.                                                                                                                                                                            |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | -  If the value is **0** or left blank, the image belongs to the default enterprise project.                                                                                                                                           |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | -  If the value is a UUID, the image belongs to the enterprise project corresponding to the UUID.                                                                                                                                      |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  |    For more information about enterprise projects and how to obtain enterprise project IDs, see *Enterprise Management User Guide*.                                                                                                    |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | max_ram               | No              | Integer          | Specifies the maximum memory of the image in the unit of MB. This parameter is not configured by default.                                                                                                                              |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | min_ram               | No              | Integer          | Specifies the minimum memory of the image in the unit of MB. The default value is **0**.                                                                                                                                               |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | vault_id              | No              | String           | Specifies the ID of the vault to which an ECS is to be added or has been added.                                                                                                                                                        |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | To create a full-ECS image from an ECS, create a backup from the ECS and then use the backup to create a full-ECS image. If a CBR backup is created, **vault_id** is mandatory. If a CSBS backup is created, **vault_id** is optional. |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | You can obtain the vault ID from the CBR console or section "Querying the Vault List" in *Cloud Backup and Recovery API Reference*.                                                                                                    |
+   +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Parameters in the request body when a CSBS backup or CBR backup is used to create a full-ECS image
 
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter        | Mandatory       | Type             | Description                                                                                                                                                      |
-   +==================+=================+==================+==================================================================================================================================================================+
-   | name             | Yes             | String           | Specifies the image name. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`.                           |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | description      | No              | String           | Provides supplementary information about the image. For detailed description, see :ref:`Image Attributes <en-us_topic_0000001361199252__section61598810155254>`. |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags             | No              | Array of strings | Lists the image tags. The value is left blank by default.                                                                                                        |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | Use either **tags** or **image_tags**.                                                                                                                           |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_tags       | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                        |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | Use either **tags** or **image_tags**.                                                                                                                           |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | backup_id        | Yes             | String           | Specifies the CSBS backup ID or CBR backup ID.                                                                                                                   |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | To obtain the CSBS backup ID, perform the following operations:                                                                                                  |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | #. Log in to the management console.                                                                                                                             |
-   |                  |                 |                  | #. Under **Storage**, click **Cloud Server Backup Service**.                                                                                                     |
-   |                  |                 |                  | #. In the backup list, expand details of the backup to obtain its ID.                                                                                            |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | To obtain the CBR backup ID, perform the following operations:                                                                                                   |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | #. Log in to the management console.                                                                                                                             |
-   |                  |                 |                  | #. Under **Storage**, click **Cloud Backup and Recovery**.                                                                                                       |
-   |                  |                 |                  | #. On the displayed **Cloud Server Backup** page, click the **Backups** tab and obtain the backup ID from the backup list.                                       |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | max_ram          | No              | Integer          | Specifies the maximum memory of the image in the unit of MB. This parameter is not configured by default.                                                        |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | min_ram          | No              | Integer          | Specifies the minimum memory of the image in the unit of MB. The default value is **0**, indicating that the memory is not restricted.                           |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | whole_image_type | No              | String           | Specifies the method of creating a full-ECS image.                                                                                                               |
-   |                  |                 |                  |                                                                                                                                                                  |
-   |                  |                 |                  | -  If the value is CBR, a CBR backup is used to create a full-ECS image. In this case, backup_id is the CBR backup ID.                                           |
-   |                  |                 |                  | -  If the value is CSBS, a CSBS backup is used to create a full-ECS image. In this case, backup_id is the CSBS backup ID.                                        |
-   |                  |                 |                  | -  If you do not specify this parameter, value CSBS is used by default.                                                                                          |
-   +------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type             | Description                                                                                                                                                                              |
+   +=======================+=================+==================+==========================================================================================================================================================================================+
+   | name                  | Yes             | String           | Specifies the image name. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`.                                                         |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description           | No              | String           | Provides supplementary information about the image. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`.                               |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | tags                  | No              | Array of strings | Lists the image tags. The value is left blank by default.                                                                                                                                |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                   |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | image_tags            | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                   |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | backup_id             | Yes             | String           | Specifies the CSBS backup ID or CBR backup ID.                                                                                                                                           |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | To obtain the CSBS backup ID, perform the following operations:                                                                                                                          |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | #. Log in to the management console.                                                                                                                                                     |
+   |                       |                 |                  | #. Under **Storage**, click **Cloud Server Backup Service**.                                                                                                                             |
+   |                       |                 |                  | #. In the backup list, expand details of the backup to obtain its ID.                                                                                                                    |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | To obtain the CBR backup ID, perform the following operations:                                                                                                                           |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | #. Log in to the management console.                                                                                                                                                     |
+   |                       |                 |                  | #. Under **Storage**, click **Cloud Backup and Recovery**.                                                                                                                               |
+   |                       |                 |                  | #. On the displayed **Cloud Server Backup** page, click the **Backups** tab and obtain the backup ID from the backup list.                                                               |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id | No              | String           | Specifies the enterprise project that the image belongs to.                                                                                                                              |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | -  If the value is **0** or left blank, the image belongs to the default enterprise project.                                                                                             |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | -  If the value is a UUID, the image belongs to the enterprise project corresponding to the UUID.                                                                                        |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  |    For more information about enterprise projects and how to obtain enterprise project IDs, see *Enterprise Management User Guide*.                                                      |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | max_ram               | No              | Integer          | Specifies the maximum memory of the image in the unit of MB. This parameter is not configured by default.                                                                                |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | min_ram               | No              | Integer          | Specifies the minimum memory of the image in the unit of MB. The default value is **0**, indicating that the memory is not restricted.                                                   |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | whole_image_type      | No              | String           | Specifies the method of creating a full-ECS image.                                                                                                                                       |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | -  If a CBR backup is used to create a full-ECS image, this parameter is mandatory and the value must be **CBR**. In this case, **backup_id** is the CBR backup ID.                      |
+   |                       |                 |                  | -  If a CSBS backup is used to create a full-ECS image, this parameter can be left blank and the default value **CSBS** will be used. In this case, **backup_id** is the CSBS backup ID. |
+   +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example requests
 
@@ -193,7 +210,7 @@ Request
                 "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
          }
 
-   -  Creating a full-ECS image from a CSBS backup or CBR backup
+   -  Creating a full-ECS image from a CSBS or CBR backup
 
       .. code-block:: text
 
@@ -232,13 +249,13 @@ Response
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                    |
-   +=======================+=======================+================================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                             |
-   |                       |                       |                                                                                |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0000001361199224>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                              |
+   +=======================+=======================+==========================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                       |
+   |                       |                       |                                                                          |
+   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+--------------------------------------------------------------------------+
 
 -  Example response
 
@@ -261,18 +278,18 @@ Returned Values
 
 -  Abnormal
 
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
-   | Returned Value            | Description                                                                                                      |
-   +===========================+==================================================================================================================+
-   | 400 Bad Request           | Request error. For details about the returned error code, see :ref:`Error Codes <en-us_topic_0000001411239233>`. |
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
-   | 401 Unauthorized          | Authentication failed.                                                                                           |
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
-   | 403 Forbidden             | You do not have the rights to perform the operation.                                                             |
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
-   | 404 Not Found             | The requested resource was not found.                                                                            |
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
-   | 500 Internal Server Error | Internal service error.                                                                                          |
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
-   | 503 Service Unavailable   | The service is unavailable.                                                                                      |
-   +---------------------------+------------------------------------------------------------------------------------------------------------------+
+   +---------------------------+------------------------------------------------------------------------------------------------------------+
+   | Returned Value            | Description                                                                                                |
+   +===========================+============================================================================================================+
+   | 400 Bad Request           | Request error. For details about the returned error code, see :ref:`Error Codes <en-us_topic_0022473689>`. |
+   +---------------------------+------------------------------------------------------------------------------------------------------------+
+   | 401 Unauthorized          | Authentication failed.                                                                                     |
+   +---------------------------+------------------------------------------------------------------------------------------------------------+
+   | 403 Forbidden             | You do not have the rights to perform the operation.                                                       |
+   +---------------------------+------------------------------------------------------------------------------------------------------------+
+   | 404 Not Found             | The requested resource was not found.                                                                      |
+   +---------------------------+------------------------------------------------------------------------------------------------------------+
+   | 500 Internal Server Error | Internal service error.                                                                                    |
+   +---------------------------+------------------------------------------------------------------------------------------------------------+
+   | 503 Service Unavailable   | The service is unavailable.                                                                                |
+   +---------------------------+------------------------------------------------------------------------------------------------------------+

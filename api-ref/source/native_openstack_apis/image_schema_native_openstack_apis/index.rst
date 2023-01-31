@@ -1,14 +1,14 @@
-:original_name: en-us_topic_0000001411399189.html
+:original_name: en-us_topic_0020091554.html
 
-.. _en-us_topic_0000001411399189:
+.. _en-us_topic_0020091554:
 
 Image Schema (Native OpenStack APIs)
 ====================================
 
--  :ref:`Querying an Image Schema (Native OpenStack API) <en-us_topic_0000001360879732>`
--  :ref:`Querying an Image List Schema (Native OpenStack API) <en-us_topic_0000001411119573>`
--  :ref:`Querying an Image Member Schema (Native OpenStack API) <en-us_topic_0000001411119565>`
--  :ref:`Querying an Image Member List Schema (Native OpenStack API) <en-us_topic_0000001411239253>`
+-  :ref:`Querying an Image Schema (Native OpenStack API) <en-us_topic_0020091555>`
+-  :ref:`Querying an Image List Schema (Native OpenStack API) <en-us_topic_0020091556>`
+-  :ref:`Querying an Image Member Schema (Native OpenStack API) <en-us_topic_0049147876>`
+-  :ref:`Querying an Image Member List Schema (Native OpenStack API) <en-us_topic_0049147877>`
 
 .. toctree::
    :maxdepth: 1
