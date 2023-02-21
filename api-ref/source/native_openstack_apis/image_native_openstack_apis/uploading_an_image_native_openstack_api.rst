@@ -42,6 +42,10 @@ PUT /v2/images/{image_id}/file
    |                 |                 |                 | -  After this API is invoked, you can check the image status with the image ID. When the image status changes to **active**, the image is uploaded successfully. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+.. note::
+
+   AK/SK authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, token authentication is recommended.
+
 Request
 -------
 
