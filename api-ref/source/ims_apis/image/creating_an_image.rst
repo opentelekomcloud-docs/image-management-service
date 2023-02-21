@@ -16,7 +16,7 @@ This API is used to create a private image. The following methods are supported:
 
 The API is an asynchronous one. If it is successfully called, the cloud service system receives the request. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
 
-You cannot export public images (such as Windows, SUSE Linux, Red Hat Linux, Oracle Linux, and Ubuntu) or private images created using these public images.
+You cannot export public images (such as Windows, SUSE, Red Hat, Oracle Linux, and Ubuntu) or private images created using these public images.
 
 Constraints (Creating a System Disk Image Using a Data Disk)
 ------------------------------------------------------------
