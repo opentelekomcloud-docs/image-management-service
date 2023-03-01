@@ -5,6 +5,8 @@
 Installing the PV Driver
 ========================
 
+This section only applies to Xen ECSs, which have been discontinued and no longer been available for new users. If you are a new user or you are an existing user that will use this image to create a non-Xen ECS, skip this section.
+
 Scenarios
 ---------
 
@@ -33,7 +35,7 @@ Prerequisites
 -  To avoid an installation failure, perform the following operations before starting the installation:
 
    -  Uninstall third-party virtualization platform tools, such as Citrix Xen Tools and VMware Tools. For how to uninstall the tools, see the corresponding official documents of the tools.
-   -  Disable your antivirus and intrusion detection software. You can enable the software after the PV driver is installed.
+   -  Disable your anti-virus and intrusion detection software. You can enable the software after the PV driver is installed.
 
 .. _en-us_topic_0037352182__en-us_topic_0036684067_section46181951:
 
@@ -78,7 +80,7 @@ Perform the following steps to verify the installation of the PV driver:
 
 #. Locate the PV driver for Windows.
 
-   If the PV driver exists, the installation is successful, as shown in :ref:`Figure 1 <en-us_topic_0037352182__fig16926124855714>`.
+   If UVP VMTools for Windows exists, the installation is successful, as shown in :ref:`Figure 1 <en-us_topic_0037352182__fig16926124855714>`.
 
    .. _en-us_topic_0037352182__fig16926124855714:
 

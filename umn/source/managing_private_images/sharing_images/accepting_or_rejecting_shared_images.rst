@@ -63,3 +63,15 @@ Results
 -  **Accepted**: After an image is accepted, it is displayed in the shared image list. You can use the image to create ECSs.
 
 -  **Rejected**: After an image is rejected, it is not displayed in the shared image list. You can click **Rejected Images** to view the images you have rejected and you can still choose to accept them.
+
+Follow-up Procedure
+-------------------
+
+After accepting a system disk image or full-ECS image shared by another tenant, you can:
+
+-  Use the image to create one or more ECSs (select **Shared Image** during ECS creation).
+-  Use the image to change the OS of existing ECSs.
+
+After accepting a data disk image shared by another tenant, you can use the image to create EVS disks (locate the row that contains the image and click **Create Data Disk** in the **Operation** column).
+
+After accepting the encrypted image shared by another tenant, you can use the image to apply for ECSs or EVS disks or replace the key of the image with your own key by replicating the shared image. The replacement prevents the shared image from being unavailable when the tenant who shares the image cancels the key authorization.

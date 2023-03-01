@@ -14,6 +14,8 @@ Prerequisites
 -------------
 
 -  You have obtained the project ID from the target tenant.
+-  If the image to be shared is an encrypted image, authorize the key (it must be a custom key) used for encrypting the image. For details, see :ref:`How Do I Authorize a Key? <en-us_topic_0133773781>`
+
 -  Before sharing an image, ensure that any sensitive data has been deleted from the image.
 
 Procedure
@@ -39,7 +41,8 @@ Procedure
 
       .. note::
 
-         You can enter a maximum of 100 project IDs at a time.
+         -  You can enter a maximum of 100 project IDs at a time.
+         -  You can share images only within the region where they reside.
 
    #. Click **OK**.
 
@@ -63,11 +66,13 @@ Procedure
 
       .. note::
 
-         You can enter a maximum of 100 project IDs at a time.
+         -  You can enter a maximum of 100 project IDs at a time.
+         -  You can share images only within the region where they reside.
 
    #. Click **OK**.
 
 Related Operations
 ------------------
 
-After you share images with a tenant, the tenant can accept the shared images on the **Images Shared with Me** page on the IMS console. For detailed operations, see :ref:`Accepting or Rejecting Shared Images <en-us_topic_0032042420>`.
+-  After you share images with a tenant, the tenant can accept the shared images on the **Images Shared with Me** page on the IMS console. For detailed operations, see :ref:`Accepting or Rejecting Shared Images <en-us_topic_0032042420>`.
+-  If the shared image is an encrypted image and is accepted by a tenant, the tenant can use this image to apply for ECSs or replace the key of this image with its own by replicating the shared image. If the tenant has accepted the shared image but have not performed any other operations, do not cancel the authorization of the key. Otherwise, the shared image will be unavailable to the tenant.

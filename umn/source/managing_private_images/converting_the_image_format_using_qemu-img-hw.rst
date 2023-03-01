@@ -10,8 +10,23 @@ Scenarios
 
 You can import an image file in VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVHD, or ZVHD2 format to the cloud platform. Image files in other formats need to be converted into any of these formats using the open-source tool **qemu-img** before being imported. However, the **qemu-img** tool cannot convert image files to the ZVHD or ZVHD2 format. To convert image files to any of the two formats, use the self-developed tool **qemu-img-hw**. This section describes how to use **qemu-img-hw** to convert an image file to ZVHD2.
 
-Background
-----------
+Tool and Costs
+--------------
+
+.. table:: **Table 1** Tool and costs
+
+   +-----------------------+----------------------------------------------------------------------------------+-----------------------+
+   | Tool                  | Description                                                                      | Costs                 |
+   +=======================+==================================================================================+=======================+
+   | qemu-img-hw           | **qemu-img-hw** is developed by Huawei and is used for converting image formats. | Free                  |
+   |                       |                                                                                  |                       |
+   |                       | You can obtain it from:                                                          |                       |
+   |                       |                                                                                  |                       |
+   |                       | https://obs-20181128.ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip  |                       |
+   +-----------------------+----------------------------------------------------------------------------------+-----------------------+
+
+Constraints
+-----------
 
 **qemu-img-hw** can be used only in Linux. You can run it on a local Linux server or a Linux ECS on the cloud platform. The following procedure uses an EulerOS ECS as an example.
 
@@ -22,7 +37,7 @@ Procedure
 
    -  If the local host runs a Linux OS, run the **scp** command.
 
-      For example, to upload **image01.qcow2** to the **/usr/** directory on the ECS, run the following command:
+      For example, to upload **image01.qcow2** to the **/usr/** directory of the ECS, run the following command:
 
       **scp** **/var/image01.qcow2** **root@**\ *xxx.xxx.xx.xxx*\ **:/usr/**
 
@@ -32,7 +47,7 @@ Procedure
 
 #. Obtain the **qemu-img-hw** software package, upload it to the ECS, and then decompress the package.
 
-   .. table:: **Table 1** qemu-img-hw package
+   .. table:: **Table 2** qemu-img-hw package
 
       +--------------------+---------------------------------------------------------------------------------+
       | Tool Package       | How to Obtain                                                                   |

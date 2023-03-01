@@ -10,455 +10,205 @@ This section describes the OSs supported by different types of ECSs.
 x86 ECSs
 --------
 
--  :ref:`Table 1 <en-us_topic_0030713142__en-us_topic_0046581562_table1123458211236>` lists the OSs supported by the following ECSs:
+-  :ref:`Table 1 <en-us_topic_0030713142__table124398125555>` lists the OSs supported by the following ECSs:
 
-   General-purpose T6
+   General-purpose S2, S3
 
-   General computing S2, S3, S6, and SN3
+   Dedicated general-purpose C3, C4
 
-   General computing-plus C3 and C6
+   Memory-optimized M2, M3, M4
 
-   Memory-optimized M2, M3, and M6
+   Disk-intensive D2
 
-   High-performance computing HC2 and H3
+   Ultra-high I/O I3
 
-   Disk-intensive D2 and D3
+-  :ref:`Table 2 <en-us_topic_0030713142__table14709182711556>` lists the OSs supported by large-memory ECSs (E3).
 
--  :ref:`Table 2 <en-us_topic_0030713142__en-us_topic_0046581562_table24261748369>` lists the OSs supported by the following ECSs:
+-  :ref:`Table 3 <en-us_topic_0030713142__table204972196287>` lists the OSs supported by high-performance ECSs (HL1, H2).
 
-   General computing-plus C3ne, C6, and C6s
+-  :ref:`Table 4 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G6, P2s, P2v, P2, PI2).
 
-   Memory-optimized M3ne
+-  :ref:`Table 5 <en-us_topic_0030713142__table8704181020556>` lists the OSs supported by GPU-accelerated ECSs (P1).
 
--  :ref:`Table 3 <en-us_topic_0030713142__en-us_topic_0046581562_table8355134004315>` lists the OSs supported by the following ECSs:
+-  FPGA-accelerated FP1c and FP1cne ECSs support only CentOS 7.3 64bit.
 
-   Large-memory E3
+-  AI-accelerated AI1 ECSs support the following OSs:
 
--  :ref:`Table 4 <en-us_topic_0030713142__en-us_topic_0046581562_table168451645184516>` lists the OSs supported by the following ECSs:
+   -  Ubuntu Server 16.04 64bit
+   -  CentOS 7.4 64bit
 
-   Ultra-high I/O I3 and IR3
+.. note::
 
--  For other GPU-accelerated ECSs, see the GPU product description.
+   -  It is recommended that you use the official OS release versions. Do not tailor or customize the release versions, or problems may occur.
+   -  OS vendors do not always update OS release versions regularly. Some versions are no longer maintained, and these deprecated versions no longer receive security patches. Ensure that you read the update notifications from OS vendors and update your OS so that it runs properly.
 
-   .. note::
+.. _en-us_topic_0030713142__table124398125555:
 
-      -  It is recommended that you use the official OS release versions. Do not tailor or customize the release versions, or problems may occur.
-      -  OS vendors do not always update OS release versions regularly. Some versions are no longer maintained, and these deprecated versions no longer receive security patches. Ensure that you read the update notifications from OS vendors and update your OS so that it runs properly.
+.. table:: **Table 1** Supported OS versions
 
-.. _en-us_topic_0030713142__en-us_topic_0046581562_table1123458211236:
+   +-----------------------------------+-----------------------------------------------------+
+   | OS                                | Version                                             |
+   +===================================+=====================================================+
+   | Alma                              | Alma 8 64bit                                        |
+   +-----------------------------------+-----------------------------------------------------+
+   | CentOS                            | -  CentOS Stream 8.6 64bit                          |
+   |                                   | -  CentOS 7.9 64bit                                 |
+   |                                   | -  CentOS 7.7 64bit                                 |
+   +-----------------------------------+-----------------------------------------------------+
+   | Debian                            | -  Debian GNU/Linux 11 64bit                        |
+   |                                   | -  Debian GNU/Linux 10 64bit                        |
+   +-----------------------------------+-----------------------------------------------------+
+   | EulerOS                           | EulerOS 2.5 64bit                                   |
+   +-----------------------------------+-----------------------------------------------------+
+   | Fedora                            | -  Fedora 35 64bit                                  |
+   |                                   | -  Fedora 34 64bit                                  |
+   |                                   | -  Fedora 33 64bit                                  |
+   +-----------------------------------+-----------------------------------------------------+
+   | OpenSUSE                          | OpenSUSE 15.3 64bit                                 |
+   +-----------------------------------+-----------------------------------------------------+
+   | Oracle Linux                      | -  Oracle Linux Server release 8.4 64bit            |
+   |                                   | -  Oracle Linux Server release 7.6 64bit            |
+   +-----------------------------------+-----------------------------------------------------+
+   | Red Hat                           | -  Red Hat Enterprise Linux 7.9 64bit               |
+   |                                   | -  Red Hat Enterprise Linux 6.10 64bit              |
+   +-----------------------------------+-----------------------------------------------------+
+   | Rocky                             | Rocky 8 64bit                                       |
+   +-----------------------------------+-----------------------------------------------------+
+   | SUSE                              | -  Novell SUSE Linux Enterprise Server 15 SP3 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP2 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP1 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 64bit     |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP5 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP4 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP3 64bit |
+   +-----------------------------------+-----------------------------------------------------+
+   | SUSE-SAP                          | -  Novell SUSE Linux Enterprise Server 15 SP3 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP2 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP1 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 64bit     |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP5 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP4 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP3 64bit |
+   +-----------------------------------+-----------------------------------------------------+
+   | Ubuntu                            | -  Ubuntu 20.04 server 64bit                        |
+   |                                   | -  Ubuntu 18.04 server 64bit                        |
+   +-----------------------------------+-----------------------------------------------------+
+   | Windows                           | -  Windows Server 2019 Standard 64bit               |
+   |                                   | -  Windows Server 2016 Standard 64bit               |
+   |                                   | -  Windows Server 2012 R2 Standard 64bit            |
+   +-----------------------------------+-----------------------------------------------------+
+   | openEuler                         | openEuler 20.03 64bit                               |
+   +-----------------------------------+-----------------------------------------------------+
 
-.. table:: **Table 1** Supported OS versions-01
+.. _en-us_topic_0030713142__table14709182711556:
 
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | OS                                | OS Version                                                                                        |
-   +===================================+===================================================================================================+
-   | Windows                           | Windows Server 2008 R2 Standard/Enterprise/Datacenter/Web                                         |
-   |                                   |                                                                                                   |
-   |                                   | Windows Server 2012 Standard/Datacenter                                                           |
-   |                                   |                                                                                                   |
-   |                                   | Windows Server 2012 R2 Standard/Datacenter                                                        |
-   |                                   |                                                                                                   |
-   |                                   | Windows Server 2016 Standard/Datacenter                                                           |
-   |                                   |                                                                                                   |
-   |                                   | Windows Server 2019 Standard/Datacenter                                                           |
-   |                                   |                                                                                                   |
-   |                                   | Windows Server Core Version 1709                                                                  |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | CentOS                            | 64-bit: CentOS 6.10, 6.9, 6.8, 6.7, 6.6, 6.5, 6.4, and 6.3                                        |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: CentOS 7.9, 7.8, 7.7, 7.6, 7.5, 7.4, 7.3, 7.2, 7.1, and 7.0                               |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: CentOS 8.3, 8.2, 8.1, and 8.0                                                             |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | Ubuntu                            | 64-bit: Ubuntu 20.04, 18.04, 16.04, 14.04, and 12.04 Server                                       |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | EulerOS                           | 64-bit: EulerOS 2.9, 2.5, 2.3, and 2.2                                                            |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | Red Hat                           | 64-bit: Red Hat 6.10, 6.9, 6.8, 6.7, 6.6, 6.5, and 6.4                                            |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: Red Hat 7.6, 7.5, 7.4, 7.3, 7.2, 7.1, and 7.0                                             |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: Red Hat 8.0                                                                               |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | SUSE Linux Enterprise             | 64-bit: SLES 11 SP4 and 11 SP3                                                                    |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: SLES 12 SP4, 12 SP3, 12 SP2, 12 SP1, and 12                                               |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: SLES 15, 15 SP1, and 15 SP2                                                               |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | Debian                            | 64-bit: Debian 8.0.0-8.10.0                                                                       |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: Debian 9.13.0, 9.12.0, 9.11.0, 9.9.0, 9.8.0, 9.7.0, 9.6.0, 9.5.0, 9.4.0, 9.3.0, and 9.0.0 |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: Debian 10.0.0-10.5.0, 10.7.0                                                              |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | openSUSE                          | 64-bit: openSUSE 13.2                                                                             |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: openSUSE Leap 15.1 and 15.0                                                               |
-   |                                   |                                                                                                   |
-   |                                   | 64-bit: openSUSE Leap 42.3, 42.2, and 42.1                                                        |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | Fedora                            | 64-bit: Fedora 22-32                                                                              |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | CoreOS                            | 64-bit: CoreOS 2079.4.0                                                                           |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | FreeBSD                           | 64bit: FreeBSD 11.0,10.3, and 12.1                                                                |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
-   | openEuler                         | 64-bit: openEuler 20.03                                                                           |
-   +-----------------------------------+---------------------------------------------------------------------------------------------------+
+.. table:: **Table 2** Supported OS versions
 
-.. _en-us_topic_0030713142__en-us_topic_0046581562_table24261748369:
+   +-----------------------------------+-----------------------------------------------------+
+   | OS                                | Version                                             |
+   +===================================+=====================================================+
+   | CentOS                            | -  CentOS 7.9 64bit                                 |
+   |                                   | -  CentOS 7.7 64bit                                 |
+   +-----------------------------------+-----------------------------------------------------+
+   | EulerOS                           | EulerOS 2.5 64bit                                   |
+   +-----------------------------------+-----------------------------------------------------+
+   | Fedora                            | -  Fedora 35 64bit                                  |
+   |                                   | -  Fedora 34 64bit                                  |
+   |                                   | -  Fedora 33 64bit                                  |
+   +-----------------------------------+-----------------------------------------------------+
+   | OpenSUSE                          | OpenSUSE 15.3 64bit                                 |
+   +-----------------------------------+-----------------------------------------------------+
+   | Oracle Linux                      | -  Oracle Linux Server release 8.4 64bit            |
+   |                                   | -  Oracle Linux Server release 7.6 64bit            |
+   +-----------------------------------+-----------------------------------------------------+
+   | Red Hat                           | Red Hat Enterprise Linux 7.9 64bit                  |
+   +-----------------------------------+-----------------------------------------------------+
+   | SUSE                              | -  Novell SUSE Linux Enterprise Server 15 SP3 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP2 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP1 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 64bit     |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP5 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP4 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP3 64bit |
+   +-----------------------------------+-----------------------------------------------------+
+   | SUSE-SAP                          | -  Novell SUSE Linux Enterprise Server 15 SP3 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP2 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP1 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 64bit     |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP5 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP4 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP3 64bit |
+   +-----------------------------------+-----------------------------------------------------+
+   | Ubuntu                            | -  Ubuntu 20.04 server 64bit                        |
+   |                                   | -  Ubuntu 18.04 server 64bit                        |
+   +-----------------------------------+-----------------------------------------------------+
+   | Windows                           | -  Windows Server 2019 Standard 64bit               |
+   |                                   | -  Windows Server 2016 Standard 64bit               |
+   |                                   | -  Windows Server 2012 R2 Standard 64bit            |
+   +-----------------------------------+-----------------------------------------------------+
 
-.. table:: **Table 2** Supported OS versions-02
+.. _en-us_topic_0030713142__table204972196287:
 
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | OS                    | OS Version                                                | Kernel Version                   |
-   +=======================+===========================================================+==================================+
-   | Windows               | Windows Server 2008 R2 Enterprise/Datacenter/Web/Standard | 10.0.14393                       |
-   |                       |                                                           |                                  |
-   |                       | Windows Server 2012 R2 Standard/Datacenter                | 6.1.7600                         |
-   |                       |                                                           |                                  |
-   |                       | Windows Server 2016 Standard/Datacenter                   | 6.0.6002                         |
-   |                       |                                                           |                                  |
-   |                       | Windows Server 2019 Datacenter                            | 6.1.7600                         |
-   |                       |                                                           |                                  |
-   |                       | Windows Server Version 1709 Datacenter                    | 6.3.9600                         |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | CentOS                | 64-bit:                                                   | 2.6.32-754.10.1.e16.x86_64       |
-   |                       |                                                           |                                  |
-   |                       | CentOS 6                                                  | 2.6.32-696.16.1.el6.x86_64       |
-   |                       |                                                           |                                  |
-   |                       | CentOS 7                                                  | 2.6.32-754.10.1.el6.x86_64       |
-   |                       |                                                           |                                  |
-   |                       | CentOS 8                                                  | 2.6.32-754.11.1.e16.x86_64       |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-514.10.2.el7.x86_64       |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-693.11.1.el7.x86_64       |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-862.9.1.el7.x86_64        |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-957.5.1.e17.x86_64        |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-957.10.1.e17.x86_64       |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | Ubuntu                | 64-bit:                                                   | 4.15.0-52-56                     |
-   |                       |                                                           |                                  |
-   |                       | Ubuntu 14.04 Server                                       | 4.4.0-151-178                    |
-   |                       |                                                           |                                  |
-   |                       | Ubuntu 16.04 Server                                       | 4.4.0-104-generic                |
-   |                       |                                                           |                                  |
-   |                       | Ubuntu 18.04 Server                                       | 4.4.0-141-generic                |
-   |                       |                                                           |                                  |
-   |                       | Ubuntu 20.04 Server                                       | 4.4.0-142-generic                |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.4.0-145-generic                |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.15.0-34-generic                |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.15.0-45-generic                |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.15.0-47-generic                |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | EulerOS               | 64-bit:                                                   | 3.10.0-327.62.59.83.h162.x86_64  |
-   |                       |                                                           |                                  |
-   |                       | EulerOS 2.2                                               | 3.10.0-514.44.5.10.h198.x86_64   |
-   |                       |                                                           |                                  |
-   |                       | EulerOS 2.3                                               | 3.10.0-327.59.59.46.h38.x86_64   |
-   |                       |                                                           |                                  |
-   |                       | EulerOS 2.5                                               | 3.10.0-327.62.59.83.h96.x86_64   |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-327.62.59.83.h128.x86_64  |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-514.44.5.10.h121.x86_64   |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-514.44.5.10.h142.x86_64   |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | Red Hat               | 64-bit:                                                   | 2.6.32-358.6.2.el6.x86_64        |
-   |                       |                                                           |                                  |
-   |                       | Red Hat 6                                                 | 2.6.32-431.20.3.el6              |
-   |                       |                                                           |                                  |
-   |                       | Red Hat 7                                                 | 2.6.32-504.12.2.el6              |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 2.6.32-573.el6.x86_64            |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 2.6.32-696.1.1.el6.x86_64        |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 2.6.32-696.10.2.el6.x86_64       |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 2.6.32-754.el6.x86_64            |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-229.1.2.el7.x86_64        |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-327.36.1.el7.x86_64       |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-514.36.1.el7              |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-514.6.1.el7.x86_64        |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-693.11.6.el7.x86_64       |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.10.0-862.3.2.el7.x86_64        |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | SUSE Linux Enterprise | 64-bit:                                                   | 3.0.101-108.18-default           |
-   |                       |                                                           |                                  |
-   |                       | SLES 11                                                   | 3.12.74-60.64.40-default         |
-   |                       |                                                           |                                  |
-   |                       | SLES 12                                                   | 4.4.103-92.53-default            |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.4.120-92.70-default            |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.4.121-92.92                    |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | Debian                | 64-bit:                                                   | 4.9.168-1+deb9u3                 |
-   |                       |                                                           |                                  |
-   |                       | Debian 8                                                  | 3.2.0-4-686-pae                  |
-   |                       |                                                           |                                  |
-   |                       | Debian 9                                                  | 3.2.0-4-amd64                    |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 3.16.0-4-amd64                   |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.9.0-3-amd64                    |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.9.0-4-amd64                    |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.9.0-8-amd64                    |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.9.0-9-amd64                    |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.19.0-5-amd64                   |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | openSUSE              | 64-bit:                                                   | 4.4.103-18.41-default            |
-   |                       |                                                           |                                  |
-   |                       | openSUSE 15.0                                             | 3.0.101-108.18-default           |
-   |                       |                                                           |                                  |
-   |                       | openSUSE 15.1                                             |                                  |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | Fedora                | 64-bit:                                                   | 5.1.11-200.fc29.x86_64           |
-   |                       |                                                           |                                  |
-   |                       | Fedora 2x                                                 | 4.5.5-300.fc24.x86_64            |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.20.8-200.fc29.x86_64           |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 5.2.8-200.fc30.x86_64            |
-   |                       |                                                           |                                  |
-   |                       |                                                           | 4.8.6-300.fc25.x86_64            |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
-   | openEuler             | 64-bit:                                                   | 4.19.90-2003.4.0.0036.oel.x86_64 |
-   |                       |                                                           |                                  |
-   |                       | openEuler 20.03                                           |                                  |
-   +-----------------------+-----------------------------------------------------------+----------------------------------+
+.. table:: **Table 3** Supported OS versions
 
-.. _en-us_topic_0030713142__en-us_topic_0046581562_table8355134004315:
+   +-----------------------------------+-----------------------------------------------------+
+   | OS                                | Version                                             |
+   +===================================+=====================================================+
+   | CentOS                            | -  CentOS 7.9 64bit                                 |
+   |                                   | -  CentOS 7.7 64bit                                 |
+   +-----------------------------------+-----------------------------------------------------+
+   | Oracle Linux                      | -  Oracle Linux Server release 8.4 64bit            |
+   |                                   | -  Oracle Linux Server release 7.6 64bit            |
+   +-----------------------------------+-----------------------------------------------------+
+   | Red Hat                           | Red Hat Enterprise Linux 7.9 64bit                  |
+   +-----------------------------------+-----------------------------------------------------+
+   | SUSE                              | -  Novell SUSE Linux Enterprise Server 15 SP3 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP2 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP4 64bit |
+   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP3 64bit |
+   +-----------------------------------+-----------------------------------------------------+
 
-.. table:: **Table 3** Supported OS versions-03
+.. _en-us_topic_0030713142__table3436728145315:
 
-   +-----------------------+-----------------------+----------------------------------+
-   | OS                    | OS Version            | Kernel Version                   |
-   +=======================+=======================+==================================+
-   | CentOS                | 64-bit:               | 2.6.32-754.15.3.e16.x86_64       |
-   |                       |                       |                                  |
-   |                       | CentOS 6              | 2.6.32-696.16.1.el6.x86_64       |
-   |                       |                       |                                  |
-   |                       | CentOS 7              | 2.6.32-754.10.1.el6.x86_64       |
-   |                       |                       |                                  |
-   |                       | CentOS 8              | 2.6.32-754.11.1.e16.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-514.10.2.el7.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-693.11.1.el7.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-862.9.1.el7.x86_64        |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-957.21.3.e17.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-957.5.1.e17.x86_64        |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-957.10.1.e17.x86_64       |
-   +-----------------------+-----------------------+----------------------------------+
-   | Ubuntu                | 64-bit:               | 4.15.0-52-56                     |
-   |                       |                       |                                  |
-   |                       | Ubuntu 14.04 Server   | 4.4.0-151-178                    |
-   |                       |                       |                                  |
-   |                       | Ubuntu 16.04 Server   | 4.4.0-104-generic                |
-   |                       |                       |                                  |
-   |                       | Ubuntu 18.04 Server   | 4.4.0-141-generic                |
-   |                       |                       |                                  |
-   |                       | Ubuntu 20.04 Server   | 4.4.0-142-generic                |
-   |                       |                       |                                  |
-   |                       |                       | 4.4.0-145-generic                |
-   |                       |                       |                                  |
-   |                       |                       | 4.15.0-34-generic                |
-   |                       |                       |                                  |
-   |                       |                       | 4.15.0-45-generic                |
-   |                       |                       |                                  |
-   |                       |                       | 4.15.0-47-generic                |
-   +-----------------------+-----------------------+----------------------------------+
-   | EulerOS               | 64-bit:               | 3.10.0-327.62.59.83.h162.x86_64  |
-   |                       |                       |                                  |
-   |                       | EulerOS 2.2           | 3.10.0-514.44.5.10.h198.x86_64   |
-   |                       |                       |                                  |
-   |                       | EulerOS 2.3           | 3.10.0-327.59.59.46.h38.x86_64   |
-   |                       |                       |                                  |
-   |                       | EulerOS 2.5           | 3.10.0-327.62.59.83.h96.x86_64   |
-   |                       |                       |                                  |
-   |                       | EulerOS 2.9           | 3.10.0-327.62.59.83.h128.x86_64  |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-514.44.5.10.h121.x86_64   |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-514.44.5.10.h142.x86_64   |
-   +-----------------------+-----------------------+----------------------------------+
-   | Red Hat               | 64-bit:               | 2.6.32-358.6.2.el6.x86_64        |
-   |                       |                       |                                  |
-   |                       | Red Hat 6             | 2.6.32-431.20.3.el6              |
-   |                       |                       |                                  |
-   |                       | Red Hat 7             | 2.6.32-504.12.2.el6              |
-   |                       |                       |                                  |
-   |                       |                       | 2.6.32-573.el6.x86_64            |
-   |                       |                       |                                  |
-   |                       |                       | 2.6.32-696.1.1.el6.x86_64        |
-   |                       |                       |                                  |
-   |                       |                       | 2.6.32-696.10.2.el6.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 2.6.32-754.el6.x86_64            |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-229.1.2.el7.x86_64        |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-327.36.1.el7.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-514.36.1.el7              |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-514.6.1.el7.x86_64        |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-693.11.6.el7.x86_64       |
-   |                       |                       |                                  |
-   |                       |                       | 3.10.0-862.3.2.el7.x86_64        |
-   +-----------------------+-----------------------+----------------------------------+
-   | SUSE Linux Enterprise | 64-bit:               | 3.0.101-108.18-default           |
-   |                       |                       |                                  |
-   |                       | SLES 11               | 3.12.74-60.64.40-default         |
-   |                       |                       |                                  |
-   |                       | SLES 12               | 4.4.103-92.53-default            |
-   |                       |                       |                                  |
-   |                       | SLES 15               | 4.4.120-92.70-default            |
-   |                       |                       |                                  |
-   |                       |                       | 4.4.121-92.92                    |
-   +-----------------------+-----------------------+----------------------------------+
-   | Debian                | 64-bit:               | 4.9.168-1+deb9u3                 |
-   |                       |                       |                                  |
-   |                       | Debian 8              | 3.2.0-4-686-pae                  |
-   |                       |                       |                                  |
-   |                       | Debian 9              | 3.2.0-4-amd64                    |
-   |                       |                       |                                  |
-   |                       | Debian 10             | 3.16.0-4-amd64                   |
-   |                       |                       |                                  |
-   |                       |                       | 4.9.0-3-amd64                    |
-   |                       |                       |                                  |
-   |                       |                       | 4.9.0-4-amd64                    |
-   |                       |                       |                                  |
-   |                       |                       | 4.9.0-8-amd64                    |
-   |                       |                       |                                  |
-   |                       |                       | 4.9.0-9-amd64                    |
-   |                       |                       |                                  |
-   |                       |                       | 4.19.0-5-amd64                   |
-   +-----------------------+-----------------------+----------------------------------+
-   | openSUSE              | 64-bit:               | 4.4.103-18.41-default            |
-   |                       |                       |                                  |
-   |                       | openSUSE 15.0         | 3.0.101-108.18-default           |
-   |                       |                       |                                  |
-   |                       | openSUSE 15.1         |                                  |
-   +-----------------------+-----------------------+----------------------------------+
-   | Fedora                | 64-bit:               | 5.1.11-200.fc29.x86_64           |
-   |                       |                       |                                  |
-   |                       | Fedora 2x             | 4.5.5-300.fc24.x86_64            |
-   |                       |                       |                                  |
-   |                       | Fedora 3x             | 4.20.8-200.fc29.x86_64           |
-   |                       |                       |                                  |
-   |                       |                       | 5.2.8-200.fc30.x86_64            |
-   |                       |                       |                                  |
-   |                       |                       | 4.8.6-300.fc25.x86_64            |
-   +-----------------------+-----------------------+----------------------------------+
-   | openEuler             | 64-bit:               | 4.19.90-2003.4.0.0036.oel.x86_64 |
-   |                       |                       |                                  |
-   |                       | openEuler 20.03       |                                  |
-   +-----------------------+-----------------------+----------------------------------+
+.. table:: **Table 4** Supported OS versions
 
-.. _en-us_topic_0030713142__en-us_topic_0046581562_table168451645184516:
+   +-----------------------------------+---------------------------------------------+
+   | OS                                | OS Version                                  |
+   +===================================+=============================================+
+   | Rocky                             | Rocky 8 64 bit                              |
+   +-----------------------------------+---------------------------------------------+
+   | CentOS                            | CentOS 7.9 64bit                            |
+   +-----------------------------------+---------------------------------------------+
+   | EulerOS                           | EulerOS 2.5 64bit                           |
+   |                                   |                                             |
+   |                                   | .. note::                                   |
+   |                                   |                                             |
+   |                                   |    PI2 ECSs do not support this OS version. |
+   +-----------------------------------+---------------------------------------------+
+   | Oracle Linux                      | Oracle Linux Server release 7.6 64bit       |
+   +-----------------------------------+---------------------------------------------+
+   | Ubuntu                            | -  Ubuntu 20.04 server 64bit                |
+   |                                   | -  Ubuntu 18.04 server 64bit                |
+   +-----------------------------------+---------------------------------------------+
+   | Windows                           | -  Windows Server 2019 Standard 64bit       |
+   |                                   | -  Windows Server 2016 Standard 64bit       |
+   |                                   | -  Windows Server 2012 R2 Standard 64bit    |
+   +-----------------------------------+---------------------------------------------+
 
-.. table:: **Table 4** Supported OS versions-04
+.. _en-us_topic_0030713142__table8704181020556:
 
-   +-----------------------+-----------------------+----------------------------+
-   | OS                    | OS Version            | Kernel Version             |
-   +=======================+=======================+============================+
-   | CentOS                | 64-bit:               | 3.10.0-514.10.2.el7.x86_64 |
-   |                       |                       |                            |
-   |                       | CentOS 7              | 3.10.0-693.11.1.el7.x86_64 |
-   |                       |                       |                            |
-   |                       |                       | 3.10.0-862.9.1.el7.x86_64  |
-   |                       |                       |                            |
-   |                       |                       | 3.10.0-957.21.3.e17.x86_64 |
-   |                       |                       |                            |
-   |                       |                       | 3.10.0-957.5.1.e17.x86_64  |
-   |                       |                       |                            |
-   |                       |                       | 3.10.0-957.10.1.e17.x86_64 |
-   +-----------------------+-----------------------+----------------------------+
-   | Ubuntu                | 64-bit:               | 4.4.0-31-generic           |
-   |                       |                       |                            |
-   |                       | Ubuntu 14.04 Server   | 4.4.0-131-generic          |
-   |                       |                       |                            |
-   |                       | Ubuntu 16.04 Server   | 4.4.0-141-generic          |
-   |                       |                       |                            |
-   |                       | Ubuntu 18.04 Server   | 4.4.0-142-generic          |
-   |                       |                       |                            |
-   |                       |                       | 4.15.0-29-generic          |
-   |                       |                       |                            |
-   |                       |                       | 4.15.0-45-generic          |
-   +-----------------------+-----------------------+----------------------------+
-   | SUSE Linux Enterprise | 64-bit:               | 4.4.103-92.53-default      |
-   |                       |                       |                            |
-   |                       | SLES 12               | 4.4.120-92.70-default      |
-   +-----------------------+-----------------------+----------------------------+
-   | Debian                | 64-bit:               | 3.16.0-7-amd64             |
-   |                       |                       |                            |
-   |                       | Debian 8              | 3.16.0-4-amd64             |
-   |                       |                       |                            |
-   |                       | Debian 9              | 4.9.0-3-amd64              |
-   +-----------------------+-----------------------+----------------------------+
+.. table:: **Table 5** Supported OS versions
 
-Kunpeng ECSs
-------------
-
-:ref:`Table 5 <en-us_topic_0030713142__en-us_topic_0046581562_table1470094014463>` lists the OSs supported by the following ECSs:
-
--  Kunpeng general computing-plus KC1
--  Kunpeng memory-optimized KM1
-
-.. _en-us_topic_0030713142__en-us_topic_0046581562_table1470094014463:
-
-.. table:: **Table 5** Supported OS versions-05
-
-   +-----------------------------------+-----------------------------------+
-   | OS                                | OS Version                        |
-   +===================================+===================================+
-   | CentOS                            | 64-bit: CentOS 7.6, 7.5, and 7.4  |
-   |                                   |                                   |
-   |                                   | 64-bit: CentOS 8.0                |
-   +-----------------------------------+-----------------------------------+
-   | Ubuntu                            | 64-bit: Ubuntu 18.04 Server       |
-   +-----------------------------------+-----------------------------------+
-   | EulerOS                           | 64-bit: EulerOS 2.8               |
-   +-----------------------------------+-----------------------------------+
-   | Red Hat                           | 64-bit: Red Hat 7.6 and 7.5       |
-   +-----------------------------------+-----------------------------------+
-   | SUSE Linux Enterprise             | 64-bit: SLES 12 SP5 and SP4       |
-   |                                   |                                   |
-   |                                   | 64-bit: SLES 15                   |
-   +-----------------------------------+-----------------------------------+
-   | openSUSE                          | 64-bit: openSUSE Leap 15.0        |
-   +-----------------------------------+-----------------------------------+
-   | Fedora                            | 64-bit: Fedora 29                 |
-   +-----------------------------------+-----------------------------------+
-   | Debian                            | 64-bit: Debian 10.2.0             |
-   +-----------------------------------+-----------------------------------+
-   | openEuler                         | 64-bit: openEuler 20.03           |
-   +-----------------------------------+-----------------------------------+
+   +-----------------------------------+---------------------------------------+
+   | OS                                | OS Version                            |
+   +===================================+=======================================+
+   | CentOS                            | CentOS 7.9 64bit                      |
+   +-----------------------------------+---------------------------------------+
+   | Debian                            | -  Debian GNU/Linux 11 64bit          |
+   |                                   | -  Debian GNU/Linux 10 64bit          |
+   +-----------------------------------+---------------------------------------+
+   | Oracle Linux                      | Oracle Linux Server release 7.6 64bit |
+   +-----------------------------------+---------------------------------------+
+   | Ubuntu                            | -  Ubuntu 20.04 server 64bit          |
+   |                                   | -  Ubuntu 18.04 server 64bit          |
+   +-----------------------------------+---------------------------------------+

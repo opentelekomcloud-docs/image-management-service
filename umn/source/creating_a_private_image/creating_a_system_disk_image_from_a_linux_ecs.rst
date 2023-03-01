@@ -65,7 +65,7 @@ Before creating a private image from an ECS:
 
 -  To ensure that the ECSs created from the image support both Xen and KVM virtualization, the Linux ECS used to create the image has to be modified. For instance, the disk IDs in the GRUB and fstab files need to be UUID and native Xen and KVM drivers need to be installed.
 
-   For details, see steps :ref:`2 <en-us_topic_0047501133__en-us_topic_0036684058_li52904758173244>` to :ref:`6 <en-us_topic_0047501133__en-us_topic_0036684058_li36218236173244>` in :ref:`Optimization Process <en-us_topic_0047501133>`.
+   For details, see steps :ref:`2 <en-us_topic_0047501133__li20604522122715>` to :ref:`6 <en-us_topic_0047501133__li18604132210271>` in :ref:`Optimization Process <en-us_topic_0047501133>`.
 
 -  If multiple data disks are attached to an ECS used to create a private image, the ECSs created from the image may be unavailable. You need to detach all data disks from the ECS before using it to create an image. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
 
@@ -111,24 +111,28 @@ Procedure
 
       .. table:: **Table 2** Image information
 
-         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-         | Parameter                         | Description                                                                                                              |
-         +===================================+==========================================================================================================================+
-         | Encryption                        | This parameter specifies whether the image will be encrypted. The value is provided by the system and cannot be changed. |
-         |                                   |                                                                                                                          |
-         |                                   | -  Only an unencrypted private image can be created from an unencrypted ECS.                                             |
-         |                                   | -  Only an encrypted private image can be created from an encrypted ECS.                                                 |
-         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-         | Name                              | Set a name for the image.                                                                                                |
-         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-         | Tag                               | (Optional) Set a tag key and a tag value for the image to make identification and management of your images easier.      |
-         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-         | Description                       | (Optional) Enter a description of the image.                                                                             |
-         +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+         +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Parameter                         | Description                                                                                                                                                                                                                      |
+         +===================================+==================================================================================================================================================================================================================================+
+         | Encryption                        | This parameter specifies whether the image will be encrypted. The value is provided by the system and cannot be changed.                                                                                                         |
+         |                                   |                                                                                                                                                                                                                                  |
+         |                                   | -  Only an unencrypted private image can be created from an unencrypted ECS.                                                                                                                                                     |
+         |                                   | -  Only an encrypted private image can be created from an encrypted ECS.                                                                                                                                                         |
+         +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Name                              | Set a name for the image.                                                                                                                                                                                                        |
+         +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Enterprise Project                | Select an enterprise project from the drop-down list. This parameter is available only if you have enabled enterprise projects or your account is an enterprise account. To enable this function, contact your customer manager. |
+         |                                   |                                                                                                                                                                                                                                  |
+         |                                   | An enterprise project provides central management of cloud resources on a project.                                                                                                                                               |
+         +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Tag                               | (Optional) Set a tag key and a tag value for the image to make identification and management of your images easier.                                                                                                              |
+         +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+         | Description                       | (Optional) Enter a description of the image.                                                                                                                                                                                     |
+         +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    c. Click **Create Now**.
 
-   d. Confirm the parameters and click **Submit**.
+   d. Confirm the settings and click **Submit**.
 
 #. Go back to the **Private Images** page and view the new system disk image.
 

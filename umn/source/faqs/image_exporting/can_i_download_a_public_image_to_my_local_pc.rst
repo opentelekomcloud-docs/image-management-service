@@ -14,4 +14,5 @@ Helpful links:
 
 .. note::
 
-   Windows and SUSE Linux public images and the private images created from these public images cannot be exported.
+   -  Windows, SUSE, Red Hat, Ubuntu, and Oracle Linux public images and the private images created from these public images cannot be exported.
+   -  However, if a Windows, SUSE, Red Hat, Ubuntu, or Oracle Linux private image is created from an external image file, this private image can be exported.

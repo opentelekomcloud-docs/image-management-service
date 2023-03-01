@@ -8,7 +8,7 @@ Installing UVP VMTools
 Scenarios
 ---------
 
-Before using an ECS or external image file to create a private image, ensure that UVP VMTools has been installed in the OS to enable subsequently created ECSs to support KVM virtualization and improve network performance.
+This section only applies to KVM ECSs, which will replace Xen ECSs gradually. Before using an ECS or external image file to create a private image, ensure that UVP VMTools has been installed in the OS to enable subsequently created ECSs to support KVM virtualization and improve network performance.
 
 .. caution::
 
@@ -77,6 +77,10 @@ The following operations describe how to install UVP VMTools. **vmtools-WIN2008R
          **Figure 2** Windows Security
 
    b. Click **Finish**.
+
+      .. note::
+
+         After the installation is complete, restart the ECS so that NIC drivers can be detected.
 
 #. Perform the operations in :ref:`Verifying the Installation <en-us_topic_0037352061__en-us_topic_0036684065_section42271171>` to check whether UVP VMTools is successfully installed.
 

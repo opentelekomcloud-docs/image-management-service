@@ -26,7 +26,7 @@ Prerequisites
 Procedure
 ---------
 
-#. Install the open-source tool **qemu-img**.
+#. Install the open-source image conversion tool **qemu-img**.
 
 #. Run the **cmd** command to go to the **qemu-img** installation directory and run the **qemu-img** command to convert the image file to the RAW format.
 
@@ -96,7 +96,7 @@ Procedure
 
    f. Set parameters as prompted.
 
-      For details about the parameters, see :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713184>` and :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713193>`.
+      For details about the parameters, see :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713193>`.
 
       .. caution::
 

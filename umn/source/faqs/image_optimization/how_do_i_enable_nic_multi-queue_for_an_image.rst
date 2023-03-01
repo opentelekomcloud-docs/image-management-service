@@ -72,14 +72,14 @@ Assume that an ECS has the required specifications and virtualization type.
 -  If the ECS was created using a public image listed in :ref:`ECSs Supporting NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section892862210138>`, NIC multi-queue has been enabled on the ECS by default. Therefore, you do not need to manually enable NIC multi-queue for it.
 -  If the ECS was created using an external image file with an OS listed in :ref:`ECSs Supporting NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section892862210138>`, perform the following operations to enable NIC multi-queue:
 
-   #. :ref:`Register the external image file as a private image <en-us_topic_0085214115__en-us_topic_0058758453_section1659682611504>`.
+   #. :ref:`Register the External Image File as a Private Image <en-us_topic_0085214115__en-us_topic_0058758453_section1659682611504>`.
    #. :ref:`Set NIC Multi-Queue for the Image <en-us_topic_0085214115__en-us_topic_0058758453_section1949113217282>`.
    #. :ref:`Create an ECS from the Private Image <en-us_topic_0085214115__en-us_topic_0058758453_section1841681225617>`.
    #. :ref:`Enable NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section214227201118>`.
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section1659682611504:
 
-Register the external image file as a private image
+Register the External Image File as a Private Image
 ---------------------------------------------------
 
 Register the external image file as a private image. For details, see :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713193>`.
@@ -89,7 +89,7 @@ Register the external image file as a private image. For details, see :ref:`Regi
 Set NIC Multi-Queue for the Image
 ---------------------------------
 
-Windows OSs have not commercially supported NIC multi-queue. If you enable NIC multi-queue in a Windows image, starting an ECS created using such an image may be slow.
+Windows OSs have not commercially supported NIC multi-queue. If you enable NIC multi-queue for a Windows image, starting an ECS created using such an image may be slow.
 
 Use either of the following methods to set NIC multi-queue.
 
@@ -165,7 +165,7 @@ Use either of the following methods to set NIC multi-queue.
 Create an ECS from the Private Image
 ------------------------------------
 
-Use the registered private image to create an ECS. For details, see *Elastic Cloud Server User Guide*. Note the following when setting the parameters:
+Use the registered private image to create an ECS. For details, see the *Elastic Cloud Server User Guide*. Note the following when setting the parameters:
 
 -  **Region**: Select the region where the private image is located.
 -  **Image**: Select **Private image** and then the desired image from the drop-down list.

@@ -21,6 +21,10 @@ Delete log files and historical records, and stop the ECS.
 
    **rm** **-rf** **/var/log/\***
 
+   .. note::
+
+      Before deleting log files, back up log directories and log files required by application startup. For example, if the default Nginx log directory **/var/log/nginx** is deleted, Nginx may fail to be started.
+
 3. Run the following commands to delete historical records:
 
    **echo** **>** **/root/.bash_history**

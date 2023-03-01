@@ -22,7 +22,7 @@ The following figure shows the process of creating a data disk image from an ext
    **Figure 1** Creating a data disk image from an external image file
 
 #. Prepare an external image file. The file must be in VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVHD, or ZVHD2 format. If you want to use an image file in other formats, convert the file into any of the listed formats before importing it to the cloud platform.
-#. When uploading the external image file, you must select an OBS bucket with standard storage. For details, see :ref:`Uploading an External Image File <en-us_topic_0030713183>`.
+#. When uploading the external image file, you must select an OBS bucket with standard storage. For details, see :ref:`Uploading an External Image File <en-us_topic_0030713192>`.
 #. Create a data disk image. For details, see :ref:`Procedure <en-us_topic_0084064672__section17888236123013>`.
 #. Use the data disk image to create data disks. For details, see :ref:`Follow-up Procedure <en-us_topic_0084064672__section14131852173714>`.
 
@@ -48,7 +48,7 @@ Procedure
    c. Select **Image File** for **Source**. Select the bucket storing the image file from the list and then select the image file.
 
 
-      .. figure:: /_static/images/en-us_image_0120595887.png
+      .. figure:: /_static/images/en-us_image_0162744031.png
          :alt: **Figure 2** Creating a data disk image
 
          **Figure 2** Creating a data disk image
@@ -64,16 +64,17 @@ Procedure
 
    e. In the **Image Information** area, set the following parameters.
 
-      -  **OS Type**: The value can be **Windows** or **Linux**.
+      -  **OS Type**: The value is **Windows** or **Linux**.
       -  **Data Disk**: The value ranges from 1 GB to 2048 GB and must be no less than the data disk size in the image file.
       -  **Name**: Enter a name for the image.
       -  (Optional) **Encryption**: If you want to encrypt the image, select **KMS encryption** and then select the key to be used from the key list.
+      -  **Enterprise Project**: Select an enterprise project from the drop-down list. This parameter is available only if you have enabled enterprise projects or your account is an enterprise account. To enable this function, contact your customer manager. An enterprise project provides central management of cloud resources on a project.
       -  (Optional) **Tag**: Set a tag key and a tag value for the image to easily identify and manage it.
       -  (Optional) **Description**: Enter description of the image.
 
    f. Click **Create Now**.
 
-   g. Confirm the parameters and click **Submit**.
+   g. Confirm the settings and click **Submit**.
 
 #. Go back to the **Private Images** page and view the new data disk image.
 

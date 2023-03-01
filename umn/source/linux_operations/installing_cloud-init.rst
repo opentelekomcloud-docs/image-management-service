@@ -42,13 +42,19 @@ Perform the operations provided here to check whether Cloud-Init has been instal
 
 The methods of checking whether Cloud-Init is installed vary depending on the OSs. Take CentOS 6 as an example. Run the following command to check whether Cloud-Init is installed:
 
-**rpm -qa \|grep cloud-init**
+**which cloud-init**
 
-If information similar to the following is displayed, Cloud-Init has been installed:
+-  If information similar to the following is displayed, Cloud-Init has been installed:
 
-.. code-block::
+   .. code-block::
 
-   cloud-init-0.7.5-10.el6.centos.2.x86_64
+      cloud-init-0.7.5-10.el6.centos.2.x86_64
+
+-  If no information is returned, Cloud-Init is not installed.
+
+   .. note::
+
+      To confirm Cloud-Init is really not installed, you are advised to run **rpm -qa \|grep cloud-init** to check again. If either of **which cloud-init** and **rpm -qa \|grep cloud-init** shows that Cloud-Init has been installed, Cloud-Init is installed.
 
 If Cloud-Init has been installed, perform the following operations:
 
@@ -87,7 +93,9 @@ The following describes how to install Cloud-Init on an ECS running SUSE Linux, 
 
    Paths for obtaining the Cloud-Init installation package for SUSE Linux
 
-   `http://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/ <http://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools>`__
+   http://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/
+
+   `https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/ <https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools>`__
 
    http://download.opensuse.org/repositories/Cloud:/Tools/
 
@@ -101,7 +109,7 @@ The following describes how to install Cloud-Init on an ECS running SUSE Linux, 
 
    #. Run the following command to install the network installation source for SUSE Enterprise Linux Server 12:
 
-      **zypper ar http://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/SLE_12_SP3/Cloud:Tools.repo**
+      **zypper ar https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/SLE_12_SP3/Cloud:Tools.repo**
 
    #. Run the following command to update the network installation source:
 
@@ -143,43 +151,69 @@ The following describes how to install Cloud-Init on an ECS running SUSE Linux, 
 
    .. table:: **Table 1** Cloud-Init installation package addresses
 
-      +---------+----------+---------------------------------------------------------------+
-      | OS Type | Version  | How to Obtain                                                 |
-      +=========+==========+===============================================================+
-      | CentOS  | 6 32-bit | https://archives.fedoraproject.org/pub/archive/epel/6/i386/   |
-      +---------+----------+---------------------------------------------------------------+
-      |         | 6 64-bit | https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ |
-      +---------+----------+---------------------------------------------------------------+
-      |         | 7 64-bit | https://archives.fedoraproject.org/pub/epel/7/x86_64/         |
-      +---------+----------+---------------------------------------------------------------+
+      +---------+----------+------------------------------------------------------------------+
+      | OS Type | Version  | How to Obtain                                                    |
+      +=========+==========+==================================================================+
+      | CentOS  | 6 32-bit | https://archives.fedoraproject.org/pub/archive/epel/6/i386/      |
+      +---------+----------+------------------------------------------------------------------+
+      |         | 6 64-bit | https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/    |
+      +---------+----------+------------------------------------------------------------------+
+      |         | 7 64-bit | https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/ |
+      +---------+----------+------------------------------------------------------------------+
 
-   Run the following commands to install Cloud-Init on an ECS running CentOS 6.5 64-bit (example):
+   #. Run the following commands to install Cloud-Init:
 
-   **yum install https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/epel-release-**\ *xx-xx*\ **.noarch.rpm**
+      **yum install** *Cloud-Init installation package address*\ **/epel-release-**\ *x-y*\ **.noarch.rpm**
 
-   **yum install cloud-init**
+      **yum install cloud-init**
 
-   .. note::
+      .. note::
 
-      *xx-xx* indicates the version of Extra Packages for Enterprise Linux (EPEL) required by the current OS.
+         *Cloud-Init installation package address* indicates the address of the Cloud-Init epel-release installation package, and *x-y* indicates the version of the Cloud-Init epel-release required by the current OS. Replace them with the actual values according to :ref:`Table 1 <en-us_topic_0030730603__table859383892814>`.
+
+         -  Take CentOS 6 64-bit as an example. If the version is 6.8, the command is as follows:
+
+            **yum install https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/epel-release-6-8.noarch.rpm**
+
+         -  Take CentOS 7 64-bit as an example. If the version is 7.14, the command is as follows:
+
+            **yum install https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm**
+
+   #. Run the following commands to enable Cloud-Init to automatically start upon system boot:
+
+      **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
+
+      **systemctl status cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
 -  Fedora
 
    Before installing Cloud-Init, ensure that the network installation source address has been configured for the OS by checking whether the **/etc/yum.repo.d/fedora.repo** file contains the installation source address of the software package. If the file does not contain the address, configure the address by following the instructions on the Fedora official website.
 
-   Run the following command to install Cloud-Init:
+   #. Run the following command to install Cloud-Init:
 
-   **yum install cloud-init**
+      **yum install cloud-init**
+
+   #. Run the following commands to enable Cloud-Init to automatically start upon system boot:
+
+      **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
+
+      **systemctl status cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
 -  Debian and Ubuntu
 
    Before installing Cloud-Init, ensure that the network installation source address has been configured for the OS by checking whether the **/etc/apt/sources.list** file contains the installation source address of the software package. If the file does not contain the address, configure the address by following the instructions on the Debian or Ubuntu official website.
 
-   Run the following commands to install Cloud-Init:
+   #. Run the following commands to install Cloud-Init:
 
-   **apt-get update**
+      **apt-get update**
 
-   **apt-get install** **cloud-init**
+      **apt-get install** **cloud-init**
+
+   #. Run the following commands to enable Cloud-Init to automatically start upon system boot:
+
+      **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
+
+      **systemctl status cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
 .. _en-us_topic_0030730603__section124220553610:
 
@@ -215,6 +249,10 @@ The following operations use Cloud-Init 0.7.9 as an example to describe how to i
 #. Run the following command to install the downloaded Cloud-Init source code package (select **--upgrade** as needed during installation):
 
    **pip install [--upgrade] /home/cloud-init-0.7.9.tar.gz**
+
+   .. note::
+
+      For details about how to install a Cloud-Init source code package, see `Cloud-Init Documentation <http://cloudinit.readthedocs.io/?spm=a2c4g.11186623.0.0.c8bb67b7NIX4Oa>`__
 
 #. Run the **cloud-init -v** command. Cloud-Init is installed successfully if the following information is displayed:
 

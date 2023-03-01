@@ -11,7 +11,7 @@ If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0
 
    The proper running of ECSs depends on the Xen or KVM driver. If no such a driver is installed, the performance of ECSs will be affected and some functions will be unavailable. Ensure that the Xen or KVM driver has been installed for the image file as needed before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
 
-   For details, see :ref:`How Do I Install Native Xen and KVM Drivers? <en-us_topic_0086020894>`
+   For details, see :ref:`How Do I Install the Native Xen and KVM Drivers? <en-us_topic_0086020894>`
 
 .. _en-us_topic_0030713211__fig18196115421120:
 

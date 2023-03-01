@@ -33,7 +33,6 @@ Add, Delete, and Modify Image Tags
 #. Click the **Private Images** tab and click the image name to display the image details.
 
    -  To modify an image tag, go to :ref:`3 <en-us_topic_0068002265__en-us_topic_0029124542_li41380655103827>`.
-
    -  To delete an image tag, go to :ref:`4 <en-us_topic_0068002265__li29841739193722>`.
    -  To add an image tag, go to :ref:`5 <en-us_topic_0068002265__li185112015308>`.
 
@@ -74,4 +73,36 @@ Search for Private Images by Tag
 
    The system searches for private images based on tag keys or tag values.
 
+Search for Shared Images by Tag
+-------------------------------
+
+You can search for a private image that has a tag and is shared with you by another tenant.
+
+After you accept private image **image_test** with tag (Enterprise=A) which is shared by another tenant, you can search for the image by tag.
+
+.. note::
+
+   You cannot add tags to a shared image. The tags of a shared image are added by the tenant who shares the image with you.
+
+#. Log in to the management console.
+
+#. Under **Compute**, click **Image Management Service**.
+
+   The **Private Images** page is displayed.
+
+#. Click the **Images Shared with Me** tab and then **Search by Tag**.
+
+#. Enter the tag key and value.
+
+   Neither the tag key nor tag value can be empty. When the tag key and tag value are matched, the system automatically shows your desired shared images.
+
+#. Click |image2| to add a tag.
+
+   You can add multiple tags to search for shared images. The system will display private images that match all tags.
+
+#. Click **Search**.
+
+   The system searches for shared images based on tag keys or tag values.
+
 .. |image1| image:: /_static/images/en-us_image_0187517327.png
+.. |image2| image:: /_static/images/en-us_image_0187518440.png

@@ -123,13 +123,13 @@ Configure Cloud-Init
           distro: rhel
           # Default user name + that default users groups (if added/used)
           default_user:
-            name: linux  //Username for login
-            lock_passwd: False  //Login using a password is enabled. Note that some OSs use value 0 to enable the password login.
+            name: linux  #Username for login
+            lock_passwd: False  #Login using a password is enabled. Note that some OSs use value 0 to enable the password login.
             gecos: Cloud User
-            groups: users  //Optional. Add users to other groups that have been configured in /etc/group.
+            groups: users  #Optional. Add users to other groups that have been configured in /etc/group.
             passwd: $6$I63DBVKK$Zh4lchiJR7NuZvtJHsYBQJIg5RoQCRLS1X2Hsgj2s5JwXI7KUO1we8WYcwbzeaS2VNpRmNo28vmxxCyU6LwoD0
-            sudo: ["ALL=(ALL) NOPASSWD:ALL"]  // Assign the root rights to the user.
-            shell: /bin/bash  //Execute shell in bash mode.
+            sudo: ["ALL=(ALL) NOPASSWD:ALL"]  # Assign the root rights to the user.
+            shell: /bin/bash  #Execute shell in bash mode.
           # Other config here will be given to the distro class and/or path classes
           paths:
              cloud_dir: /var/lib/cloud/
@@ -211,29 +211,29 @@ Configure Cloud-Init
 
       **vi /usr/lib/python2.7/site-packages/cloudinit/sources/__init__.py**
 
-      Press **i** to enter editing mode. Search for **toks**. The following information is displayed:
+      Press **i** to enter editing mode. Modify the file content as follows based on the keyword **toks**:
 
       .. code-block::
 
          if toks:
              toks = str(toks).split('.')
          else:
-             toks = ["ip-%s" % lhost.replace(".", "-")]
-         else:
-             toks = lhost.split(".novalocal")
+             #toks = ["ip-%s" % lhost.replace(".", "-")]  # Comment out this line.
+             toks = lhost.split(".novalocal")  # Add this line.
 
          if len(toks) > 1:
              hostname = toks[0]
-             #domain = '.'.join(toks[1:])
+             #domain = '.'.join(toks[1:])   # Comment out this line.
          else:
              hostname = toks[0]
 
          if fqdn and domain != defdomain:
-             return "%s.%s" % (hostname, domain)
+             #return hostname   # Comment out this line.
+             return "%s.%s" % (hostname, domain) # Add this line.
          else:
              return hostname
 
-      After the modification is complete, press **Esc** to exit the editing mode and enter **:wq!** to save the configuration and exit.
+      After the modification is complete, press **Esc** to exit the editing mode and enter **:wq!** to save the settings and exit.
 
 
       .. figure:: /_static/images/en-us_image_0125515202.png

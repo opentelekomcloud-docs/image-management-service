@@ -34,7 +34,7 @@ ECS or Image File Configurations
 .. table:: **Table 2** Image file configurations
 
    +-----------------------+--------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-   | OS                    | Configuration Item                                                                               | Reference                                               |
+   | OS                    | Configuration                                                                                    | Reference                                               |
    +=======================+==================================================================================================+=========================================================+
    | Windows               | -  Set the NIC to DHCP.                                                                          | :ref:`Preparing an Image File <en-us_topic_0030713189>` |
    |                       | -  Enable remote desktop connection.                                                             |                                                         |
@@ -62,24 +62,24 @@ BMS or Image File Configurations
 
 .. table:: **Table 3** BMS configurations
 
-   +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-   | OS                    | Configuration Item                                         | Reference                                                                                 |
-   +=======================+============================================================+===========================================================================================+
-   | Windows               | -  Install software in the **bms-network-config** package. | For details, see "Creating a Private Image from a BMS" in *Bare Metal Server User Guide*. |
-   |                       | -  Install Cloudbase-Init.                                 |                                                                                           |
-   |                       | -  Delete residual files from the OS.                      |                                                                                           |
-   +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-   | Linux                 | -  Install software in the **bms-network-config** package. | For details, see "Creating a Private Image from a BMS" in *Bare Metal Server User Guide*. |
-   |                       | -  Install Cloud-Init.                                     |                                                                                           |
-   |                       | -  Delete residual files from the OS.                      |                                                                                           |
-   +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+   +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------+
+   | OS                    | Configuration                                              | Reference                                                               |
+   +=======================+============================================================+=========================================================================+
+   | Windows               | -  Install software in the **bms-network-config** package. | "Creating a Private Image from a BMS" in *Bare Metal Server User Guide* |
+   |                       | -  Install Cloudbase-Init.                                 |                                                                         |
+   |                       | -  Delete residual files from the OS.                      |                                                                         |
+   +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------+
+   | Linux                 | -  Install software in the **bms-network-config** package. | "Creating a Private Image from a BMS" in *Bare Metal Server User Guide* |
+   |                       | -  Install Cloud-Init.                                     |                                                                         |
+   |                       | -  Delete residual files from the OS.                      |                                                                         |
+   +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------+
 
 .. table:: **Table 4** Image file configurations
 
    +-----------------------+------------------------------------------------------------+------------------------------------------+
-   | OS                    | Configuration Item                                         | Reference                                |
+   | OS                    | Configuration                                              | Reference                                |
    +=======================+============================================================+==========================================+
-   | Windows               | -  Install drivers for x86 v5 BMSs.                        | *Bare Metal Server Image Creation Guide* |
+   | Windows               | -  Install drivers for x86 V5 BMSs.                        | *Bare Metal Server Image Creation Guide* |
    |                       | -  Install Cloudbase-Init.                                 |                                          |
    |                       | -  Install software in the **bms-network-config** package. |                                          |
    |                       | -  (Optional) Install the SDI iNIC driver.                 |                                          |

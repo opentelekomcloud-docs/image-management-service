@@ -14,6 +14,7 @@ Sharing Images
 -  :ref:`Stopping Sharing Images <en-us_topic_0032042422>`
 -  :ref:`Adding Tenants Who Can Use Shared Images <en-us_topic_0032042423>`
 -  :ref:`Deleting Image Recipients Who Can Use Shared Images <en-us_topic_0032087324>`
+-  :ref:`Replicating a Shared Image <en-us_topic_0172473649>`
 
 .. toctree::
    :maxdepth: 1
@@ -28,3 +29,4 @@ Sharing Images
    stopping_sharing_images
    adding_tenants_who_can_use_shared_images
    deleting_image_recipients_who_can_use_shared_images
+   replicating_a_shared_image

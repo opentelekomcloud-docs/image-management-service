@@ -14,6 +14,7 @@ Constraints
 -----------
 
 -  When creating a full-ECS image from a CSBS backup, ensure that the source ECS of the CSBS backup has been properly configured, or the image creation may fail.
+-  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
 -  A CSBS backup used to create a full-ECS image cannot have shared disks.
 -  Only an available CSBS backup can be used to create a full-ECS image. A CSBS backup can be used to create only one full-ECS image.
 -  A full-ECS image cannot be exported or replicated.
@@ -38,7 +39,7 @@ Procedure
    c. Select **CSBS Backup** for **Source** and then select a backup from the list.
 
 
-      .. figure:: /_static/images/en-us_image_0120595964.png
+      .. figure:: /_static/images/en-us_image_0162745871.png
          :alt: **Figure 1** Creating a full-ECS image using a CSBS backup
 
          **Figure 1** Creating a full-ECS image using a CSBS backup
@@ -47,7 +48,7 @@ Procedure
 
    e. Click **Create Now**.
 
-   f. Confirm the parameters and click **Submit**.
+   f. Confirm the settings and click **Submit**.
 
 #. Switch back to the **Image Management Service** page to monitor the image status.
 
@@ -60,7 +61,10 @@ Follow-up Procedure
 
    .. note::
 
-      If a full-ECS image contains one or more data disks, the system configures data disk parameters automatically when you use the image to create ECSs.
+      When you use a full-ECS image to create an ECS:
+
+      -  The system and data disk information defaulted by the image will be automatically displayed.
+      -  If the full-ECS image contains multiple data disks, it takes some time to load and display the disk information.
 
 -  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.
 -  If you want to share a full-ECS image with other tenants, you must migrate resources to the CBR service because only full-ECS images created from CBR backups can be shared.

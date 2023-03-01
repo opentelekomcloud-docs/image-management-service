@@ -197,7 +197,7 @@ Procedure
 
    f. Set parameters as prompted.
 
-      For details about the parameters, see :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713184>` and :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713193>`.
+      For details about the parameters, see :ref:`Registering an External Image File as a Private Image <en-us_topic_0030713193>`.
 
       .. caution::
 

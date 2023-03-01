@@ -8,18 +8,17 @@ Installing Native KVM Drivers
 Scenarios
 ---------
 
-When optimizing a Linux private image, you need to install native KVM drivers on the ECS.
+When optimizing a Linux private image, you need to install native KVM drivers on the ECS. If the drivers have been installed, skip this section.
 
 .. caution::
 
    If you do not install KVM drivers, NICs of the ECS may not be detected and the ECS cannot communicate with other resources.
 
-This section describes how to install native KVM drivers.
-
 Prerequisites
 -------------
 
--  ECSs that use native Linux KVM drivers must have a kernel later than the 2.6.24 version.
+-  The ECS is using KVM virtualization and needs to be optimized. For details, see
+-  If the ECS uses native Linux KVM drivers, its kernel must be later than 2.6.24.
 -  Disable your antivirus and intrusion detection software. You can enable the software after KVM drivers are installed.
 
 Procedure
@@ -52,7 +51,7 @@ Modify the configuration file based on the OS version.
    +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
    |                       | If the OS version is later than SUSE 12 SP1 or openSUSE 13:                                                                                                                                                                | :ref:`SUSE and openSUSE (Later than SUSE 12 SP1 or openSUSE 13) <en-us_topic_0000001120952155__section17251152081820>`   |
    |                       |                                                                                                                                                                                                                            |                                                                                                                          |
-   |                       | #. In the **/etc/dracut.conf** file, add VirtIO drivers to **add_drivers**. VirtIO drivers include virtio_blk, virtio_scsi, virtio_net, virtio_pci, virtio_ring, and virtio. Separate driver names with spaces.            |                                                                                                                          |
+   |                       | #. In the **/etc/dracut.conf** file, add VirtIO drivers to **add_drivers**, including virtio_blk, virtio_scsi, virtio_net, virtio_pci, virtio_ring, and virtio. Separate driver names with spaces.                         |                                                                                                                          |
    |                       | #. Save and exit the **/etc/dracut.conf** file and run the **dracut -f** command to generate **initrd** again.                                                                                                             |                                                                                                                          |
    +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
 

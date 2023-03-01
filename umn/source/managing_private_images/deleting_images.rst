@@ -32,14 +32,14 @@ Procedure
       a. Select the images you want to delete in the image list.
       b. Click **Delete** above the image list.
 
-#. (Optional) Select **Delete CSBS backups of the full-ECS images**.
+#. (Optional) Select **Delete CSBS backups or cloud server backups of the full-ECS images**.
 
    This parameter is available only when you have selected full-ECS images from the image list.
 
-   If you select this option, the system will delete CSBS backups of the full-ECS images.
+   If you select this option, the system will delete CSBS or CBR backups of the full-ECS images.
 
    .. note::
 
-      If CSBS backups failed to be deleted, the cause may be that these backups are being created and cannot be deleted. In this case, manually delete them as prompted.
+      If CSBS or CBR backups failed to be deleted, the cause may be that these backups are being created and cannot be deleted. In this case, manually delete them as prompted.
 
 #. Click **Yes**.

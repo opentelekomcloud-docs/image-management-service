@@ -24,10 +24,11 @@ Prerequisites
 Install Cloudbase-Init
 ----------------------
 
-#. On the Windows **Start** menu, choose **Control Panel** > **Programs** > **Programs and Features** and check whether Cloudbase-Init is installed.
+#. On the Windows **Start** menu, choose **Control Panel** > **Programs** > **Programs and Features** and check whether Cloudbase-Init 1.1.2 is installed.
 
-   -  If yes, go to :ref:`Configure Cloudbase-Init <en-us_topic_0030730602__section67455211370>`.
-   -  If no, go to the next step.
+   -  If Cloudbase-Init 1.1.2 is installed, skip the subsequent steps and go to :ref:`Configure Cloudbase-Init <en-us_topic_0030730602__section67455211370>`.
+   -  If Cloudbase-Init is installed but the version is not 1.1.2, uninstall Cloudbase-Init and go to the next step.
+   -  If Cloudbase-Init is not installed, go to the next step.
 
 #. Check whether the version of the OS is Windows desktop.
 
@@ -50,17 +51,10 @@ Install Cloudbase-Init
 
    Download the Cloudbase-Init installation package of the appropriate version based on the OS architecture from the Cloudbase-Init official website (http://www.cloudbase.it/cloud-init-for-windows-instances/).
 
-   Cloudbase-Init has two versions: stable and beta.
-
    To obtain the stable version, visit the following paths:
 
    -  64-bit: https://www.cloudbase.it/downloads/CloudbaseInitSetup_Stable_x64.msi
    -  32-bit: https://www.cloudbase.it/downloads/CloudbaseInitSetup_Stable_x86.msi
-
-   To obtain the beta version, visit the following paths:
-
-   -  64-bit: https://www.cloudbase.it/downloads/CloudbaseInitSetup_x64.msi
-   -  32-bit: https://www.cloudbase.it/downloads/CloudbaseInitSetup_x86.msi
 
 #. Double-click the Cloudbase-Init installation package.
 
@@ -77,7 +71,7 @@ Install Cloudbase-Init
       The version number shown in the figure is for reference only.
 
 
-   .. figure:: /_static/images/en-us_image_0087083593.png
+   .. figure:: /_static/images/en-us_image_0000001505495049.png
       :alt: **Figure 1** Configuring parameters
 
       **Figure 1** Configuring parameters
@@ -98,7 +92,7 @@ Install Cloudbase-Init
    In the **Completed the Cloudbase-Init Setup Wizard** window, ensure that neither option is selected.
 
 
-   .. figure:: /_static/images/en-us_image_0085074510.png
+   .. figure:: /_static/images/en-us_image_0000001455418292.png
       :alt: **Figure 2** Completing the Cloudbase-Init installation
 
       **Figure 2** Completing the Cloudbase-Init installation

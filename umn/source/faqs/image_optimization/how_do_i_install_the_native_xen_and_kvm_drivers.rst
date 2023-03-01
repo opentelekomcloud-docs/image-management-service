@@ -2,27 +2,28 @@
 
 .. _en-us_topic_0086020894:
 
-How Do I Install Native Xen and KVM Drivers?
-============================================
+How Do I Install the Native Xen and KVM Drivers?
+================================================
 
 Scenarios
 ---------
 
-When optimizing a Linux private image, you need to install native Xen and KVM drivers for the image.
+When optimizing a Linux private image with Xen virtualization, you need to change the UUID in the fstab and GRUB configuration files, and install native Xen and KVM drivers on the source ECS of the image.
+
+This section describes how to install the native Xen and KVM drivers.
 
 .. caution::
 
-   If you do not install Xen drivers for the image, the network performance of the ECSs created from this image will be poor, and the security groups and firewall configured for the ECSs will not take effect.
+   Xen: If you do not install the Xen driver for the image, the network performance of the ECSs created from this image will be poor, and the security groups and firewall configured for the ECSs will not take effect.
 
-   If you do not install KVM drivers for the image, the NICs of the ECSs may not be detected and the ECSs will be unable to communicate with other resources.
-
-This section describes how to install native Xen and KVM drivers.
+   KVM: If you do not install the KVM driver for the image, the NICs of the ECSs may not be detected and the ECSs will be unable to communicate with other resources.
 
 Prerequisites
 -------------
 
+-  The virtualization type of the ECS is Xen. For details, see .
 -  The kernel version must be later than 2.6.24.
--  Antivirus and intrusion detection software have been disabled. You can enable them after Xen and KVM drivers are installed.
+-  Disable your antivirus and intrusion detection software. You can enable them after installation of the Xen and KVM drivers.
 
 Procedure
 ---------

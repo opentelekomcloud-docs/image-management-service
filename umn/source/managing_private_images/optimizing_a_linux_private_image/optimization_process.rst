@@ -5,17 +5,35 @@
 Optimization Process
 ====================
 
-A Linux ECS can be switched from Xen to KVM if xen-pv and VirtIO drivers run on the ECS. Before changing a Xen-based ECS to a KVM-based ECS, ensure that the required drivers have been installed and the UUID has been configured for the Linux private image. In addition, optimizing the private image can improve network performance of the ECS.
+The virtualization of ECSs is gradually changing from Xen to KVM. Therefore, private images need to support both Xen and KVM. To ensure that ECSs created from a private image can run properly, you are advised to optimize it no matter it is using Xen or KVM.
 
-#. Use the Linux image to be optimized to create an ECS, and start and log in to the ECS.
+A Linux ECS can run properly only when xen-pv and VirtIO drivers have been installed on it and the disk ID in its GRUB configuration file and fstab file has been changed to UUID.
 
-#. .. _en-us_topic_0047501133__en-us_topic_0036684058_li52904758173244:
+Preparations
+------------
 
-   Uninstall the PV Driver installed on the ECS.
+#. Use the Linux image to be optimized to an ECS, and start and log in to the ECS.
 
-   For details, see :ref:`Uninstalling the PV Driver from a Linux ECS <en-us_topic_0037352186>`.
+#. View the virtualization type of the ECS....
 
-#. Change the disk ID in the GRUB configuration file to UUID.
+   For details, see :ref:`Viewing the Virtualization Type of a Linux ECS <en-us_topic_0037352185>`.
+
+   The virtualization type may cause slice differences in an optimization process.
+
+Process
+-------
+
+#. Uninstall PV drivers from the ECS.
+
+   For details, see :ref:`Uninstalling PV Drivers from a Linux ECS <en-us_topic_0037352186>`.
+
+   .. note::
+
+      If the ECS is using KVM virtualization, skip this step.
+
+#. .. _en-us_topic_0047501133__li20604522122715:
+
+   Change the disk ID in the GRUB configuration file to UUID.
 
    For details, see :ref:`Changing the Disk Identifier in the GRUB Configuration File to UUID <en-us_topic_0086020895>`.
 
@@ -23,11 +41,12 @@ A Linux ECS can be switched from Xen to KVM if xen-pv and VirtIO drivers run on 
 
    For details, see :ref:`Changing the Disk Identifier in the fstab File to UUID <en-us_topic_0086024961>`.
 
-#. Install native KVM drivers.
+#. Install native virtualization drivers.
 
-   For details, see :ref:`Installing Native KVM Drivers <en-us_topic_0000001120952155>`.
+   -  For Xen, install native Xen and KVM drivers. For details, see :ref:`Install the Native Xen and KVM Drivers <en-us_topic_0000001347866330>`
+   -  For KVM, install native KVM drivers. For details, see :ref:`Installing Native KVM Drivers <en-us_topic_0000001120952155>`.
 
-#. .. _en-us_topic_0047501133__en-us_topic_0036684058_li36218236173244:
+#. .. _en-us_topic_0047501133__li18604132210271:
 
    Delete log files and historical records, and stop the ECS.
 

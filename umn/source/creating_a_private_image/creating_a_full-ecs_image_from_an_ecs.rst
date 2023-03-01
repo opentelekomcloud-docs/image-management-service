@@ -24,6 +24,7 @@ The following figure shows the process of creating an image from an entire ECS, 
 
 -  The time required for creating a full-ECS image depends on the disk size, network quality, and the number of concurrent tasks.
 -  The ECS used to create a full-ECS image must be in **Running** or **Stopped** state. To create a full-ECS image containing a database, use a stopped ECS.
+-  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
 -  When a full-ECS image is being created, do not detach the system disk from the ECS or stop, start, or restart the ECS, or the image creation will fail.
 -  In :ref:`Figure 1 <en-us_topic_0116125142__fig11785134314155>`, if there are snapshots of the system disk and data disks but the ECS backup creation is not complete, the full-ECS image you create will only be available in the AZ where the source ECS is and can only be used to provision ECSs in this AZ. You cannot provision ECSs in other AZs in the region until the original ECS is fully backed up and the full-ECS image is in the **Normal** state.
 -  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.
@@ -93,7 +94,7 @@ Procedure
    c. Select **ECS** for **Source** and then select an ECS from the list.
 
 
-      .. figure:: /_static/images/en-us_image_0118549088.png
+      .. figure:: /_static/images/en-us_image_0162744204.png
          :alt: **Figure 2** Creating a full-ECS image using an ECS
 
          **Figure 2** Creating a full-ECS image using an ECS
@@ -108,7 +109,7 @@ Procedure
 
    f. Click **Create Now**.
 
-   g. Confirm the parameters and click **Submit**.
+   g. Confirm the settings and click **Submit**.
 
 #. Go back to the **Private Images** page and view the new full-ECS image.
 
@@ -131,6 +132,9 @@ Follow-up Procedure
 
    .. note::
 
-      If a full-ECS image contains one or more data disks, the system configures data disk parameters automatically when you use the image to create ECSs.
+      When you use a full-ECS image to create an ECS:
+
+      -  The system and data disk information defaulted by the image will be automatically displayed.
+      -  If the full-ECS image contains multiple data disks, it takes some time to load and display the disk information.
 
 -  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.
