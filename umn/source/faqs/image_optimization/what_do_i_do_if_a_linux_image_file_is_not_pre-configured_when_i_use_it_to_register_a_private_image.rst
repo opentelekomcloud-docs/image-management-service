@@ -62,7 +62,7 @@ Create an ECS from the private image.
 
 #. Perform the following steps to check whether the private image has been pre-configured:
 
-   a. Check whether the ECS can be successfully started. If the start succeeds, the Xen or KVM driver has been installed for the external image file on the original platform or the driver has been automatically installed for the private image on the cloud platform. If the start failed, install the Xen or KVM driver as needed for the image file and start from :ref:`Step 1: Upload the Image File <en-us_topic_0030713211__section1049514242043>` again.
+   a. Check whether the ECS can be successfully started. If the start succeeds, the KVM driver has been installed for the external image file on the original platform or the driver has been automatically installed for the private image on the cloud platform. If the start failed, install the KVM driver as needed for the image file and start from :ref:`Step 1: Upload the Image File <en-us_topic_0030713211__section1049514242043>` again.
    b. Check whether you can log in to the ECS using your configured password or key. If you can, Cloud-Init has been installed. If you cannot, use the password or key contained in the image file to log in to the ECS and install Cloud-Init as instructed in :ref:`Installing Cloud-Init <en-us_topic_0030730603>`.
    c. Check the network configuration by referring to :ref:`Step 4: Configure the ECS <en-us_topic_0030713211__section51410413191>`.
 

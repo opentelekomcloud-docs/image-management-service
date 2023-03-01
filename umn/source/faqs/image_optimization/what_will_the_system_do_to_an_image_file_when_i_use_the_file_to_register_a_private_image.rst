@@ -32,6 +32,5 @@ Windows
 
 -  Restore the IDE driver to enable the OS to use this driver for its initial start.
 -  Delete the registry keys of the mouse and keyboard and generate the registry keys on the new platform to ensure that the mouse and keyboard are available.
--  Restore the PV driver registry key to rectify driver installation failures and Xen driver conflicts.
 -  Inject the VirtIO driver offline so that the system can start without UVP VMTools installed.
 -  Restore DHCP. The system will dynamically obtain information such as the IP address based on the DHCP protocol.

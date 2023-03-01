@@ -20,4 +20,4 @@ Where Can I View the Image Creation Progress? How Long Does It Take to Create an
 
 Log in to the management console. Choose **Compute** > **Image Management Service** and click the **Private Images** tab. Monitor the image creation progress in the **Status** column.
 
-The image creation involves the installation of Xen and KVM drivers, OS kernel loading, and GRUB boot configuration, which may take a long time. In addition, the network speed, image file type, and disk size have an impact on how long image creation takes.
+The image creation involves the installation of KVM drivers, OS kernel loading, and GRUB boot configuration, which may take a long time. In addition, the network speed, image file type, and disk size have an impact on how long image creation takes.
