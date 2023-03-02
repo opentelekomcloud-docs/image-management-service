@@ -9,10 +9,9 @@ If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0
 
 .. caution::
 
-   The proper running of ECSs depends on the Xen Guest OS driver (PV driver) andKVM Guest OS driver (UVP VMTools), without which the performance of ECSs will be affected and some functions will be unavailable. Ensure that the driver installation has been completed for the image file before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
+   The proper running of ECSs depends on the KVM Guest OS driver (UVP VMTools), without which the performance of ECSs will be affected and some functions will be unavailable. Ensure that the driver installation has been completed for the image file before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
 
-   -  Install the PV driver. For details, see :ref:`Installing the PV Driver <en-us_topic_0037352182>`.
-   -  Install UVP VMTools. For details, see :ref:`Installing UVP VMTools <en-us_topic_0037352061>`.
+   For details about how to install UVP VMTools, see :ref:`Installing UVP VMTools <en-us_topic_0037352061>`.
 
 .. _en-us_topic_0030713185__fig18196115421120:
 

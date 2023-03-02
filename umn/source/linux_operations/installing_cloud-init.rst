@@ -93,8 +93,6 @@ The following describes how to install Cloud-Init on an ECS running SUSE Linux, 
 
    Paths for obtaining the Cloud-Init installation package for SUSE Linux
 
-   http://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/
-
    `https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/ <https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools>`__
 
    http://download.opensuse.org/repositories/Cloud:/Tools/

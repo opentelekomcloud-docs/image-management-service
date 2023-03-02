@@ -9,9 +9,9 @@ If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0
 
 .. caution::
 
-   The proper running of ECSs depends on the Xen or KVM driver. If no such a driver is installed, the performance of ECSs will be affected and some functions will be unavailable. Ensure that the Xen or KVM driver has been installed for the image file as needed before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
+   The proper running of ECSs depends on the KVM driver. If no such a driver is installed, the performance of ECSs will be affected and some functions will be unavailable. Ensure that the Xen or KVM driver has been installed for the image file as needed before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
 
-   For details, see :ref:`How Do I Install the Native Xen and KVM Drivers? <en-us_topic_0086020894>`
+   For details, see :ref:`Installing Native KVM Drivers <en-us_topic_0000001120952155>`.
 
 .. _en-us_topic_0030713211__fig18196115421120:
 
@@ -62,7 +62,7 @@ Create an ECS from the private image.
 
 #. Perform the following steps to check whether the private image has been pre-configured:
 
-   a. Check whether the ECS can be successfully started. If the start succeeds, the Xen or KVM driver has been installed for the external image file on the original platform or the driver has been automatically installed for the private image on the cloud platform. If the start failed, install the Xen or KVM driver as needed for the image file and start from :ref:`Step 1: Upload the Image File <en-us_topic_0030713211__section1049514242043>` again.
+   a. Check whether the ECS can be successfully started. If the start succeeds, the KVM driver has been installed for the external image file on the original platform or the driver has been automatically installed for the private image on the cloud platform. If the start failed, install the KVM driver as needed for the image file and start from :ref:`Step 1: Upload the Image File <en-us_topic_0030713211__section1049514242043>` again.
    b. Check whether you can log in to the ECS using your configured password or key. If you can, Cloud-Init has been installed. If you cannot, use the password or key contained in the image file to log in to the ECS and install Cloud-Init as instructed in :ref:`Installing Cloud-Init <en-us_topic_0030730603>`.
    c. Check the network configuration by referring to :ref:`Step 4: Configure the ECS <en-us_topic_0030713211__section51410413191>`.
 

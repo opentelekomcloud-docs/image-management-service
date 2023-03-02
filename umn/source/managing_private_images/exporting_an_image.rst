@@ -23,7 +23,7 @@ Background
 
 -  The time required for exporting an image depends on the image size and the number of concurrent export tasks.
 
--  You can export images in QCOW2, VMDK, VHD, or ZVHD format. Images exported in different formats may vary in size.
+-  You can export images in ZVHD2, QCOW2, VMDK, VHD, or ZVHD format. The default format of a private image is ZVHD2. Images exported in different formats may vary in size.
 
 -  If an image is greater than 128 GB, you can select **Enable** for **Fast Export** when exporting the image to an OBS bucket. In this case, you cannot specify the format of the exported image. You can convert the image format after it is exported.
 

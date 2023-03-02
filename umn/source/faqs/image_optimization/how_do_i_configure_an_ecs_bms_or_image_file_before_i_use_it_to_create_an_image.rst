@@ -10,26 +10,26 @@ ECS or Image File Configurations
 
 .. table:: **Table 1** ECS configurations
 
-   +-----------------------+---------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-   | OS                    | Configuration                                                             | Reference                                                                       |
-   +=======================+===========================================================================+=================================================================================+
-   | Windows               | -  Set the NIC to DHCP.                                                   | :ref:`Creating a System Disk Image from a Windows ECS <en-us_topic_0030713149>` |
-   |                       | -  Enable remote desktop connection.                                      |                                                                                 |
-   |                       | -  (Optional) install special Windows drivers.                            |                                                                                 |
-   |                       | -  (Optional) Install Cloudbase-Init.                                     |                                                                                 |
-   |                       | -  Install the Guest OS drivers, including the PV driver and UVP VMTools. |                                                                                 |
-   |                       | -  Run Sysprep.                                                           |                                                                                 |
-   +-----------------------+---------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-   | Linux                 | -  Set the NIC to DHCP.                                                   | :ref:`Creating a System Disk Image from a Linux ECS <en-us_topic_0030713180>`   |
-   |                       | -  (Optional) install special Linux drivers.                              |                                                                                 |
-   |                       | -  (Optional) Install Cloud-Init.                                         |                                                                                 |
-   |                       | -  Delete files from the network rule directory.                          |                                                                                 |
-   |                       | -  Change the disk identifier in the GRUB configuration file to UUID.     |                                                                                 |
-   |                       | -  Change the disk identifier in the fstab file to UUID.                  |                                                                                 |
-   |                       | -  Install native Xen and KVM drivers.                                    |                                                                                 |
-   |                       | -  Detach data disks from the ECS.                                        |                                                                                 |
-   |                       | -  Configure console logging.                                             |                                                                                 |
-   +-----------------------+---------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+   +-----------------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------------+
+   | OS                    | Configuration                                                         | Reference                                                                       |
+   +=======================+=======================================================================+=================================================================================+
+   | Windows               | -  Set the NIC to DHCP.                                               | :ref:`Creating a System Disk Image from a Windows ECS <en-us_topic_0030713149>` |
+   |                       | -  Enable remote desktop connection.                                  |                                                                                 |
+   |                       | -  (Optional) install special Windows drivers.                        |                                                                                 |
+   |                       | -  (Optional) Install Cloudbase-Init.                                 |                                                                                 |
+   |                       | -  Install the Guest OS driver (UVP VMTools).                         |                                                                                 |
+   |                       | -  Run Sysprep.                                                       |                                                                                 |
+   +-----------------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------------+
+   | Linux                 | -  Set the NIC to DHCP.                                               | :ref:`Creating a System Disk Image from a Linux ECS <en-us_topic_0030713180>`   |
+   |                       | -  (Optional) install special Linux drivers.                          |                                                                                 |
+   |                       | -  (Optional) Install Cloud-Init.                                     |                                                                                 |
+   |                       | -  Delete files from the network rule directory.                      |                                                                                 |
+   |                       | -  Change the disk identifier in the GRUB configuration file to UUID. |                                                                                 |
+   |                       | -  Change the disk identifier in the fstab file to UUID.              |                                                                                 |
+   |                       | -  Install native KVM drivers.                                        |                                                                                 |
+   |                       | -  Detach data disks from the ECS.                                    |                                                                                 |
+   |                       | -  Configure console logging.                                         |                                                                                 |
+   +-----------------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Image file configurations
 
@@ -38,13 +38,13 @@ ECS or Image File Configurations
    +=======================+==================================================================================================+=========================================================+
    | Windows               | -  Set the NIC to DHCP.                                                                          | :ref:`Preparing an Image File <en-us_topic_0030713189>` |
    |                       | -  Enable remote desktop connection.                                                             |                                                         |
-   |                       | -  Install the Guest OS drivers, including the PV driver and UVP VMTools.                        |                                                         |
+   |                       | -  Install the Guest OS driver (UVP VMTools).                                                    |                                                         |
    |                       | -  (Optional) Install Cloudbase-Init.                                                            |                                                         |
    |                       | -  (Optional) Enable NIC multi-queue.                                                            |                                                         |
    +-----------------------+--------------------------------------------------------------------------------------------------+---------------------------------------------------------+
    | Linux                 | -  Delete files from the network rule directory.                                                 | :ref:`Preparing an Image File <en-us_topic_0030713198>` |
    |                       | -  Set the NIC to DHCP.                                                                          |                                                         |
-   |                       | -  Install native Xen and KVM drivers.                                                           |                                                         |
+   |                       | -  Install native KVM drivers.                                                                   |                                                         |
    |                       | -  Change the disk identifier in the GRUB configuration file to UUID.                            |                                                         |
    |                       | -  Change the disk identifier in the fstab file to UUID.                                         |                                                         |
    |                       | -  Delete the automatic attachment information of non-system disks from the **/etc/fstab** file. |                                                         |
