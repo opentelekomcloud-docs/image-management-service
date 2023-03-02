@@ -63,9 +63,9 @@ Before creating a private image from an ECS:
 
 -  Delete any network rules to prevent NIC name drift on the ECSs created from the image. For details, see :ref:`Deleting Files from the Network Rule Directory <en-us_topic_0069904570>`.
 
--  To ensure that the ECSs created from the image support both Xen and KVM virtualization, the Linux ECS used to create the image has to be modified. For instance, the disk IDs in the GRUB and fstab files need to be UUID and native Xen and KVM drivers need to be installed.
+-  To ensure that the ECSs created from the image support KVM virtualization, the Linux ECS used to create the image has to be modified. For instance, the disk IDs in the GRUB and fstab files need to be UUID and native KVM drivers need to be installed.
 
-   For details, see steps :ref:`2 <en-us_topic_0047501133__li20604522122715>` to :ref:`6 <en-us_topic_0047501133__li18604132210271>` in :ref:`Optimization Process <en-us_topic_0047501133>`.
+   For details, see :ref:`Optimization Process <en-us_topic_0047501133>`.
 
 -  If multiple data disks are attached to an ECS used to create a private image, the ECSs created from the image may be unavailable. You need to detach all data disks from the ECS before using it to create an image. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
 

@@ -5,17 +5,13 @@
 Optimization Process
 ====================
 
-The proper running of ECSs depends on Xen Guest OS driver (PV driver) and KVM Guest OS driver (UVP VMTools). To ensure that ECSs support both Xen and KVM and to improve network performance, the PV driver and UVP VMTools must be installed for the image.
+The proper running of ECS depends on KVM Guest OS driver (UVP VMTools). To ensure that ECSs support KVM and to improve network performance, the UVP VMTools must be installed for the image.
 
 #. Create an ECS using the Windows private image to be optimized and log in to the ECS.
 
-#. .. _en-us_topic_0047501112__en-us_topic_0036684057_li46245228:
+#. .. _en-us_topic_0047501112__en-us_topic_0036684057_li24121565:
 
-   Install the latest version of PV driver on the ECS.
-
-   For details, see :ref:`Installing the PV Driver <en-us_topic_0037352182>`.
-
-#. Install the UVP VMTools required for creating ECSs in the KVM virtual resource pool.
+   Install the UVP VMTools required for creating ECSs in the KVM virtual resource pool.
 
    For details, see :ref:`Installing UVP VMTools <en-us_topic_0037352061>`.
 

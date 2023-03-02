@@ -17,7 +17,7 @@ When optimizing a Linux private image, you need to install native KVM drivers on
 Prerequisites
 -------------
 
--  The ECS is using KVM virtualization and needs to be optimized. For details, see
+-  The ECS needs to be optimized. For details, see :ref:`Checking Whether a Private Image Needs to be Optimized <en-us_topic_0037352185>`.
 -  If the ECS uses native Linux KVM drivers, its kernel must be later than 2.6.24.
 -  Disable your antivirus and intrusion detection software. You can enable the software after KVM drivers are installed.
 

@@ -14,7 +14,6 @@ Image Optimization
 -  :ref:`How Do I Enable NIC Multi-Queue for an Image? <en-us_topic_0085214115>`
 -  :ref:`How Do I Make a System Disk Image Support Fast ECS Creation? <en-us_topic_0187108863>`
 -  :ref:`What Is the Cause of the Failure to Install a Guest OS Driver on a Windows ECS? <en-us_topic_0030713215>`
--  :ref:`How Do I Install the Native Xen and KVM Drivers? <en-us_topic_0086020894>`
 
 .. toctree::
    :maxdepth: 1
@@ -29,4 +28,3 @@ Image Optimization
    how_do_i_enable_nic_multi-queue_for_an_image
    how_do_i_make_a_system_disk_image_support_fast_ecs_creation
    what_is_the_cause_of_the_failure_to_install_a_guest_os_driver_on_a_windows_ecs
-   how_do_i_install_the_native_xen_and_kvm_drivers
