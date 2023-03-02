@@ -8,7 +8,7 @@ Image Sharing FAQs
 How Many Tenants Can I Share an Image with?
 -------------------------------------------
 
-128
+A system disk image or data disk image can be shared with up to 256 tenants, but a full-ECS image can only be shared with up to 10 tenants.
 
 How Many Images Can Be Shared with Me?
 --------------------------------------
@@ -24,6 +24,11 @@ I Shared an Image to an Account But the Account Did Not Accept or Reject the Ima
 ----------------------------------------------------------------------------------------------------------------------------
 
 No.
+
+Can I Share Images Shared with Me with Other Tenants?
+-----------------------------------------------------
+
+You cannot directly share such images with other tenants. If you do need to do so, you can replicate a shared image to a private image and then share the private image.
 
 Can I Use an Image I Have Shared with Others to Create an ECS?
 --------------------------------------------------------------

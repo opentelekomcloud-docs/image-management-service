@@ -26,7 +26,7 @@ Procedure
    On the **My Credentials** page, view the project ID in the project list.
 
 
-   .. figure:: /_static/images/en-us_image_0180992674.png
+   .. figure:: /_static/images/en-us_image_0180992673.png
       :alt: **Figure 1** Viewing the project ID
 
       **Figure 1** Viewing the project ID

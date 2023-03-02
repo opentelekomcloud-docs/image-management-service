@@ -9,11 +9,9 @@ You can run the following command to query the virtualization type of an ECS:
 
 **lscpu**
 
-If the value of **Hypervisor vendor** is **Xen**, the ECS uses Xen. If KVM is required, perform the operations in this section to optimize the Linux private image.
+If the value of **Hypervisor vendor** is **Xen**, the ECS uses Xen.
 
-.. note::
-
-   If the ECS uses KVM, you are also advised to optimize the private image to prevent any exceptions with the ECSs created from the image.
+If the value of **Hypervisor vendor** is **KVM**, the ECS uses KVM.
 
 
 .. figure:: /_static/images/en-us_image_0125146639.png

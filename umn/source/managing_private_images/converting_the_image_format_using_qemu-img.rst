@@ -10,8 +10,28 @@ Scenarios
 
 You can import an image file in VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVHD, or ZVHD2 format to the cloud platform. Image files in other formats need to be converted before being imported. The open-source tool **qemu-img** is provided for you to convert image file formats.
 
-Background
-----------
+Description
+-----------
+
+This section describes how to convert an image format using a Windows or Linux local PC.
+
+Tool and Costs
+--------------
+
+.. table:: **Table 1** Tool and costs
+
+   +-----------------------+-------------------------------------------------------------------+-----------------------+
+   | Tool                  | Description                                                       | Costs                 |
+   +=======================+===================================================================+=======================+
+   | qemu-img              | **qemu-img** is an open-source tool for converting image formats. | Free                  |
+   |                       |                                                                   |                       |
+   |                       | You can obtain it from:                                           |                       |
+   |                       |                                                                   |                       |
+   |                       | https://qemu.weilnetz.de/w64/                                     |                       |
+   +-----------------------+-------------------------------------------------------------------+-----------------------+
+
+Constraints
+-----------
 
 -  **qemu-img** supports the mutual conversion of image formats VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, and QED.
 
@@ -171,9 +191,13 @@ Linux
 Examples
 --------
 
-A pre-allocated image depends on two files: *xxxx*\ **.vmdk** (configuration file) and *xxxx*\ **-flat.vmdk** (data file) and cannot be directly imported to the cloud platform. When you export a pre-allocated image file in VMDK monolithic Flat format from the VMware platform, you must convert its format to common VMDK or QCOW2 before it can be imported to the cloud platform.
+-  Scenario
 
-The following uses the image files **centos6.9-64bit-flat.vmdk** and **centos6.9-64bit.vmdk** as an example to describe how to use qemu-img to convert image formats.
+   A pre-allocated image depends on two files: *xxxx*\ **.vmdk** (configuration file) and *xxxx*\ **-flat.vmdk** (data file) and cannot be directly imported to the cloud platform. When you export a pre-allocated image file in VMDK monolithic Flat format from the VMware platform, you must convert its format to common VMDK or QCOW2 before it can be imported to the cloud platform.
+
+   The following uses the image files **centos6.9-64bit-flat.vmdk** and **centos6.9-64bit.vmdk** as an example to describe how to use qemu-img to convert image formats.
+
+-  Procedure
 
 #. Run the following commands to query the image file details:
 

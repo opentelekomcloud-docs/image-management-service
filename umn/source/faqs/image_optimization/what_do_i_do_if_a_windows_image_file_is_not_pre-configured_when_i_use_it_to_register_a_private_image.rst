@@ -9,7 +9,7 @@ If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0
 
 .. caution::
 
-   The proper running of ECSs depends on the XEN Guest OS driver (PV driver) or KVM Guest OS driver (UVP VMTools). If no such a driver is installed, the performance of ECSs will be affected and some functions will be unavailable. Ensure that the PV driver or UVP VMTools has been installed for the image file as needed before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
+   The proper running of ECSs depends on the Xen Guest OS driver (PV driver) andKVM Guest OS driver (UVP VMTools), without which the performance of ECSs will be affected and some functions will be unavailable. Ensure that the driver installation has been completed for the image file before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
 
    -  Install the PV driver. For details, see :ref:`Installing the PV Driver <en-us_topic_0037352182>`.
    -  Install UVP VMTools. For details, see :ref:`Installing UVP VMTools <en-us_topic_0037352061>`.
@@ -84,7 +84,7 @@ Remotely log in to the ECS created in :ref:`Step 3: Create an ECS <en-us_topic_0
 
 #. .. _en-us_topic_0030713185__li174414479612:
 
-   Enable remote desktop connection for the ECS as needed. For details, see :ref:`Enabling Remote Desktop Connection <en-us_topic_0030713155>`.
+   Enable remote desktop connection for the ECS as needed. For details about how to enable this function, see :ref:`Enabling Remote Desktop Connection <en-us_topic_0030713155>`.
 
 #. (Optional) Configure value-added functions.
 

@@ -13,7 +13,7 @@ Image files in VMDK, VHD, QCOW2, RAW, VHDX, QED, VDI, QCOW, ZVHD2, or ZVHD forma
 Supported OSs
 -------------
 
-When you upload an external image file to an OBS bucket on the management console, the OS contained in the image file will be checked. :ref:`Table 1 <en-us_topic_0030713143__table6432073491848>` lists the OSs supported for external image files.
+When you upload an external image file to an OBS bucket on the management console, the OS contained in the image file will be checked. :ref:`Table 1 <en-us_topic_0030713143__table6432073491848>` lists the OSs supported by external image files.
 
 If the OS cannot be identified or is not supported:
 
@@ -38,13 +38,17 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Windows 7 Enterprise 64bit                |
    |                                   |                                           |
+   |                                   | Windows 7 Professional 64bit              |
+   |                                   |                                           |
+   |                                   | Windows 7 Professional 32bit              |
+   |                                   |                                           |
    |                                   | Windows Server 2016 Standard 64bit        |
    |                                   |                                           |
    |                                   | Windows Server 2016 Datacenter 64bit      |
    |                                   |                                           |
    |                                   | Windows Server 2012 R2 Standard 64bit     |
    |                                   |                                           |
-   |                                   | Windows Server 2012 Essentials R2 64bit   |
+   |                                   | Windows Server 2012 R2 Essentials 64bit   |
    |                                   |                                           |
    |                                   | Windows Server 2012 R2 Datacenter 64bit   |
    |                                   |                                           |
@@ -52,7 +56,7 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Windows Server 2012 Standard 64bit        |
    |                                   |                                           |
-   |                                   | Windows Server 2008 R2 WEB 64bit          |
+   |                                   | Windows Server 2008 WEB R2 64bit          |
    |                                   |                                           |
    |                                   | Windows Server 2008 R2 Standard 64bit     |
    |                                   |                                           |
@@ -65,6 +69,8 @@ If the OS cannot be identified or is not supported:
    |                                   | SUSE Linux Enterprise Server 15 64bit     |
    |                                   |                                           |
    |                                   | SUSE Linux Enterprise Server 12 SP5 64bit |
+   |                                   |                                           |
+   |                                   | SUSE Linux Enterprise Server 12 SP4 64bit |
    |                                   |                                           |
    |                                   | SUSE Linux Enterprise Server 12 SP3 64bit |
    |                                   |                                           |
@@ -241,6 +247,8 @@ If the OS cannot be identified or is not supported:
    |                                   | Debian GNU/Linux 9.3.0 64bit              |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 9.0.0 64bit              |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 8.10.0 64bit             |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 8.8.0 64bit              |
    |                                   |                                           |

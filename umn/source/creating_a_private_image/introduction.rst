@@ -21,3 +21,5 @@ This section describes how to create a private image using any of the following 
 -  :ref:`Creating a Full-ECS Image from an ECS <en-us_topic_0116125142>`
 -  :ref:`Creating a Full-ECS Image from a CSBS Backup <en-us_topic_0093344231>`
 -  :ref:`Creating a Full-ECS Image from a CBR Backup <en-us_topic_0176812699>`
+
+After a system disk image is created, you can use it to change the OS of an ECS.

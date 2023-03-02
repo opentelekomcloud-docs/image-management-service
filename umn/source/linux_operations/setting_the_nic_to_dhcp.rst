@@ -26,7 +26,7 @@ For details about how to log in to an ECS, see *Elastic Cloud Server User Guide*
 Procedure
 ---------
 
-This section uses Ubuntu 14.04 as an example to describe how to query and configure NIC attributes of an ECS.
+This section uses Ubuntu 16.04 as an example to describe how to query and configure NIC attributes of an ECS.
 
 #. Run the following command on the ECS to open the **/etc/network/interfaces** file using the vi editor and query the IP address obtaining mode:
 
@@ -34,19 +34,28 @@ This section uses Ubuntu 14.04 as an example to describe how to query and config
 
    -  If DHCP has been configured on all NICs, enter **:q** to exit the vi editor.
 
+      .. code-block::
 
-      .. figure:: /_static/images/en-us_image_0030714279.png
-         :alt: **Figure 1** DHCP IP address obtaining mode
+         auto lo
+         iface lo inet loopback
+         auto eth0
+         iface eth0 inet dhcp
 
-         **Figure 1** DHCP IP address obtaining mode
+         auto eth1
+         iface eth1 inet dhcp
 
    -  If static IP addresses are set on the NICs, go to :ref:`2 <en-us_topic_0030713176__en-us_topic_0029124465_li47654828194142>`.
 
+      .. code-block::
 
-      .. figure:: /_static/images/en-us_image_0030714282.png
-         :alt: **Figure 2** Static IP address obtaining mode
-
-         **Figure 2** Static IP address obtaining mode
+         auto lo
+         iface lo inet loopback
+         auto eth0
+         #iface eth0 inet dhcp
+         iface eth0 inet static
+         address 192.168.1.109
+         netmask 255.255.255.0
+         gateway 192.168.1.1
 
 #. .. _en-us_topic_0030713176__en-us_topic_0029124465_li47654828194142:
 
@@ -56,19 +65,23 @@ This section uses Ubuntu 14.04 as an example to describe how to query and config
 
    You can insert a number sign (#) in front of each line of static IP address configuration to comment it out.
 
+   .. code-block::
 
-   .. figure:: /_static/images/en-us_image_0030714285.png
-      :alt: **Figure 3** Configuring DHCP on a NIC
-
-      **Figure 3** Configuring DHCP on a NIC
+      auto lo
+      iface lo inet loopback
+      auto eth0
+      iface eth0 inet dhcp
 
    If the ECS has multiple NICs, you must configure DHCP for all the NICs.
 
+   .. code-block::
 
-   .. figure:: /_static/images/en-us_image_0030714288.png
-      :alt: **Figure 4** Configuring DHCP on multiple NICs
-
-      **Figure 4** Configuring DHCP on multiple NICs
+      auto lo
+      iface lo inet loopback
+      auto eth0
+      iface eth0 inet dhcp
+      auto eth1
+      iface eth1 inet dhcp
 
 #. Press **Esc**, enter **:wq**, and press **Enter**.
 

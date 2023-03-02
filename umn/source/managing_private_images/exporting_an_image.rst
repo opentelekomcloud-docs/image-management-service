@@ -29,7 +29,7 @@ Background
 
    .. note::
 
-      **Fast Export** is unavailable for encrypted images.
+      **Fast Export** is unavailable for encrypted images. To export an encrypted image, decrypt it first.
 
 Constraints
 -----------
@@ -37,7 +37,7 @@ Constraints
 -  The following private images cannot be exported:
 
    -  Full-ECS images
-   -  Private images created from a Windows or SUSE public image
+   -  Private images created from a Windows, SUSE, Red Hat, Ubuntu, or Oracle Linux public image
 
 -  The image size must be less than 1 TB. Images larger than 128 GB support only fast export.
 

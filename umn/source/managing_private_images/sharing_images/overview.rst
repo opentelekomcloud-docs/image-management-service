@@ -11,8 +11,8 @@ Constraints
 -----------
 
 -  You can share images only within the region where they reside.
--  Each image can be shared with a maximum of 128 tenants.
--  Encrypted images cannot be shared.
+-  A system disk image or data disk image can be shared with up to 256 tenants, and a full-ECS image can be shared with no more than 10 tenants.
+-  If an encrypted image needs to be shared with other tenants, the key of the image must be a custom key instead of the default key **ims/default**.
 -  Only full-ECS images created from CBR backups can be shared. Other full-ECS images cannot be shared.
 
 Procedure

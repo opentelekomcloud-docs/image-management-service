@@ -44,7 +44,7 @@ You can import an image file in any of the following methods depending on the fi
 .. note::
 
    -  The import of large files depends on lazy loading which defers loading of file data until it is needed. This reduces the initial loading time. However, RAW files do not support this feature. When you upload a RAW file, you need to upload its bitmap together.
-   -  For details about how to optimize an image file, see :ref:`Optimization Process <en-us_topic_0047501112>` or :ref:`Optimization Process <en-us_topic_0047501133>` depending on the OS type specified in the image file.
+   -  For details about how to optimize an image file, see :ref:`Optimization Process <en-us_topic_0047501112>` (Windows) or :ref:`Optimization Process <en-us_topic_0047501133>` (Linux) depending on the OS type specified in the image file.
 
 Import Process
 --------------

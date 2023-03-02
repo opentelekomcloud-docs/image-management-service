@@ -21,6 +21,7 @@ Constraints
 
 -  When creating a full-ECS image from a CBR backup, ensure that the source ECS of the CBR backup has been properly configured, or the image creation may fail.
 -  A CBR backup can be used to create only one full-ECS image.
+-  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
 -  A full-ECS image created from a CBR backup can be shared with other tenants. However, if it is a shared CBR backup, the full-ECS image created from it cannot be shared.
 -  A full-ECS image cannot be exported or replicated.
 
@@ -42,7 +43,7 @@ Procedure
    c. Select **Cloud Server Backup** for **Source** and then select a backup from the list.
    d. In the **Image Information** area, configure basic image details, such as the image name and description.
    e. Click **Create Now**.
-   f. Confirm the parameters and click **Submit**.
+   f. Confirm the settings and click **Submit**.
 
 #. Switch back to the **Image Management Service** page to monitor the image status.
 
@@ -57,6 +58,10 @@ After the full-ECS image creation is complete, you can perform the following ope
 
    .. note::
 
-      If a full-ECS image contains one or more data disks, the system configures data disk parameters automatically when you use the image to create ECSs.
+      When you use a full-ECS image to create an ECS:
+
+      -  The system and data disk information defaulted by the image will be automatically displayed.
+      -  If the full-ECS image contains multiple data disks, it takes some time to load and display the disk information.
 
 -  If you want to share the image with other tenants, click **More** in the **Operation** column and select **Share** from the drop-down list. In the displayed dialog box, enter the project IDs of the image recipients. For details, see :ref:`Sharing Specified Images <en-us_topic_0032042419>`.
+-  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.

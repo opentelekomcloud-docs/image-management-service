@@ -18,7 +18,7 @@ Procedure
 #. Access the CTS console.
 
    a. Log in to the management console.
-   b. Click **Cloud Trace Service** under **Management & Governance**.
+   b. Click **Cloud Trace Service** under **Management & Deployment**.
 
 #. In the navigation pane on the left, choose **Trace List**.
 
@@ -39,7 +39,7 @@ Procedure
 
    -  **Trace Status**: Available values are **All trace statuses**, **Normal**, **Warning**, and **Incident**.
 
-   -  Time range: You can select **Last 1 hour**, **Last 1 day**, **Last 1 week**, or **Customize**.
+   -  **Time Range**: You can select **Last 1 hour**, **Last 1 day**, **Last 1 week**, or **Customize**.
 
 #. Locate the target trace and click |image1| to expand the trace details.
 

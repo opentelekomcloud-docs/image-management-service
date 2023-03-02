@@ -36,3 +36,8 @@ Procedure
 #. In the **Add Tenant** dialog box, enter the project ID of the tenant to be added and click **OK**.
 
    To add multiple tenants, enter their project IDs and separate them with commas. Click **OK**.
+
+   .. note::
+
+      -  You can share images only within the region where they reside.
+      -  A project ID uniquely identifies a tenant in a specific region. If you enter a project ID that belongs to a different region from the images, a message will display indicating that the tenant cannot be found.

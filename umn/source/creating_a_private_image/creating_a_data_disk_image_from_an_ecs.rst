@@ -52,16 +52,18 @@ Procedure
    c. Select **ECS** for **Source** and then select a data disk of the ECS.
 
 
-      .. figure:: /_static/images/en-us_image_0120595879.png
+      .. figure:: /_static/images/en-us_image_0162743998.png
          :alt: **Figure 2** Creating a data disk image
 
          **Figure 2** Creating a data disk image
 
    d. In the **Image Information** area, set **Name**, **Tag**, and **Description**.
 
-   e. Click **Create Now**.
+   e. In the **Image Information** area, set **Name**, **Tag**, and **Description**, and select an enterprise project.
 
-   f. Confirm the parameters and click **Submit**.
+   f. Click **Create Now**.
+
+   g. Confirm the settings and click **Submit**.
 
 #. Go back to the **Private Images** page and view the new data disk image.
 
