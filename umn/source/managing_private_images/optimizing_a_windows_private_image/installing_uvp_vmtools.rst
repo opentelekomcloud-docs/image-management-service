@@ -39,7 +39,7 @@ Prerequisites
 Installing UVP VMTools
 ----------------------
 
-The following operations describe how to install UVP VMTools. **vmtools-WIN2008R2-x64.exe** extracted from **vmtools-WIN2008R2-x64.zip** is used as an example.
+The following operations describe how to install UVP VMTools. **vmtools-WIN2016-x64.exe** extracted from **vmtools-WIN2016-x64.zip** is used as an example.
 
 #. Log in to the Windows ECS using VNC.
 
@@ -51,36 +51,19 @@ The following operations describe how to install UVP VMTools. **vmtools-WIN2008R
 
 #. Download the required UVP VMTools based on the ECS OS and :ref:`Obtaining Required Software Packages <en-us_topic_0037352059>`.
 
-#. Decompress the UVP Tools software package. This section uses **vmtools-WIN2008R2-x64.exe** extracted from **vmtools-WIN2008R2-x64.zip** as an example to describe how to decompress the UVP Tools software package.
+#. Decompress the UVP Tools software package **vmtools-WIN2016-x64.zip**.
 
-#. Right-click **vmtools-WIN2008R2-x64.exe**, select **Run as administrator** from the shortcut menu, and complete the installation as prompted.
+#. Right-click **vmtools-WIN2016-x64.exe**, and select **Run as administrator** from the shortcut menu.
 
-#. In the displayed dialog box, select **I accept the terms in the License Agreement** and click **Install**.
+#. In the displayed dialog box, select **I agree to the license terms and conditions** and click **Install**.
 
 
-   .. figure:: /_static/images/en-us_image_0089766015.png
+   .. figure:: /_static/images/en-us_image_0000001494625768.png
       :alt: **Figure 1** Installing UVP VMTools
 
       **Figure 1** Installing UVP VMTools
 
-#. Install UVP VMTools as prompted.
-
-#. Perform the following operations to install UVP VMTools on an ECS running Windows Server 2008:
-
-   a. The **Windows Security** dialog box shown in :ref:`Figure 2 <en-us_topic_0037352061__fig47401118184018>` may be displayed during installation. In the dialog box, select **Always trust...** and click **Install**. Otherwise, the installation will fail.
-
-      .. _en-us_topic_0037352061__fig47401118184018:
-
-      .. figure:: /_static/images/en-us_image_0115573259.png
-         :alt: **Figure 2** Windows Security
-
-         **Figure 2** Windows Security
-
-   b. Click **Finish**.
-
-      .. note::
-
-         After the installation is complete, restart the ECS so that NIC drivers can be detected.
+#. Restart the OS for UVP VMTools to take effect.
 
 #. Perform the operations in :ref:`Verifying the Installation <en-us_topic_0037352061__en-us_topic_0036684065_section42271171>` to check whether UVP VMTools is successfully installed.
 
@@ -95,11 +78,11 @@ Perform the following steps to verify the installation of UVP VMTools:
 
 #. Locate UVP VMTools for Windows.
 
-   If UVP VMTools for Windows exists, the installation is successful, as shown in :ref:`Figure 3 <en-us_topic_0037352061__fig6404346182112>`.
+   If UVP VMTools for Windows exists, the installation is successful, as shown in :ref:`Figure 2 <en-us_topic_0037352061__fig6404346182112>`.
 
    .. _en-us_topic_0037352061__fig6404346182112:
 
    .. figure:: /_static/images/en-us_image_0127506675.png
-      :alt: **Figure 3** Verifying the installation
+      :alt: **Figure 2** Verifying the installation
 
-      **Figure 3** Verifying the installation
+      **Figure 2** Verifying the installation
