@@ -25,13 +25,18 @@ The following figure shows the process of creating a system disk image from an E
 
 -  System disk images are often used for application scale-out. They can also be used for hybrid cloud deployment. You can create system disk images for resource synchronization on and off cloud. The procedure is as follows:
 
-   #. Create a system disk image from an ECS.
+   #. .. _en-us_topic_0030713180__en-us_topic_0030713149_li1784210562132:
+
+      Create a system disk image from an ECS.
 
       .. note::
 
-         The ECS must be created from a private image. If it is created from a public image, the system disk image cannot be exported.
+         If the ECS is created from any of the following images, the system disk image cannot be exported:
+
+         -  Private image created from a SUSE, Red Hat, Ubuntu, or Oracle Linux public image
 
    #. Export the image to an OBS bucket. For details, see :ref:`Exporting an Image <en-us_topic_0034011241>`.
+
    #. Download the image file from the OBS bucket.
 
 -  You can create an image from a running ECS.
