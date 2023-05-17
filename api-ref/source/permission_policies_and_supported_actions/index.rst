@@ -5,6 +5,7 @@
 Permission Policies and Supported Actions
 =========================================
 
+-  :ref:`Introduction <en-us_topic_0171654733>`
 -  :ref:`Image Management <en-us_topic_0125866390>`
 -  :ref:`Image Tagging <en-us_topic_0125866391>`
 -  :ref:`Image Schema <en-us_topic_0125866392>`
@@ -16,6 +17,7 @@ Permission Policies and Supported Actions
    :maxdepth: 1
    :hidden: 
 
+   introduction
    image_management
    image_tagging
    image_schema

@@ -44,6 +44,14 @@ Request
    | disk_format      | No              | String           | Specifies the image format. The value can be **zvhd2**, **vhd**, **zvhd**, **raw**, or **qcow2**. The default value is **zvhd2**.                                                                                                                                                                                                          |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tags             | No              | Array of strings | Lists the image tags. The tag contains 1 to 255 characters. The value is left blank by default.                                                                                                                                                                                                                                            |
+   |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                  |                 |                  | .. note::                                                                                                                                                                                                                                                                                                                                  |
+   |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                  |                 |                  |    The tag is a key-value pair. Example:                                                                                                                                                                                                                                                                                                   |
+   |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                  |                 |                  |    .. code-block::                                                                                                                                                                                                                                                                                                                         |
+   |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
+   |                  |                 |                  |       "tagkey=tagvalue"                                                                                                                                                                                                                                                                                                                    |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | min_ram          | No              | Integer          | Specifies the minimum memory size (MB) required for running the image. The parameter value depends on ECS specifications. The default value is **0**.                                                                                                                                                                                      |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -51,14 +59,6 @@ Request
    |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
    |                  |                 |                  | The value of this parameter must be greater than the image system disk capacity. Otherwise, the ECS creation may fail.                                                                                                                                                                                                                     |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-   .. note::
-
-      Parameters in the request body are strings of no more than 255 characters, and their values can be left blank. Example:
-
-      .. code-block::
-
-         "key": "value"
 
 -  Example request
 
@@ -76,8 +76,8 @@ Request
           "min_ram": 1024,
           "name": "test",
           "tags": [
-              "test",
-              "image"
+              "test=testvalue",
+              "image=imagevalue"
           ],
           "visibility": "private",
           "protected": false
@@ -194,8 +194,9 @@ Response
           "visibility": "private",
           "virtual_env_type": "FusionCompute",
           "tags": [
-              "test",
-              "image"
+              "test=testvalue",
+              "image=imagevalue"
+
           ],
           "__platform": "Ubuntu",
           "__os_bit": "64",

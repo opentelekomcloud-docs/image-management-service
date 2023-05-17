@@ -59,6 +59,20 @@ Response
    | job_id                | String                | Specifies the job ID.                                                                                                              |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
    | job_type              | String                | Specifies the job type.                                                                                                            |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | -  **imsCreateImageByInstance**: Creating a system disk image from a cloud server                                                  |
+   |                       |                       | -  **imsImportImageJob**: Creating a system disk image from an external image file                                                 |
+   |                       |                       | -  **imsImportOvaImageJob**: Creating an image from an OVA image file                                                              |
+   |                       |                       | -  **imsVolumeCreateImageJob**: Creating a data disk image from a cloud server                                                     |
+   |                       |                       | -  **imsImportDataImageJob**: Creating a data disk image from an external image file                                               |
+   |                       |                       | -  **imsCreateWholeImageByInstanceJob**: Creating a full-ECS image from an ECS                                                     |
+   |                       |                       | -  **imsCreateWholeImageByBackupJob**: Creating a full-ECS image from a CBR or CSBS backup                                         |
+   |                       |                       | -  **imsNativeImportImageJob**: Registering an image                                                                               |
+   |                       |                       | -  **imsNativeExportImageJob**: Exporting image                                                                                    |
+   |                       |                       | -  **imsAddImageMembersJob**: Adding tenants that can use a shared image                                                           |
+   |                       |                       | -  **imsDelImageMembersJob**: Deleting tenants that can use a shared image                                                         |
+   |                       |                       | -  **imsUpdateImageMembersJob**: Updating status of tenants who will accept or reject shared images                                |
+   |                       |                       | -  **imsCopyImageInRegionJob**: Replicating images                                                                                 |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
    | begin_time            | String                | Specifies the start time of the job. The value is in UTC format.                                                                   |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
