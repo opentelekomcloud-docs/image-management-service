@@ -10,6 +10,7 @@ Image Management Service - User Guide
    managing_private_images/index
    windows_operations/index
    linux_operations/index
+   permissions_management/index
    faqs/index
    change_history
    glossary
