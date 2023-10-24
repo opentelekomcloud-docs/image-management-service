@@ -9,7 +9,9 @@ Image Management Service (IMS) provides flexible self-service and comprehensive 
 
    .. service_card::
       :service_type: ims
+      :environment: internal
       :umn: This document describes basic concepts, functions, key terms, and FAQs of the Image Management Service (IMS) and provides instructions for quickly creating private images and using images to create ECSs.
       :api-ref: This document describes application programming interfaces (APIs) of Image Management Service (IMS) and provides API parameter description and example values.
       :dev: This document describes how to call the Image Management Service (IMS) APIs to use various IMS functions. The concepts related to IMS help you quickly learn this service.
       :public-images: This document provides information and handling instructions for the public images on the Open Telekom Cloud.
+      :best-practice: To use Image Management Service more securely, reliably, flexibly, and efficiently, you are advised to follow the following best practices.
