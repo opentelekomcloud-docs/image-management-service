@@ -12,7 +12,7 @@ This API is used to quickly create a private image from an oversized external im
 
 The fast image creation function is only available for image files in RAW or ZVHD2 format. For other formats of image files that are smaller than 128 GB, you are advised to import these files with the common method.
 
-The API is an asynchronous one. If it is successfully called, the cloud service system receives the request. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
+The API is an asynchronous one. If it is successfully called, the cloud service system receives the request. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`.
 
 Constraints
 -----------
@@ -70,13 +70,13 @@ Request
    |                       |                 |                  |                                                                                                                                                                                              |
    |                       |                 |                  | Set either **tags** or **image_tags**.                                                                                                                                                       |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_tags            | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                    |
+   | image_tags            | No              | Array of objects | Lists the image tags. This parameter is left blank by default.                                                                                                                               |
    |                       |                 |                  |                                                                                                                                                                                              |
    |                       |                 |                  | Set either **tags** or **image_tags**.                                                                                                                                                       |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | type                  | No              | String           | Specifies the image type. The parameter value is ECS/BMS for system disk images. The default value is **ECS**.                                                                               |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | enterprise_project_id | No              | String           | Specifies the enterprise project to which the image belongs.                                                                                                                                 |
+   | enterprise_project_id | No              | String           | Specifies the enterprise project that the image belongs to.                                                                                                                                  |
    |                       |                 |                  |                                                                                                                                                                                              |
    |                       |                 |                  | -  If the value is **0** or left blank, the image belongs to the default enterprise project.                                                                                                 |
    |                       |                 |                  |                                                                                                                                                                                              |
@@ -125,13 +125,13 @@ Request
    |                       |                 |                  |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                 |                  | Set either **tags** or **image_tags**.                                                                                                                                                                                                                                                                                           |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_tags            | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                                                                                                                                                        |
+   | image_tags            | No              | Array of objects | Lists the image tags. This parameter is left blank by default.                                                                                                                                                                                                                                                                   |
    |                       |                 |                  |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                 |                  | Set either **tags** or **image_tags**.                                                                                                                                                                                                                                                                                           |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | type                  | Yes             | String           | Specifies the image type. The parameter value is DataImage for data disk images.                                                                                                                                                                                                                                                 |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | enterprise_project_id | No              | String           | Specifies the enterprise project to which the image belongs.                                                                                                                                                                                                                                                                     |
+   | enterprise_project_id | No              | String           | Specifies the enterprise project that the image belongs to.                                                                                                                                                                                                                                                                      |
    |                       |                 |                  |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                 |                  | -  If the value is **0** or left blank, the image belongs to the default enterprise project.                                                                                                                                                                                                                                     |
    |                       |                 |                  |                                                                                                                                                                                                                                                                                                                                  |
@@ -140,97 +140,90 @@ Request
    |                       |                 |                  |    For more information about enterprise projects and how to obtain enterprise project IDs, see *Enterprise Management User Guide*.                                                                                                                                                                                              |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example requests
+Example Request
+---------------
 
-   -  Creating a system disk image using an external image file
+-  Creating a system disk image with parameter **tags** using a file in an OBS bucket (file address in the bucket: ims-image:centos70.zvhd2)
 
-      .. code-block:: text
+   .. code-block:: text
 
-         POST https://{Endpoint}/v2/cloudimages/quickimport/action
+      POST https://{Endpoint}/v2/cloudimages/quickimport/action
+      {
+          "name": "ims_test_file",
+         "description": "Create an image using a file in the OBS bucket.",
+          "image_url": "ims-image:centos70.zvhd2",
+          "os_version": "CentOS 7.0 64bit",
+          "min_disk": 40,
+          "type": "ECS",
+          "tags":
+              [
+                  "aaa.111",
+                  "bbb.333",
+                  "ccc.444"
+              ]
+      }
 
-      If parameter **tags** is used:
+-  Creating a system disk image with parameter **image_tags** using a file in an OBS bucket (file address in the bucket: ims-image:centos70.zvhd2)
 
-      ::
+   .. code-block:: text
 
-         {
-             "name": "ims_test_file",
-            "description": "Create an image using a file in the OBS bucket.",
-             "image_url": "ims-image:centos70.zvhd2",
-             "os_version": "CentOS 7.0 64bit",
-             "min_disk": 40,
-             "type": "ECS",
-             "tags":
-                 [
-                     "aaa.111",
-                     "bbb.333",
-                     "ccc.444"
-                 ]
-         }
+      POST https://{Endpoint}/v2/cloudimages/quickimport/action
+      {
+          "name": "ims_test_file",
+         "description": "Create an image using a file in the OBS bucket.",
+          "image_url": "ims-image:centos70.zvhd2",
+          "os_version": "CentOS 7.0 64bit",
+          "min_disk": 40,
+          "type": "ECS",
+          "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
+      }
 
-      If parameter **image_tags** is used:
+-  Creating a data disk image with parameter **tags** using a file in an OBS bucket (file address in the bucket: ims-image:centos70.zvhd2)
 
-      ::
+   .. code-block:: text
 
-         {
-             "name": "ims_test_file",
-            "description": "Create an image using a file in the OBS bucket.",
-             "image_url": "ims-image:centos70.zvhd2",
-             "os_version": "CentOS 7.0 64bit",
-             "min_disk": 40,
-             "type": "ECS",
-             "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
-         }
+      POST https://{Endpoint}/v2/cloudimages/quickimport/action
+      {
+          "name": "ims_test_file",
+         "description": "Create an image using a file in the OBS bucket.",
+          "image_url": "ims-image:centos70.zvhd2",
+          "os_type": "Linux",
+          "min_disk": 40,
+          "type": "DataImage",
+          "tags": [
+              "aaa.111",
+              "bbb.333",
+              "ccc.444"
+          ]
+      }
 
-   -  Creating a data disk image using an external image file
+-  Creating a data disk image with parameter **image_tags** using a file in an OBS bucket (file address in the bucket: ims-image:centos70.zvhd2)
 
-      .. code-block:: text
+   .. code-block:: text
 
-         POST https://{Endpoint}/v2/cloudimages/quickimport/action
-
-      If parameter **tags** is used:
-
-      ::
-
-         {
-             "name": "ims_test_file",
-            "description": "Create an image using a file in the OBS bucket.",
-             "image_url": "ims-image:centos70.qcow2",
-             "os_type": "Linux",
-             "min_disk": 40,
-             "type": "DataImage",
-             "tags": [
-                 "aaa.111",
-                 "bbb.333",
-                 "ccc.444"
-             ]
-         }
-
-      If parameter **image_tags** is used:
-
-      ::
-
-         {
-             "name": "ims_test_file",
-            "description": "Create an image using a file in the OBS bucket.",
-             "image_url": "ims-image:centos70.qcow2",
-             "os_type": "Linux",
-             "min_disk": 40,
-             "type": "DataImage",
-             "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
-         }
+      POST https://{Endpoint}/v2/cloudimages/quickimport/action
+      {
+          "name": "ims_test_file",
+         "description": "Create an image using a file in the OBS bucket.",
+          "image_url": "ims-image:centos70.zvhd2",
+          "os_type": "Linux",
+          "min_disk": 40,
+          "type": "DataImage",
+          "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
+      }
 
 Response
 --------
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                              |
-   +=======================+=======================+==========================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                       |
-   |                       |                       |                                                                          |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                  |
+   +=======================+=======================+==============================================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                                           |
+   |                       |                       |                                                                                              |
+   |                       |                       | For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
 
 -  Example response
 

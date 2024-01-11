@@ -6,7 +6,7 @@ Image Replication
 =================
 
 +--------------------------------------+--------------------------------------+----------------------------------------------------------------------------------------------+-------------+--------------------+
-| Permissions                          | APIs                                 | Actions                                                                                      | IAM Project | Enterprise Project |
+| Permission                           | API                                  | Action                                                                                       | IAM Project | Enterprise Project |
 +======================================+======================================+==============================================================================================+=============+====================+
 | Replicating an Image Within a Region | POST /v1/cloudimages/{image_id}/copy | -  ims:images:copy                                                                           | Y           | Y                  |
 |                                      |                                      | -  ims:serverImages:create (required only for users who have enabled the enterprise project) |             |                    |

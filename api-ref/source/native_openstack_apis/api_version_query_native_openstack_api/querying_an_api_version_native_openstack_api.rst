@@ -30,15 +30,18 @@ GET /{api_version}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying an API version
 
-      GET https://{Endpoint}/v2.0
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0
 
 Response
 --------

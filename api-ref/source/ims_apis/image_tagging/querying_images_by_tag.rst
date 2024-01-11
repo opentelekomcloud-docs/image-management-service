@@ -134,75 +134,74 @@ Request
       | value           | Yes             | String          | Specifies the tag value. It cannot be left blank. Each value can contain a maximum of 255 Unicode characters.                                                                                                                                         |
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example requests
+Example Request
+---------------
+
+-  Counting the total number of images that meet the conditions specified by **tags**
 
    .. code-block:: text
 
       POST https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/resource_instances/action
-
-   -  Request body when **action** is set to **count**
-
-      ::
-
+      {
+         "action": "count",
+         "matches": [{
+            "key": "resource_name",
+            "value": "test100"
+         }],
+         "tags": [
          {
-            "action": "count",
-            "matches": [{
-               "key": "resource_name",
-               "value": "test100"
-            }],
-            "tags": [
-            {
-               "key": "key3",
-               "values": ["valueXX"]
-            }],
-            "tags_any": [
-            {
-               "key": "key0",
-               "values": ["valueXX"]
-            }],
-               "not_tags": [
-            {
-               "key": "key9",
-               "values": ["value9"]
-            }],
-            "not_tags_any": [{
-               "key": "key7",
-               "values": ["value7"]
-            }]
-         }
-
-   -  Request body when **action** is set to **filter**
-
-      ::
-
+            "key": "key3",
+            "values": ["valueXX"]
+         }],
+         "tags_any": [
          {
-            "action": "filter",
-            "limit": "1",
-            "offset": "0",
-            "matches": [{
-               "key": "resource_name",
-               "value": "test100"
-            }],
-            "tags": [
-            {
-               "key": "key3",
-               "values": ["valueXX"]
-            }],
-            "tags_any": [
-            {
-               "key": "key0",
-               "values": ["valueXX"]
-            }],
+            "key": "key0",
+            "values": ["valueXX"]
+         }],
             "not_tags": [
-            {
-               "key": "key9",
-               "values": ["value9"]
-            }],
-            "not_tags_any": [{
-               "key": "key7",
-               "values": ["value7"]
-            }]
-         }
+         {
+            "key": "key9",
+            "values": ["value9"]
+         }],
+         "not_tags_any": [{
+            "key": "key7",
+            "values": ["value7"]
+         }]
+      }
+
+-  Filtering images that meet the conditions specified by **tags**
+
+   .. code-block:: text
+
+      POST https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/resource_instances/action
+      {
+         "action": "filter",
+         "limit": "1",
+         "offset": "0",
+         "matches": [{
+            "key": "resource_name",
+            "value": "test100"
+         }],
+         "tags": [
+         {
+            "key": "key3",
+            "values": ["valueXX"]
+         }],
+         "tags_any": [
+         {
+            "key": "key0",
+            "values": ["valueXX"]
+         }],
+         "not_tags": [
+         {
+            "key": "key9",
+            "values": ["value9"]
+         }],
+         "not_tags_any": [{
+            "key": "key7",
+            "values": ["value7"]
+         }]
+      }
 
 Response
 --------

@@ -15,7 +15,7 @@ URI
 
 GET /v2/images/{image_id}
 
-:ref:`Table 1 <en-us_topic_0020091566__table37590215162351>` lists the parameters.
+:ref:`Table 1 <en-us_topic_0020091566__table37590215162351>` lists the parameters in the URI.
 
 .. _en-us_topic_0020091566__table37590215162351:
 
@@ -30,15 +30,18 @@ GET /v2/images/{image_id}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying details of an image
 
-      GET https://{Endpoint}/v2/images/33ad552d-1149-471c-8190-ff6776174a00
+.. code-block:: text
+
+   GET https://{Endpoint}/v2/images/33ad552d-1149-471c-8190-ff6776174a00
 
 Response
 --------
@@ -106,7 +109,7 @@ Response
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | \__system__cmkid           | String                | Specifies the ID of the key used to encrypt the image.                                                                                                                                                                                                                                                                                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | min_disk                   | Integer               | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1024 GB.                                                                                                                                                                                                                                          |
+   | min_disk                   | Integer               | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1,024 GB.                                                                                                                                                                                                                                         |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | virtual_env_type           | String                | Specifies the environment where the image is used. The value can be **FusionCompute**, **Ironic**, **DataImage**, or **IsoImage**.                                                                                                                                                                                                                    |
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
@@ -171,7 +174,7 @@ Response
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
    |                            |                       | This attribute cannot co-exist with **\__support_xen** and **\__support_kvm**.                                                                                                                                                                                                                                                                        |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | \__support_kvm_infiniband  | String                | Specifies whether the image supports ECSs with the InfiniBand NIC on the KVM platform. If yes, the value is **true**. Otherwise, this parameter is not required.                                                                                                                                                                                      |
+   | \__support_kvm_infiniband  | String                | Specifies whether the image supports ECSs with InfiniBand NICs on the KVM platform. If yes, the value is **true**. Otherwise, this parameter is not required.                                                                                                                                                                                         |
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
    |                            |                       | This attribute cannot co-exist with **\__support_xen**.                                                                                                                                                                                                                                                                                               |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -17,6 +17,7 @@ This is an extension API and used to export a private image to an OBS bucket.
 Constraints
 -----------
 
+-  An image can only be exported to a Standard bucket that is in the same region as the image.
 -  The following private images cannot be exported:
 
    -  Full-ECS images
@@ -66,32 +67,30 @@ Request
    |                 |                 |                 |    If fast export is enabled, **file_format** cannot be specified.                     |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+.. code-block:: text
 
-      POST https://{Endpoint}/v1/cloudimages/d164b5df-1bc3-4c3f-893e-3e471fd16e64/file
-
-   ::
-
-      {
-         "bucket_url": "ims-image:centos7_5.qcow2",
-         "file_format": "qcow2",
-         "is_quick_export": false
-      }
+   POST https://{Endpoint}/v1/cloudimages/d164b5df-1bc3-4c3f-893e-3e471fd16e64/file
+   {
+      "bucket_url": "ims-image:centos7_5.qcow2",
+      "file_format": "qcow2",
+      "is_quick_export": false
+   }
 
 Response
 --------
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                              |
-   +=======================+=======================+==========================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                       |
-   |                       |                       |                                                                          |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                  |
+   +=======================+=======================+==============================================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                                           |
+   |                       |                       |                                                                                              |
+   |                       |                       | For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
 
 -  Example response
 

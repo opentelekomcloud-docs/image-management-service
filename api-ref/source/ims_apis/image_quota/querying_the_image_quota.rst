@@ -18,15 +18,18 @@ GET /v1/cloudimages/quota
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying the image quota
 
-      GET https://{Endpoint}/v1/cloudimages/quota
+.. code-block:: text
+
+   GET https://{Endpoint}/v1/cloudimages/quota
 
 Response
 --------

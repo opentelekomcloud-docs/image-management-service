@@ -5,10 +5,10 @@
 Image Jobs
 ==========
 
--  :ref:`Asynchronous Job Query <en-us_topic_0022473688>`
+-  :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   asynchronous_job_query
+   querying_the_status_of_an_asynchronous_job

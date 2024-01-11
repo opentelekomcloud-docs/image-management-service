@@ -30,28 +30,28 @@ DELETE /v2/images/{image_id}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                     |
-   +=================+=================+=================+=================================================================================================================================================================+
-   | delete_backup   | No              | Boolean         | Specifies whether to delete the CSBS backups or CBR backups associated with a full-ECS image when the image is deleted. The value can be **true** or **false**. |
-   |                 |                 |                 |                                                                                                                                                                 |
-   |                 |                 |                 | -  **true**: When a full-ECS image is deleted, its CSBS backups or CBR backups are also deleted.                                                                |
-   |                 |                 |                 | -  **false**: When a full-ECS image is deleted, its CSBS backups or CBR backups are not deleted.                                                                |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter       | Mandatory       | Type            | Description                                                                                                                                                     |
++=================+=================+=================+=================================================================================================================================================================+
+| delete_backup   | No              | Boolean         | Specifies whether to delete the CSBS backups or CBR backups associated with a full-ECS image when the image is deleted. The value can be **true** or **false**. |
+|                 |                 |                 |                                                                                                                                                                 |
+|                 |                 |                 | -  **true**: When a full-ECS image is deleted, its CSBS backups or CBR backups are also deleted.                                                                |
+|                 |                 |                 | -  **false**: When a full-ECS image is deleted, its CSBS backups or CBR backups are not deleted.                                                                |
++-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Deleting an image
 
-      DELETE https://{Endpoint}/v2/images/4ca46bf1-5c61-48ff-b4f3-0ad4e5e3ba90
+.. code-block:: text
 
-   ::
-
-      {
-          "delete_backup": true
-      }
+   DELETE https://{Endpoint}/v2/images/4ca46bf1-5c61-48ff-b4f3-0ad4e5e3ba90
+   {
+       "delete_backup": true
+   }
 
 Response
 --------

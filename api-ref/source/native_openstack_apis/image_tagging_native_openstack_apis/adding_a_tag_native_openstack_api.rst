@@ -38,15 +38,18 @@ PUT /v2/images/{image_id}/tags/{tag}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Adding an image tag
 
-      PUT https://{Endpoint}/v2/images/4ca46bf1-5c61-48ff-b4f3-0ad4e5e3ba90/tags/aaaa
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2/images/4ca46bf1-5c61-48ff-b4f3-0ad4e5e3ba90/tags/aaaa
 
 Response
 --------

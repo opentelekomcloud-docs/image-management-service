@@ -8,7 +8,7 @@ Creating a Full-ECS Image
 Function
 --------
 
-This API is used to create a full-ECS image from an ECS, Cloud Server Backup Service (CSBS) backup, or Cloud Backup and Recovery (CBR) backup. The API is an asynchronous one. If it is successfully called, the cloud system receives the request to create a full-ECS image. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
+This API is used to create a full-ECS image from an ECS, Cloud Server Backup Service (CSBS) backup, or Cloud Backup and Recovery (CBR) backup. The API is an asynchronous one. If it is successfully called, the cloud system receives the request to create a full-ECS image. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`.
 
 Constraints (Creating a Full-ECS Image Using an ECS)
 ----------------------------------------------------
@@ -90,11 +90,11 @@ Request
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | description           | No              | String           | Provides supplementary information about the image. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`.                                                                             |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags                  | No              | Array of strings | Lists the image tags. The value is left blank by default.                                                                                                                                                                              |
+   | tags                  | No              | Array of strings | Lists the image tags. This parameter is left blank by default.                                                                                                                                                                         |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_tags            | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                                                              |
+   | image_tags            | No              | Array of objects | Lists the image tags. This parameter is left blank by default.                                                                                                                                                                         |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -134,11 +134,11 @@ Request
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | description           | No              | String           | Provides supplementary information about the image. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`.                               |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tags                  | No              | Array of strings | Lists the image tags. The value is left blank by default.                                                                                                                                |
+   | tags                  | No              | Array of strings | Lists the image tags. This parameter is left blank by default.                                                                                                                           |
    |                       |                 |                  |                                                                                                                                                                                          |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                   |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_tags            | No              | Array of objects | Lists the image tags. The value is left blank by default.                                                                                                                                |
+   | image_tags            | No              | Array of objects | Lists the image tags. This parameter is left blank by default.                                                                                                                           |
    |                       |                 |                  |                                                                                                                                                                                          |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                   |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -174,88 +174,81 @@ Request
    |                       |                 |                  | -  If a CSBS backup is used to create a full-ECS image, this parameter can be left blank and the default value **CSBS** will be used. In this case, **backup_id** is the CSBS backup ID. |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example requests
+Example Request
+---------------
 
-   -  Creating a full-ECS image from an ECS
+-  Creating a full-ECS image with parameter **tags** using an ECS (ID: 877a2cda-ba63-4e1e-b95f-e67e48b6129a)
 
-      .. code-block:: text
+   .. code-block:: text
 
-         POST https://{Endpoint}/v1/cloudimages/wholeimages/action
+      POST https://{Endpoint}/v1/cloudimages/wholeimages/action
+      {
+             "name": "instance_whole_image",
+             "description": "creating an image from an ECS",
+             "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
+             "vault_id": "de9fcf45-11b2-432c-8562-5c5428574600",
+             "tags": [
+                 "aaa.111",
+                 "bbb.333",
+                 "ccc.444"
+             ]
+      }
 
-      If parameter **tags** is used:
+-  Creating a full-ECS image with parameter **image_tags** using an ECS (ID: 877a2cda-ba63-4e1e-b95f-e67e48b6129a)
 
-      ::
+   .. code-block:: text
 
-         {
-                "name": "instance_whole_image",
-                "description": "creating an image from an ECS",
-                "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
-                "vault_id": "de9fcf45-11b2-432c-8562-5c5428574600",
-                "tags": [
-                    "aaa.111",
-                    "bbb.333",
-                    "ccc.444"
-                ]
-         }
+      POST https://{Endpoint}/v1/cloudimages/wholeimages/action
+      {
+             "name": "instance_whole_image",
+             "description": "creating an image from an ECS",
+             "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
+             "vault_id": "de9fcf45-11b2-432c-8562-5c5428574600",
+             "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
+      }
 
-      If parameter **image_tags** is used:
+-  Creating a full-ECS image with parameter **tags** using aCSBS backup or CBR backup (ID: 9b27efab-4a17-4c06-bfa2-3e0cf021d3c3)
 
-      ::
+   .. code-block:: text
 
-         {
-                "name": "instance_whole_image",
-                "description": "creating an image from an ECS",
-                "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
-                "vault_id": "de9fcf45-11b2-432c-8562-5c5428574600",
-                "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
-         }
+      POST https://{Endpoint}/v1/cloudimages/wholeimages/action
+      {
+           "name": "backup_whole_image",
+           "description": "Creating a full-ECS image from a CBR backup",
+           "backup_id": "9b27efab-4a17-4c06-bfa2-3e0cf021d3c3",
+           "whole_image_type": "CBR",
+           "tags": [
+                 "aaa.111",
+                 "bbb.333",
+                 "ccc.444"
+            ]
+      }
 
-   -  Creating a full-ECS image from a CSBS or CBR backup
+-  Creating a full-ECS image with parameter **image_tags** using aCSBS backup or CBR backup (ID: 9b27efab-4a17-4c06-bfa2-3e0cf021d3c3)
 
-      .. code-block:: text
+   .. code-block:: text
 
-         POST https://{Endpoint}/v1/cloudimages/wholeimages/action
-
-      If parameter **tags** is used:
-
-      ::
-
-         {
-              "name": "backup_whole_image",
-              "description": "Creating a full-ECS image from a CBR backup",
-              "backup_id": "9b27efab-4a17-4c06-bfa2-3e0cf021d3c3",
-              "whole_image_type": "CBR",
-              "tags": [
-                    "aaa.111",
-                    "bbb.333",
-                    "ccc.444"
-               ]
-         }
-
-      If parameter **image_tags** is used:
-
-      ::
-
-         {
-              "name": "backup_whole_image",
-              "description": "Creating a full-ECS image from a CBR backup",
-              "backup_id": "9b27efab-4a17-4c06-bfa2-3e0cf021d3c3",
-              "whole_image_type": "CBR",
-              "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
-         }
+      POST https://{Endpoint}/v1/cloudimages/wholeimages/action
+      {
+           "name": "backup_whole_image",
+           "description": "Creating a full-ECS image from a CBR backup",
+           "backup_id": "9b27efab-4a17-4c06-bfa2-3e0cf021d3c3",
+           "whole_image_type": "CBR",
+           "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
+      }
 
 Response
 --------
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                              |
-   +=======================+=======================+==========================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                       |
-   |                       |                       |                                                                          |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                  |
+   +=======================+=======================+==============================================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                                           |
+   |                       |                       |                                                                                              |
+   |                       |                       | For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
 
 -  Example response
 

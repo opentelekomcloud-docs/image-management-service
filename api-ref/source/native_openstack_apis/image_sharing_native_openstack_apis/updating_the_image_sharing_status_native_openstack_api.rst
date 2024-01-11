@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0036994318:
 
-Updating the Image Sharing Status in Batches (Native OpenStack API)
-===================================================================
+Updating the Image Sharing Status (Native OpenStack API)
+========================================================
 
 Function
 --------
@@ -21,12 +21,13 @@ PUT /v2/images/{image_id}/members/{member_id}
 
 .. table:: **Table 1** Parameter description
 
-   ========= ========= ====== ========================
-   Parameter Mandatory Type   Description
-   ========= ========= ====== ========================
-   image_id  Yes       String Specifies the image ID.
-   member_id Yes       String Specifies the member ID.
-   ========= ========= ====== ========================
+   +-----------+-----------+--------+-----------------------------------------------------------------------------------+
+   | Parameter | Mandatory | Type   | Description                                                                       |
+   +===========+===========+========+===================================================================================+
+   | image_id  | Yes       | String | Specifies the image ID.                                                           |
+   +-----------+-----------+--------+-----------------------------------------------------------------------------------+
+   | member_id | Yes       | String | Specifies the project ID of the tenant who is to accept or reject a shared image. |
+   +-----------+-----------+--------+-----------------------------------------------------------------------------------+
 
 Request
 -------
@@ -50,53 +51,48 @@ Request
    |                 |                 |                 | You can obtain the vault ID from the CBR console or section "Querying the Vault List" in *Cloud Backup and Recovery API Reference*.                                                        |
    +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   -  If the image is not a full-ECS image:
+-  Updating the image sharing status to **accepted**
 
-      .. code-block:: text
+   .. code-block:: text
 
-         PUT https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members/edc89b490d7d4392898e19b2deb34797
+      PUT https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members/edc89b490d7d4392898e19b2deb34797
+      {
+          "status": "accepted"
+      }
 
-      ::
+-  Updating the sharing status of an image created from a CBR backup to **accepted** (vault ID: 6yhtb5df-1bc3-4c3f-893e-3e4716yhgt61)
 
-         {
-             "status": "accepted"
-         }
+   .. code-block:: text
 
-   -  If the image is a full-ECS image:
-
-      .. code-block:: text
-
-         PUT https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members/edc89b490d7d4392898e19b2deb34797
-
-      ::
-
-         {
-             "status": "accepted",
-             "vault_id": "6yhtb5df-1bc3-4c3f-893e-3e4716yhgt61"
-         }
+      PUT https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members/edc89b490d7d4392898e19b2deb34797
+      {
+          "status": "accepted",
+          "vault_id": "6yhtb5df-1bc3-4c3f-893e-3e4716yhgt61"
+      }
 
 Response
 --------
 
 -  Response parameters
 
-   +------------+--------+---------------------------------------------------------------------------------+
-   | Parameter  | Type   | Description                                                                     |
-   +============+========+=================================================================================+
-   | status     | String | Specifies the image sharing status.                                             |
-   +------------+--------+---------------------------------------------------------------------------------+
-   | created_at | String | Specifies the time when a shared image was created. The value is in UTC format. |
-   +------------+--------+---------------------------------------------------------------------------------+
-   | updated_at | String | Specifies the time when a shared image was updated. The value is in UTC format. |
-   +------------+--------+---------------------------------------------------------------------------------+
-   | image_id   | String | Specifies the image ID.                                                         |
-   +------------+--------+---------------------------------------------------------------------------------+
-   | member_id  | String | Specifies the member ID.                                                        |
-   +------------+--------+---------------------------------------------------------------------------------+
-   | schema     | String | Specifies the sharing schema.                                                   |
-   +------------+--------+---------------------------------------------------------------------------------+
+   +------------+--------+-----------------------------------------------------------------------------------+
+   | Parameter  | Type   | Description                                                                       |
+   +============+========+===================================================================================+
+   | status     | String | Specifies the image sharing status.                                               |
+   +------------+--------+-----------------------------------------------------------------------------------+
+   | created_at | String | Specifies the time when a shared image was created. The value is in UTC format.   |
+   +------------+--------+-----------------------------------------------------------------------------------+
+   | updated_at | String | Specifies the time when a shared image was updated. The value is in UTC format.   |
+   +------------+--------+-----------------------------------------------------------------------------------+
+   | image_id   | String | Specifies the image ID.                                                           |
+   +------------+--------+-----------------------------------------------------------------------------------+
+   | member_id  | String | Specifies the project ID of the tenant who is to accept or reject a shared image. |
+   +------------+--------+-----------------------------------------------------------------------------------+
+   | schema     | String | Specifies the sharing schema.                                                     |
+   +------------+--------+-----------------------------------------------------------------------------------+
 
 -  Example response
 

@@ -41,7 +41,7 @@ Request
    |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
    |                  |                 |                  | The default value is **bare**.                                                                                                                                                                                                                                                                                                             |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | disk_format      | No              | String           | Specifies the image format. The value can be **zvhd2**, **vhd**, **zvhd**, **raw**, or **qcow2**. The default value is **zvhd2**.                                                                                                                                                                                                          |
+   | disk_format      | No              | String           | Specifies the image format. The value can be **zvhd2**, **vhd**, **raw**, or **qcow2**. The default value is **zvhd2**.                                                                                                                                                                                                                    |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tags             | No              | Array of strings | Lists the image tags. The tag contains 1 to 255 characters. The value is left blank by default.                                                                                                                                                                                                                                            |
    |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
@@ -55,33 +55,31 @@ Request
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | min_ram          | No              | Integer          | Specifies the minimum memory size (MB) required for running the image. The parameter value depends on ECS specifications. The default value is **0**.                                                                                                                                                                                      |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | min_disk         | No              | Integer          | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1024 GB.                                                                                                                                                                                                                               |
+   | min_disk         | No              | Integer          | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1,024 GB.                                                                                                                                                                                                                              |
    |                  |                 |                  |                                                                                                                                                                                                                                                                                                                                            |
    |                  |                 |                  | The value of this parameter must be greater than the image system disk capacity. Otherwise, the ECS creation may fail.                                                                                                                                                                                                                     |
    +------------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+.. code-block:: text
 
-      POST https://{Endpoint}/v2/images
-
-   .. code-block::
-
-      {
-          "__os_version": "Ubuntu 14.04 server 64bit",
-          "container_format": "bare",
-          "disk_format": "vhd",
-          "min_disk": 1,
-          "min_ram": 1024,
-          "name": "test",
-          "tags": [
-              "test=testvalue",
-              "image=imagevalue"
-          ],
-          "visibility": "private",
-          "protected": false
-      }
+   POST https://{Endpoint}/v2/images
+   {
+       "__os_version": "Ubuntu 14.04 server 64bit",
+       "container_format": "bare",
+       "disk_format": "vhd",
+       "min_disk": 100,
+       "min_ram": 1024,
+       "name": "test",
+       "tags": [
+           "test=testvalue",
+           "image=imagevalue"
+       ],
+       "visibility": "private",
+       "protected": false
+   }
 
 Response
 --------
@@ -101,13 +99,13 @@ Response
    |                       |                       |                                                                                                                                                                                                                                                                                                   |
    |                       |                       | The value is **bare**.                                                                                                                                                                                                                                                                            |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | disk_format           | String                | Specifies the image format. The value can be **zvhd2**, **vhd**, **zvhd**, **raw**, or **qcow2**. The default value is **zvhd2**.                                                                                                                                                                 |
+   | disk_format           | String                | Specifies the image format. The value can be **zvhd2**, **vhd**, **raw**, or **qcow2**. The default value is **zvhd2**.                                                                                                                                                                           |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tags                  | Array of strings      | Lists the image tags. The tag contains 1 to 255 characters.                                                                                                                                                                                                                                       |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | min_ram               | Integer               | Specifies the minimum memory size (MB) required for running the image. The parameter value depends on the ECS specifications limit. The value is generally set to **0**.                                                                                                                          |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | min_disk              | Integer               | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1024 GB. It must be greater than the system disk capacity in the image. Otherwise, the ECS creation may fail.                                                                                 |
+   | min_disk              | Integer               | Specifies the minimum disk space (GB) required for running the image. It must be greater than the system disk capacity in the image. Otherwise, the ECS creation will fail. The value ranges from 1 GB to 1,024 GB.                                                                               |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | status                | String                | Specifies the image status. The value can be one of the following:                                                                                                                                                                                                                                |
    |                       |                       |                                                                                                                                                                                                                                                                                                   |
@@ -150,7 +148,7 @@ Response
    |                       |                       | Specifies the environment where the image is used. The value can be **FusionCompute**, **Ironic**, **DataImage**, or **IsoImage**.                                                                                                                                                                |
    |                       |                       |                                                                                                                                                                                                                                                                                                   |
    |                       |                       | -  For an ECS image, the value is **FusionCompute**.                                                                                                                                                                                                                                              |
-   |                       |                       | -  For a data disk image, the value is **DataImage**.                                                                                                                                                                                                                                             |
+   |                       |                       | -  For an ECS data disk image, the value is **DataImage**.                                                                                                                                                                                                                                        |
    |                       |                       | -  For a BMS image, the value is **Ironic**.                                                                                                                                                                                                                                                      |
    |                       |                       | -  For an ISO image, the value is **IsoImage**.                                                                                                                                                                                                                                                   |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -177,7 +175,7 @@ Response
 
       {
           "schema": "/v2/schemas/image",
-          "min_disk": 1,
+          "min_disk": 100,
           "created_at": "2016-06-02T07:49:48Z",
           "__image_source_type": "uds",
           "container_format": "bare",

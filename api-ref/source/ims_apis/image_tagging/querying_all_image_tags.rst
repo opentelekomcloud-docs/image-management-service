@@ -30,15 +30,18 @@ GET /v2/{project_id}/images/tags
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying all image tags
 
-      GET https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/tags
+.. code-block:: text
+
+   GET https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/tags
 
 Response
 --------

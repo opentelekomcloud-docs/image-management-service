@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0036994320:
 
-Querying Image Members (Native OpenStack API)
-=============================================
+Querying Image Sharing Members (Native OpenStack API)
+=====================================================
 
 Function
 --------
@@ -30,15 +30,18 @@ GET /v2/images/{image_id}/members
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying image sharing members
 
-      GET https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members
+.. code-block:: text
+
+   GET https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members
 
 Response
 --------
