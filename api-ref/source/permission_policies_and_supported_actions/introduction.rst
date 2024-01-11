@@ -39,8 +39,8 @@ IMS supports the following actions that can be defined in custom policies:
 
 -  :ref:`Image Management <en-us_topic_0125866390>`, including actions supported by IMS's image management APIs, such as the APIs for querying images, updating image information, creating images, registering images, and exporting images.
 -  :ref:`Image Tagging <en-us_topic_0125866391>`, including actions supported by IMS's tag management APIs, such as the APIs for adding tags, deleting tags, and querying images.
--  :ref:`Image Schema <en-us_topic_0125866392>`, including actions supported by IMS's image schema management APIs, such as the APIs for querying an image schema, querying an image list schema, querying an image member schema, and query an image member list schema.
--  :ref:`Image Sharing <en-us_topic_0125866393>`, including actions supported by IMS's shared image APIs, such as the APIs for adding an image member, updating the status of image members, querying image member details, and deleting an image member.
+-  :ref:`Image Schema <en-us_topic_0125866392>`, including actions supported by IMS's image schema management APIs, such as the APIs for querying an image schema, querying an image list schema, querying an image sharing member schema, and query an image sharing member list schema.
+-  :ref:`Image Sharing <en-us_topic_0125866393>`, including actions supported by IMS's shared image APIs, such as the APIs for adding an image sharing member, updating the status of image sharing members, querying image sharing member details, and deleting an image sharing member.
 -  :ref:`Image Replication <en-us_topic_0125866394>`, including actions supported by IMS's image replication APIs, such as the API for replicating an image within a region.
 -  :ref:`Image Quota <en-us_topic_0125866395>`, including actions supported by IMS's image quota APIs, such as the API for querying image quotas.
 

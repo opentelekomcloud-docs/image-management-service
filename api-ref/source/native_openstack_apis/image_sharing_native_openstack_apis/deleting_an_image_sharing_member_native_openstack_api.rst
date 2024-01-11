@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0036994321:
 
-Deleting an Image Member (Native OpenStack API)
-===============================================
+Deleting an Image Sharing Member (Native OpenStack API)
+=======================================================
 
 Function
 --------
@@ -31,15 +31,18 @@ DELETE /v2/images/{image_id}/members/{member_id}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Deleting an image sharing member
 
-      DELETE https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members/edc89b490d7d4392898e19b2deb34797
+.. code-block:: text
+
+   DELETE https://{Endpoint}/v2/images/d164b5df-1bc3-4c3f-893e-3e471fd16e64/members/edc89b490d7d4392898e19b2deb34797
 
 Response
 --------

@@ -18,15 +18,18 @@ GET /v2/schemas/images
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying an image list schema
 
-      GET https://{Endpoint}/v2/schemas/images
+.. code-block:: text
+
+   GET https://{Endpoint}/v2/schemas/images
 
 Response
 --------

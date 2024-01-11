@@ -22,7 +22,7 @@ The following describes how to use this API:
 
 #. After the API is successfully invoked as an asynchronous one, the cloud service system receives a request. Query the image status using the image ID and check whether the image file is successfully registered. When the image status changes to **active**, the image file is successfully registered as a private image.
 
-   For details about how to query the status of an asynchronous task, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
+   For details about how to query the status of an asynchronous task, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`.
 
 .. note::
 
@@ -65,30 +65,30 @@ Request
    |                 |                 |                 |    The storage class of the OBS bucket must be **Standard**.                                            |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Registering an image (URL of the image file: bucketname:Centos6.5-disk1.vmdk)
 
-      PUT https://{Endpoint}/v1/cloudimages/4ca46bf1-5c61-48ff-b4f3-0ad4e5e3ba86/upload
+.. code-block:: text
 
-   ::
-
-      {
-         "image_url": "bucketname:Centos6.5-disk1.vmdk"
-      }
+   PUT https://{Endpoint}/v1/cloudimages/4ca46bf1-5c61-48ff-b4f3-0ad4e5e3ba86/upload
+   {
+      "image_url": "bucketname:Centos6.5-disk1.vmdk"
+   }
 
 Response
 --------
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                              |
-   +=======================+=======================+==========================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                       |
-   |                       |                       |                                                                          |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                  |
+   +=======================+=======================+==============================================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                                           |
+   |                       |                       |                                                                                              |
+   |                       |                       | For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
 
 -  Example response
 

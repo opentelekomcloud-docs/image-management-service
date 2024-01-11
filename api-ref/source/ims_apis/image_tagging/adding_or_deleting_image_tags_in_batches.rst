@@ -72,55 +72,50 @@ Request
       | value     | Yes       | String | Specifies the tag value.                                 |
       +-----------+-----------+--------+----------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   -  Adding image tags in batches
+-  Adding tags for an image (**key1:value1**, **key2:value2**)
 
-      .. code-block:: text
+   .. code-block:: text
 
-         POST https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/67e17426-359e-49fb-aa12-0bd1756ec240/tags/action
-
-      ::
-
+      POST https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/67e17426-359e-49fb-aa12-0bd1756ec240/tags/action
+      {
+         "tags": [{
+            "value": "value1",
+            "key": "key1"
+         },
          {
-            "tags": [{
-               "value": "value1",
-               "key": "key1"
-            },
-            {
-               "value": "value2",
-               "key": "key2"
-            },
-            {
-               "value": "",
-               "key": "key3"
-            }],
-            "action": "create"
-         }
-
-   -  Deleting image tags in batches
-
-      .. code-block:: text
-
-         POST https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/67e17426-359e-49fb-aa12-0bd1756ec240/tags/action
-
-      ::
-
+            "value": "value2",
+            "key": "key2"
+         },
          {
-            "tags": [{
-               "value": "value1",
-               "key": "key1"
-            },
-            {
-               "value": "value2",
-               "key": "key2"
-            },
-            {
-               "value": "",
-               "key": "key3"
-            }],
-               "action": "delete"
-         }
+            "value": "",
+            "key": "key3"
+         }],
+         "action": "create"
+      }
+
+-  Deleting image tags (**key1:value1**, **key2:value2**)
+
+   .. code-block:: text
+
+      POST https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/67e17426-359e-49fb-aa12-0bd1756ec240/tags/action
+      {
+         "tags": [{
+            "value": "value1",
+            "key": "key1"
+         },
+         {
+            "value": "value2",
+            "key": "key2"
+         },
+         {
+            "value": "",
+            "key": "key3"
+         }],
+            "action": "delete"
+      }
 
 Response
 --------

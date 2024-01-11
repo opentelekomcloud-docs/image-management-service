@@ -2,13 +2,13 @@
 
 .. _en-us_topic_0049147876:
 
-Querying an Image Member Schema (Native OpenStack API)
-======================================================
+Querying a Schema for an Image Sharing Member (Native OpenStack API)
+====================================================================
 
 Function
 --------
 
-This API is used to query an image member schema, which allows you to view image member attributes and their data types.
+This API is used to query an image sharing member schema, which allows you to view image sharing member attributes and their data types.
 
 URI
 ---
@@ -18,15 +18,18 @@ GET /v2/schemas/member
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying a schema for an image sharing member
 
-      GET https://{Endpoint}/v2/schemas/member
+.. code-block:: text
+
+   GET https://{Endpoint}/v2/schemas/member
 
 Response
 --------

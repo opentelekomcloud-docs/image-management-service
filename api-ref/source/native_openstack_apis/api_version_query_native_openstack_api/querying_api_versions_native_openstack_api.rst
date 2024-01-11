@@ -22,11 +22,14 @@ Request
 
    None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying API versions
 
-      GET https://{Endpoint}/
+.. code-block:: text
+
+   GET https://{Endpoint}/
 
 Response
 --------

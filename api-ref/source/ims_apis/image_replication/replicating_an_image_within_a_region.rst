@@ -10,7 +10,7 @@ Function
 
 This API is an extension one and is used to copy an existing image to another image. When replicating an image, you can change the image attributes to meet the requirements of different scenarios.
 
-This API is an asynchronous one. If **job_id** is returned, the task is successfully delivered. You need to query the status of the asynchronous task. If the status is **success**, the task is successfully executed. If the status is **failed**, the task fails. For details about how to query the status of an asynchronous task, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`.
+This API is an asynchronous one. If **job_id** is returned, the task is successfully delivered. You need to query the status of the asynchronous task. If the status is **success**, the task is successfully executed. If the status is **failed**, the task fails. For details about how to query the status of an asynchronous task, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`.
 
 Constraints
 -----------
@@ -50,7 +50,7 @@ Request
    +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | cmk_id                | No              | String          | Specifies the encryption key. This parameter is left blank by default.                                                                                                                                                                                                                                                                                  |
    +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | enterprise_project_id | No              | String          | Indicates the enterprise project that the image belongs to.                                                                                                                                                                                                                                                                                             |
+   | enterprise_project_id | No              | String          | Specifies the enterprise project that the image belongs to.                                                                                                                                                                                                                                                                                             |
    |                       |                 |                 |                                                                                                                                                                                                                                                                                                                                                         |
    |                       |                 |                 | -  If the value is **0** or left blank, the image belongs to the default enterprise project.                                                                                                                                                                                                                                                            |
    |                       |                 |                 |                                                                                                                                                                                                                                                                                                                                                         |
@@ -59,32 +59,32 @@ Request
    |                       |                 |                 |    For more information about enterprise projects and how to obtain enterprise project IDs, see *Enterprise Management User Guide*.                                                                                                                                                                                                                     |
    +-----------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Replicating an image (name: ims_encrypted_copy3) within a region
 
-      POST https://{Endpoint}/v1/cloudimages/465076de-dc36-4aec-80f5-ef9d8009428f/copy
+.. code-block:: text
 
-   ::
-
-      {
-          "name": "ims_encrypted_copy3",
-          "description": "test copy",
-          "cmk_id": "bd66288c-9081-460a-8227-4cbd0c814cb4"
-      }
+   POST https://{Endpoint}/v1/cloudimages/465076de-dc36-4aec-80f5-ef9d8009428f/copy
+   {
+       "name": "ims_encrypted_copy3",
+       "description": "test copy",
+       "cmk_id": "bd66288c-9081-460a-8227-4cbd0c814cb4"
+   }
 
 Response
 --------
 
 -  Response parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                              |
-   +=======================+=======================+==========================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                       |
-   |                       |                       |                                                                          |
-   |                       |                       | For details, see :ref:`Asynchronous Job Query <en-us_topic_0022473688>`. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                  |
+   +=======================+=======================+==============================================================================================+
+   | job_id                | String                | Specifies the asynchronous job ID.                                                           |
+   |                       |                       |                                                                                              |
+   |                       |                       | For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`. |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
 
 -  Example response
 

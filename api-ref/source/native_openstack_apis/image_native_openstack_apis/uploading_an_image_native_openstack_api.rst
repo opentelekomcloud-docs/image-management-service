@@ -57,19 +57,20 @@ Request
    *image_file* Yes       file Specifies the local file to be uploaded.
    ============ ========= ==== ========================================
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+.. code-block:: text
 
-      PUT https://{Endpoint}/v2/images/84ac7f2b-bf19-4efb-86a0-b5be8771b476/file
+   PUT https://{Endpoint}/v2/images/84ac7f2b-bf19-4efb-86a0-b5be8771b476/file
 
-   .. note::
+.. note::
 
-      If you use the curl command to call the API, the example request is as follows:
+   If you use the curl command to call the API, the example request is as follows:
 
-      .. code-block::
+   .. code-block::
 
-         curl -i --insecure 'https://IP/v2/images/84ac7f2b-bf19-4efb-86a0-b5be8771b476/file' -X PUT -H "X-Auth-Token: $mytoken" -H "Content-Type:application/octet-stream" -T /mnt/userdisk/images/suse.zvhd
+      curl -i --insecure 'https://IP/v2/images/84ac7f2b-bf19-4efb-86a0-b5be8771b476/file' -X PUT -H "X-Auth-Token: $mytoken" -H "Content-Type:application/octet-stream" -T /mnt/userdisk/images/suse.zvhd
 
 Response
 --------

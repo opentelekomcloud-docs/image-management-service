@@ -8,18 +8,18 @@ Updating Image Information
 Function
 --------
 
-This API is used to modify image attributes and update image information.
+This API is used to update image information.
 
 .. note::
 
-   Only information of images in **active** status can be changed.
+   Only **active** images can be updated.
 
 URI
 ---
 
 PATCH /v2/cloudimages/{image_id}
 
-:ref:`Table 1 <en-us_topic_0020091567__table30282311>` describes the parameters in the URI.
+:ref:`Table 1 <en-us_topic_0020091567__table30282311>` lists the parameters in the URI.
 
 .. _en-us_topic_0020091567__table30282311:
 
@@ -53,9 +53,9 @@ Request
       +=================+=================+=================+==================================================================================================================================================+
       | op              | Yes             | String          | Specifies the operation. The value can be **add**, **replace**, or **remove**.                                                                   |
       +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-      | path            | Yes             | String          | Specifies the name of the attribute to be modified. **/** needs to be added in front of it.                                                      |
+      | path            | Yes             | String          | Specifies the name of the attribute to be updated. **/** needs to be added in front of it.                                                       |
       |                 |                 |                 |                                                                                                                                                  |
-      |                 |                 |                 | You can modify the following attributes:                                                                                                         |
+      |                 |                 |                 | You can update the following attributes:                                                                                                         |
       |                 |                 |                 |                                                                                                                                                  |
       |                 |                 |                 | -  **name**: specifies the image name.                                                                                                           |
       |                 |                 |                 | -  **\__description**: specifies the image description.                                                                                          |
@@ -77,21 +77,21 @@ Request
       | value           | Yes             | String          | Specifies the new value of the attribute. For detailed description, see :ref:`Image Attributes <en-us_topic_0020091562__section61598810155254>`. |
       +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Changing an image name to **ims_test**
 
-      PATCH https://{Endpoint}/v2/cloudimages/33ad552d-1149-471c-8190-ff6776174a00
+::
 
-   ::
-
-      [
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "ims_test"
-          }
-      ]
+   PATCH https://{Endpoint}/v2/cloudimages/33ad552d-1149-471c-8190-ff6776174a00
+   [
+       {
+           "op": "replace",
+           "path": "/name",
+           "value": "ims_test"
+       }
+   ]
 
 Response
 --------
@@ -159,7 +159,7 @@ Response
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | \__system__cmkid           | String                | Specifies the ID of the key used to encrypt the image.                                                                                                                                                                                                                                                                                                |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | min_disk                   | Integer               | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1024 GB.                                                                                                                                                                                                                                          |
+   | min_disk                   | Integer               | Specifies the minimum disk space (GB) required for running the image. The value ranges from 1 GB to 1,024 GB.                                                                                                                                                                                                                                         |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | virtual_env_type           | String                | Specifies the environment where the image is used. The value can be **FusionCompute**, **Ironic**, **DataImage**, or **IsoImage**.                                                                                                                                                                                                                    |
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
@@ -231,7 +231,7 @@ Response
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
    |                            |                       | This attribute cannot co-exist with **\__support_xen** and **\__support_kvm**.                                                                                                                                                                                                                                                                        |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | \__support_kvm_infiniband  | String                | Specifies whether the image supports ECSs with the InfiniBand NIC on the KVM platform. If yes, the value is **true**. Otherwise, this parameter is not required.                                                                                                                                                                                      |
+   | \__support_kvm_infiniband  | String                | Specifies whether the image supports ECSs with InfiniBand NICs on the KVM platform. If yes, the value is **true**. Otherwise, this parameter is not required.                                                                                                                                                                                         |
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
    |                            |                       | This attribute cannot co-exist with **\__support_xen**.                                                                                                                                                                                                                                                                                               |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -243,7 +243,7 @@ Response
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
    |                            |                       |    For more information about enterprise projects, see *Enterprise Management User Guide*.                                                                                                                                                                                                                                                            |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | \__sequence_num            | String                | Specifies the ECS system disk slot number corresponding to the image.                                                                                                                                                                                                                                                                                 |
+   | \__sequence_num            | String                | Specifies the ECS system disk slot number of the image.                                                                                                                                                                                                                                                                                               |
    |                            |                       |                                                                                                                                                                                                                                                                                                                                                       |
    |                            |                       | This parameter is unavailable currently.                                                                                                                                                                                                                                                                                                              |
    +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -32,15 +32,18 @@ HEAD /v1/images/{image_id}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Querying image metadata
 
-      HEAD https://{Endpoint}/v1/images/3c3d1d01-b48a-4639-8a88-08be3b9b5d78
+.. code-block::
+
+   HEAD https://{Endpoint}/v1/images/3c3d1d01-b48a-4639-8a88-08be3b9b5d78
 
 Response
 --------

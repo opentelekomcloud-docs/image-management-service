@@ -38,15 +38,18 @@ DELETE /v2/{project_id}/images/{image_id}/tags/{key}
 Request
 -------
 
--  Request parameters
+Request parameters
 
-   None
+None
 
--  Example request
+Example Request
+---------------
 
-   .. code-block:: text
+Deleting an image tag
 
-      DELETE https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/67e17426-359e-49fb-aa12-0bd1756ec240/tags/key1
+.. code-block:: text
+
+   DELETE https://{Endpoint}/v2/fd73a4a14a4a4dfb9771a8475e5198ea/images/67e17426-359e-49fb-aa12-0bd1756ec240/tags/key1
 
 Response
 --------

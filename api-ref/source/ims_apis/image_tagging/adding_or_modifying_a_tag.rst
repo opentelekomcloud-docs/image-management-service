@@ -45,33 +45,28 @@ Request
       value     Yes       String Specifies the tag value.
       ========= ========= ====== ========================
 
--  Example request
+Example Request
+---------------
 
-   -  Example request containing parameter **tag**
+-  Adding or modifying a tag (parameter: **tags**)
 
-      .. code-block:: text
+   .. code-block:: text
 
-         PUT https://{Endpoint}/v1/cloudimages/tags
+      PUT https://{Endpoint}/v1/cloudimages/tags
+      {
+        "image_id": "62a15f6c-9197-44d2-89c7-708981c1bec1",
+        "tag": "aaaa.1111"
+      }
 
-      ::
+-  Adding or modifying a tag (parameter: **image_tag**)
 
-         {
-           "image_id": "62a15f6c-9197-44d2-89c7-708981c1bec1",
-           "tag": "aaaa.1111"
-         }
+   .. code-block:: text
 
-   -  Example request containing parameter **image_tag**
-
-      .. code-block:: text
-
-         PUT https://{Endpoint}/v1/cloudimages/tags
-
-      ::
-
-         {
-           "image_id": "67437ebd-2563-46e0-887e-ad1923977fa1",
-           "image_tag": {"key":"key1","value":"value1"}
-         }
+      PUT https://{Endpoint}/v1/cloudimages/tags
+      {
+        "image_id": "67437ebd-2563-46e0-887e-ad1923977fa1",
+        "image_tag": {"key":"key1","value":"value1"}
+      }
 
 Response
 --------
