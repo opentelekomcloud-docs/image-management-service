@@ -16,6 +16,7 @@ Constraints
 -----------
 
 -  Full-ECS images cannot be replicated.
+-  Private images created using ISO files do not support in-region replication.
 
 URI
 ---

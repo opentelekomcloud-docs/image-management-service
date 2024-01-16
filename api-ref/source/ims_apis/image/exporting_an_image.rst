@@ -21,6 +21,7 @@ Constraints
 -  The following private images cannot be exported:
 
    -  Full-ECS images
+   -  ISO images
    -  Private images created from a Windows, SUSE, Red Hat, Ubuntu, or Oracle Linux public image
 
 -  The image size must be less than 1 TB. Images larger than 128 GB support only fast export.
