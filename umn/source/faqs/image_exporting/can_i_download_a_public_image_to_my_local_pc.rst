@@ -5,7 +5,7 @@
 Can I Download a Public Image to My Local PC?
 =============================================
 
-Telekom will provide the customer with public images and GPU drivers for sole use on the Open Telekom Cloud platform. The customer is expressly prohibited from Downloading and copying the software provided by Telekom and storing or using it locally or in a different environment.
+Telekom will provide the customer with public images and GPU drivers for sole use on the Open Telekom Cloud platform. The customer is expressly prohibited from downloading and copying the software provided by Telekom and storing or using it locally or in a different environment.
 
 Helpful links:
 
