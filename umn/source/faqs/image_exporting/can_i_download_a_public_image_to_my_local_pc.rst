@@ -5,7 +5,7 @@
 Can I Download a Public Image to My Local PC?
 =============================================
 
-Currently, you cannot directly download a public image. You can use the public image to create an ECS, use the ECS to create a private image, export the private image to your OBS bucket, and download the private image to your local PC.
+Telekom will provide the customer with public images and GPU drivers for sole use on the Open Telekom Cloud platform. The customer is expressly prohibited from Downloading and copying the software provided by Telekom and storing or using it locally or in a different environment.
 
 Helpful links:
 
