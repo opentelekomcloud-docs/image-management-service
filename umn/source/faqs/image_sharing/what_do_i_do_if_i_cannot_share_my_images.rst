@@ -5,9 +5,7 @@
 What Do I Do If I Cannot Share My Images?
 =========================================
 
-**Cause 1**: Some images cannot be shared in any cases (the **Share** button in the **Operation** column for these images is unavailable), such as:
+-  Some images cannot be shared. Therefore, the **Share** option is not provided for them in the **Operation** column. The following images cannot be shared:
 
--  Encrypted images
--  Full-ECS images created from a CSBS backup
-
-**Cause 2**: Images can only be shared within the same region. If you are attempting to share an image across regions, your attempt will fail.
+   -  Encrypted images
+   -  Full-ECS images created from a CSBS backup

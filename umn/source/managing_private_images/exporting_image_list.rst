@@ -20,13 +20,13 @@ Exporting Private Image Information
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
 #. Click the **Private Images** tab and click |image1|.
 
-   The system will automatically export all private images in the current region under your account to a local directory.
+   The system will automatically export the private image list in the current region under your account to a local directory.
 
    .. note::
 
@@ -39,7 +39,7 @@ Exporting Public Image Information
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

@@ -5,6 +5,15 @@
 Related Services
 ================
 
+:ref:`Figure 1 <en-us_topic_0030713148__fig149214433462>` shows the relationships between IMS and other services.
+
+.. _en-us_topic_0030713148__fig149214433462:
+
+.. figure:: /_static/images/en-us_image_0200591921.png
+   :alt: **Figure 1** IMS relationships with other services
+
+   **Figure 1** IMS relationships with other services
+
 .. table:: **Table 1** Related services
 
    +------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+

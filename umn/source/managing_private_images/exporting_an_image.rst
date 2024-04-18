@@ -34,9 +34,11 @@ Background
 Constraints
 -----------
 
+-  An image can only be exported to a Standard bucket that is in the same region as the image.
 -  The following private images cannot be exported:
 
    -  Full-ECS images
+   -  ISO images
    -  Private images created from a Windows, SUSE, Red Hat, Ubuntu, or Oracle Linux public image
 
 -  The image size must be less than 1 TB. Images larger than 128 GB support only fast export.
@@ -55,7 +57,7 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
@@ -72,6 +74,10 @@ Procedure
    -  **Format**: Select one from **qcow2**, **vmdk**, **vhd**, and **zvhd** as you need.
    -  **Name**: Enter a name that is easy to identify.
    -  **Storage Path**: Click |image1| to expand the bucket list and select an OBS bucket for storing the exported image.
+
+      .. note::
+
+         An image can only be exported to a Standard bucket that is in the same region as the image. So, only such buckets are available in the list.
 
 #. Click **OK**.
 

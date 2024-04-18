@@ -35,7 +35,7 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
@@ -43,9 +43,9 @@ Procedure
 
    a. Click **Create Image** in the upper right corner.
 
-   b. In the **Image Type and Source** area, select **Data disk image** for **Type**.
+   b. In the **Image Type and Source** area, select **Import Image** for **Type** and then select **Data disk image** for **Image Type**.
 
-   c. Select **Image File** for **Source**. Select the bucket storing the image file from the list and then select the image file.
+   c. Select the bucket storing the image file from the list and then select the image file.
 
 
       .. figure:: /_static/images/en-us_image_0162744031.png
@@ -68,7 +68,6 @@ Procedure
       -  **Data Disk**: The value ranges from 1 GB to 2048 GB and must be no less than the data disk size in the image file.
       -  **Name**: Enter a name for the image.
       -  (Optional) **Encryption**: If you want to encrypt the image, select **KMS encryption** and then select the key to be used from the key list.
-      -  **Enterprise Project**: Select an enterprise project from the drop-down list. This parameter is available only if you have enabled enterprise projects or your account is an enterprise account. To enable this function, contact your customer manager. An enterprise project provides central management of cloud resources on a project.
       -  (Optional) **Tag**: Set a tag key and a tag value for the image to easily identify and manage it.
       -  (Optional) **Description**: Enter description of the image.
 
@@ -88,8 +87,15 @@ Follow-up Procedure
 If you want to use the created data disk image to create an EVS disk and attach it to an ECS, you can perform either of the following operations:
 
 -  Locate the row that contains the created data disk image and click **Create Data Disk** to create one or multiple data disks. Then attach the data disks to an ECS.
+
 -  On the page for creating ECSs, click **Create Disk from Data Disk Image** and select the data disk image.
 
    .. note::
 
-      A data disk image can be used to create a data disk for an ECS only once.
+      In this way, a data disk image can be used to create a data disk for an ECS only once. For example, a data disk created from data disk image **data_disk_image** has been added to the ECS. No any other data disk created from this image can be added to the ECS.
+
+
+   .. figure:: /_static/images/en-us_image_0186473007.png
+      :alt: **Figure 3** Adding data disks
+
+      **Figure 3** Adding data disks

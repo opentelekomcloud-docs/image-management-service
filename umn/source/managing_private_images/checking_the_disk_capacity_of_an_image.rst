@@ -24,12 +24,19 @@ Check the disk capacity in the **Disk Capacity** column of the private image lis
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
 #. Click the **Private Images** tab to display the image list.
+
 #. Check the value in the **Disk Capacity** column. The unit is **GB**.
+
+
+   .. figure:: /_static/images/en-us_image_0000001537790897.png
+      :alt: **Figure 1** Checking the disk capacity of a system disk image or data disk image
+
+      **Figure 1** Checking the disk capacity of a system disk image or data disk image
 
 .. _en-us_topic_0300978092__section712514158290:
 
@@ -42,7 +49,7 @@ The disk capacity of a full-ECS image is the sum of the system disk capacity and
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

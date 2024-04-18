@@ -24,7 +24,7 @@ Check Whether an Image Supports Fast ECS Creation
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

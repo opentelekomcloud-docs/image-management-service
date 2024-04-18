@@ -120,23 +120,70 @@ Configure Cloudbase-Init
 
    b. Add **metadata_services=cloudbaseinit.metadata.services.httpservice.HttpService** to enable the agent to access the IaaS OpenStack data source.
 
-   c. (Optional) Add the following configuration items to configure the number of retry times and interval for obtaining metadata:
+   c. Add **plugins** to configure the plugins that will be loaded. Separate different plugins with commas (,). The information in bold is the keyword of each plugin.
+
+      -  The following plugins are loaded by default. You can keep all or some of them as needed.
+
+         .. code-block::
+
+            plugins=cloudbaseinit.plugins.common.localscripts.LocalScriptsPlugin,cloudbaseinit.plugins.common.mtu.MTUPlugin,cloudbaseinit.plugins.windows.createuser.CreateUserPlugin,cloudbaseinit.plugins.common.setuserpassword.SetUserPasswordPlugin,cloudbaseinit.plugins.common.sshpublickeys.SetUserSSHPublicKeysPlugin,cloudbaseinit.plugins.common.sethostname.SetHostNamePlugin,cloudbaseinit.plugins.windows.extendvolumes.ExtendVolumesPlugin,cloudbaseinit.plugins.common.userdata.UserDataPlugin,cloudbaseinit.plugins.windows.licensing.WindowsLicensingPlugin
+
+         Plugin functions:
+
+         -  **LocalScriptsPlugin** configures scripts.
+         -  **MTUPlugin** configures MTU network interfaces.
+         -  **CreateUserPlugin** creates a user.
+         -  **SetUserPasswordPlugin** configures a password.
+         -  **SetUserSSHPublicKeysPlugin** configures a key.
+         -  **SetHostNamePlugin** configures a hostname.
+         -  **ExtendVolumesPlugin** expands disk space.
+         -  **UserDataPlugin** injects user data.
+         -  **WindowsLicensingPlugin** activates Windows instances.
+
+         .. note::
+
+            If you may change the hostname of ECSs after they are created from this image and services on the ECSs are sensitive to hostname changes, you are not advised to configure the **SetHostNamePlugin** here.
+
+      -  Optional plugins:
+
+         .. code-block::
+
+            plugins=cloudbaseinit.plugins.windows.winrmlistener.ConfigWinRMListenerPlugin,cloudbaseinit.plugins.windows.winrmcertificateauth.ConfigWinRMCertificateAuthPlugin
+
+         Plugin functions:
+
+         -  **ConfigWinRMListenerPlugin** configures listening to remote logins.
+         -  **ConfigWinRMCertificateAuthPlugin** configures remote logins without password authentication.
+
+            .. caution::
+
+               The WinRM plug-ins use weak cryptographic algorithm, which may cause security risks. So, you are advised not to load the plug-ins.
+
+   d. (Optional) Add the following configuration items to configure the number of retry times and interval for obtaining metadata:
 
       .. code-block::
 
          retry_count=40
          retry_count_interval=5
 
-   d. (Optional) Add the following configuration item to prevent metadata network disconnections caused by the default route added by Windows:
+   e. (Optional) Add the following configuration item to prevent metadata network disconnections caused by the default route added by Windows:
 
       .. code-block::
 
          [openstack]
          add_metadata_private_ip_route=False
 
-   e. (Optional) When the Cloudbase-Init version is 0.9.12 or later, you can customize the length of the password.
+   f. (Optional) If the Cloudbase-Init version is 0.9.12 or later, you can customize the length of the password.
 
       Change the value of **user_password_length** to customize the password length.
+
+   g. (Optional) Add the following configuration item to ensure that time synchronization from BIOS persists through system restarts:
+
+      **real_time_clock_utc=true**
+
+      .. note::
+
+         The registry entry **RealTimeIsUniversal=1** allows the system to synchronize time from BIOS. If **real_time_clock_utc=true** is not configured, Cloudbase-Init will revert **RealTimeIsUniversal** back to **0**. As a result, the system cannot synchronize time from BIOS after a restart.
 
 #. Release the current DHCP address so that the created ECSs can obtain correct addresses.
 

@@ -12,7 +12,7 @@ After another tenant shares images with you, you will receive a message. You can
 
 .. note::
 
-   If you are not in the same region as the tenant sharing the images with you, you will not receive the message.
+   -  If you are not in the same region as the tenant sharing the images with you, you will not receive the message.
 
 Prerequisites
 -------------
@@ -27,9 +27,11 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
+
+#. In the upper left corner, switch to the region where the target project resides and then select the project.
 
 #. Click the **Images Shared with Me** tab.
 
@@ -70,7 +72,7 @@ Follow-up Procedure
 After accepting a system disk image or full-ECS image shared by another tenant, you can:
 
 -  Use the image to create one or more ECSs (select **Shared Image** during ECS creation).
--  Use the image to change the OS of existing ECSs.
+-  Use the image to change the OS of existing ECSs. For details, see "Changing the OS" in *Elastic Cloud Server User Guide*.
 
 After accepting a data disk image shared by another tenant, you can use the image to create EVS disks (locate the row that contains the image and click **Create Data Disk** in the **Operation** column).
 

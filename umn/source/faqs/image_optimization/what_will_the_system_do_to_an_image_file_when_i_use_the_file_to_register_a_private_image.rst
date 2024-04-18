@@ -13,7 +13,7 @@ Linux
 -  Check whether any PV drivers exist. If yes, the system deletes them.
 -  Modify the **grub** and **syslinux** configuration files to add the OS kernel boot parameters and change the disk partition name (**UUID=**\ *UUID of the disk partition*).
 -  Change the names of the disk partitions in the **/etc/fstab** file (**UUID=**\ *UUID of the disk partition*).
--  Check whether the initrd file has the Xen and IDE drivers. If no, the system loads the Xen and IDE drivers.
+-  Check whether the initrd file has the IDE driver. If no, the system will load the IDE driver.
 -  Modify the X Window configuration file **/etc/X11/xorg.conf** to prevent display failures.
 -  Delete services of VMware tools.
 -  Record the latest automatic modification made to the image into **/var/log/rainbow_modification_record.log**.

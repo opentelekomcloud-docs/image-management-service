@@ -30,20 +30,50 @@ Example Policies
               {
                   "Effect": "Allow",
                   "Action": [
-                      "ims:serverImages:create",
-                      "obs:bucket:*",
-                      "obs:object:*",
-                      "kms:*:*",
+                      "ims:serverImages:create"
+                  ]
+              },
+              {
+                  "Effect": "Allow",
+                  "Action": [
+                      "KMS:*:*"
+                  ]
+              },
+              {
+                  "Effect": "Allow",
+                  "Action": [
                       "ecs:cloudServers:get",
                       "ecs:servers:get",
                       "ecs:serverVolumes:use",
                       "ecs:cloudServers:list",
                       "ecs:serverVolumeAttachments:list",
-                      "ecs:servers:list",
-                      "evs:volumes:*",
+                      "ecs:servers:list"
+
+                  ]
+              },
+              {
+                  "Effect": "Allow",
+                  "Action": [
                       "bms:servers:list",
                       "bms:servers:get",
                       "bms:serverFlavors:get"
+                  ]
+              },
+             {
+                  "Effect": "Allow",
+                  "Action": [
+                      "evs:volumes:*"
+                  ]
+              }
+          ]
+      }
+      {
+          "Version": "1.1",
+          "Statement": [
+              {
+                  "Effect": "Allow",
+                  "Action": [
+                      "OBS:*:*"
                   ]
               }
           ]

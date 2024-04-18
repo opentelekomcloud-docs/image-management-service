@@ -8,11 +8,11 @@ Creating a User and Granting Permissions
 Scenarios
 ---------
 
-This section describes how to use `Identity and Access Management <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html>`__ (IAM) to implement fine-grained permissions control for your IMS resources. With IAM, you can:
+This section describes how to use `Identity and Access Management <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html>`__ (IAM) to implement fine-grained permissions control for your images. With IAM, you can:
 
--  Create IAM users for employees based on the organizational structure of your enterprise. Each IAM user has their own security credentials, providing access to IMS resources.
+-  Create IAM users for employees based on the organizational structure of your enterprise. Each IAM user has their own security credentials, providing access to images.
 -  Grant only the permissions required for users to perform a task.
--  Entrust an account or cloud service to perform professional and efficient O&M on your IMS resources.
+-  Entrust an account or cloud service to perform professional and efficient O&M on your images.
 
 If your account does not need individual IAM users for permissions management, you can skip this section.
 

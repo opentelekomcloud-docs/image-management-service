@@ -12,7 +12,7 @@ You can use tags to classify images. You can add, modify, or delete image tags, 
 
 .. note::
 
-   When adding predefined tags to an image or searching for an image using predefined tags, you must have permission to access the Tag Management Service (TMS).
+   -  When adding predefined tags to an image or searching for an image using predefined tags, you must have permission to access the Tag Management Service (TMS).
 
 Constraints
 -----------
@@ -26,7 +26,7 @@ Add, Delete, and Modify Image Tags
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
@@ -55,11 +55,17 @@ Search for Private Images by Tag
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
 #. Click the **Private Images** tab and then **Search by Tag**.
+
+
+   .. figure:: /_static/images/en-us_image_0000001745305005.png
+      :alt: **Figure 1** Searching for images by tag
+
+      **Figure 1** Searching for images by tag
 
 #. Enter the tag key and value.
 
@@ -68,6 +74,12 @@ Search for Private Images by Tag
 #. Click |image1| to add a tag.
 
    You can add multiple tags to search for private images. The system will display private images that match all tags.
+
+
+   .. figure:: /_static/images/en-us_image_0000001745225193.png
+      :alt: **Figure 2** Adding a tag
+
+      **Figure 2** Adding a tag
 
 #. Click **Search**.
 
@@ -86,7 +98,7 @@ After you accept private image **image_test** with tag (Enterprise=A) which is s
 
 #. Log in to the management console.
 
-#. Under **Compute**, click **Image Management Service**.
+#. Under **Computing**, click **Image Management Service**.
 
    The **Private Images** page is displayed.
 
@@ -104,5 +116,5 @@ After you accept private image **image_test** with tag (Enterprise=A) which is s
 
    The system searches for shared images based on tag keys or tag values.
 
-.. |image1| image:: /_static/images/en-us_image_0187517327.png
+.. |image1| image:: /_static/images/en-us_image_0000001697305558.png
 .. |image2| image:: /_static/images/en-us_image_0187518440.png

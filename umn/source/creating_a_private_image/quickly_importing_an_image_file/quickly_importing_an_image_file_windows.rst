@@ -62,6 +62,10 @@ Procedure
 
       **java -jar CreateMF.jar D:/image01.raw D:/image01.mf**
 
+      .. caution::
+
+         -  The generated .mf bitmap file must have the same name as the RAW image file. For example, if the image file name is **image01.raw**, the generated bitmap name is **image01.mf**.
+
 #. Use OBS Browser to upload the converted image file and its bitmap file to an OBS bucket.
 
    You must upload the RAW image file and its bitmap file to the same OBS bucket.
@@ -76,15 +80,15 @@ Procedure
 
       #. Log in to the management console.
 
-      #. Under **Compute**, click **Image Management Service**.
+      #. Under **Computing**, click **Image Management Service**.
 
          The IMS console is displayed.
 
    b. In the upper right corner, click **Create Image**.
 
-   c. In the **Image Type and Source** area, select **System disk image** or **Data disk image** for **Type**.
+   c. In the **Image Type and Source** area, select **Import Image** for **Type** and then select **System disk image** or **Data disk image** for **Image Type**.
 
-   d. Select **Image File** for **Source**. Select the bucket storing the ZVHD2 or RAW image file and then select the image file. If the image file is in the RAW format, you also need to select its bitmap file.
+   d. Select the bucket storing the ZVHD2 or RAW image file and then select the image file. If the image file is in the RAW format, you also need to select its bitmap file.
 
    e. Select **Enable Fast Create**, and select the sentence following **Image File Preparation**.
 

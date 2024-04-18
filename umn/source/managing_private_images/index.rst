@@ -11,7 +11,6 @@ Managing Private Images
 -  :ref:`Creating an ECS from an Image <en-us_topic_0030713200>`
 -  :ref:`Deleting Images <en-us_topic_0030713201>`
 -  :ref:`Sharing Images <en-us_topic_0032042416>`
--  :ref:`Importing an Image <en-us_topic_0000001175697174>`
 -  :ref:`Exporting an Image <en-us_topic_0034011241>`
 -  :ref:`Optimizing a Windows Private Image <en-us_topic_0130878748>`
 -  :ref:`Optimizing a Linux Private Image <en-us_topic_0130878749>`
@@ -32,7 +31,6 @@ Managing Private Images
    creating_an_ecs_from_an_image
    deleting_images
    sharing_images/index
-   importing_an_image
    exporting_an_image
    optimizing_a_windows_private_image/index
    optimizing_a_linux_private_image/index

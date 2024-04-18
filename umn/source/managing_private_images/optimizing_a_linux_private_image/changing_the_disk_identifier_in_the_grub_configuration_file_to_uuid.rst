@@ -154,7 +154,7 @@ Procedure
 
    9. Run the following command to verify the change:
 
-      **cat /boot/grub/grub.cfg**
+      **cat /boot/grub/grub.conf**
 
       The change is successful if information similar to the following is displayed:
 
