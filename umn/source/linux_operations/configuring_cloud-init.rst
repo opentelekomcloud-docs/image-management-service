@@ -72,7 +72,7 @@ Configure Cloud-Init
 
    .. note::
 
-      For Ubuntu and Debian, set the value of **manage_etc_hosts** in the **/etc/cloud/cloud.cfg** file to **localhost**. Otherwise, switching to user **root** from a user other than **root** may time out.
+      For Ubuntu and Debian, set the value of **manage_etc_hosts** in the **/etc/cloud/cloud.cfg** file to **localhost**. Otherwise, switching to user **root** may time out.
 
    Take Ubuntu as an example.
 
@@ -195,7 +195,7 @@ Configure Cloud-Init
 
       **Figure 2** Preventing Cloud-Init from taking over the network
 
-#. Modify the **cloud_init_modules** configuration file.
+#. Modify **cloud_init_modules** in the **cloud.cfg** configuration file.
 
    Move **ssh** from the bottom to the top to speed up the SSH login.
 

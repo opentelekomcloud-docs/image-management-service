@@ -28,6 +28,7 @@ Constraints
 -----------
 
 -  Full-ECS images cannot be replicated.
+-  Private images created using ISO files do not support in-region replication.
 
 Prerequisites
 -------------
@@ -41,7 +42,7 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

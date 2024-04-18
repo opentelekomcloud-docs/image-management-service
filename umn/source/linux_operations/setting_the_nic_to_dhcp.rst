@@ -23,16 +23,84 @@ You have logged in to the ECS used to create a Windows private image.
 
 For details about how to log in to an ECS, see *Elastic Cloud Server User Guide*.
 
-Procedure
----------
+Ubuntu 18 or Later
+------------------
 
-This section uses Ubuntu 16.04 as an example to describe how to query and configure NIC attributes of an ECS.
+#. Run **vi /etc/netplan/01-netcfg.yaml** on the ECS to open the **/etc/netplan/01-netcfg.yaml** file, and check whether the value of **dhcp4** is **true**.
 
-#. Run the following command on the ECS to open the **/etc/network/interfaces** file using the vi editor and query the IP address obtaining mode:
+   -  If **dhcp4** is set to **true**, enter **:q** to exit the editor. No further action will be required.
+
+      .. code-block::
+
+          network:
+             version:2
+             renderer:NetworkManager
+             ethernets:
+                 eth0:
+                     dhcp4: true
+
+   -  If **dhcp4** is set to **no** and a static IP address is configured, go to the next step.
+
+      .. code-block::
+
+         network:
+             version:2
+             renderer:NetworkManager
+             ethernets:
+                 eth0:
+                     dhcp4: no
+                    addresses: [192.168.1.109/24]
+                    gateway4: 192.168.1.1
+                    nameservers:
+                       addresses: [8.8.8.8,114.114.114.114]
+
+#. Press **i** to enter the editing mode.
+
+   Delete the static IP address settings and set **dhcp4** to **true**. You can also use a number sign (#) to comment out the static IP address settings.
+
+   .. code-block::
+
+      network:
+          version:2
+          renderer:NetworkManager
+          ethernets:
+              eth0:
+                dhcp4: true   # Set dhcp4 to true.
+                #dhcp4: no    # Delete or comment out the static IP address settings.
+                #addresses: [192.168.1.109]
+                #gateway4: 192.168.1.1
+                #nameservers:
+                # addresses: [8.8.8.8,114.114.114.114]
+
+#. If your ECS has more than one NIC, configure DHCP for all of them.
+
+   .. code-block::
+
+      network:
+          version:2
+          renderer:NetworkManager
+          ethernets:
+               eth0:
+                  dhcp4: true
+               eth1:
+                   dhcp4: true
+               eth2:
+                   dhcp4: true
+               eth3:
+                   dhcp4: true
+
+#. Press **Esc**, enter **:wq**, and press **Enter** to save the settings and exit the vi editor.
+
+#. Run the **netplan apply** command to make the settings take effect.
+
+Ubuntu 16.04
+------------
+
+#. Run the following command on the ECS to open the **/etc/network/interfaces** file:
 
    **vi /etc/network/interfaces**
 
-   -  If DHCP has been configured on all NICs, enter **:q** to exit the vi editor.
+   -  If DHCP has been configured for all NICs, enter **:q** to exit the vi editor.
 
       .. code-block::
 
@@ -59,11 +127,11 @@ This section uses Ubuntu 16.04 as an example to describe how to query and config
 
 #. .. _en-us_topic_0030713176__en-us_topic_0029124465_li47654828194142:
 
-   Press **i** to enter editing mode.
+   Press **i** to enter the editing mode.
 
-#. Delete the static IP address configuration and configure DHCP for the NICs.
+#. Delete the static IP address settings and configure DHCP for the NICs.
 
-   You can insert a number sign (#) in front of each line of static IP address configuration to comment it out.
+   You can also use a number sign (#) to comment out the static IP address settings.
 
    .. code-block::
 
@@ -85,7 +153,7 @@ This section uses Ubuntu 16.04 as an example to describe how to query and config
 
 #. Press **Esc**, enter **:wq**, and press **Enter**.
 
-   The system saves the configuration and exits the vi editor.
+   The system saves the settings and exits the vi editor.
 
 Related Operations
 ------------------

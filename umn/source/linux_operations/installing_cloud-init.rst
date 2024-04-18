@@ -38,23 +38,39 @@ Procedure
 Check Whether Cloud-Init Has Been Installed
 -------------------------------------------
 
-Perform the operations provided here to check whether Cloud-Init has been installed.
+Perform the operations provided here to check whether Cloud-Init has been installed. The methods of checking whether Cloud-Init is installed vary depending on the OSs.
 
-The methods of checking whether Cloud-Init is installed vary depending on the OSs. Take CentOS 6 as an example. Run the following command to check whether Cloud-Init is installed:
+-  If you are in a Python 3 environment, run the following command to check whether Cloud-Init is installed (Ubuntu22.0.4 is used as an example):
 
-**which cloud-init**
+   **which cloud-init**
 
--  If information similar to the following is displayed, Cloud-Init has been installed:
+   -  If information similar to the following is displayed, Cloud-Init has been installed:
 
-   .. code-block::
+      .. code-block::
 
-      cloud-init-0.7.5-10.el6.centos.2.x86_64
+         /usr/bin/cloud-init
 
--  If no information is returned, Cloud-Init is not installed.
+   -  If information similar to the following is displayed, Cloud-Init is not installed:
 
-   .. note::
+      .. code-block::
 
-      To confirm Cloud-Init is really not installed, you are advised to run **rpm -qa \|grep cloud-init** to check again. If either of **which cloud-init** and **rpm -qa \|grep cloud-init** shows that Cloud-Init has been installed, Cloud-Init is installed.
+         /usr/bin/which: no cloud-init in (/usr/local/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin)
+
+-  If you are in a Python 2 environment, run the following command to check whether Cloud-Init is installed (CentOS 6 is used as an example):
+
+   **which cloud-init**
+
+   -  If information similar to the following is displayed, Cloud-Init has been installed:
+
+      .. code-block::
+
+         cloud-init-0.7.5-10.el6.centos.2.x86_64
+
+   -  If no information is returned, Cloud-Init is not installed.
+
+      .. note::
+
+         To confirm Cloud-Init is really not installed, you are advised to run **rpm -qa \|grep cloud-init** to check again. If either of **which cloud-init** and **rpm -qa \|grep cloud-init** shows that Cloud-Init has been installed, Cloud-Init is installed.
 
 If Cloud-Init has been installed, perform the following operations:
 

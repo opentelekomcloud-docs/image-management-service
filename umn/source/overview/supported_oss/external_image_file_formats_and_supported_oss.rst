@@ -150,7 +150,17 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Ubuntu 19.04 Server 64bit                 |
    |                                   |                                           |
+   |                                   | Ubuntu 18.04.2 Server 64bit               |
+   |                                   |                                           |
+   |                                   | Ubuntu 18.04.1 Server 64bit               |
+   |                                   |                                           |
    |                                   | Ubuntu 18.04 Server 64bit                 |
+   |                                   |                                           |
+   |                                   | Ubuntu 16.04.6 Server 64bit               |
+   |                                   |                                           |
+   |                                   | Ubuntu 16.04.5 Server 64bit               |
+   |                                   |                                           |
+   |                                   | Ubuntu 16.04.4 Server 64bit               |
    |                                   |                                           |
    |                                   | Ubuntu 16.04.3 Server 64bit               |
    |                                   |                                           |
@@ -247,8 +257,6 @@ If the OS cannot be identified or is not supported:
    |                                   | Debian GNU/Linux 9.3.0 64bit              |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 9.0.0 64bit              |
-   |                                   |                                           |
-   |                                   | Debian GNU/Linux 8.10.0 64bit             |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 8.8.0 64bit              |
    |                                   |                                           |

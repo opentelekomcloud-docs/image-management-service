@@ -10,6 +10,11 @@ Scenarios
 
 You can delete private images that will no longer be used.
 
+-  Deleted private images cannot be retrieved. Perform this operation only when absolutely necessary.
+-  After a private image is deleted, it cannot be used to create ECSs or EVS disks.
+-  After a private image is deleted, ECSs created from the image can still be used and are still billed. However, the OS cannot be reinstalled for the ECSs and ECSs with the same configuration cannot be created.
+-  Deleting the source image of a replicated image has no effect on the replicated image. Similarly, deleting a replicated image has no effect on its source.
+
 Procedure
 ---------
 
@@ -17,7 +22,7 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

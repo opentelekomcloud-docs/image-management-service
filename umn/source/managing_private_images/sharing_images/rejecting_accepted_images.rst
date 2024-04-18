@@ -24,7 +24,7 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
@@ -32,4 +32,4 @@ Procedure
 #. Determine the next step based on how many images you are to reject.
 
    -  To reject multiple images: select the images to be rejected and click **Reject** above the image list. In the displayed dialog box, click **Yes**.
-   -  To reject a specific image: locate the image to be rejected and choose **More** > **Reject** in the **Operation** column. In the displayed dialog box, click **Yes**.
+   -  To reject a specific image: locate the image to be rejected and click **Reject** in the **Operation** column. In the displayed dialog box, click **Yes**.

@@ -32,17 +32,28 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
 #. Create a full-ECS image.
 
    a. Click **Create Image** in the upper right corner.
-   b. In the **Image Type and Source** area, select **Full-ECS image** for **Type**.
+
+   b. In the **Image Type and Source** area, select **Create Image** for **Type** and then select **Full-ECS image** for **Image Type**.
+
    c. Select **Cloud Server Backup** for **Source** and then select a backup from the list.
+
+
+      .. figure:: /_static/images/en-us_image_0000001744523069.png
+         :alt: **Figure 1** Creating a full-ECS image using a CBR backup
+
+         **Figure 1** Creating a full-ECS image using a CBR backup
+
    d. In the **Image Information** area, configure basic image details, such as the image name and description.
+
    e. Click **Create Now**.
+
    f. Confirm the settings and click **Submit**.
 
 #. Switch back to the **Image Management Service** page to monitor the image status.

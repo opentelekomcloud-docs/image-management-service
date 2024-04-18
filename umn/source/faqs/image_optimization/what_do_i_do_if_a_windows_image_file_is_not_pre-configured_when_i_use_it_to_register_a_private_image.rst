@@ -43,7 +43,7 @@ Step 3: Create an ECS
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

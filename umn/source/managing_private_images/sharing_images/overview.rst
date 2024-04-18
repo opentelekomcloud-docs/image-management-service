@@ -7,11 +7,15 @@ Overview
 
 You can share your private images with other tenants. The tenants who accept the shared images can use the images to create ECSs of the same specifications.
 
+.. caution::
+
+   The cloud platform is not responsible for the integrity or security of shared images. When you use a shared image, ensure that the image is from a trusted sharer.
+
 Constraints
 -----------
 
 -  You can share images only within the region where they reside.
--  A system disk image or data disk image can be shared with up to 256 tenants, and a full-ECS image can be shared with no more than 10 tenants.
+-  Each image can be shared with a maximum of 256 tenants.
 -  If an encrypted image needs to be shared with other tenants, the key of the image must be a custom key instead of the default key **ims/default**.
 -  Only full-ECS images created from CBR backups can be shared. Other full-ECS images cannot be shared.
 

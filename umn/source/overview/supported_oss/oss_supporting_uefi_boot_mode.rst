@@ -5,7 +5,7 @@
 OSs Supporting UEFI Boot Mode
 =============================
 
-The ECS boot mode can be BIOS or UEFI. For details about the differences between the two modes, see :ref:`How Is BIOS Different from UEFI? <en-us_topic_0113533721>`.
+The ECS boot mode can be BIOS or UEFI. For details about the differences between them, see :ref:`How Is BIOS Different from UEFI? <en-us_topic_0113533721>`
 
 :ref:`Table 1 <en-us_topic_0170853315__table1067910315818>` lists the OSs that support the UEFI boot mode.
 

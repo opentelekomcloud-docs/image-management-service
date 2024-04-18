@@ -9,7 +9,7 @@ IMS allows you to create encrypted images to ensure data security.
 
 .. note::
 
-   To use the image encryption function, you must apply for KMS Administrator permissions.
+   To use the image encryption function, you must apply for KMS Administrator permissions. For details, see :ref:`Creating a User and Granting Permissions <en-us_topic_0171668650>`.
 
 Constraints
 -----------

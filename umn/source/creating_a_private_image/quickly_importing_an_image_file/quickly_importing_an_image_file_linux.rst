@@ -102,7 +102,7 @@ Procedure
 
       .. caution::
 
-         The generated .mf bitmap file must have the same name as the RAW image file. For example, if the image file name is **image01.raw**, the generated bitmap name is **image01.mf**.
+         -  The generated .mf bitmap file must have the same name as the RAW image file. For example, if the image file name is **image01.raw**, the generated bitmap name is **image01.mf**.
 
 #. .. _en-us_topic_0133773660__li12136151722:
 
@@ -120,7 +120,7 @@ Procedure
 
          **yum** **install** **wget**
 
-      #. Run the following commands to obtain the **s75pxd** software package:
+      #. Run the following commands to obtain the **s3cmd** software package:
 
          **wget** **https://github.com/s3tools/s3cmd/archive/master.zip**
 
@@ -177,15 +177,15 @@ Procedure
 
       #. Log in to the management console.
 
-      #. Under **Compute**, click **Image Management Service**.
+      #. Under **Computing**, click **Image Management Service**.
 
          The IMS console is displayed.
 
    b. In the upper right corner, click **Create Image**.
 
-   c. In the **Image Type and Source** area, select **System disk image** or **Data disk image** for **Type**.
+   c. In the **Image Type and Source** area, select **Import Image** for **Type** and then select **System disk image** or **Data disk image** for **Image Type**.
 
-   d. Select **Image File** for **Source**. Select the bucket storing the ZVHD2 or RAW image file and then select the image file. If the image file is in the RAW format, you also need to select its bitmap file.
+   d. Select the bucket storing the ZVHD2 or RAW image file and then select the image file. If the image file is in the RAW format, you also need to select its bitmap file.
 
    e. Select **Enable Fast Create**, and select the sentence following **Image File Preparation**.
 

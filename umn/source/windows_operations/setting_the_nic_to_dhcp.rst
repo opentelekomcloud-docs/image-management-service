@@ -60,5 +60,3 @@ Procedure
       :alt: **Figure 3** Configuring the IP address obtaining mode
 
       **Figure 3** Configuring the IP address obtaining mode
-
-   The system will automatically obtain an IP address.

@@ -22,11 +22,12 @@ You can modify the following attributes of a private image:
 
    NIC multi-queue enables multiple CPUs to process NIC interruptions for load balancing. For details, see :ref:`How Do I Enable NIC Multi-Queue for an Image? <en-us_topic_0085214115>`
 
+-  Boot Mode
+
 Constraints
 -----------
 
 -  You can only modify a private image in the **Normal** state.
--  For a data disk image, you can only change its name and description.
 
 Procedure
 ---------
@@ -39,13 +40,21 @@ Method 1:
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
 #. Click the **Private Images** tab to display the image list.
+
 #. Locate the row that contains the image and click **Modify** in the **Operation** column.
+
 #. In the **Modify Image** dialog box, modify the image.
+
+
+   .. figure:: /_static/images/en-us_image_0000001537687701.png
+      :alt: **Figure 1** Modifying an image
+
+      **Figure 1** Modifying an image
 
 Method 2:
 
@@ -53,7 +62,7 @@ Method 2:
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

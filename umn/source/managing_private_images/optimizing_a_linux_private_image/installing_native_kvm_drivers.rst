@@ -172,7 +172,7 @@ Modify the **/etc/sysconfig/kernel** file.
 
 #. Run the following command to modify the **/etc/sysconfig/kernel** file:
 
-   **vi** **etc/sysconfig/kernel**
+   **vi** **/etc/sysconfig/kernel**
 
 #. Add VirtIO drivers to **INITRD_MODULES=""** (the format of drivers depends on the OS).
 

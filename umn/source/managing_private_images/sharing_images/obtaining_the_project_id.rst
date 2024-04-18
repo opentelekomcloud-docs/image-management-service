@@ -17,13 +17,15 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 
 #. Click the username in the upper right corner and select **My Credentials** from the drop-down list.
 
    On the **My Credentials** page, view the project ID in the project list.
+
+   Images can be shared only within the region where they reside. So, obtain the project ID in the same region.
 
 
    .. figure:: /_static/images/en-us_image_0180992673.png

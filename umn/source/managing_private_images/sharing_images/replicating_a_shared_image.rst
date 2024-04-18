@@ -15,14 +15,8 @@ If the shared image to be replicated is an encrypted image, you can replace the 
 Constraints
 -----------
 
--  Only accepted shared images can be replicated.
-
-   To replicate a rejected shared image, you must accept the image first. For details, see :ref:`Accepting Rejected Images <en-us_topic_0075730699>`.
-
 -  Currently, only system and data disk images can be replicated. Full-ECS images are not supported.
-
 -  Currently, images can only be replicated within a region.
-
 -  An image to be replicated cannot be larger than 128 GB.
 
 Procedure
@@ -32,7 +26,7 @@ Procedure
 
    a. Log in to the management console.
 
-   b. Under **Compute**, click **Image Management Service**.
+   b. Under **Computing**, click **Image Management Service**.
 
       The IMS console is displayed.
 

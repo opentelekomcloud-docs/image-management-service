@@ -12,6 +12,7 @@ Image Optimization
 -  :ref:`What Do I Do If a Windows Image File Is Not Pre-Configured When I Use It to Register a Private Image? <en-us_topic_0030713185>`
 -  :ref:`What Do I Do If a Linux Image File Is Not Pre-Configured When I Use It to Register a Private Image? <en-us_topic_0030713211>`
 -  :ref:`How Do I Enable NIC Multi-Queue for an Image? <en-us_topic_0085214115>`
+-  :ref:`How Do I Configure an ECS to Dynamically Acquire IPv6 Addresses? <en-us_topic_0129883696>`
 -  :ref:`How Do I Make a System Disk Image Support Fast ECS Creation? <en-us_topic_0187108863>`
 -  :ref:`What Is the Cause of the Failure to Install a Guest OS Driver on a Windows ECS? <en-us_topic_0030713215>`
 
@@ -26,5 +27,6 @@ Image Optimization
    what_do_i_do_if_a_windows_image_file_is_not_pre-configured_when_i_use_it_to_register_a_private_image
    what_do_i_do_if_a_linux_image_file_is_not_pre-configured_when_i_use_it_to_register_a_private_image
    how_do_i_enable_nic_multi-queue_for_an_image
+   how_do_i_configure_an_ecs_to_dynamically_acquire_ipv6_addresses
    how_do_i_make_a_system_disk_image_support_fast_ecs_creation
    what_is_the_cause_of_the_failure_to_install_a_guest_os_driver_on_a_windows_ecs

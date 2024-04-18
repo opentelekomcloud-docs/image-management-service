@@ -13,7 +13,7 @@ You can import an image file in VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVH
 Description
 -----------
 
-This section describes how to convert an image format using a Windows or Linux local PC.
+This section describes how to convert an image format on a local Windows or Linux PC.
 
 Tool and Costs
 --------------
@@ -37,9 +37,9 @@ Constraints
 
 -  ZVHD and ZVHD2 are self-developed image file formats and cannot be identified by **qemu-img**. To convert image files to any of the two formats, use the **qemu-img-hw** tool. For details, see :ref:`Converting the Image Format Using qemu-img-hw <en-us_topic_0171668652>`
 
--  When you run the command to convert the format of VHD image files, use VPC to replace VHD. Otherwise, qemu-img cannot identify the image format.
+-  When you run a command to convert the format of VHD image files, use VPC to replace VHD. Otherwise, qemu-img cannot identify the image format.
 
-   For example, to convert a CentOS 6.9 VHD image file into a QCOW2 image file, run the following command:
+   For example, to convert a CentOS 6.9 image file from VHD to QCOW2, run the following command:
 
    **qemu-img** **convert** **-p** **-f** **vpc** **-O** **qcow2** **centos6.9.vhd** **centos6.9.qcow2**
 
@@ -159,7 +159,7 @@ Linux
 
       -  **-p**: indicates the conversion progress.
       -  **-f** indicates the source image format.
-      -  The pat following **-O** (which must be in upper case) is the converted image format + source image file name + target image file name.
+      -  The part following **-O** (which must be in upper case) is the converted image format + source image file name + target image file name.
 
       After the conversion is complete, the target image file is displayed in the directory where the source image file is located.
 
