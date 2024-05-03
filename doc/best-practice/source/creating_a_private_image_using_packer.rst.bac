@@ -1,0 +1,258 @@
+:original_name: ims_bp_0031.html
+
+.. _ims_bp_0031:
+
+Creating a Private Image Using Packer
+=====================================
+
+Packer is an open-source tool for creating custom images. Packer's behavior is determined by a template which is a HashiCorp Configuration Language (HCL2) or JSON file and mainly contains three component types: builder, provisioner, and post-processor. These components can be flexibly combined in the template to automatically create image files for multiple cloud platforms in parallel. Packer simplifies private image creation by using manageable code. In this way, users can flexibly customize images and easily use identical images between different cloud platforms.
+
+This section describes how to use Packer to create an Ubuntu 22.04 Server 64-bit private image on a CentOS 8.2 64-bit ECS.
+
+Constraints
+-----------
+
+Full-ECS images cannot be used as an image source when you use Packer to create private images.
+
+Procedure
+---------
+
+|image1|
+
+Install Packer
+--------------
+
+#. Log in to the management console, create an ECS (for example, an ECS running CentOS 8.2 64-bit), and bind an EIP to the ECS.
+
+#. Log in to the ECS.
+
+#. Visit https://www.packer.io/downloads and download the latest version of Packer that matches the ECS OS and architecture.
+
+#. Run the following command to install Packer (**packer_1.9.1_linux_amd64.zip** as an example):
+
+   **wget --no-check-certificate https://releases.hashicorp.com/packer/1.9.1/packer_1.9.1_linux_amd64.zip**
+
+   .. note::
+
+      -  Ensure that you have bound an EIP to the ECS so that the ECS can access the Internet.
+      -  If message "command not found" is displayed, the wget tool is not installed. Run the **yum install wget** command to install it.
+
+#. Run the following command to decompress the Packer installation package:
+
+   **unzip packer_1.9.1_linux_amd64.zip**
+
+#. Run the following command to move the Packer installation package to the **/usr/local/bin** directory:
+
+   **mv packer /usr/local/bin**
+
+   .. note::
+
+      The **/usr/local/bin** directory has been added to environment variables. You can also move the Packer installation package to another directory that has been added to environment variables.
+
+#. Run the following command to check whether Packer is installed successfully:
+
+   **packer -v**
+
+   -  If the command output contains the Packer version number, Packer is installed successfully.
+   -  If "command not found" is displayed, the Packer installation failed. Check whether the directory where Packer resides has been added to environment variables.
+
+      .. note::
+
+         Run the **env \| grep PATH** command to check whether the environment variable **PATH** contains the Packer installation directory.
+
+         If **PATH** does not contain the Packer installation directory, perform the following operations to add it to **PATH**:
+
+         a. Run the following command to open the **profile** file:
+
+            **vim /etc/profile**
+
+         b. Press **i** to enter the editing mode and add **export PATH=$PATH:/usr/local/bin** to the end of the file.
+
+            If your Packer resides in a directory other than **/usr/local/bin**, replace **/usr/local/bin** in the command with the actual directory.
+
+         c. Press **Esc** to exit the editing mode. Enter **:wq** and press **Enter** to save the changes and exit.
+
+         d. Run the following command to make the change take effect:
+
+            **source /etc/profile**
+
+Create a Packer Template
+------------------------
+
+To create an image using Packer, you need a template in .pkr.hcl format. In the template, you need to configure `builders <https://www.packer.io/intro/getting-started/build-image.html>`__, `provisioners <https://www.packer.io/intro/getting-started/provision.html>`__, and post-processors. In a provisioner, you can modify the source image as you need. For example, you can modify the configurations and specify the software to be pre-installed. In this example, a post-processor is used to redirect the output path of manifest. If your Packer template has multiple builders, you can locate the ID of the image created from each builder based on the manifest output. For more information about builders, provisioners, and post-processors, see the `official Packer documentation <https://www.packer.io/docs/index.html>`__.
+
+This section takes a Shell provisioner as an example.
+
+#. Run the following command to create a **hwcloud.pkr.hcl** file:
+
+   **touch hwcloud.pkr.hcl**
+
+#. Run the following command to open the **hwcloud.pkr.hcl** file:
+
+   **vim hwcloud.pkr.hcl**
+
+#. Press **i** to enter the editing mode and edit the template based on the site requirements. For parameter details, see :ref:`Table 1 <ims_bp_0031__table48841302250>`. The following content is for reference only.
+
+   .. code-block::
+
+      packer {
+        required_plugins {
+          huaweicloud = {
+            version = ">= 1.0.0"
+            source  = "github.com/huaweicloud/huaweicloud"
+          }
+        }
+      }
+
+      source "huaweicloud-ecs" "artifact" {
+        region            = "xxx"
+        availability_zone = "xxx"
+        flavor            = "c6.large.2"
+        source_image_name = "Ubuntu 22.04 server 64bit"
+        image_name        = "Ubuntu-2204-image-powered-by-Packer"
+        image_tags = {
+          builder = "packer"
+          os      = "Ubuntu-22.04-server"
+        }
+
+        ssh_username       = "root"
+        eip_type           = "5_bgp"
+        eip_bandwidth_size = 5
+      }
+
+      build {
+        sources = ["source.huaweicloud-ecs.artifact"]
+
+        provisioner "shell" {
+          inline = ["apt-get update -y"]
+        }
+
+        post-processor "manifest" {
+          strip_path = true
+          output     = "packer-result.json"
+        }
+      }
+
+   .. note::
+
+      In :ref:`Table 1 <ims_bp_0031__table48841302250>`, **region**, **availability_zone**, **flavor**, and **source_image_name** are the attributes of the temporary ECS that will be used to create the private image.
+
+   .. _ims_bp_0031__table48841302250:
+
+   .. table:: **Table 1** Packer template parameters
+
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | Parameter             | Description                                                                                                                                                                  | Mandatory             |
+      +=======================+==============================================================================================================================================================================+=======================+
+      | region                | Region name. Obtain the region name from `Regions and Endpoints <https://developer.huaweicloud.com/intl/en-us/endpoint>`__.                                                  | Yes                   |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | flavor                | Flavor of the temporary ECS.                                                                                                                                                 | Yes                   |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | image_name            | Name of the private image to be created.                                                                                                                                     | Yes                   |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | image_tags            | Tags of the private image to be created.                                                                                                                                     | No                    |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | availability_zone     | AZ. Obtain the region name from `Regions and Endpoints <https://developer.huaweicloud.com/intl/en-us/endpoint>`__.                                                           | No                    |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | source_image_name     | Name of the source image. This is the image whose base OS you intend to build on top of. You can obtain the source image name from the public image list on the IMS console. | No                    |
+      |                       |                                                                                                                                                                              |                       |
+      |                       | .. note::                                                                                                                                                                    |                       |
+      |                       |                                                                                                                                                                              |                       |
+      |                       |    To specify a source image, you can also use **source_image** to specify an image ID or use **source_image_filter** to filter a source image.                              |                       |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | ssh_username          | SSH login username of the private image to be created.                                                                                                                       | No                    |
+      |                       |                                                                                                                                                                              |                       |
+      |                       | This parameter is mandatory for SSH login.                                                                                                                                   |                       |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | eip_type              | EIP line type.                                                                                                                                                               | No                    |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | eip_bandwidth_size    | EIP bandwidth (Mbit/s). This parameter is mandatory if access to the Internet is required.                                                                                   | No                    |
+      |                       |                                                                                                                                                                              |                       |
+      |                       | .. note::                                                                                                                                                                    |                       |
+      |                       |                                                                                                                                                                              |                       |
+      |                       |    **eip_type** and **eip_bandwidth_size** are configured to create a new EIP. To use an existing EIP, configure **reuse_ips** and **floating_ip**.                          |                       |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | provisioner           | Provisioner type. For details, see `Packer Provisioners <https://www.packer.io/intro/getting-started/provision.html>`__.                                                     | Yes                   |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | post-processor        | Post-processor type.                                                                                                                                                         | No                    |
+      +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+
+   .. note::
+
+      For more parameters, see https://github.com/huaweicloud/packer-plugin-huaweicloud/wiki.
+
+Create a Private Image Using Packer
+-----------------------------------
+
+#. After the Packer template is created, run the following command to import AK/SK:
+
+   export HW_ACCESS_KEY=<AccessKey ID>
+
+   export HW_SECRET_KEY=<AccessKey Secret>
+
+#. Run the following command to create an image:
+
+   **packer build hwcloud.pkr.hcl**
+
+   .. code-block::
+
+      huaweicloud-ecs.artifact: output will be in this color.
+
+      ==> huaweicloud-ecs.artifact: Loading availability zones...
+          huaweicloud-ecs.artifact: the specified availability_zone ap-southeast-1a is available
+      ==> huaweicloud-ecs.artifact: Loading flavor: c6.large.2
+      ==> huaweicloud-ecs.artifact: Creating temporary keypair: packer_64abc4fd-xxxx-xxxx-xxxx-2139eee76819...
+      ==> huaweicloud-ecs.artifact: Created temporary keypair: packer_64abc4fd-xxxx-xxxx-xxxx-2139eee76819
+          huaweicloud-ecs.artifact: Found Image ID: 19d9079e-xxxx-xxxx-xxxx-642116ad6557
+      ==> huaweicloud-ecs.artifact: Creating temporary VPC...
+          huaweicloud-ecs.artifact: temporary VPC ID: 6e309adc-xxxx-xxxx-xxxx-4c3356b972c7
+      ==> huaweicloud-ecs.artifact: Creating temporary subnet...
+          huaweicloud-ecs.artifact: temporary subnet ID: 66ab3bc3-xxxx-xxxx-xxxx-d8ca2d9378cc
+          huaweicloud-ecs.artifact: the [default] security groups will be used ...
+      ==> huaweicloud-ecs.artifact: Creating EIP ...
+          huaweicloud-ecs.artifact: Created EIP: '0cd696e3-xxxx-xxxx-xxxx-220b8d277604' (159.xxx.xxx.180)
+      ==> huaweicloud-ecs.artifact: Launching server in AZ ap-southeast-1a...
+          huaweicloud-ecs.artifact: Waiting for server to become ready...
+          huaweicloud-ecs.artifact: Server ID: 13f78f88-xxxx-xxxx-xxxx-7e8c27a9ad1f
+      ==> huaweicloud-ecs.artifact: Using SSH communicator to connect: 159.138.141.180
+      ==> huaweicloud-ecs.artifact: Waiting for SSH to become available...
+      ==> huaweicloud-ecs.artifact: Connected to SSH!
+      ==> huaweicloud-ecs.artifact: Provisioning with shell script: /tmp/packer-shell2456008753
+      huaweicloud-ecs.artifact: Hit:1 http://repo.huaweicloud.com/ubuntu jammy InRelease
+              ......
+          huaweicloud-ecs.artifact: Fetched 5,536 kB in 3s (2,006 kB/s)
+          huaweicloud-ecs.artifact: Reading package lists...
+      ==> huaweicloud-ecs.artifact: Stopping server: 13f78f88-xxxx-xxxx-xxxx-7e8c27a9ad1f ...
+          huaweicloud-ecs.artifact: Waiting for server to stop: 13f78f88-xxxx-xxxx-xxxx-7e8c27a9ad1f ...
+      ==> huaweicloud-ecs.artifact: Creating the system image: Ubuntu-2204-image-powered-by-Packer ...
+          huaweicloud-ecs.artifact: Image: 62dc6e37-xxxx-xxxx-xxxx-a2a00a677f5b
+      ==> huaweicloud-ecs.artifact: Terminating the source server: 13f78f88-xxxx-xxxx-xxxx-7e8c27a9ad1f...
+      ==> huaweicloud-ecs.artifact: Deleted temporary public IP '0cd696e3-xxx-xxxx-xxxx-220b8d277604' (159.xxx.xxx.180)
+      ==> huaweicloud-ecs.artifact: Deleting temporary subnet: 66ab3bc3-xxxx-xxxx-xxxx-d8ca2d9378cc...
+      ==> huaweicloud-ecs.artifact: Deleting temporary VPC: 6e309adc-xxxx-xxxx-xxxx-4c3356b972c7...
+      ==> huaweicloud-ecs.artifact: Deleting temporary keypair: packer_64abc4fd-xxxx-xxxx-xxxx-2139eee76819 ...
+      ==> huaweicloud-ecs.artifact: Running post-processor:  (type manifest)
+      Build 'huaweicloud-ecs.artifact' finished after 5 minutes 48 seconds.
+
+      ==> Wait completed after 5 minutes 48 seconds
+
+      ==> Builds finished. The artifacts of successful builds are:
+      --> huaweicloud-ecs.artifact: An image was created: 62dc6e37-xxxx-xxxx-xxxx-a2a00a677f5b
+
+#. Log in to the management console and click **Image Management Service** under **Compute**.
+
+#. Click the **Private Images** tab and view the image created using Packer. :ref:`Figure 1 <ims_bp_0031__fig52013511610>` shows the created image.
+
+   .. _ims_bp_0031__fig52013511610:
+
+   .. figure:: /_static/images/en-us_image_0000001648507829.png
+      :alt: **Figure 1** Viewing the private image created using Packer
+
+      **Figure 1** Viewing the private image created using Packer
+
+Helpful Links
+-------------
+
+Packer official guide: https://www.packer.io/intro/getting-started/install.html
+
+.. |image1| image:: /_static/images/en-us_image_0140629595.png
