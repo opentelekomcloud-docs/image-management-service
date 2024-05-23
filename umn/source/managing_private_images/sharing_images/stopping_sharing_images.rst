@@ -33,4 +33,4 @@ Procedure
 #. Click the **Private Images** tab.
 #. Locate the row that contains the private image that you no longer want to share, and choose **More** > **Share** in the **Operation** column.
 #. In the **Share Image** dialog box, click the **Stop Sharing** tab.
-#. Select the project ID for which you want to stop image sharing and click **OK**.
+#. Select the project for which you want to stop the image sharing and click **OK**.

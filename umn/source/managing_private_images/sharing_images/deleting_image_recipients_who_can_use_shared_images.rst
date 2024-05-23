@@ -14,7 +14,7 @@ Prerequisites
 -------------
 
 -  You have shared private images.
--  You have obtained project IDs of the image recipients.
+-  You have obtained the project IDs of the image recipients.
 
 Procedure
 ---------

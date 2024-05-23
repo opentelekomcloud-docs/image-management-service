@@ -8,7 +8,7 @@ Replicating Images
 Scenarios
 ---------
 
-You can convert encrypted and unencrypted images into each other or enable some advanced features (such as fast ECS creation from an image) using the image replication function. You may need to replicate an image in the following scenarios:
+You can convert encrypted and unencrypted images into each other or enable some advanced features (such as fast ECS creation from an image) using the image replication function. You may need to replicate an image to:
 
 -  Replicate an encrypted image to an unencrypted one.
 

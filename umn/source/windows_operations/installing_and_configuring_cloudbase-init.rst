@@ -14,6 +14,10 @@ To ensure that you can use the user data injection function to inject initial cu
 -  By default, ECSs created from a public image have Cloudbase-Init installed. You do not need to install or configure Cloudbase-Init on such ECSs.
 -  For ECSs created from external image files, install and configure Cloudbase-Init by performing the operations in this section.
 
+.. note::
+
+   Cloudbase-Init is open-source software. If the installed version has security vulnerabilities, you are advised to upgrade it to the latest version.
+
 Prerequisites
 -------------
 

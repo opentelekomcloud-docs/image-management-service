@@ -137,7 +137,7 @@ Procedure
 Follow-up Procedure
 -------------------
 
-After a system disk image is created, you can use either of the following methods to migrate data between two servers:
+After a system disk image is created, you can:
 
 -  Use the image to create new ECSs. For details, see :ref:`Creating an ECS from an Image <en-us_topic_0030713200>`.
 -  Use the image to change the OSs of existing ECSs.

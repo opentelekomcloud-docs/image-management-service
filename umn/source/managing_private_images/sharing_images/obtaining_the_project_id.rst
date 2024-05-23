@@ -23,7 +23,7 @@ Procedure
 
 #. Click the username in the upper right corner and select **My Credentials** from the drop-down list.
 
-   On the **My Credentials** page, view the project ID in the project list.
+   On the **My Credentials** page, view the project ID.
 
    Images can be shared only within the region where they reside. So, obtain the project ID in the same region.
 

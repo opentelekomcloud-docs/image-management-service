@@ -56,4 +56,4 @@ Follow-up Procedure
       -  If the full-ECS image contains multiple data disks, it takes some time to load and display the disk information.
 
 -  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.
--  If you want to share a full-ECS image with other tenants, you must migrate resources to the CBR service because only full-ECS images created from CBR backups can be shared.
+-  If you want to share a full-ECS image with other tenants, you must migrate the associated backup to CBR first because only full-ECS images created from CBR backups can be shared.

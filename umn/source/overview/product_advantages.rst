@@ -11,7 +11,7 @@ Saving Time and Effort
 ----------------------
 
 -  Deploying services on cloud servers is much faster and easier when you use images.
--  A private image can be created from an ECS or an external image file. It can be a system, disk, or full-ECS image that suites your different needs.
+-  A private image can be created from an ECS or an external image file. It can be a system disk, data disk, or full-ECS image that suites your different needs.
 -  Private images can be transferred between accounts, regions, or cloud platforms through image sharing, replication, and export.
 
 Secure

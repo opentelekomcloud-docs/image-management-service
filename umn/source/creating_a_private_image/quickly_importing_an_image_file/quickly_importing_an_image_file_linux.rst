@@ -203,9 +203,9 @@ Procedure
 
          -  The OS must be the same as that in the image file.
 
-         -  The system disk size must be greater than the one specified in the image file.
+         -  The system disk capacity must be greater than that specified in the image file.
 
-            Run the following command to check the system disk size in the image file:
+            Run the following command to check the system disk capacity in the image file:
 
             **qemu-img-hw** **info** *test.zvhd2*
 

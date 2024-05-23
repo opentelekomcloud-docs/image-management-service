@@ -33,9 +33,9 @@ Procedure
 
 #. Click **Add Tenant**.
 
-#. In the **Add Tenant** dialog box, enter the project ID of the tenant to be added and click **OK**.
+#. In the **Add Tenant** dialog box, enter the project ID of the tenant to be added, and click **OK**.
 
-   To add multiple tenants, enter their project IDs and separate them with commas. Click **OK**.
+   To add multiple tenants, enter their project IDs and separate them with commas (,). Click **OK**.
 
    .. note::
 

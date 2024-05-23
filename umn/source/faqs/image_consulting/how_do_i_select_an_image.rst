@@ -5,7 +5,7 @@
 How Do I Select an Image?
 =========================
 
-When creating an ECS or BMS, you can select an image based on the following factors:
+When creating an ECS or a BMS, you can select an image based on the following factors:
 
 -  :ref:`Region and AZ <en-us_topic_0195253327__section79821850163918>`
 -  :ref:`Image Type <en-us_topic_0195253327__section10191306168>`

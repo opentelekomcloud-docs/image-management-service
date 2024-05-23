@@ -25,7 +25,7 @@ The following figure shows the process of creating an image from an entire ECS, 
 -  The time required for creating a full-ECS image depends on the disk size, network quality, and the number of concurrent tasks.
 -  The ECS used to create a full-ECS image must be in **Running** or **Stopped** state. To create a full-ECS image containing a database, use a stopped ECS.
 -  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
--  When a full-ECS image is being created, do not detach the system disk from the ECS or stop, start, or restart the ECS, or the image creation will fail.
+-  When a full-ECS image is being created from an ECS, do not perform any operations on the ECS, or the image creation may fail.
 -  In :ref:`Figure 1 <en-us_topic_0116125142__fig11785134314155>`, if there are snapshots of the system disk and data disks but the ECS backup creation is not complete, the full-ECS image you create will only be available in the AZ where the source ECS is and can only be used to provision ECSs in this AZ. You cannot provision ECSs in other AZs in the region until the original ECS is fully backed up and the full-ECS image is in the **Normal** state.
 -  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.
 

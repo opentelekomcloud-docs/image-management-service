@@ -11,7 +11,7 @@ Scenarios
 You can export the public or private image list in the current region as a CSV file to your local PC.
 
 -  For public images, the file describes the image name, image status, OS, image type, image creation time, system disk, and minimum memory.
--  For private images, the file describes the image name, image ID, image status, OS, image type, image creation time, disk sizes, shared disks, image size, minimum memory, and encryption.
+-  For private images, the file describes the image name, image ID, image status, OS, image type, image creation time, disk capacities, shared disks, image size, minimum memory, and encryption.
 
 Exporting Private Image Information
 -----------------------------------

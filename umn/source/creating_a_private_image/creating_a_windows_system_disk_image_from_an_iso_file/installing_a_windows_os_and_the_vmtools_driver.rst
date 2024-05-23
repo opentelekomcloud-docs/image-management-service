@@ -160,13 +160,13 @@ Procedure
 
 #. Install related drivers.
 
-   a. Open **Computer** and double-click the CD driver.
+   a. Open **Computer** and double-click the CD drive.
 
 
       .. figure:: /_static/images/en-us_image_0160277992.png
-         :alt: **Figure 13** Starting the CD driver
+         :alt: **Figure 13** Starting the CD drive
 
-         **Figure 13** Starting the CD driver
+         **Figure 13** Starting the CD drive
 
    b. Double-click the **vmtools-windows** folder.
 
@@ -184,7 +184,7 @@ Procedure
 
          **Figure 15** Executing the Setup file
 
-   d. Install drivers as prompted.
+   d. Install the driver as prompted.
 
 
       .. figure:: /_static/images/en-us_image_0160278288.png

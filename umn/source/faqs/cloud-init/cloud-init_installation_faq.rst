@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0132216287:
 
-Cloud-Init
-==========
+Cloud-Init Installation FAQ
+===========================
 
 You are advised to install Cloud-Init on the ECS that will be used to create a private image so that new ECSs created from the private image support custom configurations (for example, changing the ECS login password).
 

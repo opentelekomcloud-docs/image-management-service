@@ -30,7 +30,7 @@ Procedure
 
 #. For details about how to create an ECS, see *Elastic Cloud Server User Guide*.
 
-   When you use a system disk image to create an ECS, you can set the ECS specifications and system disk type without considering those in the image, but the system disk size can only be larger than that in the image.
+   When you use a system disk image to create an ECS, you can set the ECS specifications and system disk type without considering those in the image, but the system disk capacity can only be larger than that in the image.
 
    When you use a full-ECS image to create an ECS, the system and data disk information defaulted by the image will be automatically displayed. You can increase the capacity of a system disk or data disks, but cannot decrease it.
 

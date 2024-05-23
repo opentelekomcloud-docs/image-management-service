@@ -8,10 +8,10 @@ Creating a User and Granting Permissions
 Scenarios
 ---------
 
-This section describes how to use `Identity and Access Management <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html>`__ (IAM) to implement fine-grained permissions control for your images. With IAM, you can:
+This section describes how to use `Identity and Access Management <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html>`__ (IAM) to implement fine-grained permissions control over your images. With IAM, you can:
 
--  Create IAM users for employees based on the organizational structure of your enterprise. Each IAM user has their own security credentials, providing access to images.
--  Grant only the permissions required for users to perform a task.
+-  Create IAM users for employees based on the organizational structure of your enterprise. Each IAM user has their own identity credentials for accessing images.
+-  Grant only the permissions required for users to perform a specific task.
 -  Entrust an account or cloud service to perform professional and efficient O&M on your images.
 
 If your account does not need individual IAM users for permissions management, you can skip this section.
@@ -35,7 +35,7 @@ Process Flow
 
 #. .. _en-us_topic_0171668650__li2021991142518:
 
-   `Create a user group and assign permissions <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/creating_a_user_group_and_assigning_permissions.html>`__.
+   `Create a user group and grant permissions to it <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/creating_a_user_group_and_assigning_permissions.html>`__.
 
    Create a user group on the IAM console, and grant the read-only permission to the group by assigning the **IMS ReadOnlyAccess** permission.
 

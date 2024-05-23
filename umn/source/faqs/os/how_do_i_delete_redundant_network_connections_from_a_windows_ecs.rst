@@ -10,6 +10,10 @@ Method 1
 
 #. Press **Win+R**. In the displayed dialog box, enter **regedit** and press **Enter** to open the registry editor.
 
+   .. note::
+
+      Modifying a registry may cause a system startup failure. So, back up the registry before modifying it.
+
 #. Open the following registry key:
 
    **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Profiles**
@@ -24,6 +28,10 @@ Method 2
 --------
 
 #. Press **Win+R**. In the displayed dialog box, enter **regedit** and press **Enter** to open the registry editor.
+
+   .. note::
+
+      Modifying a registry may cause a system startup failure. So, back up the registry before modifying it.
 
 #. Open the following registry keys:
 
