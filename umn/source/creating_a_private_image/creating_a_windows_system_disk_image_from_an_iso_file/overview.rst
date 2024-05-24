@@ -23,7 +23,7 @@ Creation Process
 
 The procedure is as follows:
 
-#. Integrate the VMTools driver into the ISO file
+#. Integrate the VMTools driver into the ISO file.
 
    Windows uses the IDE disk and VirtIO NIC. Before registering an image on the cloud platform, integrate the VMTools driver into the Windows ISO file. For details, see :ref:`Integrating the VMTools Driver into an ISO File <en-us_topic_0146474781>`.
 

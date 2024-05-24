@@ -13,7 +13,7 @@ You can use a Cloud Backup and Recovery (CBR) backup to create a full-ECS image,
 Background
 ----------
 
--  The Cloud Backup and Recovery (CBR) service provides backup services for EVS disks, ECSs, and BMSs, and supports restoring data of servers and disks using backups. If you have created a backup for an ECS using CBR, you can use the backup to create a full-ECS image.
+-  The CBR service provides backup services for EVS disks, BMSs, and ECSs, and supports restoring data of servers and disks using backups. If you have created a backup for an ECS using CBR, you can use the backup to create a full-ECS image.
 -  If you use a full-ECS image to change an ECS OS, only the system disk data can be written into the ECS. Therefore, if you want to restore or migrate the data disk data of an ECS by using a full-ECS image, you can only use the image to create a new ECS rather than use it to change the ECS OS.
 
 Constraints
@@ -42,7 +42,7 @@ Procedure
 
    b. In the **Image Type and Source** area, select **Create Image** for **Type** and then select **Full-ECS image** for **Image Type**.
 
-   c. Select **Cloud Server Backup** for **Source** and then select a backup from the list.
+   c. Select **Cloud Server Backup** for **Source** and then select an ECS from the list.
 
 
       .. figure:: /_static/images/en-us_image_0000001744523069.png

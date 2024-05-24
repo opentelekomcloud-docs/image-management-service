@@ -65,7 +65,7 @@ Procedure
    e. In the **Image Information** area, set the following parameters.
 
       -  **OS Type**: The value is **Windows** or **Linux**.
-      -  **Data Disk**: The value ranges from 1 GB to 2048 GB and must be no less than the data disk size in the image file.
+      -  **Data Disk**: The value ranges from 1 GB to 2048 GB and must be no less than the data disk capacity in the image file.
       -  **Name**: Enter a name for the image.
       -  (Optional) **Encryption**: If you want to encrypt the image, select **KMS encryption** and then select the key to be used from the key list.
       -  (Optional) **Tag**: Set a tag key and a tag value for the image to easily identify and manage it.

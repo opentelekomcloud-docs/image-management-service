@@ -5,7 +5,7 @@
 Optimization Process
 ====================
 
-A Linux ECS can run properly only when VirtIO drivers have been installed on it and the disk ID in its GRUB configuration file and fstab file has been changed to UUID.
+A Linux ECS can run properly only when native KVM (VirtIO) drivers have been installed on it and the disk ID in its GRUB configuration file and fstab file has been changed to UUID.
 
 Preparations
 ------------
@@ -37,4 +37,4 @@ Process
 
    For details, see :ref:`Clearing System Logs <en-us_topic_0125076462>`.
 
-#. Create a Linux private image using the ECS.
+#. Create a Linux private image from the ECS.

@@ -15,6 +15,10 @@ To ensure that you can use the user data injection function to inject initial cu
 -  By default, ECSs created from a public image have Cloud-Init installed. You do not need to install or configure Cloud-Init on such ECSs.
 -  For ECSs created using an external image file, install and configure Cloud-Init by performing the operations in this section. For how to configure Cloud-Init, see :ref:`Configuring Cloud-Init <en-us_topic_0122876047>`.
 
+.. note::
+
+   Cloud-Init is open-source software. If the installed version has security vulnerabilities, you are advised to upgrade it to the latest version.
+
 Prerequisites
 -------------
 
@@ -74,7 +78,7 @@ Perform the operations provided here to check whether Cloud-Init has been instal
 
 If Cloud-Init has been installed, perform the following operations:
 
--  Check whether to use the certificate in the ECS OS. If the certificate is no longer used, delete it.
+-  Check whether to use the SSH certificate in the ECS OS. If the certificate is no longer used, delete it.
 
    -  If the certificate is stored in a directory of user **root**, for example, */$path/$to/$root*\ **/.ssh/authorized_keys**, run the following commands:
 

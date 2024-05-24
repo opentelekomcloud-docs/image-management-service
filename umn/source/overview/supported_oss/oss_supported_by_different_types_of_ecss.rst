@@ -16,7 +16,7 @@ x86 ECSs
 
    Dedicated general-purpose C3, C4
 
-   Memory-optimized M2, M3, M4
+   Memory-optimized M3, M4
 
    Disk-intensive D2
 
@@ -24,13 +24,7 @@ x86 ECSs
 
 -  :ref:`Table 2 <en-us_topic_0030713142__table14709182711556>` lists the OSs supported by large-memory ECSs (E3).
 
--  :ref:`Table 3 <en-us_topic_0030713142__table204972196287>` lists the OSs supported by high-performance ECSs (HL1, H2).
-
--  :ref:`Table 4 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G6, P2s, P2v, P2, PI2).
-
--  :ref:`Table 5 <en-us_topic_0030713142__table8704181020556>` lists the OSs supported by GPU-accelerated ECSs (P1).
-
--  FPGA-accelerated FP1c and FP1cne ECSs support only CentOS 7.3 64bit.
+-  :ref:`Table 3 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G6, P2s, P2v, PI2).
 
 -  AI-accelerated AI1 ECSs support the following OSs:
 
@@ -131,30 +125,9 @@ x86 ECSs
    |                                   | -  Windows Server 2012 R2 Standard 64bit            |
    +-----------------------------------+-----------------------------------------------------+
 
-.. _en-us_topic_0030713142__table204972196287:
-
-.. table:: **Table 3** Supported OS versions
-
-   +-----------------------------------+-----------------------------------------------------+
-   | OS                                | Version                                             |
-   +===================================+=====================================================+
-   | CentOS                            | -  CentOS 7.9 64bit                                 |
-   |                                   | -  CentOS 7.7 64bit                                 |
-   +-----------------------------------+-----------------------------------------------------+
-   | Oracle Linux                      | -  Oracle Linux Server release 8.4 64bit            |
-   |                                   | -  Oracle Linux Server release 7.6 64bit            |
-   +-----------------------------------+-----------------------------------------------------+
-   | Red Hat                           | Red Hat Enterprise Linux 7.9 64bit                  |
-   +-----------------------------------+-----------------------------------------------------+
-   | SUSE                              | -  Novell SUSE Linux Enterprise Server 15 SP3 64bit |
-   |                                   | -  Novell SUSE Linux Enterprise Server 15 SP2 64bit |
-   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP4 64bit |
-   |                                   | -  Novell SUSE Linux Enterprise Server 12 SP3 64bit |
-   +-----------------------------------+-----------------------------------------------------+
-
 .. _en-us_topic_0030713142__table3436728145315:
 
-.. table:: **Table 4** Supported OS versions
+.. table:: **Table 3** Supported OS versions
 
    +-----------------------------------+---------------------------------------------+
    | OS                                | OS Version                                  |
@@ -178,21 +151,3 @@ x86 ECSs
    |                                   | -  Windows Server 2016 Standard 64bit       |
    |                                   | -  Windows Server 2012 R2 Standard 64bit    |
    +-----------------------------------+---------------------------------------------+
-
-.. _en-us_topic_0030713142__table8704181020556:
-
-.. table:: **Table 5** Supported OS versions
-
-   +-----------------------------------+---------------------------------------+
-   | OS                                | OS Version                            |
-   +===================================+=======================================+
-   | CentOS                            | CentOS 7.9 64bit                      |
-   +-----------------------------------+---------------------------------------+
-   | Debian                            | -  Debian GNU/Linux 11 64bit          |
-   |                                   | -  Debian GNU/Linux 10 64bit          |
-   +-----------------------------------+---------------------------------------+
-   | Oracle Linux                      | Oracle Linux Server release 7.6 64bit |
-   +-----------------------------------+---------------------------------------+
-   | Ubuntu                            | -  Ubuntu 20.04 server 64bit          |
-   |                                   | -  Ubuntu 18.04 server 64bit          |
-   +-----------------------------------+---------------------------------------+

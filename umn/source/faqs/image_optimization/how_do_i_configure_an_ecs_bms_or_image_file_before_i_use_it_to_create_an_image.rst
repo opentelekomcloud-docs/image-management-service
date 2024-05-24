@@ -65,7 +65,7 @@ BMS or Image File Configurations
    +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------+
    | OS                    | Configuration                                              | Reference                                                               |
    +=======================+============================================================+=========================================================================+
-   | Windows               | -  Install software in the **bms-network-config** package. | "Creating a Private Image from a BMS" in *Bare Metal Server User Guide* |
+   | Windows               | -  Install the **bms-network-config** package.             | "Creating a Private Image from a BMS" in *Bare Metal Server User Guide* |
    |                       | -  Install Cloudbase-Init.                                 |                                                                         |
    |                       | -  Delete residual files from the OS.                      |                                                                         |
    +-----------------------+------------------------------------------------------------+-------------------------------------------------------------------------+

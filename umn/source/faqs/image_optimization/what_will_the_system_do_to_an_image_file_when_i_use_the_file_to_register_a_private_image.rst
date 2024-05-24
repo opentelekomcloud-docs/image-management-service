@@ -17,7 +17,7 @@ Linux
 -  Modify the X Window configuration file **/etc/X11/xorg.conf** to prevent display failures.
 -  Delete services of VMware tools.
 -  Record the latest automatic modification made to the image into **/var/log/rainbow_modification_record.log**.
--  Copy the built-in VirtIO driver to **initrd** or **initramfs**. For details, see :ref:`External Image File Formats and Supported OSs <en-us_topic_0030713143>`.
+-  Copy built-in VirtIO drivers to **initrd** or **initramfs**. For details, see :ref:`External Image File Formats and Supported OSs <en-us_topic_0030713143>`.
 
 .. note::
 
@@ -30,7 +30,7 @@ Linux
 Windows
 -------
 
--  Restore the IDE driver to enable the OS to use this driver for its initial start.
--  Delete the registry keys of the mouse and keyboard and generate the registry keys on the new platform to ensure that the mouse and keyboard are available.
--  Inject the VirtIO driver offline so that the system can start without UVP VMTools installed.
--  Restore DHCP. The system will dynamically obtain information such as the IP address based on the DHCP protocol.
+-  Restore the IDE driver so that the OS can use this driver for its initial start.
+-  Delete the registry keys of the mouse and keyboard and generate the registry keys again to ensure that the mouse and keyboard are available on the new cloud platform.
+-  Inject VirtIO drivers offline so that the OS can start without UVP VMTools installed.
+-  Restore DHCP. The OS will dynamically obtain information such as the IP address based on the DHCP protocol.

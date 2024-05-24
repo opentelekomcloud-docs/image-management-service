@@ -46,9 +46,11 @@ Constraints
 Prerequisites
 -------------
 
-An OBS bucket is available in the region where the private image is located.
+-  You have Administrator permissions for OBS.
 
-If no OBS bucket is available, create one by referring to *Object Storage Service User Guide*. Select **Standard** for **Storage Class**.
+-  An OBS bucket is available in the region where the private image is located.
+
+   If no OBS bucket is available, create one by referring to *Object Storage Service User Guide*. Select **Standard** for **Storage Class**.
 
 Procedure
 ---------

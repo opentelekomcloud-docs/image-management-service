@@ -18,7 +18,7 @@ Prerequisites
 -------------
 
 -  The ECS needs to be optimized. For details, see :ref:`Checking Whether a Private Image Needs to be Optimized <en-us_topic_0037352185>`.
--  If the ECS uses native Linux KVM drivers, its kernel must be later than 2.6.24.
+-  The ECS kernel must be later than 2.6.24.
 -  Disable your antivirus and intrusion detection software. You can enable the software after KVM drivers are installed.
 
 Procedure
@@ -31,7 +31,7 @@ Modify the configuration file based on the OS version.
    +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
    | OS                    | Configuration                                                                                                                                                                                                              | Reference                                                                                                                |
    +=======================+============================================================================================================================================================================================================================+==========================================================================================================================+
-   | CentOS/EulerOS        | Take CentOS 7.0 as an example.                                                                                                                                                                                             | :ref:`CentOS, EulerOS <en-us_topic_0000001120952155__section57411552112542>`                                             |
+   | CentOS/EulerOS        | Take CentOS 7.0 as an example.                                                                                                                                                                                             | :ref:`CentOS and EulerOS <en-us_topic_0000001120952155__section57411552112542>`                                          |
    |                       |                                                                                                                                                                                                                            |                                                                                                                          |
    |                       | #. In the **/etc/dracut.conf** file, add VirtIO drivers to **add_drivers**, including virtio_blk, virtio_scsi, virtio_net, virtio_pci, virtio_ring, and virtio. Separate driver names with spaces.                         |                                                                                                                          |
    |                       | #. Save and exit the **/etc/dracut.conf** file and run the **dracut -f** command to generate **initrd** again.                                                                                                             |                                                                                                                          |
@@ -57,14 +57,14 @@ Modify the configuration file based on the OS version.
 
 .. _en-us_topic_0000001120952155__section57411552112542:
 
-CentOS, EulerOS
----------------
+CentOS and EulerOS
+------------------
 
 #. Run the following command to open the **/etc/dracut.conf** file:
 
    **vi** **/etc/dracut.conf**
 
-#. Press **i** to enter the editing mode and add VirtIO drivers to **add_drivers** (the format depends on the OS requirements).
+#. Press **i** to enter the editing mode and add VirtIO drivers to **add_drivers** (the format varies depending on the OS).
 
    .. code-block:: console
 
@@ -81,11 +81,11 @@ CentOS, EulerOS
 
    If the virtual file system is not the default initramfs, run the **dracut -f** *Name of the initramfs or initrd file actually used* command. The actual initramfs or initrd file name can be obtained from the **grub.cfg** file, which can be **/boot/grub/grub.cfg**, **/boot/grub2/grub.cfg**, or **/boot/grub/grub.conf** depending on the OS.
 
-#. If the virtual file system is initramfs, run the following command to check whether native KVM drivers have been loaded:
+#. If the virtual file system is initramfs, run the following command to check whether native KVM drivers have been installed:
 
    **lsinitrd** **/boot/initramfs-`uname** **-r`.img** **\|** **grep** **virtio**
 
-   If the virtual file system is initrd, run the following command to check whether native KVM drivers have been loaded:
+   If the virtual file system is initrd, run the following command to check whether native KVM drivers have been installed:
 
    **lsinitrd** **/boot/initrd-`uname** **-r\`** **\|** **grep** **virtio**
 
@@ -117,7 +117,7 @@ Ubuntu and Debian
 
    **vi** **/etc/initramfs-tools/modules**
 
-#. Press **i** to enter the editing mode and add VirtIO drivers to the **/etc/initramfs-tools/modules** file (the format depends on the OS requirements).
+#. Press **i** to enter the editing mode and add VirtIO drivers to the **/etc/initramfs-tools/modules** file (the format varies depending on the OS).
 
    .. code-block:: console
 
@@ -207,7 +207,7 @@ Modify the **/etc/sysconfig/kernel** file.
 
    **/boot/initrd.vmx** in the **initrd** line is the **initrd** file actually used. Run the **dracut -f /boot/initrd.vmx** command. If the **initrd** file does not contain the **/boot** directory, such as **/initramfs-**\ *xxx*, run the **dracut -f /boot/initramfs-**\ *xxx* command.
 
-#. Run the following command to check whether the VirtIO module for KVM is loaded:
+#. Run the following command to check whether KVM VirtIO drivers have been installed:
 
    **lsinitrd** **/boot/initrd-`uname** **-r\`** **\|** **grep** **virtio**
 
@@ -256,7 +256,7 @@ Modify the **/etc/dracut.conf** file.
 
    **vi** **/etc/dracut.conf**
 
-#. Press **i** to enter the editing mode and add VirtIO drivers to **add-drivers** (the format depends on the OS requirements).
+#. Press **i** to enter the editing mode and add VirtIO drivers to **add-drivers** (the format varies depending on the OS).
 
    .. code-block:: console
 
@@ -272,11 +272,11 @@ Modify the **/etc/dracut.conf** file.
 
    If the virtual file system is not the default initramfs, run the **dracut -f** *Name of the initramfs or initrd file actually used* command. The actual initramfs or initrd file name can be obtained from the **grub.cfg** file, which can be **/boot/grub/grub.cfg**, **/boot/grub2/grub.cfg**, or **/boot/grub/grub.conf** depending on the OS.
 
-#. If the virtual file system is initramfs, run the following command to check whether native KVM drivers have been loaded:
+#. If the virtual file system is initramfs, run the following command to check whether native KVM drivers have been installed:
 
    **lsinitrd** **/boot/initramfs-`uname** **-r`.img** **\|** **grep** **virtio**
 
-   If the virtual file system is initrd, run the following command to check whether native KVM drivers have been loaded:
+   If the virtual file system is initrd, run the following command to check whether native KVM drivers have been installed:
 
    **lsinitrd** **/boot/initrd-`uname** **-r\`** **\|** **grep** **virtio**
 
@@ -293,7 +293,7 @@ Take SUSE Linux Enterprise Server 12 SP2 (x86_64) as an example.
 
    **vi** **/etc/dracut.conf**
 
-#. Press **i** to enter the editing mode and add VirtIO drivers to **add_drivers** (the format depends on the OS requirements).
+#. Press **i** to enter the editing mode and add VirtIO drivers to **add_drivers** (the format varies depending on the OS).
 
    .. code-block:: console
 
@@ -309,11 +309,11 @@ Take SUSE Linux Enterprise Server 12 SP2 (x86_64) as an example.
 
    If the virtual file system is not the default initramfs, run the **dracut -f** *Name of the initramfs or initrd file actually used* command. The actual initramfs or initrd file name can be obtained from the **grub.cfg** file, which can be **/boot/grub/grub.cfg**, **/boot/grub2/grub.cfg**, or **/boot/grub/grub.conf** depending on the OS.
 
-#. If the virtual file system is initramfs, run the following command to check whether native KVM drivers have been loaded:
+#. If the virtual file system is initramfs, run the following command to check whether native KVM drivers have been installed:
 
    **lsinitrd** **/boot/initramfs-`uname** **-r`.img** **\|** **grep** **virtio**
 
-   If the virtual file system is initrd, run the following command to check whether native KVM drivers have been loaded:
+   If the virtual file system is initrd, run the following command to check whether native KVM drivers have been installed:
 
    **lsinitrd** **/boot/initrd-`uname** **-r\`** **\|** **grep** **virtio**
 
