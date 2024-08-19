@@ -21,7 +21,7 @@ This section uses the **IMS ReadOnlyAccess** permission as an example to describ
 Prerequisites
 -------------
 
-Learn about the permissions (see :ref:`IMS Permissions <en-us_topic_0171668647__section2091762218354>`) supported by IMS. For the system permissions of other services, see `Permissions <https://docs.otc.t-systems.com/additional/permissions.html>`__.
+Learn about the permissions (see :ref:`IMS Permissions <en-us_topic_0171668647__section2091762218354>`) supported by IMS. For the system permissions of other services, see `Permissions <https://docs.otc.t-systems.com/identity-access-management/permissions/permissions.html>`__.
 
 Process Flow
 ------------

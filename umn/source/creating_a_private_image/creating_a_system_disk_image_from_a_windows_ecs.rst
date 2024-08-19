@@ -61,9 +61,9 @@ Before creating a private image from an ECS:
 
 -  Check whether Cloudbase-Init has been installed on the ECS. The user data injection function on the management console is only available for new ECSs that have this tool installed. You can use data injection, for example, to set the login password for a new ECS. For details, see :ref:`Installing and Configuring Cloudbase-Init <en-us_topic_0030730602>`.
 
--  Check and install the UVP VMTools driver to ensure that new ECSs created from the image support KVM virtualization and to improve network performance.
+-  Check and install VirtIO drivers to ensure that new ECSs created from the image support KVM virtualization and to improve network performance.
 
-   For details, see steps :ref:`2 <en-us_topic_0047501112__en-us_topic_0036684057_li24121565>` to :ref:`4 <en-us_topic_0047501112__en-us_topic_0036684057_li19262089>` in :ref:`Optimization Process <en-us_topic_0047501112>`.
+   For details, see steps :ref:`2 <en-us_topic_0047501112__li1314146174813>` to :ref:`4 <en-us_topic_0047501112__en-us_topic_0036684057_li19262089>` in :ref:`Optimization Process <en-us_topic_0047501112>`.
 
 -  Run Sysprep to ensure that the SIDs of the new ECSs created from the image are unique within their domain. In a cluster deployment scenario, the SIDs must be unique. For details, see :ref:`Running Sysprep <en-us_topic_0093887081>`.
 

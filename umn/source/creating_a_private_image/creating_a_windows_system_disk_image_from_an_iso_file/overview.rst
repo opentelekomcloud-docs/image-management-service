@@ -16,20 +16,20 @@ Creation Process
 
 .. _en-us_topic_0146477763__fig19385204211310:
 
-.. figure:: /_static/images/en-us_image_0209970890.png
+.. figure:: /_static/images/en-us_image_0000001926097585.png
    :alt: **Figure 1** Creating a Windows system disk image
 
    **Figure 1** Creating a Windows system disk image
 
 The procedure is as follows:
 
-#. Integrate the VMTools driver into the ISO file.
+#. Integrate VirtIO drivers into the ISO file.
 
-   Windows uses the IDE disk and VirtIO NIC. Before registering an image on the cloud platform, integrate the VMTools driver into the Windows ISO file. For details, see :ref:`Integrating the VMTools Driver into an ISO File <en-us_topic_0146474781>`.
+   Windows uses Integrated Drive Electronics (IDE) disks and VirtIO NICs. Before registering an image on the cloud platform, integrate VirtIO drivers into the Windows ISO file. For details, see :ref:`Integrating VirtIO Drivers into an ISO File <en-us_topic_0146474781>`.
 
 #. Register the ISO file as an ISO image.
 
-   On the management console, register the ISO file that has integrated the VMTools driver as an image. The image is an ISO image and cannot be used to provision ECSs. For details, see :ref:`Registering an ISO File as an ISO Image <en-us_topic_0146474782>`.
+   On the management console, register the ISO file with VirtIO drivers as an image. The image is an ISO image and cannot be used to provision ECSs. For details, see :ref:`Registering an ISO File as an ISO Image <en-us_topic_0146474782>`.
 
 #. Create a temporary ECS from the ISO image.
 
@@ -37,7 +37,7 @@ The procedure is as follows:
 
 #. Install an OS and necessary drivers for the temporary ECS and configure related settings.
 
-   The operations include installing an OS and VMTools driver, and configuring NIC attributes. For details, see :ref:`Installing a Windows OS and the VMTools Driver <en-us_topic_0146474784>` and :ref:`1 <en-us_topic_0146480985__li108111309459>` in :ref:`Configuring the ECS and Creating a Windows System Disk Image <en-us_topic_0146480985>`.
+   You need to install an OS and VirtIO drivers, and configure NICs. For details, see :ref:`Installing a Windows OS and VirtIO Drivers <en-us_topic_0146474784>` and :ref:`1 <en-us_topic_0146480985__li108111309459>` in :ref:`Configuring the ECS and Creating a Windows System Disk Image <en-us_topic_0146480985>`.
 
 #. Create a system disk image from the temporary ECS.
 

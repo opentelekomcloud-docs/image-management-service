@@ -5,15 +5,15 @@
 Optimization Process
 ====================
 
-The proper running of ECSs depends on KVM Guest OS driver (UVP VMTools). To ensure that ECSs support KVM and to improve network performance, the UVP VMTools must be installed for the image.
+An ECS can run properly only after KVM Guest OS drivers (VirtIO drivers) are installed on it. To ensure that ECSs support KVM and to improve network performance, VirtIO drivers must be installed for the image.
 
-#. Create an ECS using the Windows private image to be optimized and log in to the ECS.
+#. Create an ECS from the Windows private image to be optimized and log in to the ECS.
 
-#. .. _en-us_topic_0047501112__en-us_topic_0036684057_li24121565:
+#. .. _en-us_topic_0047501112__li1314146174813:
 
-   Install the UVP VMTools which is required to create ECSs using KVM virtual resources.
+   Install VirtIO drivers that are needed to create KVM ECSs.
 
-   For details, see :ref:`Installing UVP VMTools <en-us_topic_0037352061>`.
+   For details, see :ref:`Installing VirtIO Drivers <en-us_topic_0000001841305273>`.
 
 #. On the ECS, choose **Control Panel** > **Power Options**. Click **Choose when to turn off the display**, select **Never** for **Turn off the display**, and save the changes.
 

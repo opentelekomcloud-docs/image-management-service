@@ -16,9 +16,9 @@ The following describes common problems you may encounter when installing Cloud-
 Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 ---------------------------------------------------------------
 
--  Symptom:
+-  Symptom
 
-   After Cloud-Init is installed, run the following command to set Cloud-Init automatic start:
+   After Cloud-Init is installed, you run the following command to configure Cloud-Init automatic start:
 
    **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
@@ -30,13 +30,13 @@ Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 
       **Figure 1** Failed to enable Cloud-Init to start automatically
 
--  Solution:
+-  Solution
 
    #. Run the following command to roll back the configuration:
 
       **systemctl unmask cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
-   #. Run the following command to set automatic start again:
+   #. Run the following command to configure automatic start again:
 
       **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
@@ -48,15 +48,15 @@ Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 
 
       .. figure:: /_static/images/en-us_image_0137085941.png
-         :alt: **Figure 2** Checking Cloud-Init status
+         :alt: **Figure 2** Checking Cloud-Init status (1)
 
-         **Figure 2** Checking Cloud-Init status
+         **Figure 2** Checking Cloud-Init status (1)
 
 
       .. figure:: /_static/images/en-us_image_0137085943.png
-         :alt: **Figure 3** Checking Cloud-Init status
+         :alt: **Figure 3** Checking Cloud-Init status (2)
 
-         **Figure 3** Checking Cloud-Init status
+         **Figure 3** Checking Cloud-Init status (2)
 
       This is because the address that the system uses to access Cloud-Init is redirected to **/usr/bin/**, but the actual installation path is **/usr/local/bin**.
 
@@ -81,11 +81,11 @@ Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 Ubuntu 14.04: chkconfig and systemctl Not Installed
 ---------------------------------------------------
 
--  Symptom:
+-  Symptom
 
    chkconfig is not installed.
 
--  Solution:
+-  Solution
 
    Run the following commands to install chkconfig:
 
@@ -105,12 +105,12 @@ Ubuntu 14.04: chkconfig and systemctl Not Installed
 
       -bash:/usr/bin/cloud-init:not found this command
 
-   Solution: Run the following command to copy Cloud-Init to the **usr/bin** directory:
+   Run the following command to copy Cloud-Init to the **usr/bin** directory:
 
    **cp /usr/local/bin/cloud-init /usr/bin**/
 
-Debian 9.5: Failed to Query the Cloud-Init Version and Set Automatic Start
---------------------------------------------------------------------------
+Debian 9.5: Failed to Query the Cloud-Init Version and Configure Automatic Start
+--------------------------------------------------------------------------------
 
 #. Run the following command to query the Cloud-Init version:
 
@@ -122,27 +122,27 @@ Debian 9.5: Failed to Query the Cloud-Init Version and Set Automatic Start
 
       -bash:/usr/bin/cloud-init:not found this command
 
-   Solution: Run the **cp /usr/local/bin/cloud-init /usr/bin/** command to copy Cloud-Init to the **usr/bin** directory.
+   Run the **cp /usr/local/bin/cloud-init /usr/bin/** command to copy Cloud-Init to the **usr/bin** directory.
 
 #. Run the **cloud-init init --local** command.
 
    Information similar to the following is displayed:
 
 
-   .. figure:: /_static/images/en-us_image_0137070023.png
+   .. figure:: /_static/images/en-us_image_0000001954451565.png
       :alt: **Figure 5** Information returned when Cloud-Init automatic start successfully set
 
       **Figure 5** Information returned when Cloud-Init automatic start successfully set
 
-   Cause analysis: The compilation fails because GCC is not installed.
+   The compilation fails because GCC is not installed.
 
-   Solution:
+   To solve this issue:
 
    Run the following command to install GCC. Then, install Cloud-Init again.
 
    **yum -y install gcc**
 
-#. After Cloud-Init is installed, run the following command to set Cloud-Init automatic start:
+#. After Cloud-Init is installed, run the following command to configure Cloud-Init automatic start:
 
    **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
@@ -150,11 +150,11 @@ Debian 9.5: Failed to Query the Cloud-Init Version and Set Automatic Start
 
 
    .. figure:: /_static/images/en-us_image_0137070025.png
-      :alt: **Figure 6** Prompt indicating the failure to set Cloud-Init automatic start
+      :alt: **Figure 6** Prompt indicating the failure to configure Cloud-Init automatic start
 
-      **Figure 6** Prompt indicating the failure to set Cloud-Init automatic start
+      **Figure 6** Prompt indicating the failure to configure Cloud-Init automatic start
 
-   Solution:
+   To solve this issue:
 
    a. Run the following command to roll back the configuration:
 
@@ -181,7 +181,7 @@ CentOS 7/Fedora 28: Required C Compiler Not Installed
 
 -  Symptom
 
-   After Cloud-Init is successfully installed, run the following command:
+   After Cloud-Init is successfully installed, you run the following command:
 
    **cloud-init init --local**
 
@@ -210,7 +210,7 @@ CentOS 7/Fedora: Failed to Use the New Password to Log In to an ECS Created from
 
 -  Symptom
 
-   After Cloud-Init is successfully installed on an ECS, an image is created from the ECS. You cannot use a new password to log in to the ECSs created from this image. When you log in to the ECSs using the old password, you find that NICs of these ECSs are not started.
+   You cannot use a new password to log in to an ECS created from an image with Cloud-Init installed. After logging in to the ECS using the old password, you find that NICs of the ECS are not started.
 
 
    .. figure:: /_static/images/en-us_image_0137083450.png
@@ -218,6 +218,6 @@ CentOS 7/Fedora: Failed to Use the New Password to Log In to an ECS Created from
 
       **Figure 8** NIC not started
 
--  Solution:
+-  Solution
 
-   Log in to the ECS used to create the image, open the DHCP configuration file **/etc/sysconfig/network-scripts/ifcfg-eth**\ *X*, and comment out **HWADDR**.
+   Log in to the ECS used to create that image, open the DHCP configuration file **/etc/sysconfig/network-scripts/ifcfg-eth**\ *X*, and comment out **HWADDR**.

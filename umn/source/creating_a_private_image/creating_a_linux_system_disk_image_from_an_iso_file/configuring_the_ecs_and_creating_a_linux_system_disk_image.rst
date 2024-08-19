@@ -8,7 +8,7 @@ Configuring the ECS and Creating a Linux System Disk Image
 Scenarios
 ---------
 
-After installing an OS for the temporary ECS, configure the ECS and install the native Xen and KVM drivers to ensure that ECSs created subsequently are available.
+After installing an OS for the temporary ECS, configure the ECS and install KVM drivers to ensure that ECSs created from this temporary ECS can work properly.
 
 This section describes how to configure a Linux ECS, install drivers, and create a Linux system disk image.
 
@@ -25,22 +25,22 @@ Procedure
       -  Check whether NICs are set to DHCP. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Setting the NIC to DHCP <en-us_topic_0030713176>`.
       -  Run the **service sshd status** command to check whether SSH is enabled. If it is disabled, run the **service sshd start** command to enable it. Ensure that your ECS firewall, for example, Linux iptables, allows access to SSH.
 
-   b. Install the drivers.
+   b. Install drivers.
 
-      To ensure that the network performance and basic functions of the ECSs created from the private image are normal, install the KVM driver on the ECS used to create the image.
+      To ensure that the network performance and basic functions of the ECSs created from the private image are normal, install KVM drivers on the ECS used to create the image.
 
       .. note::
 
-         Disable your antivirus and intrusion detection software. You can enable them after installation of the Xen and KVM drivers.
+         Disable your antivirus and intrusion detection software. You can enable them after the installation of KVM drivers.
 
-      -  Install native KVM driver. For details, see :ref:`Installing Native KVM Drivers <en-us_topic_0000001120952155>`.
+      -  Install native KVM drivers. For details, see :ref:`Installing Native KVM Drivers <en-us_topic_0000001120952155>`.
       -  After the drivers are installed, you need to clear log files and historical records. For details, see :ref:`Clearing System Logs <en-us_topic_0125076462>`.
 
    c. Configure a file system.
 
       -  Change the disk identifier in the GRUB configuration file to UUID. For details, see :ref:`Changing the Disk Identifier in the GRUB Configuration File to UUID <en-us_topic_0086020895>`.
       -  Change the disk identifier in the fstab file to UUID. For details, see :ref:`Changing the Disk Identifier in the fstab File to UUID <en-us_topic_0086024961>`.
-      -  Clear the automatic attachment information of non-system disks in the **/etc/fstab** file to prevent impacts on subsequent data disk attachment. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
+      -  Clear the automatic mount configuration of non-system disks in the **/etc/fstab** file. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
 
    d. (Optional) Configure value-added functions.
 

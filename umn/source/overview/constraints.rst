@@ -69,7 +69,7 @@ This section describes the constraints on using IMS.
    |                                                           | If the image size is between 128 GB and 1 TB, convert the image file into the RAW or ZVHD2 format and import the image through fast import.                                         |
    |                                                           |                                                                                                                                                                                     |
    |                                                           | -  For details about how to convert the image file format, see :ref:`Converting the Image Format Using qemu-img-hw <en-us_topic_0171668652>`.                                       |
-   |                                                           | -  For details about fast import, see :ref:`Quickly Importing an Image File <en-us_topic_0133773658>`.                                                                              |
+   |                                                           | -  For details about fast import, see :ref:`Fast Import of an Image File <en-us_topic_0133773658>`.                                                                                 |
    +-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _en-us_topic_0192505040__table15609132017272:
@@ -145,7 +145,7 @@ This section describes the constraints on using IMS.
    +--------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------+
    | Operation                            | Item                                                                               | Constraint                                                 |
    +======================================+====================================================================================+============================================================+
-   | Encrypting an image                  | Creating an encrypted image from an encrypted ECS or an external image file        | -  An encrypted image cannot be shared with other tenants. |
+   | Encrypting an image                  | Creating an encrypted image from an encrypted ECS or an external image file        | -  An encrypted image cannot be shared with others.        |
    |                                      |                                                                                    | -  The key used for encrypting an image cannot be changed. |
    +--------------------------------------+------------------------------------------------------------------------------------+------------------------------------------------------------+
    | Deleting images                      | Private image status                                                               | A published private image cannot be deleted.               |

@@ -8,20 +8,20 @@ How Do I Enable NIC Multi-Queue for an Image?
 Scenarios
 ---------
 
-With the increase of network I/O bandwidth, a single vCPU cannot meet the requirement of processing NIC interruptions. NIC multi-queue allows multiple vCPUs to process NIC interruptions, thereby improving network PPS and I/O performance.
+Network I/O bandwidth can keep increasing to the point where a single vCPU cannot process all of the NIC interrupts. NIC multi-queue allows multiple vCPUs to process NIC interrupts, thereby improving network PPS and I/O performance.
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section892862210138:
 
 ECSs Supporting NIC Multi-Queue
 -------------------------------
 
-NIC multi-queue can be enabled on an ECS only when the ECS specifications, virtualization type, and image meet the requirements described in this section.
+NIC multi-queue can only be enabled on an ECS with the specifications, image, and virtualization type described in this section.
 
 -  For details about the ECS flavors that support NIC multi-queue, see section "Instances" in *Elastic Cloud Server User Guide*.
 
    .. note::
 
-      If the number of NIC queues is greater than 1, NIC multi-queue is supported.
+      If there are more than 1 NIC queue, NIC multi-queue is supported.
 
 -  Only KVM ECSs support NIC multi-queue.
 -  The Linux public images listed in :ref:`Table 1 <en-us_topic_0085214115__en-us_topic_0058758453_table1572993710538>` support NIC multi-queue.
@@ -38,44 +38,44 @@ NIC multi-queue can be enabled on an ECS only when the ECS specifications, virtu
 
 .. table:: **Table 1** KVM ECSs that support NIC multi-queue
 
-   +---------+-------------------------------------------------------------+----------------+
-   | OS      | Image                                                       | Supported By   |
-   +=========+=============================================================+================+
-   | Windows | Windows Server 2008 WEB R2 64bit                            | Private images |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | Windows Server 2008 R2 Standard/Datacenter/Enterprise 64bit | Private images |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | Windows Server 2012 R2 Standard/Datacenter 64bit            | Private images |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | Windows Server 2016 Standard/Datacenter 64bit               | Private images |
-   +---------+-------------------------------------------------------------+----------------+
-   | Linux   | Ubuntu 14.04/16.04 Server 64bit                             | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | openSUSE 42.2 64bit                                         | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | SUSE Enterprise 12 SP1/SP2 64bit                            | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | CentOS 6.8/6.9/7.0/7.1/7.2/7.3/7.4/7.5/7.6 64bit            | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | Debian 8.0.0/8.8.0/8.9.0/9.0.0 64bit                        | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | Fedora 24/25 64bit                                          | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
-   |         | EulerOS 2.2 64bit                                           | Public images  |
-   +---------+-------------------------------------------------------------+----------------+
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   | OS      | Image                                                       | Support for NIC Multi-Queue            |
+   +=========+=============================================================+========================================+
+   | Windows | Windows Server 2008 WEB R2 64bit                            | Yes (only supported by private images) |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | Windows Server 2008 R2 Standard/Datacenter/Enterprise 64bit | Yes (only supported by private images) |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | Windows Server 2012 R2 Standard/Datacenter 64bit            | Yes (only supported by private images) |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | Windows Server 2016 Standard/Datacenter 64bit               | Yes (only supported by private images) |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   | Linux   | Ubuntu 14.04/16.04 Server 64bit                             | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | openSUSE 42.2 64bit                                         | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | SUSE Enterprise 12 SP1/SP2 64bit                            | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | CentOS 6.8/6.9/7.0/7.1/7.2/7.3/7.4/7.5/7.6 64bit            | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | Debian 8.0.0/8.8.0/8.9.0/9.0.0 64bit                        | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | Fedora 24/25 64bit                                          | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
+   |         | EulerOS 2.2 64bit                                           | Yes                                    |
+   +---------+-------------------------------------------------------------+----------------------------------------+
 
 Operation Instructions
 ----------------------
 
 Assume that an ECS has the required specifications and virtualization type.
 
--  If the ECS was created using a public image listed in :ref:`ECSs Supporting NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section892862210138>`, NIC multi-queue has been enabled on the ECS by default. Therefore, you do not need to manually enable NIC multi-queue for it.
--  If the ECS was created using an external image file with an OS listed in :ref:`ECSs Supporting NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section892862210138>`, perform the following operations to enable NIC multi-queue:
+-  If the ECS was created from a public image listed in :ref:`ECSs Supporting NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section892862210138>`, NIC multi-queue is enabled on the ECS by default. You do not need to enable NIC multi-queue manually.
+-  If the ECS was created from an external image file with an OS listed in :ref:`ECSs Supporting NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section892862210138>`, you may need to perform the following operations to enable NIC multi-queue:
 
    #. :ref:`Register the External Image File as a Private Image <en-us_topic_0085214115__en-us_topic_0058758453_section1659682611504>`.
-   #. :ref:`Set NIC Multi-Queue for the Image <en-us_topic_0085214115__en-us_topic_0058758453_section1949113217282>`.
+   #. :ref:`Enable NIC Multi-Queue for the Image <en-us_topic_0085214115__en-us_topic_0058758453_section1949113217282>`.
    #. :ref:`Create an ECS from the Private Image <en-us_topic_0085214115__en-us_topic_0058758453_section1841681225617>`.
-   #. :ref:`Enable NIC Multi-Queue <en-us_topic_0085214115__en-us_topic_0058758453_section214227201118>`.
+   #. :ref:`Enable NIC Multi-Queue on the ECS <en-us_topic_0085214115__en-us_topic_0058758453_section214227201118>`.
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section1659682611504:
 
@@ -86,12 +86,12 @@ Register the external image file as a private image. For details, see :ref:`Regi
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section1949113217282:
 
-Set NIC Multi-Queue for the Image
----------------------------------
+Enable NIC Multi-Queue for the Image
+------------------------------------
 
-Windows OSs have not commercially supported NIC multi-queue. If you enable NIC multi-queue for a Windows image, starting an ECS created using such an image may be slow.
+Windows has not commercially supported NIC multi-queue. If you enable NIC multi-queue for a Windows image, an ECS created from such an image may take longer than normal to start.
 
-Use either of the following methods to set NIC multi-queue.
+Use any of the following methods to enable NIC multi-queue for an image:
 
 **Method 1:**
 
@@ -103,8 +103,8 @@ Use either of the following methods to set NIC multi-queue.
 
       The IMS console is displayed.
 
-#. On the displayed **Private Images** page, locate the row that contains the target image and click **Modify** in the **Operation** column.
-#. Set NIC multi-queue for the image.
+#. On the displayed **Private Images** page, locate the row that contains the image and click **Modify** in the **Operation** column.
+#. Enable NIC multi-queue for the image.
 
 **Method 2:**
 
@@ -116,8 +116,8 @@ Use either of the following methods to set NIC multi-queue.
 
       The IMS console is displayed.
 
-#. On the displayed **Private Images** page, click the name of the target image.
-#. In the upper right corner of the displayed image details page, click **Modify**. In the displayed **Modify Image** dialog box, set NIC multi-queue for the image.
+#. On the displayed **Private Images** page, click the name of the image.
+#. In the upper right corner of the displayed image details page, click **Modify**. In the displayed **Modify Image** dialog box, enable NIC multi-queue for the image.
 
 **Method 3:** Add **hw_vif_multiqueue_enabled** to the image using an API.
 
@@ -133,7 +133,7 @@ Use either of the following methods to set NIC multi-queue.
 
 #. Add **Content-Type** to the request header.
 
-   The value of **Content-Type** is **application/openstack-images-v2.1-json-patch**.
+   Set **Content-Type** to **application/openstack-images-v2.1-json-patch**.
 
    The request URI is in the following format:
 
@@ -147,18 +147,9 @@ Use either of the following methods to set NIC multi-queue.
                {
                 "op":"add",
                 "path":"/hw_vif_multiqueue_enabled",
-                "value": "true"
+                "value": true
                }
        ]
-
-   :ref:`Figure 1 <en-us_topic_0085214115__en-us_topic_0058758453_en-us_topic_0085214115_fig3215821216479>` shows an example request body for setting NIC multi-queue.
-
-   .. _en-us_topic_0085214115__en-us_topic_0058758453_en-us_topic_0085214115_fig3215821216479:
-
-   .. figure:: /_static/images/en-us_image_0196045691.png
-      :alt: **Figure 1** Example request body
-
-      **Figure 1** Example request body
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section1841681225617:
 
@@ -172,8 +163,8 @@ Use the registered private image to create an ECS. For details, see the *Elastic
 
 .. _en-us_topic_0085214115__en-us_topic_0058758453_section214227201118:
 
-Enable NIC Multi-Queue
-----------------------
+Enable NIC Multi-Queue on the ECS
+---------------------------------
 
 KVM ECSs running Windows use private images to support NIC multi-queue.
 
@@ -210,7 +201,7 @@ For Linux ECSs, which run CentOS 7.4 as an example, perform the following operat
 
       [root@localhost ~]# ethtool -L eth0 combined 4 #Enable four queues on NIC eth0.
 
-#. (Optional) Enable irqbalance so that the system automatically allocates NIC interruptions to multiple vCPUs.
+#. (Optional) Enable irqbalance so that the system automatically allocates NIC interrupts to multiple vCPUs.
 
    a. Run the following command to enable irqbalance:
 
@@ -224,13 +215,13 @@ For Linux ECSs, which run CentOS 7.4 as an example, perform the following operat
 
 
       .. figure:: /_static/images/en-us_image_0196045692.png
-         :alt: **Figure 2** Enabled irqbalance
+         :alt: **Figure 1** Enabled irqbalance
 
-         **Figure 2** Enabled irqbalance
+         **Figure 1** Enabled irqbalance
 
 #. (Optional) Enable interrupt binding.
 
-   Enabling irqbalance allows the system to automatically allocate NIC interruptions, improving network performance. If the improved network performance fails to meet your expectations, manually configure interrupt affinity on the target ECS.
+   Enabling irqbalance allows the system to automatically allocate NIC interrupts, improving network performance. If the improved network performance fails to meet your expectations, manually configure interrupt affinity on the target ECS.
 
    The detailed operations are as follows:
 

@@ -31,7 +31,7 @@ Procedure
 
       The IMS console is displayed.
 
-#. In the upper left corner, switch to the region where the target project resides and then select the project.
+#. In the upper left corner, switch to the region where the target project is and then select the project.
 
 #. Click the **Images Shared with Me** tab.
 

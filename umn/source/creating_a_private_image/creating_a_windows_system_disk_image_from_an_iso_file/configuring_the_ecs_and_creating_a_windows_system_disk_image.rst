@@ -8,7 +8,7 @@ Configuring the ECS and Creating a Windows System Disk Image
 Scenarios
 ---------
 
-After installing an OS for the temporary ECS, configure the ECS and install the Guest OS drivers provided by the cloud platform to ensure that ECSs created subsequently are available.
+After installing an OS for the temporary ECS, configure the ECS and install Guest OS drivers provided by the cloud platform so that ECSs that will be created with this temporary ECS as a source can work properly.
 
 This section describes how to configure a Windows ECS, install the Guest OS drivers, and create a Windows system disk image.
 

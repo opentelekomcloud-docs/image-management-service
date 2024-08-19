@@ -53,12 +53,12 @@ Procedure
 
          **Figure 2** Creating a data disk image
 
-   d. To register the image file using the Fast Create function, select **Enable Fast Create**.
+   d. To register the image file using Fast Create, select **Enable Fast Create**.
 
       .. note::
 
-         -  Currently, this function supports only image files in ZVHD2 or RAW format.
-         -  For how to convert image file formats and generate bitmap files, see :ref:`Quickly Importing an Image File <en-us_topic_0030713151>`.
+         -  Currently, fast import is only available for ZVHD2 and RAW image files.
+         -  For how to convert image file formats and generate bitmap files, see :ref:`Fast Import of an Image File <en-us_topic_0030713151>`.
 
       After you select **Enable Fast Create**, select the confirmation information following **Image File Preparation** if you have prepared the required files.
 

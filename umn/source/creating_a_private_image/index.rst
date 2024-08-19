@@ -18,7 +18,7 @@ Creating a Private Image
 -  :ref:`Creating a Full-ECS Image from a CBR Backup <en-us_topic_0176812699>`
 -  :ref:`Creating a Windows System Disk Image from an ISO File <en-us_topic_0146328750>`
 -  :ref:`Creating a Linux System Disk Image from an ISO File <en-us_topic_0146464401>`
--  :ref:`Quickly Importing an Image File <en-us_topic_0030713151>`
+-  :ref:`Fast Import of an Image File <en-us_topic_0030713151>`
 
 .. toctree::
    :maxdepth: 1
@@ -37,4 +37,4 @@ Creating a Private Image
    creating_a_full-ecs_image_from_a_cbr_backup
    creating_a_windows_system_disk_image_from_an_iso_file/index
    creating_a_linux_system_disk_image_from_an_iso_file/index
-   quickly_importing_an_image_file/index
+   fast_import_of_an_image_file/index

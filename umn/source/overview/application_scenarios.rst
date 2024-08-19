@@ -7,7 +7,7 @@ Application Scenarios
 
 -  Migrating servers to the cloud or on the cloud
 
-   You can import local images to the cloud platform and use the images to quickly create cloud servers for service migration to the cloud. A variety of image types can be imported, including VHD, VMDK, QCOW2, and RAW.
+   You can import local images in various formats such as VHD, VMDK, QCOW2, and RAW to the cloud platform and use the images to quickly create cloud servers for service migration to the cloud.
 
 -  Deploying a specific software environment
 

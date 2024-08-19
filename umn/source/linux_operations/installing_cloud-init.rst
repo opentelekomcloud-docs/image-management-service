@@ -44,7 +44,7 @@ Check Whether Cloud-Init Has Been Installed
 
 Perform the operations provided here to check whether Cloud-Init has been installed. The methods of checking whether Cloud-Init is installed vary depending on the OSs.
 
--  If you are in a Python 3 environment, run the following command to check whether Cloud-Init is installed (Ubuntu22.0.4 is used as an example):
+-  If you are in a Python 3 environment, run the following command to check whether Cloud-Init is installed (Ubuntu 22.0.4 is used as an example):
 
    **which cloud-init**
 
@@ -169,15 +169,15 @@ The following describes how to install Cloud-Init on an ECS running SUSE Linux, 
 
    .. table:: **Table 1** Cloud-Init installation package addresses
 
-      +---------+----------+------------------------------------------------------------------+
-      | OS Type | Version  | How to Obtain                                                    |
-      +=========+==========+==================================================================+
-      | CentOS  | 6 32-bit | https://archives.fedoraproject.org/pub/archive/epel/6/i386/      |
-      +---------+----------+------------------------------------------------------------------+
-      |         | 6 64-bit | https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/    |
-      +---------+----------+------------------------------------------------------------------+
-      |         | 7 64-bit | https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/ |
-      +---------+----------+------------------------------------------------------------------+
+      +---------+----------+--------------------------------------------------------------------------+
+      | OS Type | Version  | How to Obtain                                                            |
+      +=========+==========+==========================================================================+
+      | CentOS  | 6 32-bit | https://archives.fedoraproject.org/pub/archive/epel/6/i386/              |
+      +---------+----------+--------------------------------------------------------------------------+
+      |         | 6 64-bit | https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/            |
+      +---------+----------+--------------------------------------------------------------------------+
+      |         | 7 64-bit | https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/Packages/e/ |
+      +---------+----------+--------------------------------------------------------------------------+
 
    #. Run the following commands to install Cloud-Init:
 
@@ -195,7 +195,7 @@ The following describes how to install Cloud-Init on an ECS running SUSE Linux, 
 
          -  Take CentOS 7 64-bit as an example. If the version is 7.14, the command is as follows:
 
-            **yum install https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm**
+            **yum install https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm**
 
    #. Run the following commands to enable Cloud-Init to automatically start upon system boot:
 

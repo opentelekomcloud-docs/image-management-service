@@ -14,15 +14,15 @@ You can modify the following attributes of a private image:
 
 -  Description
 
--  Minimum Memory
+-  Minimum memory
 
--  Maximum Memory
+-  Maximum memory
 
--  NIC Multi-Queue
+-  NIC multi-queue
 
-   NIC multi-queue enables multiple CPUs to process NIC interruptions for load balancing. For details, see :ref:`How Do I Enable NIC Multi-Queue for an Image? <en-us_topic_0085214115>`
+   NIC multi-queue enables multiple CPUs to process NIC interrupts for load balancing. For details, see :ref:`How Do I Enable NIC Multi-Queue for an Image? <en-us_topic_0085214115>`
 
--  Boot Mode
+-  Boot mode
 
 Constraints
 -----------

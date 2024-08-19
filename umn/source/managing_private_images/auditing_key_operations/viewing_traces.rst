@@ -8,41 +8,62 @@ Viewing Traces
 Scenarios
 ---------
 
-Once CTS is enabled, it starts recording IMS operations. You can view operations recorded in the last seven days on the CTS management console.
+After you enable CTS and the management tracker is created, CTS starts recording operations on cloud resources. CTS stores operation records generated in the last seven days.
 
-This section describes how to view the records.
+This section describes how to query and export operation records of the last seven days on the CTS console.
 
-Procedure
----------
+-  :ref:`Viewing Real-Time Traces in the Trace List <en-us_topic_0107462582__en-us_topic_0179639644_section19271975203>`
 
-#. Access the CTS console.
+.. _en-us_topic_0107462582__en-us_topic_0179639644_section19271975203:
 
-   a. Log in to the management console.
-   b. Click **Cloud Trace Service** under **Management & Deployment**.
+Viewing Real-Time Traces in the Trace List
+------------------------------------------
 
-#. In the navigation pane on the left, choose **Trace List**.
+#. Log in to the management console.
 
-#. Set the filter criteria and click **Query**.
+#. Click |image1| in the upper left corner and choose **Management & Deployment** > **Cloud Trace Service**. The CTS console is displayed.
 
-   The following filters are available:
+#. Choose **Trace List** in the navigation pane on the left.
 
-   -  **Trace Type**, **Trace Source**, **Resource Type**, and **Search By**.
+#. Set filters to search for your desired traces, as shown in :ref:`Figure 1 <en-us_topic_0107462582__en-us_topic_0179639644_fig139361441134311>`. The following filters are available:
 
-      Select **Management** for **Trace Type** and **IMS** for **Trace Source**.
+   .. _en-us_topic_0107462582__en-us_topic_0179639644_fig139361441134311:
 
-      Note that:
+   .. figure:: /_static/images/en-us_image_0000001744598325.png
+      :alt: **Figure 1** Filters
 
-      -  If you select **Resource ID** for **Search By**, you need to enter a resource ID. Only whole word match is supported.
-      -  If you select **Resource name** for **Search By**, you need to select or enter a specific resource name.
+      **Figure 1** Filters
 
-   -  **Operator**: Select a specific operator from the drop-down list.
+   -  **Trace Type**, **Trace Source**, **Resource Type**, and **Search By**: Select a filter from the drop-down list.
 
-   -  **Trace Status**: Available values are **All trace statuses**, **Normal**, **Warning**, and **Incident**.
+      -  If you select **Resource ID** for **Search By**, specify a resource ID.
+      -  If you select **Trace name** for **Search By**, specify a trace name.
+      -  If you select **Resource name** for **Search By**, specify a resource name.
 
-   -  **Time Range**: You can select **Last 1 hour**, **Last 1 day**, **Last 1 week**, or **Customize**.
+   -  **Operator**: Select a user.
+   -  **Trace Status**: Select **All trace statuses**, **Normal**, **Warning**, or **Incident**.
+   -  Time range: You can query traces generated during any time range in the last seven days.
+   -  Click **Export** to export all traces in the query result as a CSV file. The file can contain up to 5000 records.
 
-#. Locate the target trace and click |image1| to expand the trace details.
+#. Click **Query**.
 
-#. Click **View Trace** in the upper right corner of the trace details area.
+#. On the **Trace List** page, you can also export and refresh the trace list.
 
-.. |image1| image:: /_static/images/en-us_image_0285376505.png
+   -  Click **Export** to export all traces in the query result as a CSV file. The file can contain up to 5000 records.
+   -  Click |image2| to view the latest information about traces.
+
+#. Click |image3| on the left of a trace to expand its details.
+
+   |image4|
+
+#. Click **View Trace** in the **Operation** column. The trace details are displayed.
+
+   |image5|
+
+#. For details about key fields in the trace structure, see section "Trace References" > "Trace Structure" and section "Trace References" > "Example Traces" in the *CTS User Guide*.
+
+.. |image1| image:: /_static/images/en-us_image_0000001696838310.png
+.. |image2| image:: /_static/images/en-us_image_0000001696678850.png
+.. |image3| image:: /_static/images/en-us_image_0000001744678489.jpg
+.. |image4| image:: /_static/images/en-us_image_0000001696838318.png
+.. |image5| image:: /_static/images/en-us_image_0000001758618249.png

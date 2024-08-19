@@ -9,8 +9,8 @@ FAQs
 -  :ref:`Image Creation <en-us_topic_0193137621>`
 -  :ref:`Image Sharing <en-us_topic_0171668653>`
 -  :ref:`OS <en-us_topic_0133773782>`
--  :ref:`Image Importing <en-us_topic_0030713195>`
--  :ref:`Image Exporting <en-us_topic_0030713222>`
+-  :ref:`Image Import <en-us_topic_0030713195>`
+-  :ref:`Image Export <en-us_topic_0030713222>`
 -  :ref:`Image Optimization <en-us_topic_0030713203>`
 -  :ref:`Image Replication <en-us_topic_0183293891>`
 -  :ref:`Image Deletion <en-us_topic_0032326546>`
@@ -29,8 +29,8 @@ FAQs
    image_creation/index
    image_sharing/index
    os/index
-   image_importing/index
-   image_exporting/index
+   image_import/index
+   image_export/index
    image_optimization/index
    image_replication
    image_deletion

@@ -48,7 +48,7 @@ Procedure
 
 #. Click **Properties** and select the configured Internet protocol version.
 
-#. On the **General** tab, select **Obtain an IP address automatically** and **Obtain DNS server address automatically** and click **OK**. :ref:`Figure 3 <en-us_topic_0030713152__en-us_topic_0029124575_fig32561684193046>` shows the dialog box for configuring the IP address obtaining mode.
+#. On the **General** tab, select **Obtain an IP address automatically** and **Obtain DNS server address automatically** and click **OK**, as shown in :ref:`Figure 3 <en-us_topic_0030713152__en-us_topic_0029124575_fig32561684193046>`. The system will automatically obtain an IP address.
 
    .. note::
 
@@ -57,6 +57,6 @@ Procedure
    .. _en-us_topic_0030713152__en-us_topic_0029124575_fig32561684193046:
 
    .. figure:: /_static/images/en-us_image_0208136141.png
-      :alt: **Figure 3** Configuring the IP address obtaining mode
+      :alt: **Figure 3** Configuring DHCP
 
-      **Figure 3** Configuring the IP address obtaining mode
+      **Figure 3** Configuring DHCP

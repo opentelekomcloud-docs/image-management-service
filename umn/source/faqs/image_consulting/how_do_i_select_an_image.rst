@@ -16,7 +16,7 @@ When creating an ECS or a BMS, you can select an image based on the following fa
 Region and AZ
 -------------
 
-An image is a regional resource. You cannot use an image to create an instance in a different region. For example, when creating an instance in region A, you can only select an image that is already in region A. For more regions, see :ref:`Region and AZ <en-us_topic_0171754221>`.
+An image is a regional resource. You cannot use an image to create an instance in a different region. For example, when creating an instance in region A, you can only select an image that is already in region A. For more information, see :ref:`Region and AZ <en-us_topic_0171754221>`.
 
 .. _en-us_topic_0195253327__section10191306168:
 
@@ -45,12 +45,12 @@ When selecting an OS, consider the following factors:
 
 -  OS types
 
-   +-----------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-   | OS Type               | Applicable Scenario                                                                                                              | Constraints                                                                         |
-   +=======================+==================================================================================================================================+=====================================================================================+
-   | Windows               | -  Programs developed for Windows (for example, .NET).                                                                           | The system disk must be at least 1 GB, and there must be at least 1 GB of memory.   |
-   |                       | -  Databases such as SQL Server. (You need to install the database.)                                                             |                                                                                     |
-   +-----------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-   | Linux                 | -  High-performance server applications (for example, Web) and working with common programming languages such as PHP and Python. | The system disk must be at least 1 GB, and there must be at least 512 MB of memory. |
-   |                       | -  Databases such as MySQL. (You need to install the database.)                                                                  |                                                                                     |
-   +-----------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   +-----------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | OS Type               | Applicable Scenario                                                                                                | Constraints                                                                         |
+   +=======================+====================================================================================================================+=====================================================================================+
+   | Windows               | -  Programs developed for Windows (for example, .NET).                                                             | The system disk must be at least 1 GB, and there must be at least 1 GB of memory.   |
+   |                       | -  Databases such as SQL Server. (You need to install the database.)                                               |                                                                                     |
+   +-----------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | Linux                 | -  High-performance server applications (for example, Web) and common programming languages such as PHP and Python | The system disk must be at least 1 GB, and there must be at least 512 MB of memory. |
+   |                       | -  Databases such as MySQL. (You need to install the database.)                                                    |                                                                                     |
+   +-----------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+

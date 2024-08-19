@@ -30,7 +30,7 @@ The configuration method varies depending on the OS.
 
    To prevent impact on the start of the recovery mode, you are advised to modify only the item used for the default start.
 
--  For CentOS and Red Hat 6, perform the following steps:
+-  For CentOS 6 and Red Hat 6, perform the following steps:
 
    #. Run the following command to open the configuration file:
 
