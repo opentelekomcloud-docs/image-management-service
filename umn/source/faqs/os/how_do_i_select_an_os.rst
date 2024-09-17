@@ -9,8 +9,6 @@ How Do I Select an OS?
 
    Used for development platforms or services that run Linux. CentOS and Ubuntu are provided. CentOS is recommended.
 
-   The system disk must be no less than 40 GB, and the memory must be no less than 512 MB.
+   The system disk must be at least 40 GB, and there must be at least 512 MB of memory.
 
--  OS selection for servers that require memory greater than 4 GB
-
-   Because 32-bit OSs allow addressing only within a 4 GB memory range, if the required memory capacity is 4 GB or larger, select a 64-bit OS.
+-  If your servers require more than 4 GB of memory, select a 64-bit OS because 4 GB is the maximum memory a 32-bit OS can access.

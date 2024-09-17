@@ -67,6 +67,6 @@ Procedure
 
    f. Confirm the settings and click **Submit**.
 
-#. Switch back to the **Image Management Service** page to monitor the image status.
+#. Switch back to the **Image Management Service** page to check the image status.
 
    When the image status changes to **Normal**, the image is registered successfully.

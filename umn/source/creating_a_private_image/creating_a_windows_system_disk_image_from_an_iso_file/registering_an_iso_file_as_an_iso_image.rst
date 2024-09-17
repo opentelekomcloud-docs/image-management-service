@@ -8,7 +8,7 @@ Registering an ISO File as an ISO Image
 Scenarios
 ---------
 
-Register an external ISO file on the cloud platform as a private image (ISO image). Before registering an image, upload the ISO file exported in :ref:`Integrating the VMTools Driver into an ISO File <en-us_topic_0146474781>` to the OBS bucket.
+Register an external ISO file on the cloud platform as a private image (ISO image). Before registering an image, upload the ISO file exported in :ref:`Integrating VirtIO Drivers into an ISO File <en-us_topic_0146474781>` to the OBS bucket.
 
 The ISO image cannot be replicated, exported, or encrypted.
 
@@ -63,6 +63,6 @@ Procedure
 
    f. Confirm the settings and click **Submit**.
 
-#. Switch back to the **Image Management Service** page to monitor the image status.
+#. Switch back to the **Image Management Service** page to check the image status.
 
    When the image status changes to **Normal**, the image is registered successfully.

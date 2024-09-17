@@ -8,7 +8,7 @@ How Do I Make a System Disk Image Support Fast ECS Creation?
 Scenarios
 ---------
 
-Fast Create greatly reduces the time required for creating ECSs from a system disk image. Currently, this feature is supported by all newly created system disk images by default. Some existing system disk images may not support this feature, you can make them support it through image replication.
+Fast Create greatly reduces the time required to create ECSs from a system disk image. Currently, this feature is supported for all newly created system disk images by default, but some existing system disk images may not support this feature. You can make them support it through image replication.
 
 For example, if image A does not support fast ECS creation, you can replicate it to generate image copy_A that supports fast ECS creation.
 
@@ -35,10 +35,10 @@ Check Whether an Image Supports Fast ECS Creation
 Configure an Image to Make It Support Fast ECS Creation
 -------------------------------------------------------
 
-#. Locate the target system disk image, click **More** in the **Operation** column, and select **Replicate** from the drop-down list.
+#. Locate the system disk image, click **More** in the **Operation** column, and select **Replicate** from the drop-down list.
 
    The **Replicate Image** dialog box is displayed.
 
 #. Set parameters based on :ref:`Replicating Images <en-us_topic_0049177180>`.
 
-#. After the image is successfully replicated, the generated image can be used to quickly create ECSs.
+#. Wait for the replication to complete. Then, the new image can be used to quickly create ECSs.

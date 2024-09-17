@@ -25,7 +25,7 @@ Background
 
 -  You can export images in ZVHD2, QCOW2, VMDK, VHD, or ZVHD format. The default format of a private image is ZVHD2. Images exported in different formats may vary in size.
 
--  If an image is greater than 128 GB, you can select **Enable** for **Fast Export** when exporting the image to an OBS bucket. In this case, you cannot specify the format of the exported image. You can convert the image format after it is exported.
+-  If an image is larger than 128 GB, you can select **Enable** for **Fast Export** when exporting the image to an OBS bucket. The image will be exported as a ZVHD2 file. You can convert the image format after it is exported.
 
    .. note::
 

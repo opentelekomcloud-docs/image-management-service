@@ -15,7 +15,7 @@ Constraints
 -----------
 
 -  KMS must be enabled.
--  If an encrypted image needs to be shared with other tenants, the key of the image must be a custom key instead of the default key **ims/default**.
+-  Encrypted images cannot be shared with others.
 -  The system disk of an ECS created from an encrypted image is also encrypted, and its key is the same as the image key.
 -  If an ECS has an encrypted system disk, private images created from the ECS are also encrypted.
 -  The key used for encrypting an image cannot be changed.

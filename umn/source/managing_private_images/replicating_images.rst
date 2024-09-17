@@ -8,7 +8,7 @@ Replicating Images
 Scenarios
 ---------
 
-You can convert encrypted and unencrypted images into each other or enable some advanced features (such as fast ECS creation from an image) using the image replication function. You may need to replicate an image to:
+You can convert encrypted and unencrypted images into each other or enable some advanced features (such as fast ECS creation from an image) using image replication. You may need to replicate an image to:
 
 -  Replicate an encrypted image to an unencrypted one.
 
@@ -22,7 +22,7 @@ You can convert encrypted and unencrypted images into each other or enable some 
 
 -  Optimize a system disk image so that it can be used to quickly create ECSs.
 
-   Fast Create greatly reduces the time required for creating ECSs from a system disk image. Currently, this feature is supported by all newly created system disk images by default. Existing system disk images may not support this function. You can optimize the images using the image replication function. For example, if image A does not support fast ECS creation, you can replicate it to generate image copy_A that supports fast ECS creation.
+   Fast Create greatly reduces the time required for creating ECSs from a system disk image. Currently, this feature is supported by all newly created system disk images by default. Existing system disk images may not support this function. You can optimize the images through image replication. For example, if image A does not support fast ECS creation, you can replicate it to generate image copy_A that supports fast ECS creation.
 
 Constraints
 -----------

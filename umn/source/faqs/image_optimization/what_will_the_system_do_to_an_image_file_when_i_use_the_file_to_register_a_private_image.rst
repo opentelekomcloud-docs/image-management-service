@@ -11,9 +11,9 @@ Linux
 -----
 
 -  Check whether any PV drivers exist. If yes, the system deletes them.
--  Modify the **grub** and **syslinux** configuration files to add the OS kernel boot parameters and change the disk partition name (**UUID=**\ *UUID of the disk partition*).
--  Change the names of the disk partitions in the **/etc/fstab** file (**UUID=**\ *UUID of the disk partition*).
--  Check whether the initrd file has the IDE driver. If no, the system will load the IDE driver.
+-  Modify the **grub** and **syslinux** configuration files to add OS kernel boot parameters and change disk partition names to UUIDs.
+-  Change disk partition names in the **/etc/fstab** file to UUIDs.
+-  Check whether the initrd file has IDE driver. If no, the system will load the IDE driver.
 -  Modify the X Window configuration file **/etc/X11/xorg.conf** to prevent display failures.
 -  Delete services of VMware tools.
 -  Record the latest automatic modification made to the image into **/var/log/rainbow_modification_record.log**.
@@ -21,7 +21,7 @@ Linux
 
 .. note::
 
-   For the following image files, the system does not copy this driver after **Enable automatic configuration** is selected:
+   For the following image files, the system does not copy built-in VirtIO drivers after **Enable automatic configuration** is selected:
 
    -  Image files whose **/usr** directory is an independent partition
    -  Fedora 29 64bit, Fedora 30 64bit, and CentOS 8.0 64bit image files that use the XFS file system
@@ -32,5 +32,4 @@ Windows
 
 -  Restore the IDE driver so that the OS can use this driver for its initial start.
 -  Delete the registry keys of the mouse and keyboard and generate the registry keys again to ensure that the mouse and keyboard are available on the new cloud platform.
--  Inject VirtIO drivers offline so that the OS can start without UVP VMTools installed.
--  Restore DHCP. The OS will dynamically obtain information such as the IP address based on the DHCP protocol.
+-  Restore DHCP so that the OS will dynamically obtain information such as the IP address based on the DHCP protocol.

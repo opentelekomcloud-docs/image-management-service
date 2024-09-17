@@ -5,9 +5,9 @@
 How Do I Create a Full-ECS Image Using an ECS That Has a Spanned Volume?
 ========================================================================
 
-An ECS used to create a Windows full-ECS image cannot have a spanned volume. If you attempt to create an image from an ECS with a spanned volume, when the image is used to create new ECSs, data may be lost.
+You are not advised to use a Windows ECS that has a spanned volume to create a full-ECS image. If you create such an image and then use it to create new ECSs, data may be lost.
 
-If an ECS has a spanned volume, back up data in the spanned volume and then delete this volume from the ECS. Use the ECS to create a full-ECS image. Use the full-ECS image to create an ECS. Then, use the backup to create a spanned volume for the new ECS if necessary.
+If an ECS has a spanned volume, back up data in the spanned volume and then delete the volume. Use the ECS to create a full-ECS image. You can then use the full-ECS image to create an ECS and use the backup to create a spanned volume for the new ECS if necessary.
 
 .. note::
 

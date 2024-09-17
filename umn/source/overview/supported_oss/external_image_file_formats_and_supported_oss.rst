@@ -24,7 +24,6 @@ If the OS cannot be identified or is not supported:
 
    -  Uploading image files containing OSs not listed in :ref:`Table 1 <en-us_topic_0030713143__table6432073491848>` may fail. You are advised to contact the customer service before uploading these image files.
    -  For details about the formats and OSs supported for BMS images, see *Bare Metal Server Private Image Creation Guide*.
-   -  When uploading a CoreOS image file, set the OS type to CoreOS. Otherwise, the OS type will be set to **Other (64bit)**. In addition, ensure that coreos-cloudinit has been installed and configured for CoreOS. Automatic system upgrades must be disabled. Otherwise, they may make ECSs created using this image unavailable.
    -  You can only use external image files containing Windows 10 64bit or Windows 7 Enterprise 64bit to create ECSs on a Dedicated Host (DeH).
 
 .. _en-us_topic_0030713143__table6432073491848:
@@ -41,6 +40,14 @@ If the OS cannot be identified or is not supported:
    |                                   | Windows 7 Professional 64bit              |
    |                                   |                                           |
    |                                   | Windows 7 Professional 32bit              |
+   |                                   |                                           |
+   |                                   | Windows Server 2022 Standard 64bit        |
+   |                                   |                                           |
+   |                                   | Windows Server 2022 Datacenter 64bit      |
+   |                                   |                                           |
+   |                                   | Windows Server 2019 Standard 64bit        |
+   |                                   |                                           |
+   |                                   | Windows Server 2019 Datacenter 64bit      |
    |                                   |                                           |
    |                                   | Windows Server 2016 Standard 64bit        |
    |                                   |                                           |
@@ -64,7 +71,15 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Windows Server 2008 R2 Datacenter 64bit   |
    +-----------------------------------+-------------------------------------------+
-   | SUSE                              | SUSE Linux Enterprise Server 15 SP1 64bit |
+   | SUSE                              | SUSE Linux Enterprise Server 15 SP5 64bit |
+   |                                   |                                           |
+   |                                   | SUSE Linux Enterprise Server 15 SP4 64bit |
+   |                                   |                                           |
+   |                                   | SUSE Linux Enterprise Server 15 SP3 64bit |
+   |                                   |                                           |
+   |                                   | SUSE Linux Enterprise Server 15 SP2 64bit |
+   |                                   |                                           |
+   |                                   | SUSE Linux Enterprise Server 15 SP1 64bit |
    |                                   |                                           |
    |                                   | SUSE Linux Enterprise Server 15 64bit     |
    |                                   |                                           |
@@ -85,8 +100,6 @@ If the OS cannot be identified or is not supported:
    |                                   | SUSE Linux Enterprise Server 11 SP3 64bit |
    |                                   |                                           |
    |                                   | SUSE Linux Enterprise Server 11 SP3 32bit |
-   |                                   |                                           |
-   |                                   | SUSE Linux Enterprise Server 11 SP1 32bit |
    +-----------------------------------+-------------------------------------------+
    | Oracle Linux                      | Oracle Linux Server release 7.6 64bit     |
    |                                   |                                           |
@@ -112,7 +125,25 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Oracle Linux Server release 6.5 64bit     |
    +-----------------------------------+-------------------------------------------+
-   | Red Hat                           | Red Hat Linux Enterprise 8.0 64bit        |
+   | Red Hat                           | Red Hat Linux Enterprise 9.1 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 9.0 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.7 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.6 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.5 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.4 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.3 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.2 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.1 64bit        |
+   |                                   |                                           |
+   |                                   | Red Hat Linux Enterprise 8.0 64bit        |
    |                                   |                                           |
    |                                   | Red Hat Linux Enterprise 7.6 64bit        |
    |                                   |                                           |
@@ -146,7 +177,9 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Red Hat Linux Enterprise 6.4 32bit        |
    +-----------------------------------+-------------------------------------------+
-   | Ubuntu                            | Ubuntu 20.04 Server 64bit                 |
+   | Ubuntu                            | Ubuntu 22.04 Server 64bit                 |
+   |                                   |                                           |
+   |                                   | Ubuntu 20.04 Server 64bit                 |
    |                                   |                                           |
    |                                   | Ubuntu 19.04 Server 64bit                 |
    |                                   |                                           |
@@ -192,6 +225,14 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | openSUSE 42.1 64bit                       |
    |                                   |                                           |
+   |                                   | openSUSE 15.5 64bit                       |
+   |                                   |                                           |
+   |                                   | openSUSE 15.4 64bit                       |
+   |                                   |                                           |
+   |                                   | openSUSE 15.3 64bit                       |
+   |                                   |                                           |
+   |                                   | openSUSE 15.2 64bit                       |
+   |                                   |                                           |
    |                                   | openSUSE 15.1 64bit                       |
    |                                   |                                           |
    |                                   | openSUSE 15.0 64bit                       |
@@ -200,7 +241,17 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | openSUSE 11.3 64bit                       |
    +-----------------------------------+-------------------------------------------+
-   | CentOS                            | CentOS 8.0 64bit                          |
+   | CentOS                            | CentOS 8.5 64bit                          |
+   |                                   |                                           |
+   |                                   | CentOS 8.4 64bit                          |
+   |                                   |                                           |
+   |                                   | CentOS 8.3 64bit                          |
+   |                                   |                                           |
+   |                                   | CentOS 8.2 64bit                          |
+   |                                   |                                           |
+   |                                   | CentOS 8.1 64bit                          |
+   |                                   |                                           |
+   |                                   | CentOS 8.0 64bit                          |
    |                                   |                                           |
    |                                   | CentOS 7.9 64bit                          |
    |                                   |                                           |
@@ -252,7 +303,51 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | CentOS 6.3 32bit                          |
    +-----------------------------------+-------------------------------------------+
-   | Debian                            | Debian GNU/Linux 10.0.0 64bit             |
+   | Debian                            | Debian GNU/Linux 12.0.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.7.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.6.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.5.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.4.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.3.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.2.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.1.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 11.0.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.13.0 64bit            |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.12.0 64bit            |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.11.0 64bit            |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.10.0 64bit            |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.9.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.8.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.7.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.6.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.5.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.4.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.3.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.2.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.1.0 64bit             |
+   |                                   |                                           |
+   |                                   | Debian GNU/Linux 10.0.0 64bit             |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 9.3.0 64bit              |
    |                                   |                                           |
@@ -269,10 +364,26 @@ If the OS cannot be identified or is not supported:
    |                                   | Debian GNU/Linux 8.4.0 64bit              |
    |                                   |                                           |
    |                                   | Debian GNU/Linux 8.2.0 64bit              |
-   |                                   |                                           |
-   |                                   | Debian GNU/Linux 8.1.0 64bit              |
    +-----------------------------------+-------------------------------------------+
-   | Fedora                            | Fedora 30 64bit                           |
+   | Fedora                            | Fedora 39 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 38 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 37 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 36 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 35 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 34 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 33 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 32 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 31 64bit                           |
+   |                                   |                                           |
+   |                                   | Fedora 30 64bit                           |
    |                                   |                                           |
    |                                   | Fedora 29 64bit                           |
    |                                   |                                           |
@@ -290,7 +401,17 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | Fedora 22 64bit                           |
    +-----------------------------------+-------------------------------------------+
-   | EulerOS                           | EulerOS 2.9 64bit                         |
+   | EulerOS                           | EulerOS 2.12 64bit                        |
+   |                                   |                                           |
+   |                                   | EulerOS 2.11 64bit                        |
+   |                                   |                                           |
+   |                                   | EulerOS 2.10 64bit                        |
+   |                                   |                                           |
+   |                                   | EulerOS 2.9 64bit                         |
+   |                                   |                                           |
+   |                                   | EulerOS 2.8 64bit                         |
+   |                                   |                                           |
+   |                                   | EulerOS 2.7 64bit                         |
    |                                   |                                           |
    |                                   | EulerOS 2.5 64bit                         |
    |                                   |                                           |
@@ -300,13 +421,65 @@ If the OS cannot be identified or is not supported:
    |                                   |                                           |
    |                                   | EulerOS 2.1 64bit                         |
    +-----------------------------------+-------------------------------------------+
-   | CoreOS                            | CoreOS 1068.10.0                          |
+   | openEuler                         | openEuler 22.03 SP1 64bit                 |
    |                                   |                                           |
-   |                                   | CoreOS 1010.5.0                           |
+   |                                   | openEuler 22.03 64bit                     |
    |                                   |                                           |
-   |                                   | CoreOS 1298.6.0                           |
+   |                                   | openEuler 20.03 SP3 64bit                 |
+   |                                   |                                           |
+   |                                   | openEuler 20.03 SP2 64bit                 |
+   |                                   |                                           |
+   |                                   | openEuler 20.03 SP1 64bit                 |
+   |                                   |                                           |
+   |                                   | openEuler 20.03 64bit                     |
    +-----------------------------------+-------------------------------------------+
-   | openEuler                         | openEuler 20.03 64bit                     |
+   | CentOS Stream                     | 9.6 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.6 64bit                                 |
+   +-----------------------------------+-------------------------------------------+
+   | Rocky LInux                       | 9.2 64bit                                 |
+   |                                   |                                           |
+   |                                   | 9.1 64bit                                 |
+   |                                   |                                           |
+   |                                   | 9.0 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.8 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.7 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.6 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.5 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.4 64bit                                 |
+   |                                   |                                           |
+   |                                   | 8.3 64bit                                 |
+   +-----------------------------------+-------------------------------------------+
+   | FreeBSD                           | 13.2 64bit                                |
+   |                                   |                                           |
+   |                                   | 13.1 64bit                                |
+   |                                   |                                           |
+   |                                   | 13.0 64bit                                |
+   |                                   |                                           |
+   |                                   | 12.4 64bit                                |
+   |                                   |                                           |
+   |                                   | 12.3 64bit                                |
+   |                                   |                                           |
+   |                                   | 12.2 64bit                                |
+   |                                   |                                           |
+   |                                   | 12.1 64bit                                |
+   |                                   |                                           |
+   |                                   | 12.0 64bit                                |
+   |                                   |                                           |
+   |                                   | 11.4 64bit                                |
+   |                                   |                                           |
+   |                                   | 11.3 64bit                                |
+   |                                   |                                           |
+   |                                   | 11.2 64bit                                |
+   |                                   |                                           |
+   |                                   | 11.1 64bit                                |
+   |                                   |                                           |
+   |                                   | 11.0 64bit                                |
    +-----------------------------------+-------------------------------------------+
 
 Related Operations

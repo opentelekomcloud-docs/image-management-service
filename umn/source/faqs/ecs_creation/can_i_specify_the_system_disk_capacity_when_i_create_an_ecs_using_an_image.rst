@@ -5,8 +5,8 @@
 Can I Specify the System Disk Capacity When I Create an ECS Using an Image?
 ===========================================================================
 
-Yes. However, the value must be smaller than 30,768 GB but no less than the system disk capacity in the image.
+Yes, but you cannot create a system disk smaller than the original and the maximum allowed is 30,768 GB.
 
 .. note::
 
-   Ensure that your ECS OS supports the system disk capacity you specified.
+   Ensure that your ECS OS can support the system disk size you specified.

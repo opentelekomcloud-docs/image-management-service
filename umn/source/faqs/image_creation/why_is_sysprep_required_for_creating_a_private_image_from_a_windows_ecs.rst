@@ -8,22 +8,21 @@ Why Is Sysprep Required for Creating a Private Image from a Windows ECS?
 Why Is Sysprep Required?
 ------------------------
 
-For a user that needs to be added to a domain and uses the domain account to log in to Windows, Sysprep is required before a private image is created. Otherwise, the image will contain information about the original ECS, especially the SID. ECSs with the same SID cannot be added to a domain. If Windows does not require any user or ECS to be added to a domain, you do not need to run Sysprep.
+`Sysprep <https://technet.microsoft.com/zh-cn/library/cc721940(v=ws.10).aspx>`__ is used to generalize images. It removes server-specific information, like the security identifier (SID), from an image so that ECSs created from this image can have unique SIDs in a domain. If your windows ECSs do not need to join a domain, Sysprep is not required.
 
 .. caution::
 
-   -  Before running Sysprep, ensure that Windows is activated.
-   -  For details about Sysprep, visit https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-vista/cc721940(v=ws.10)?redirectedfrom=MSDN.
+   Before running Sysprep, ensure that Windows is activated.
 
 Restrictions on Running Sysprep
 -------------------------------
 
-Sysprep can only be used for configuring a new Windows installation. You can run Sysprep multiple times to install and configure Windows. However, you can reset and activate a Windows OS only three times, and you are not allowed to use Sysprep to re-configure an existing Windows OS.
+Sysprep can only be used to configure new installations of Windows and not to reconfigure an existing installation. You can run Sysprep as many times as required to build and to configure your installation of Windows. However, you can reset Windows activation only up to three times.
 
 .. note::
 
-   In the Windows command line, enter the following command to check how many times you can run Sysprep in the displayed **Windows Script Host** dialog box:
+   In the Windows command line, run the following command to check how many times you can run Sysprep:
 
    **slmgr /dlv**
 
-   If the value of **Remaining Windows rearm count** is **0**, you cannot run Sysprep.
+   In the displayed **Windows Script Host** dialog box, if the value of **Remaining Windows rearm count** is **0**, you cannot run Sysprep.

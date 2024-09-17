@@ -5,11 +5,11 @@
 What Do I Do If a Linux Image File Is Not Pre-Configured When I Use It to Register a Private Image?
 ===================================================================================================
 
-If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0030713198__table85212269215>` before it is exported from the original platform, configure it by referring to :ref:`Figure 1 <en-us_topic_0030713211__fig18196115421120>`.
+If an image file is not configured as instructed in :ref:`Table 1 <en-us_topic_0030713198__table184016916467>` before it is exported from the original platform, you can use it to create an ECS, configure the ECS, and use the ECS to create a private image. :ref:`Figure 1 <en-us_topic_0030713211__fig18196115421120>` shows the process.
 
 .. caution::
 
-   The proper running of ECSs depends on the KVM driver. If no such a driver is installed, the performance of ECSs will be affected and some functions will be unavailable. Ensure that the KVM driver has been installed for the image file before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
+   An ECS can run properly only after KVM drivers are installed on it. If no such drivers are installed, the performance of the ECS will be affected and some functions will be unavailable. Ensure that KVM drivers have been installed for the image file before it is exported from the original platform. Otherwise, the ECSs created from the image will fail to start.
 
    For details, see :ref:`Installing Native KVM Drivers <en-us_topic_0000001120952155>`.
 
@@ -60,9 +60,9 @@ Create an ECS from the private image.
 
    For details, see *Elastic Cloud Server User Guide*.
 
-#. Perform the following steps to check whether the private image has been pre-configured:
+#. Check the ECS to see if the private image used to create the ECS has been pre-configured.
 
-   a. Check whether the ECS can be successfully started. If the start succeeds, the KVM driver has been installed for the external image file on the original platform or the driver has been automatically installed for the private image on the cloud platform. If the start failed, install the KVM driver as needed for the image file and start from :ref:`Step 1: Upload the Image File <en-us_topic_0030713211__section1049514242043>` again.
+   a. Check whether the ECS can be successfully started. If the start succeeds, KVM drivers have been installed for the external image file on the original platform or the drivers have been automatically installed for the private image on the cloud platform. If the start failed, install KVM drivers for the image file and start from :ref:`Step 1: Upload the Image File <en-us_topic_0030713211__section1049514242043>` again.
    b. Check whether you can log in to the ECS using your configured password or key. If you can, Cloud-Init has been installed. If you cannot, use the password or key contained in the image file to log in to the ECS and install Cloud-Init as instructed in :ref:`Installing Cloud-Init <en-us_topic_0030730603>`.
    c. Check the network configuration by referring to :ref:`Step 4: Configure the ECS <en-us_topic_0030713211__section51410413191>`.
 
@@ -86,7 +86,7 @@ Remotely log in to the ECS created in :ref:`Step 3: Create an ECS <en-us_topic_0
 
    -  Change the disk identifier in the GRUB configuration file to UUID. For details, see :ref:`Changing the Disk Identifier in the GRUB Configuration File to UUID <en-us_topic_0086020895>`.
    -  Change the disk identifier in the fstab file to UUID. For details, see :ref:`Changing the Disk Identifier in the fstab File to UUID <en-us_topic_0086024961>`.
-   -  Clear the automatic attachment information of non-system disks in the **/etc/fstab** file to prevent impacts on subsequent data disk attachment. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
+   -  Clear the automatic mount configuration of non-system disks in the **/etc/fstab** file. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
 
 #. (Optional) Configure value-added functions.
 

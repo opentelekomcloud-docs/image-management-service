@@ -5,28 +5,26 @@
 Installing Special Linux Drivers
 ================================
 
-Scenarios
----------
+Before using a private image to create GPU-accelerated ECSs, install a GPU driver for the image.
 
-Before using some types of ECSs to create private images, you need to install special drivers on the ECSs.
+There are two types of GPU drivers: GRID and Tesla.
 
-NVIDIA Driver
--------------
+-  To use graphics acceleration, such as OpenGL, DirectX, or Vulkan, install a GRID driver and separately purchase and configure a GRID license. The GRID driver with a vDWS license also supports CUDA for both computing and graphics acceleration.
 
-If you want to use the private image to create P1 ECSs, install the NVIDIA driver for the image to enable computing acceleration. For details, see :ref:`How Do I Install the NVIDIA Driver on a P1 ECS? <en-us_topic_0093842586>`
+   -  A graphics-accelerated (G series) ECS created from a Linux public image does not have a GRID driver installed by default. To install a GRID driver, see `Installing a GRID Driver on a GPU-accelerated ECS <https://docs.otc.t-systems.com/elastic-cloud-server/umn/instances/optional_installing_a_driver_and_toolkit/installing_a_grid_driver_on_a_gpu-accelerated_ecs.html>`__.
+   -  To install a GRID driver on a GPU-accelerated ECS created from a private image, see `Installing a GRID Driver on a GPU-accelerated ECS <https://docs.otc.t-systems.com/elastic-cloud-server/umn/instances/optional_installing_a_driver_and_toolkit/installing_a_grid_driver_on_a_gpu-accelerated_ecs.html>`__.
 
-InfiniBand NIC Driver
----------------------
+-  To use computing acceleration, install a Tesla driver.
 
-#. If you want to use the private image to create H2 ECSs, install the InfiniBand NIC driver for the image. Download the required version (4.2-1.0.0.0) of InfiniBand NIC driver from the official website and install the driver by following the instructions provided by Mellanox.
+   -  A computing-accelerated (P series) ECS created from a Linux public image does not have a Tesla driver installed by default. To install a Tesla driver, see `Installing a Tesla Driver and CUDA Toolkit on a GPU-accelerated ECS <https://docs.otc.t-systems.com/elastic-cloud-server/umn/instances/optional_installing_a_driver_and_toolkit/installing_a_tesla_driver_and_cuda_toolkit_on_a_gpu-accelerated_ecs.html>`__.
+   -  To install a Tesla driver on a GPU-accelerated ECS created from a private image, see `Installing a Tesla Driver and CUDA Toolkit on a GPU-accelerated ECS <https://docs.otc.t-systems.com/elastic-cloud-server/umn/instances/optional_installing_a_driver_and_toolkit/installing_a_tesla_driver_and_cuda_toolkit_on_a_gpu-accelerated_ecs.html>`__.
 
-   -  InfiniBand NIC: **Mellanox Technologies ConnectX-4 Infiniband HBA (MCX455A-ECAT)**
-   -  Mellanox official website: http://www.mellanox.com/
-   -  NIC driver download path: https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/
-   -  H2 ECSs: `High-Performance Computing ECSs <https://docs.otc.t-systems.com/en-us/usermanual/ecs/en-us_topic_0035470100.html>`__
+.. table:: **Table 1** Acceleration supported by GPU drivers
 
-#. If you want to use the private image to create HL1 ECSs, install the InfiniBand NIC driver for the image. Download the required version (4.2-1.0.0.0) of InfiniBand NIC driver from the official website and install the driver by following the instructions provided by Mellanox.
-
-   -  InfiniBand NIC: **Mellanox Technologies ConnectX-4 Infiniband HBA (MCX455A-ECAT)**
-   -  Mellanox official website: http://www.mellanox.com/
-   -  HL1 ECS: `High-Performance Computing ECSs <https://docs.otc.t-systems.com/en-us/usermanual/ecs/en-us_topic_0035470100.html>`__
+   +--------+--------------+-----------+---------------+---------------+---------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Driver | License      | CUDA      | OpenGL        | DirectX       | Vulkan        | Application Scenario                                       | Description                                                                                                                        |
+   +========+==============+===========+===============+===============+===============+============================================================+====================================================================================================================================+
+   | GRID   | Required     | Supported | Supported     | Supported     | Supported     | 3D rendering, graphics workstation, and game acceleration  | The GRID driver must be paid and requires a license to accelerate graphics and image applications.                                 |
+   +--------+--------------+-----------+---------------+---------------+---------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Tesla  | Not required | Supported | Not supported | Not supported | Not supported | Scientific computing, deep learning training and inference | The Tesla driver is downloaded free of charge and usually used with NVIDIA CUDA SDKs to accelerate general-computing applications. |
+   +--------+--------------+-----------+---------------+---------------+---------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+

@@ -5,4 +5,4 @@
 How Can I Apply a Private Image to an Existing ECS?
 ===================================================
 
--  You can change the OS of the ECS later. When you change the OS, select the created private image. For details about how to change the OS, see "Changing the OS" in *Elastic Cloud Server User Guide*.
+-  You can use the image to change the ECS OS. When you change the OS, select that image. For details about how to change the OS, see "Changing the OS" in *Elastic Cloud Server User Guide*.
