@@ -181,7 +181,11 @@ Configure Cloudbase-Init
 
       Change the value of **user_password_length** to customize the password length.
 
-   g. (Optional) Add the following configuration item to ensure that time synchronization from BIOS persists through system restarts:
+   g. (Optional) Add the following configuration item to disable password changing upon first login:
+
+      **first_logon_behaviour=no**
+
+   h. (Optional) Add the following configuration item to ensure that time synchronization from BIOS persists through system restarts:
 
       **real_time_clock_utc=true**
 

@@ -22,7 +22,7 @@ Tool and Costs
    |                       |                                                                                 |                       |
    |                       | You can obtain it from:                                                         |                       |
    |                       |                                                                                 |                       |
-   |                       | https://obs-20181128.ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |                       |
+   |                       | https://obs-20181128-ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |                       |
    +-----------------------+---------------------------------------------------------------------------------+-----------------------+
 
 Constraints
@@ -52,7 +52,7 @@ Procedure
       +--------------------+---------------------------------------------------------------------------------+
       | Tool Package       | How to Obtain                                                                   |
       +====================+=================================================================================+
-      | quick-import-tools | https://obs-20181128.ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |
+      | quick-import-tools | https://obs-20181128-ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |
       +--------------------+---------------------------------------------------------------------------------+
 
    .. note::

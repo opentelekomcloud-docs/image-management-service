@@ -43,7 +43,7 @@ Procedure
          +--------------------+---------------------------------------------------------------------------------+
          | Tool Package       | How to Obtain                                                                   |
          +====================+=================================================================================+
-         | quick-import-tools | https://obs-20181128.ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |
+         | quick-import-tools | https://obs-20181128-ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |
          +--------------------+---------------------------------------------------------------------------------+
 
    b. Ensure that JDK has been installed in the current environment.
