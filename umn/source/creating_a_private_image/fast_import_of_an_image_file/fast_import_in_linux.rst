@@ -48,7 +48,7 @@ Procedure
       +--------------------+---------------------------------------------------------------------------------+
       | Tool Package       | How to Obtain                                                                   |
       +====================+=================================================================================+
-      | quick-import-tools | https://obs-20181128.ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |
+      | quick-import-tools | https://obs-20181128-ims.obs.eu-de.otc.t-systems.com/DT-image-convert-tools.zip |
       +--------------------+---------------------------------------------------------------------------------+
 
 #. Use **qemu-img-hw** to convert the image format.
