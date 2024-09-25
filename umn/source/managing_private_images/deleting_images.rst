@@ -14,6 +14,7 @@ You can delete private images that will no longer be used.
 -  After a private image is deleted, it cannot be used to create ECSs or EVS disks.
 -  After a private image is deleted, ECSs created from the image can still be used and are still billed. However, the OS cannot be reinstalled for the ECSs and ECSs with the same configuration cannot be created.
 -  Deleting the source image of a replicated image has no effect on the replicated image. Similarly, deleting a replicated image has no effect on its source.
+-  If a full-ECS image is still being created when you delete it, some intermediate backups may fail to be deleted. To avoid generating any unnecessary expenditures, you can delete them on the CBR console.
 
 Procedure
 ---------
