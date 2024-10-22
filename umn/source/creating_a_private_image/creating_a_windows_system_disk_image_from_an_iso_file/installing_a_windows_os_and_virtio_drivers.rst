@@ -158,7 +158,7 @@ Procedure
 
          You are required to set a password for the OS user.
 
-         Supported special characters include\ ``!@$%^-_=+[{}]:,./?``
+         Supported special characters include ``!@$%^-_=+[{}]:,./?``
 
 
       .. figure:: /_static/images/en-us_image_0146478951.png
