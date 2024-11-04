@@ -85,7 +85,7 @@ Other
 -----
 
 -  Currently, images with data disks cannot be created. The image file must contain only a system disk, and the system disk size must be between 1 GB and 1 TB.
--  The initial password in the image file must contain uppercase letters, lowercase letters, digits, and special characters ``!@$%^-_=+[{}]:,./?``.
+-  The initial password in the image file must contain uppercase letters, lowercase letters, digits, and special characters (``!@$%^-_=+[{}]:,./?``).
 -  The boot partition and system partition must be on the same disk.
 -  Generally, the boot mode is BIOS in an image. Some OS images support the UEFI boot mode. For details, see "OSs Supporting UEFI Boot Mode" in *Image Service Management User Guide*.
 -  The image file cannot be encrypted, or ECSs created from the registered image may not work properly.
