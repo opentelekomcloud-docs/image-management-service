@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'ims-best-practice.tex',
-     u'Image Management Service - Best Practice',
+    u'Image Management Service - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 

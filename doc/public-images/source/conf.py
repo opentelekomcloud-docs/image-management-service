@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'ims-public-images.tex',
-     u'Image Management Service - Public Image Introduction',
+    u'Image Management Service - Public Image Introduction',
      u'OpenTelekomCloud', 'manual'),
 ]
 

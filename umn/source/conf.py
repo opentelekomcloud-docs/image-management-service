@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'ims-umn.tex',
-     u'Image Management Service - User Guide',
+    u'Image Management Service - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
