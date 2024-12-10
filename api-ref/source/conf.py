@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'ims-api-ref.tex',
-     u'Image Management Service - API Reference',
+    u'Image Management Service - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 

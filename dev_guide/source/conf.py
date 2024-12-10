@@ -109,8 +109,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'ims-dev-guide.tex',
-     u'Image Management Service - Developer Guide',
+     'ims-dev-guide.tex',u'Image Management Service - Developer Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
