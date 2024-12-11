@@ -4,6 +4,13 @@
     default-branch: main
     templates:
       - helpcenter-base-jobs
+    vars:
+      sphinx_pdf_files:
+        - ims-umn.pdf
+        - ims-api-ref.pdf
+        - ims-dev-guide.pdf
+        - ims-public-images.pdf
+        - ims-best-practice.pdf
     check:
       jobs:
         - noop
