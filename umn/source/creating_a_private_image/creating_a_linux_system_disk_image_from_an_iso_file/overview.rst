@@ -33,7 +33,7 @@ The procedure is as follows:
 
 #. Install an OS and necessary drivers for the temporary ECS and configure related settings.
 
-   The operations include installing an OS, installing native Xen and KVM drivers, configuring NIC attributes, and deleting files from the network rule directory. For details, see :ref:`Installing a Linux OS <en-us_topic_0146480989>` and :ref:`1 <en-us_topic_0146480990__li249171184717>` in :ref:`Configuring the ECS and Creating a Linux System Disk Image <en-us_topic_0146480990>`.
+   The operations include installing an OS, installing native Xen and KVM drivers, configuring NICs, and deleting files from the network rule directory. For details, see :ref:`Installing a Linux OS <en-us_topic_0146480989>` and :ref:`1 <en-us_topic_0146480990__li249171184717>` in :ref:`Configuring the ECS and Creating a Linux System Disk Image <en-us_topic_0146480990>`.
 
 #. Create a system disk image from the temporary ECS.
 

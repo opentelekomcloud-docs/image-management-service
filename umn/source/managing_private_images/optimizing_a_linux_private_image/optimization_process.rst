@@ -5,7 +5,7 @@
 Optimization Process
 ====================
 
-A Linux ECS can run properly only when native KVM (VirtIO) drivers have been installed on it and the disk ID in its GRUB configuration file and fstab file has been changed to UUID.
+A Linux ECS can run properly only when native KVM (VirtIO) drivers have been installed on it and disk identifiers in its GRUB file and fstab file have been changed to UUID.
 
 Preparations
 ------------
@@ -21,13 +21,13 @@ Preparations
 Process
 -------
 
-#. Change the disk ID in the GRUB configuration file to UUID.
+#. Change disk identifiers in the GRUB file to UUID.
 
-   For details, see :ref:`Changing the Disk Identifier in the GRUB Configuration File to UUID <en-us_topic_0086020895>`.
+   For details, see :ref:`Changing Disk Identifiers in the GRUB File to UUID <en-us_topic_0086020895>`.
 
-#. Change the disk ID in the fstab file to UUID.
+#. Change disk identifiers in the fstab file to UUID.
 
-   For details, see :ref:`Changing the Disk Identifier in the fstab File to UUID <en-us_topic_0086024961>`.
+   For details, see :ref:`Changing Disk Identifiers in the fstab File to UUID <en-us_topic_0086024961>`.
 
 #. Install native KVM drivers.
 

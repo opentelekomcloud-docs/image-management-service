@@ -16,7 +16,7 @@ Prerequisites
 -  Cloud-Init has been installed.
 -  An EIP has been bound to the ECS.
 -  You have logged in to the ECS.
--  The ECS obtains its IP address using DHCP.
+-  The ECS uses DHCP to obtain IP addresses.
 
 Procedure
 ---------

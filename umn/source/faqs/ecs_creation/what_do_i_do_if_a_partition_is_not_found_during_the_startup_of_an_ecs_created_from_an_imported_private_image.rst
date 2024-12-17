@@ -8,7 +8,7 @@ What Do I Do If a Partition Is Not Found During the Startup of an ECS Created fr
 Cause
 -----
 
-Disk partition IDs are changed after the cross-platform image import. As a result, no partition can be found at startup. In this case, you need to change disk partition IDs in the image to UUIDs.
+Disk partition IDs are changed after the cross-platform image import. As a result, no partition can be found at startup. In this case, you need to change disk partition IDs in the image to UUID.
 
 Solution
 --------
@@ -126,7 +126,7 @@ openSUSE 13.2 is used as an example.
 
    The system boot configuration file varies depending on the OS. Confirm the boot configuration file of the current OS.
 
-   -  GRUB configuration file
+   -  GRUB file
 
       -  /boot/grub/grub.conf
       -  /boot/grub/menu.lst

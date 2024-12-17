@@ -63,7 +63,7 @@ Step 3: Create an ECS
 
    a. Check whether the ECS can be successfully started. If it can, Guest OS drivers have been installed for the image file on the original platform or the drivers have been automatically installed for the private image on the cloud platform. If the ECS cannot start up, install Guest OS drivers for the image file on the original platform and go back to :ref:`Step 1: Upload the Image File <en-us_topic_0030713185__section1049514242043>`.
    b. Check whether you can log in to the ECS using your configured password or key. If you can, Cloudbase-Init has been installed. If you cannot, use the password or key contained in the image file to log in to the ECS and install Cloudbase-Init as instructed in :ref:`Installing and Configuring Cloudbase-Init <en-us_topic_0030730602>`.
-   c. Check whether NICs are set to DHCP by referring to :ref:`2 <en-us_topic_0030713185__li19785161610328>` in :ref:`Step 4: Configure the ECS <en-us_topic_0030713185__section1170711344016>`.
+   c. Check whether DHCP is configured by referring to :ref:`2 <en-us_topic_0030713185__li19785161610328>` in :ref:`Step 4: Configure the ECS <en-us_topic_0030713185__section1170711344016>`.
    d. Use MSTSC to log in to the ECS. If the login fails, enable remote desktop connection by referring to :ref:`3 <en-us_topic_0030713185__li174414479612>` in :ref:`Step 4: Configure the ECS <en-us_topic_0030713185__section1170711344016>`.
 
    If the ECS meets the preceding requirements, the private image has been pre-configured. Skip :ref:`Step 4: Configure the ECS <en-us_topic_0030713185__section1170711344016>` and :ref:`Step 5: Create a Private Image from the ECS <en-us_topic_0030713185__section10407615356>`.
@@ -79,7 +79,7 @@ Remotely log in to the ECS created in :ref:`Step 3: Create an ECS <en-us_topic_0
 
 #. .. _en-us_topic_0030713185__li19785161610328:
 
-   Check whether NICs are set to DHCP. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Setting the NIC to DHCP <en-us_topic_0030713152>`.
+   Check whether DHCP is configured. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Configuring DHCP <en-us_topic_0030713152>`.
 
 #. .. _en-us_topic_0030713185__li174414479612:
 

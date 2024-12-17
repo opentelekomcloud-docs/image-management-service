@@ -8,7 +8,7 @@ Why Is Sysprep Required for Creating a Private Image from a Windows ECS?
 Why Is Sysprep Required?
 ------------------------
 
-`Sysprep <https://technet.microsoft.com/zh-cn/library/cc721940(v=ws.10).aspx>`__ is used to generalize images. It removes server-specific information, like the security identifier (SID), from an image so that ECSs created from this image can have unique SIDs in a domain. If your windows ECSs do not need to join a domain, Sysprep is not required.
+`Sysprep <https://technet.microsoft.com/zh-cn/library/cc721940(v=ws.10).aspx>`__ is used to generalize images. It removes server-specific information, like the security identifier (SID), from an image so that ECSs created from this image can have unique SIDs in a domain. If your windows ECSs do not need to be joined to a domain, Sysprep is not required.
 
 .. caution::
 

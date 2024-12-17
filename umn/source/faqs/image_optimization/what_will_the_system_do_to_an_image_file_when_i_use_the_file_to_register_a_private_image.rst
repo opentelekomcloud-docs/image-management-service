@@ -11,8 +11,8 @@ Linux
 -----
 
 -  Check whether any PV drivers exist. If yes, the system deletes them.
--  Modify the **grub** and **syslinux** configuration files to add OS kernel boot parameters and change disk partition names to UUIDs.
--  Change disk partition names in the **/etc/fstab** file to UUIDs.
+-  Modify the **grub** and **syslinux** configuration files to add OS kernel boot parameters and change disk partition names to UUID.
+-  Change disk partition names in the **/etc/fstab** file to UUID.
 -  Check whether the initrd file has IDE driver. If no, the system will load the IDE driver.
 -  Modify the X Window configuration file **/etc/X11/xorg.conf** to prevent display failures.
 -  Delete services of VMware tools.

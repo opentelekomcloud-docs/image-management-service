@@ -32,7 +32,7 @@ If you want to share a private image with another tenant, the procedure is as fo
 
    After accepting the image, the tenant can use it to create ECSs.
 
-Related FAQs
-------------
+FAQ
+---
 
-If you have any questions, see :ref:`General Sharing FAQs <en-us_topic_0183293890>`.
+If you have any questions, see :ref:`General Sharing FAQ <en-us_topic_0183293890>`.

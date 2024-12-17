@@ -5,7 +5,7 @@
 Windows Operations
 ==================
 
--  :ref:`Setting the NIC to DHCP <en-us_topic_0030713152>`
+-  :ref:`Configuring DHCP <en-us_topic_0030713152>`
 -  :ref:`Enabling Remote Desktop Connection <en-us_topic_0030713155>`
 -  :ref:`Installing and Configuring Cloudbase-Init <en-us_topic_0030730602>`
 -  :ref:`Running Sysprep <en-us_topic_0093887081>`
@@ -15,7 +15,7 @@ Windows Operations
    :maxdepth: 1
    :hidden: 
 
-   setting_the_nic_to_dhcp
+   configuring_dhcp
    enabling_remote_desktop_connection
    installing_and_configuring_cloudbase-init
    running_sysprep

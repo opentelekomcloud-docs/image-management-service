@@ -19,4 +19,4 @@ Application Scenarios
 
 -  Backing up server environments
 
-   Create an image from an ECS to back up the ECS. If the ECS breaks down due to software faults, you can use the image to restore the ECS.
+   Create an image from an ECS to back up the ECS. If the ECS breaks down due to software faults, you can use the image to restore it.

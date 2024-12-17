@@ -60,7 +60,7 @@ Before creating a private image from an ECS:
 
 -  Ensure that the ECS is in the **Running** or **Stopped** state.
 
--  Check network configuration of the ECS and ensure that DHCP is configured for the NICs. For details, see :ref:`Setting the NIC to DHCP <en-us_topic_0030713176>`.
+-  Check network configuration of the ECS and ensure that DHCP is configured for the NICs. For details, see :ref:`Configuring DHCP <en-us_topic_0030713176>`.
 
 -  Install special drivers. The normal running and advanced functions of some ECSs depend on certain drivers. For example, P1 ECSs depend on the NVIDIA driver. For details, see :ref:`Installing Special Linux Drivers <en-us_topic_0082002007>`.
 

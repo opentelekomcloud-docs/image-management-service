@@ -79,13 +79,13 @@ Remotely log in to the ECS created in :ref:`Step 3: Create an ECS <en-us_topic_0
 #. Configure the network.
 
    -  Run the **ifconfig** command to check whether the private IP address of the ECS is the same as that displayed on the console. If they are inconsistent, delete files from the network rule directory as instructed in :ref:`Deleting Files from the Network Rule Directory <en-us_topic_0069904570>`.
-   -  Check whether NICs are set to DHCP. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Setting the NIC to DHCP <en-us_topic_0030713176>`.
+   -  Check whether DHCP is configured. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Configuring DHCP <en-us_topic_0030713176>`.
    -  Run the **service sshd status** command to check whether SSH is enabled. If it is disabled, run the **service sshd start** command to enable it. Ensure that your firewall (for example, Linux iptables) allows SSH access.
 
 #. Configure a file system.
 
-   -  Change the disk identifier in the GRUB configuration file to UUID. For details, see :ref:`Changing the Disk Identifier in the GRUB Configuration File to UUID <en-us_topic_0086020895>`.
-   -  Change the disk identifier in the fstab file to UUID. For details, see :ref:`Changing the Disk Identifier in the fstab File to UUID <en-us_topic_0086024961>`.
+   -  Change disk identifiers in the GRUB file to UUID. For details, see :ref:`Changing Disk Identifiers in the GRUB File to UUID <en-us_topic_0086020895>`.
+   -  Change disk identifiers in the fstab file to UUID. For details, see :ref:`Changing Disk Identifiers in the fstab File to UUID <en-us_topic_0086024961>`.
    -  Clear the automatic mount configuration of non-system disks in the **/etc/fstab** file. For details, see :ref:`Detaching Data Disks from an ECS <en-us_topic_0030713179>`.
 
 #. (Optional) Configure value-added functions.

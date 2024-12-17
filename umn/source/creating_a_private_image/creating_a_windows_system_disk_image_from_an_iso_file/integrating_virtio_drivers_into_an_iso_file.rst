@@ -24,7 +24,7 @@ You have obtained an ISO file.
 
 .. note::
 
-   The ISO file name can contain only letters, digits, hyphens (-), and underscores (_). If the name does not meet the requirements, change it.
+   The ISO file name can contain only letters, digits, hyphens (-), and underscores (_).
 
 AnyBurn
 -------

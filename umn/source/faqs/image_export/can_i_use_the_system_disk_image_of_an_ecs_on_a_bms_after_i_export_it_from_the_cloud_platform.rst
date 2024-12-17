@@ -5,4 +5,8 @@
 Can I Use the System Disk Image of an ECS on a BMS After I Export It from the Cloud Platform?
 =============================================================================================
 
-No. The system disk image of an ECS is a VM file that contains a system running environment and does not have an installation boot program. So, it cannot be used on a BMS.
+No.
+
+The system disk image of an ECS is a VM file that contains a system running environment and does not have an installation boot program. So, it cannot be used on a BMS.
+
+For how to create a BMS private image, see *Bare Metal Server User Guide*.

@@ -8,7 +8,7 @@ Running Sysprep
 Scenarios
 ---------
 
-Running Sysprep ensures that an ECS has a unique SID after it is added to a domain.
+Running Sysprep ensures that an ECS has a unique SID after it is joined to a domain.
 
 After installing Cloudbase-Init on an ECS, you need to decide whether the ECS needs to be added to a domain or whether it must have a unique SID. If yes, run Sysprep as instructed in this section.
 

@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0183293890:
 
-General Sharing FAQs
-====================
+General Sharing FAQ
+===================
 
 How Many Tenants Can I Share an Image With?
 -------------------------------------------

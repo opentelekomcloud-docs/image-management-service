@@ -88,7 +88,7 @@ Procedure
 
    c. In the **Image Type and Source** area, select **Import Image** for **Type** and then select **System disk image** or **Data disk image** for **Image Type**.
 
-   d. Select the bucket storing the ZVHD2 or RAW image file and then select the image file. If the image file is in the RAW format, you also need to select its bitmap file.
+   d. Select the bucket storing the ZVHD2 or RAW image file and then select the image file.
 
    e. Select **Enable Fast Create**, and select the sentence following **Image File Preparation**.
 

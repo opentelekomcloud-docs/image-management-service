@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0205267846:
 
-Full-ECS Image FAQs
-===================
+Full-ECS Image FAQ
+==================
 
 What Is a Full-ECS Image?
 -------------------------

@@ -19,7 +19,7 @@ Procedure
 
    Configure the ECS.
 
-   a. Check whether NICs are set to DHCP. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Setting the NIC to DHCP <en-us_topic_0030713152>`.
+   a. Check whether DHCP is configured. If the ECS is configured with a static IP address, change its IP address assignment mode to DHCP as instructed in :ref:`Configuring DHCP <en-us_topic_0030713152>`.
 
    b. Enable remote desktop connection for the ECS as needed. For details about how to enable this function, see :ref:`Enabling Remote Desktop Connection <en-us_topic_0030713155>`.
 

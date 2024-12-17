@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0068002265:
 
-Tagging an Image
-================
+Managing Tags
+=============
 
 Scenarios
 ---------
