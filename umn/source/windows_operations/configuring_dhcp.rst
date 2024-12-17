@@ -2,13 +2,13 @@
 
 .. _en-us_topic_0030713152:
 
-Setting the NIC to DHCP
-=======================
+Configuring DHCP
+================
 
 Scenarios
 ---------
 
-If a private image is created from an ECS or external image file and the VM where the ECS or external image file is located is configured with a static IP address, you need to change the NIC attribute to DHCP so that the new ECSs created from the private image can dynamically obtain an IP address.
+If a private image is created from an ECS or external image file and the VM where the ECS or external image file is located is configured with a static IP address, you need to configure DHCP so that the new ECSs created from the private image can dynamically obtain an IP address.
 
 This section uses Windows Server 2008 R2 as an example to describe how to configure DHCP. For details about how to configure DHCP on ECSs running other OSs, see the relevant OS documentation.
 

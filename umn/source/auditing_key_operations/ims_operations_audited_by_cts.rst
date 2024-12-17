@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0107462581:
 
-IMS Operations Recorded by CTS
-==============================
+IMS Operations Audited by CTS
+=============================
 
 Scenarios
 ---------
@@ -16,7 +16,6 @@ Prerequisites
 -------------
 
 You need to enable CTS before using it. If it is not enabled, IMS operations cannot be recorded. After being enabled, CTS automatically creates a tracker to record all your operations. The tracker stores only the operations of the last seven days. To store the operations for a longer time, store trace files in OBS buckets.
-
 
 IMS Operations Recorded by CTS
 ------------------------------

@@ -35,13 +35,17 @@ Constraints
 
 -  **qemu-img** supports the mutual conversion of image formats VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, and QED.
 
--  ZVHD and ZVHD2 are self-developed image file formats and cannot be identified by **qemu-img**. To convert image files to any of the two formats, use the **qemu-img-hw** tool. For details, see :ref:`Converting the Image Format Using qemu-img-hw <en-us_topic_0171668652>`
+-  ZVHD and ZVHD2 are the cloud's self-developed image file formats and cannot be identified by **qemu-img**. To convert image files to any of the two formats, use the **qemu-img-hw** tool. For details, see :ref:`Converting the Image Format Using qemu-img-hw <en-us_topic_0171668652>`
 
--  When you run a command to convert the format of VHD image files, use VPC to replace VHD. Otherwise, qemu-img cannot identify the image format.
+-  When you run a command to convert the format of VHD image files, replace **vhd** with **vpc**.
 
    For example, to convert a CentOS 6.9 image file from VHD to QCOW2, run the following command:
 
    **qemu-img** **convert** **-p** **-f** **vpc** **-O** **qcow2** **centos6.9.vhd** **centos6.9.qcow2**
+
+   .. note::
+
+      If an error occurs, delete **-f** **vpc**. Then, qemu-img can identify the correct image format.
 
 Windows
 -------

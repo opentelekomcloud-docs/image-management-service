@@ -5,6 +5,8 @@
 Can I Tailor an Image?
 ======================
 
+Yes, but you'd better not.
+
 When you import an external image file, you are advised to import the image that contains the official OS release version. Do not tailor or highly customize the release version. Otherwise, problems may occur.
 
 OS vendors do not always update OS release versions regularly. Some versions are no longer maintained, and these deprecated versions no longer receive security patches. Ensure that you read the update notifications from OS vendors and update your OS so that it runs properly.

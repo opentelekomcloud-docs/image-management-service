@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0171668648:
 
-Permissions Management
-======================
+Using IAM to Grant Access to IMS
+================================
 
 -  :ref:`Creating a User and Granting Permissions <en-us_topic_0171668650>`
 -  :ref:`Creating a Custom Policy <en-us_topic_0171668651>`

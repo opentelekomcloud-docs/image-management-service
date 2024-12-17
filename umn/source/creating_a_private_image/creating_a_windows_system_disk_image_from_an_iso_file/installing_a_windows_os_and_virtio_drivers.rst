@@ -44,9 +44,9 @@ Procedure
 
 
       .. figure:: /_static/images/en-us_image_0000001829550782.png
-         :alt: **Figure 2** Installation confirmation window
+         :alt: **Figure 2** Installation confirmation
 
-         **Figure 2** Installation confirmation window
+         **Figure 2** Installation confirmation
 
    c. Click **Install now**.
 
@@ -58,7 +58,7 @@ Procedure
 
    e. Select **I accept the license terms**, and click **Next**.
 
-      The **Which type of installation do you want?** window is displayed.
+      The **Which type of installation do you want?** dialog box is displayed.
 
 
       .. figure:: /_static/images/en-us_image_0146478947.png
@@ -68,7 +68,7 @@ Procedure
 
    f. Select **Custom (advanced)**.
 
-      The **Where do you want to install Windows?** window is displayed.
+      The **Where do you want to install Windows?** dialog box is displayed.
 
       -  If the system displays a message indicating that no driver is found, go to :ref:`1.g <en-us_topic_0146474784__li2827143133314>`.
 
@@ -150,7 +150,7 @@ Procedure
 
             **Figure 12** Offline disk
 
-   j. The **Installing Windows** window is displayed, and the OS installation starts.
+   j. The **Installing Windows** dialog box is displayed, and the OS installation starts.
 
       The installation takes about 50 minutes. The ECS restarts during the installation. After the ECS successfully restarts, log in to it again and configure the OS as prompted.
 

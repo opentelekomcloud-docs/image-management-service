@@ -11,7 +11,7 @@ Scenarios
 You can export the public or private image list in the current region as a CSV file to your local PC.
 
 -  For public images, the file describes the image name, image status, OS, image type, image creation time, system disk, and minimum memory.
--  For private images, the file describes the image name, image ID, image status, OS, image type, image creation time, disk capacities, shared disks, image size, minimum memory, and encryption.
+-  For private images, the file describes the image name, image ID, image status, OS, image type, image creation time, disk capacities, shared disks, image size, and encryption.
 
 Exporting Private Image Information
 -----------------------------------
@@ -24,13 +24,9 @@ Exporting Private Image Information
 
       The IMS console is displayed.
 
-#. Click the **Private Images** tab and click |image1|.
+#. On the **Private Images** tab, click **Export** above the image list and select what images to export.
 
-   The system will automatically export the private image list in the current region under your account to a local directory.
-
-   .. note::
-
-      The file name is in the format of **private-images-**\ *Region ID*\ ``-``\ *Export time*.
+   The system will automatically export the list of selected private images in the current region under your account to a local directory.
 
 Exporting Public Image Information
 ----------------------------------
@@ -43,13 +39,6 @@ Exporting Public Image Information
 
       The IMS console is displayed.
 
-#. Click the **Public Images** tab and click |image2|.
+#. On the **Public Images** tab, click **Export** above the image list, and select **Export all data to an XLSX file**.
 
-   The system will automatically export all public images in the current region to a local directory.
-
-   .. note::
-
-      The file name is in the format of **public-images-**\ *Region ID*\ ``-``\ *Export time*.
-
-.. |image1| image:: /_static/images/en-us_image_0142360062.png
-.. |image2| image:: /_static/images/en-us_image_0144424631.png
+   The system will automatically export the list of all public images in the current region to a local directory.

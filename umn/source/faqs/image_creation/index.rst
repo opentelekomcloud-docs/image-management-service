@@ -5,8 +5,8 @@
 Image Creation
 ==============
 
--  :ref:`General Creation FAQs <en-us_topic_0193146244>`
--  :ref:`Full-ECS Image FAQs <en-us_topic_0205267846>`
+-  :ref:`General Creation FAQ <en-us_topic_0193146244>`
+-  :ref:`Full-ECS Image FAQ <en-us_topic_0205267846>`
 -  :ref:`How Can I Use a Backup to Create an EVS Disk or ECS? <en-us_topic_0199396602>`
 -  :ref:`Is There Any Difference Between the Image Created from a CSBS/CBR Backup and That Created from an ECS? <en-us_topic_0030713178>`
 -  :ref:`How Do I Create a Full-ECS Image Using an ECS That Has a Spanned Volume? <en-us_topic_0106444267>`
@@ -18,8 +18,8 @@ Image Creation
    :maxdepth: 1
    :hidden: 
 
-   general_creation_faqs
-   full-ecs_image_faqs
+   general_creation_faq
+   full-ecs_image_faq
    how_can_i_use_a_backup_to_create_an_evs_disk_or_ecs
    is_there_any_difference_between_the_image_created_from_a_csbs_cbr_backup_and_that_created_from_an_ecs
    how_do_i_create_a_full-ecs_image_using_an_ecs_that_has_a_spanned_volume

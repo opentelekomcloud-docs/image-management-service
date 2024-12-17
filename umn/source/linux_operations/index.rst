@@ -5,7 +5,7 @@
 Linux Operations
 ================
 
--  :ref:`Setting the NIC to DHCP <en-us_topic_0030713176>`
+-  :ref:`Configuring DHCP <en-us_topic_0030713176>`
 -  :ref:`Deleting Files from the Network Rule Directory <en-us_topic_0069904570>`
 -  :ref:`Installing Cloud-Init <en-us_topic_0030730603>`
 -  :ref:`Configuring Cloud-Init <en-us_topic_0122876047>`
@@ -17,7 +17,7 @@ Linux Operations
    :maxdepth: 1
    :hidden: 
 
-   setting_the_nic_to_dhcp
+   configuring_dhcp
    deleting_files_from_the_network_rule_directory
    installing_cloud-init
    configuring_cloud-init

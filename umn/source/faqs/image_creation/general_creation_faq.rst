@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0193146244:
 
-General Creation FAQs
-=====================
+General Creation FAQ
+====================
 
 How Can I Use an ECS to Quickly Provision Identical ECSs?
 ---------------------------------------------------------

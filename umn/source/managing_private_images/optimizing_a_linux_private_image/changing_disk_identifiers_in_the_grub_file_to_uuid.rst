@@ -2,15 +2,15 @@
 
 .. _en-us_topic_0086020895:
 
-Changing the Disk Identifier in the GRUB Configuration File to UUID
-===================================================================
+Changing Disk Identifiers in the GRUB File to UUID
+==================================================
 
 Scenarios
 ---------
 
-When optimizing a Linux private image, you need to change the disk identifier to UUID in the GRUB configuration file of the ECS.
+When optimizing a Linux private image, you need to change disk identifiers to UUID in the GRUB file of the ECS.
 
-Modify the **menu.lst** or **grub.cfg** configuration file (**/boot/grub/menu.lst**, **/boot/grub/grub.cfg**, **/boot/grub2/grub.cfg**, **/boot/grub/grub.conf**, or **/boot/efi/EFI/euleros/grub.cfg**), and configure the boot partition using the UUID.
+Modify the **menu.lst** or **grub.cfg** file (**/boot/grub/menu.lst**, **/boot/grub/grub.cfg**, **/boot/grub2/grub.cfg**, **/boot/grub/grub.conf**, or **/boot/efi/EFI/euleros/grub.cfg**), and configure the boot partition using a UUID.
 
 .. note::
 
@@ -19,7 +19,7 @@ Modify the **menu.lst** or **grub.cfg** configuration file (**/boot/grub/menu.ls
 Procedure
 ---------
 
--  Ubuntu 14.04: Run **blkid** to obtain the UUID of the root partition. Modify the **/boot/grub/grub.cfg** file and use the UUID of the root partition to configure the boot item. If the root partition already uses UUID, no modification is required. The procedure is as follows:
+-  Ubuntu 14.04: Run **blkid** to obtain the UUID of the root partition. Modify the **/boot/grub/grub.cfg** file and use the UUID of the root partition to configure the boot item. If the root partition already uses UUID, no change is required. The procedure is as follows:
 
    #. Log in to the ECS as user **root**.
 
@@ -62,7 +62,7 @@ Procedure
 
    4. Check whether the root partition in the **/boot/grub/grub.cfg** configuration file contains **root=/dev/xvda1** or **root=UUID=ec51d860-34bf-4374-ad46-a0c3e337fd34**.
 
-      -  If **root=UUID=ec51d860-34bf-4374-ad46-a0c3e337fd34** is contained, the root partition is in the UUID format and requires no change.
+      -  If **root=UUID=ec51d860-34bf-4374-ad46-a0c3e337fd34** is contained, the root partition is in UUID format and requires no change.
       -  If **root=/dev/xvda1** is contained, the root partition is in the device name format. Go to :ref:`5 <en-us_topic_0086020895__en-us_topic_0037352187_li5200232314010>`.
 
    5. .. _en-us_topic_0086020895__en-us_topic_0037352187_li5200232314010:
@@ -103,7 +103,7 @@ Procedure
          initrd /boot/initrd.img-3.13.0-24-generic
          }
 
--  CentOS 6.5: Run **blkid** to obtain the UUID of the root partition. Modify the **/boot/grub/grub.conf** file and use the UUID of the root partition to configure the boot item. If the root partition already uses UUID, no modification is required. The procedure is as follows:
+-  CentOS 6.5: Run **blkid** to obtain the UUID of the root partition. Modify the **/boot/grub/grub.conf** file and use the UUID of the root partition to configure the boot item. If the root partition already uses UUID, no change is required. The procedure is as follows:
 
    #. Log in to the ECS as user **root**.
 
@@ -137,7 +137,7 @@ Procedure
 
    4. Check whether the root partition in the **/boot/grub/grub.conf** configuration file contains **root=/dev/xvda2** or **root=UUID=f382872b-eda6-43df-9516-5a687fecdce6**.
 
-      -  If **root=UUID=f382872b-eda6-43df-9516-5a687fecdce6** is contained, the root partition is in the UUID format and requires no change.
+      -  If **root=UUID=f382872b-eda6-43df-9516-5a687fecdce6** is contained, the root partition is in UUID format and requires no change.
       -  If **root=/dev/xvda2** is contained, the root partition is in the device name format. Go to :ref:`5 <en-us_topic_0086020895__en-us_topic_0037352187_li954614614457>`.
 
    5. .. _en-us_topic_0086020895__en-us_topic_0037352187_li954614614457:
@@ -211,7 +211,7 @@ Procedure
 
    4. Check whether the root partition in the **/boot/grub2/grub.cfg** configuration file contains **root=/dev/xvda2** or **root=UUID=4eb40294-4c6f-4384-bbb6-b8795bbb1130**.
 
-      -  If **root=UUID=4eb40294-4c6f-4384-bbb6-b8795bbb1130** is contained, the root partition is in the UUID format and requires no change.
+      -  If **root=UUID=4eb40294-4c6f-4384-bbb6-b8795bbb1130** is contained, the root partition is in UUID format and requires no change.
       -  If **root=/dev/xvda2** is contained, the root partition is in the device name format. Go to :ref:`5 <en-us_topic_0086020895__en-us_topic_0037352187_li2365474142222>`.
 
    5. .. _en-us_topic_0086020895__en-us_topic_0037352187_li2365474142222:

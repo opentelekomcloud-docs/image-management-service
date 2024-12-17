@@ -10,7 +10,7 @@ Scenarios
 
 Register an external ISO file on the cloud platform as a private image (ISO image). Before registering an image, upload the ISO file to the OBS bucket.
 
-The ISO image cannot be replicated, exported, or encrypted.
+The ISO image cannot be replicated, encrypted, or exported.
 
 Prerequisites
 -------------

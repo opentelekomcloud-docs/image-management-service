@@ -2,13 +2,13 @@
 
 .. _en-us_topic_0086024961:
 
-Changing the Disk Identifier in the fstab File to UUID
-======================================================
+Changing Disk Identifiers in the fstab File to UUID
+===================================================
 
 Scenarios
 ---------
 
-When optimizing a Linux private image, you need to change the disk identifier to UUID in the fstab configuration file of the ECS.
+When optimizing a Linux private image, you need to change the disk identifier to UUID in the fstab file of the ECS.
 
 Procedure
 ---------
@@ -42,7 +42,7 @@ Procedure
 
 #. Check whether the disk identifier in the **fstab** file is the device name.
 
-   -  If the disk is represented by UUID, no further operation is required.
+   -  If the disk is represented by a UUID, no further operation is required.
    -  If the disk is represented by the device name, go to :ref:`5 <en-us_topic_0086024961__li63646666154817>`.
 
 #. .. _en-us_topic_0086024961__li63646666154817:
