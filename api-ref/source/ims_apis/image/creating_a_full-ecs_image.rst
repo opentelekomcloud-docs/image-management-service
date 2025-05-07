@@ -10,8 +10,8 @@ Function
 
 This API is used to create a full-ECS image from an ECS, Cloud Server Backup Service (CSBS) backup, or Cloud Backup and Recovery (CBR) backup. The API is an asynchronous one. If it is successfully called, the cloud system receives the request to create a full-ECS image. However, you need to use the asynchronous job query API to query the image creation status. For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`.
 
-Constraints (Creating a Full-ECS Image Using an ECS)
-----------------------------------------------------
+Constraints (Creating a Full-ECS Image from an ECS)
+---------------------------------------------------
 
 -  When creating a full-ECS image from an ECS, ensure that the ECS has been properly configured, or the image creation may fail.
 
@@ -55,8 +55,8 @@ Constraints (Creating a Full-ECS Image Using an ECS)
 
       **san policy=onlineall**
 
-Constraints (Creating a Full-ECS Image Using a CSBS Backup)
------------------------------------------------------------
+Constraints (Creating a Full-ECS Image from a CSBS Backup)
+----------------------------------------------------------
 
 -  When creating a full-ECS image from a CSBS backup, ensure that the source ECS of the CSBS backup has been properly configured, or the image creation may fail.
 -  If an ECS is in **Stopped** state, do not start it when you are using it to create a full-ECS image.
@@ -64,8 +64,8 @@ Constraints (Creating a Full-ECS Image Using a CSBS Backup)
 -  Only an available CSBS backup can be used to create a full-ECS image. A CSBS backup can be used to create only one full-ECS image.
 -  A full-ECS image cannot be exported or replicated.
 
-Constraints (Creating a Full-ECS Image Using a CBR Backup)
-----------------------------------------------------------
+Constraints (Creating a Full-ECS Image from a CBR Backup)
+---------------------------------------------------------
 
 -  When creating a full-ECS image from a CBR backup, ensure that the source ECS of the CBR backup has been properly configured, or the image creation may fail.
 -  A CBR backup can be used to create only one full-ECS image.
@@ -97,6 +97,8 @@ Request
    | image_tags            | No              | Array of objects | Lists the image tags. This parameter is left blank by default.                                                                                                                                                                         |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
+   |                       |                 |                  |                                                                                                                                                                                                                                        |
+   |                       |                 |                  | For details about **image_tags**, see :ref:`Table 2 <en-us_topic_0092380109__table1394012426522>`.                                                                                                                                     |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | instance_id           | Yes             | String           | Specifies the ECS ID. This parameter is required when an ECS is used to create a full-ECS image.                                                                                                                                       |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
@@ -141,6 +143,8 @@ Request
    | image_tags            | No              | Array of objects | Lists the image tags. This parameter is left blank by default.                                                                                                                           |
    |                       |                 |                  |                                                                                                                                                                                          |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                   |
+   |                       |                 |                  |                                                                                                                                                                                          |
+   |                       |                 |                  | For details about **image_tags**, see :ref:`Table 2 <en-us_topic_0092380109__table1394012426522>`.                                                                                       |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | backup_id             | Yes             | String           | Specifies the CSBS backup ID or CBR backup ID.                                                                                                                                           |
    |                       |                 |                  |                                                                                                                                                                                          |
@@ -174,6 +178,17 @@ Request
    |                       |                 |                  | -  If a CSBS backup is used to create a full-ECS image, this parameter can be left blank and the default value **CSBS** will be used. In this case, **backup_id** is the CSBS backup ID. |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+.. _en-us_topic_0092380109__table1394012426522:
+
+.. table:: **Table 2** Data structure of the image_tags field
+
+   ========= ========= ====== ========================
+   Parameter Mandatory Type   Description
+   ========= ========= ====== ========================
+   key       Yes       String Specifies the tag key.
+   value     Yes       String Specifies the tag value.
+   ========= ========= ====== ========================
+
 Example Request
 ---------------
 
@@ -184,7 +199,7 @@ Example Request
       POST https://{Endpoint}/v1/cloudimages/wholeimages/action
       {
              "name": "instance_whole_image",
-             "description": "creating an image from an ECS",
+             "description": "Create an image from an ECS",
              "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
              "vault_id": "de9fcf45-11b2-432c-8562-5c5428574600",
              "tags": [
@@ -201,20 +216,20 @@ Example Request
       POST https://{Endpoint}/v1/cloudimages/wholeimages/action
       {
              "name": "instance_whole_image",
-             "description": "creating an image from an ECS",
+             "description": "Create an image from an ECS",
              "instance_id": "877a2cda-ba63-4e1e-b95f-e67e48b6129a",
              "vault_id": "de9fcf45-11b2-432c-8562-5c5428574600",
              "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]
       }
 
--  Creating a full-ECS image with parameter **tags** using aCSBS backup or CBR backup (ID: 9b27efab-4a17-4c06-bfa2-3e0cf021d3c3)
+-  Creating a full-ECS image with parameter **tags** using a CSBS backup or CBR backup (ID: 9b27efab-4a17-4c06-bfa2-3e0cf021d3c3)
 
    .. code-block:: text
 
       POST https://{Endpoint}/v1/cloudimages/wholeimages/action
       {
            "name": "backup_whole_image",
-           "description": "Creating a full-ECS image from a CBR backup",
+           "description": "Create a full-ECS image from a CBR backup",
            "backup_id": "9b27efab-4a17-4c06-bfa2-3e0cf021d3c3",
            "whole_image_type": "CBR",
            "tags": [
@@ -224,14 +239,14 @@ Example Request
             ]
       }
 
--  Creating a full-ECS image with parameter **image_tags** using aCSBS backup or CBR backup (ID: 9b27efab-4a17-4c06-bfa2-3e0cf021d3c3)
+-  Creating a full-ECS image with parameter **image_tags** using a CSBS backup or CBR backup (ID: 9b27efab-4a17-4c06-bfa2-3e0cf021d3c3)
 
    .. code-block:: text
 
       POST https://{Endpoint}/v1/cloudimages/wholeimages/action
       {
            "name": "backup_whole_image",
-           "description": "Creating a full-ECS image from a CBR backup",
+           "description": "Create a full-ECS image from a CBR backup",
            "backup_id": "9b27efab-4a17-4c06-bfa2-3e0cf021d3c3",
            "whole_image_type": "CBR",
            "image_tags": [{"key":"key2","value":"value2"},{"key":"key1","value":"value1"}]

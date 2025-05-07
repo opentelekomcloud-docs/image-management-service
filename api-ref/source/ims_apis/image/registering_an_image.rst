@@ -26,7 +26,7 @@ The following describes how to use this API:
 
 .. note::
 
-   Before registering an image file, ensure that you have the Tenant Administrator permission for OBS.
+   Before registering an image file, ensure that you have Tenant Administrator permissions for OBS.
 
 URI
 ---

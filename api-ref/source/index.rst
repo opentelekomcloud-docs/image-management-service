@@ -8,7 +8,7 @@ Image Management Service - API Reference
    api_usage_guidelines
    ims_apis/index
    native_openstack_apis/index
-   permission_policies_and_supported_actions/index
+   permissions_and_supported_actions/index
    common_parameters/index
    status_codes
    error_codes
