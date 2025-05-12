@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0125866389:
 
-Permission Policies and Supported Actions
-=========================================
+Permissions and Supported Actions
+=================================
 
 -  :ref:`Introduction <en-us_topic_0171654733>`
 -  :ref:`Image Management <en-us_topic_0125866390>`

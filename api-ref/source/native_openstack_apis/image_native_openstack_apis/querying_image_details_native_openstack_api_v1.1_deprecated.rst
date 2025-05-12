@@ -2,15 +2,15 @@
 
 .. _en-us_topic_0066978720:
 
-Querying Image Details (Native OpenStack API v1.1 - Abandoned and Not Recommended)
-==================================================================================
+Querying Image Details (Native OpenStack API V1.1, Deprecated)
+==============================================================
 
 Function
 --------
 
 This API is used to query details of images.
 
-This API has been discarded. The image query API (:ref:`Querying Images (Native OpenStack API) <en-us_topic_0060804959>`) is recommended.
+This API has been deprecated. Use the API in :ref:`Querying Images (Native OpenStack API) <en-us_topic_0060804959>`.
 
 URI
 ---
