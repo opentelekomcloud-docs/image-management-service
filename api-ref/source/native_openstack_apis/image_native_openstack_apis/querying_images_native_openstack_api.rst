@@ -166,7 +166,7 @@ Common Query Methods
 
    GET /v2/images?owner={project_id}
 
--  Available shared images
+-  Accepted shared images
 
    GET /v2/images?member_status=accepted&visibility=shared&__imagetype=shared
 
@@ -174,7 +174,7 @@ Common Query Methods
 
    GET /v2/images?member_status=rejected&visibility=shared&__imagetype=shared
 
--  Unaccepted images
+-  Images pending acceptance
 
    GET /v2/images?member_status=pending&visibility=shared&__imagetype=shared
 

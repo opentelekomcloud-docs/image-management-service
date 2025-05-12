@@ -2,15 +2,15 @@
 
 .. _en-us_topic_0066978721:
 
-Querying Image Metadata (Native OpenStack API v1 - Abandoned and Not Recommended)
-=================================================================================
+Querying Image Metadata (Native OpenStack API V1, Deprecated)
+=============================================================
 
 Function
 --------
 
 This API is used to query image metadata.
 
-This API has been discarded. The API for querying image details (:ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0020091566>`) is recommended.
+This API has been deprecated. Use the API in :ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0020091566>`.
 
 URI
 ---

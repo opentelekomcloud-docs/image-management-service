@@ -2,13 +2,13 @@
 
 .. _en-us_topic_0102682862:
 
-Adding or Deleting Image Tags in Batches
+Adding or Deleting Image Tags in a Batch
 ========================================
 
 Function
 --------
 
-This API is used to add tags to, update tags of, or delete tags from an image in batches.
+This API is used to add tags to, update tags of, or delete tags from an image in a batch.
 
 Constraints
 -----------
@@ -25,9 +25,9 @@ Constraints
 
    If the specified tag does not exist, the deletion is considered successful by default.
 
--  Restrictions on tag keys and values during batch deletion
+-  The rules for key and value verification during batch tag deletion are as follows:
 
-   During the deletion, the system will not verify the character set range of the key and value. The key cannot be left blank or an empty character string. The value is optional and will not be not verified. If the tag to be deleted does not exist, the deletion is considered successful and no error is reported. Also, the system will not verify the length of both the key and value. The key can contain a maximum of 127 characters, and the value contains a maximum of 255 characters.
+   The system does not check characters of keys and values. A key cannot be left blank or be an empty string. Values are optional for keys. If a tag to be deleted does not exist, the system considers that it has been deleted. No error will be reported. The system will check key and value lengths. A key can contain a maximum of 127 characters, and a value can contain a maximum of 255 characters.
 
 URI
 ---
@@ -139,18 +139,13 @@ Returned Values
 
 -  Abnormal
 
-   +---------------------------+------------------------------------------------------+
-   | Returned Value            | Description                                          |
-   +===========================+======================================================+
-   | 400 Bad Request           | Request error.                                       |
-   +---------------------------+------------------------------------------------------+
-   | 401 Unauthorized          | Authentication failed.                               |
-   +---------------------------+------------------------------------------------------+
-   | 403 Forbidden             | You do not have the rights to perform the operation. |
-   +---------------------------+------------------------------------------------------+
-   | 404 Not Found             | The requested resource was not found.                |
-   +---------------------------+------------------------------------------------------+
-   | 500 Internal Server Error | Internal service error.                              |
-   +---------------------------+------------------------------------------------------+
-   | 503 Service Unavailable   | The service is unavailable.                          |
-   +---------------------------+------------------------------------------------------+
+   ========================= =========================
+   Returned Value            Description
+   ========================= =========================
+   400 Bad Request           Request error.
+   401 Unauthorized          Authentication failed.
+   403 Forbidden             No operation permissions.
+   404 Not Found             Resource not found.
+   500 Internal Server Error Internal service error.
+   503 Service Unavailable   Service unavailable.
+   ========================= =========================

@@ -91,39 +91,39 @@ Values of Related Parameters
    |                                   |                                           |
    |                                   | Oracle Linux Server release 6.5 64bit     |
    +-----------------------------------+-------------------------------------------+
-   | Red Hat                           | Red Hat Linux Enterprise 8.0 64bit        |
+   | RedHat                            | Redhat Linux Enterprise 8.0 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat 7.6 64bit                         |
+   |                                   | Redhat 7.6 64bit                          |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 7.5 64bit        |
+   |                                   | Redhat Linux Enterprise 7.5 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 7.4 64bit        |
+   |                                   | Redhat Linux Enterprise 7.4 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 7.3 64bit        |
+   |                                   | Redhat Linux Enterprise 7.3 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 7.2 64bit        |
+   |                                   | Redhat Linux Enterprise 7.2 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 7.1 64bit        |
+   |                                   | Redhat Linux Enterprise 7.1 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 7.0 64bit        |
+   |                                   | Redhat Linux Enterprise 7.0 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.10 64bit       |
+   |                                   | Redhat Linux Enterprise 6.10 64bit        |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.9 64bit        |
+   |                                   | Redhat Linux Enterprise 6.9 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.8 64bit        |
+   |                                   | Redhat Linux Enterprise 6.8 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.7 64bit        |
+   |                                   | Redhat Linux Enterprise 6.7 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.6 64bit        |
+   |                                   | Redhat Linux Enterprise 6.6 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.6 32bit        |
+   |                                   | Redhat Linux Enterprise 6.6 32bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.5 64bit        |
+   |                                   | Redhat Linux Enterprise 6.5 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.4 64bit        |
+   |                                   | Redhat Linux Enterprise 6.4 64bit         |
    |                                   |                                           |
-   |                                   | Red Hat Linux Enterprise 6.4 32bit        |
+   |                                   | Redhat Linux Enterprise 6.4 32bit         |
    +-----------------------------------+-------------------------------------------+
    | Ubuntu                            | Ubuntu 19.04 server 64bit                 |
    |                                   |                                           |

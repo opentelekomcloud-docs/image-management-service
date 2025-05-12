@@ -12,7 +12,7 @@ This is an extension API and used to export a private image to an OBS bucket.
 
 .. note::
 
-   Before exporting an image, ensure that you have the Tenant Administrator permission for OBS.
+   Before exporting an image, ensure that you have Tenant Administrator permissions for OBS.
 
 Constraints
 -----------
