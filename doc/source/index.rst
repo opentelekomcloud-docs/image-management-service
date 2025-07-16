@@ -13,3 +13,8 @@ Image Management Service (IMS) provides flexible self-service and comprehensive 
       :api-ref: This document describes application programming interfaces (APIs) of Image Management Service (IMS) and provides API parameter description and example values.
       :dev: This document describes how to call the Image Management Service (IMS) APIs to use various IMS functions. The concepts related to IMS help you quickly learn this service.
       :public-images: This document provides information and handling instructions for the public images on the Open Telekom Cloud.
+
+   .. service_card_link::
+      :title: Best Practice
+      :url: https://arch.otc-service.com/docs/best-practices/computing/image-management-service
+      :description: Discover our best practices for optimizing cloud-based solutions, focusing on architectural principles that ensure reliability, scalability, security, high availability, and fault tolerance in the Open Telekom Cloud Architecture Center.
