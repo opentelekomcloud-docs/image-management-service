@@ -6,9 +6,9 @@
       - helpcenter-base-jobs
     vars:
       sphinx_pdf_files:
-        - ims-dev-guide.pdf
         - ims-umn.pdf
         - ims-api-ref.pdf
+        - ims-dev-guide.pdf
         - ims-public-images.pdf
     check:
       jobs:
