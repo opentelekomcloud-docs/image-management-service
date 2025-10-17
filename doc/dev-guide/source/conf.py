@@ -34,7 +34,7 @@ otcdocs_repo_name = 'opentelekomcloud-docs/image-management-service'
 otcdocs_doc_environment = 'public'
 otcdocs_doc_link = '/image-management-service/dev-guide/'
 otcdocs_doc_title = 'Developer Guide'
-otcdocs_doc_type = 'dev'
+otcdocs_doc_type = 'dev-guide'
 otcdocs_service_category = 'compute'
 otcdocs_service_title = 'Image Management Service'
 otcdocs_service_type = 'ims'
@@ -113,7 +113,8 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'ims-dev-guide.tex',u'Image Management Service - Developer Guide',
+     'ims-dev-guide.tex',
+    u'Image Management Service - Developer Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
