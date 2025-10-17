@@ -15,6 +15,6 @@ Image Management Service (IMS) provides flexible self-service and comprehensive 
       :public-images: This document provides information and handling instructions for the public images on the Open Telekom Cloud.
 
    .. service_card_link::
-      :title: Best Practice
+      :title: Best Practices
       :url: https://arch.otc-service.com/docs/best-practices/computing/image-management-service
       :description: Discover our best practices for optimizing cloud-based solutions, focusing on architectural principles that ensure reliability, scalability, security, high availability, and fault tolerance in the Open Telekom Cloud Architecture Center.
