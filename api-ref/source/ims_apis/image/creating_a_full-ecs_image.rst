@@ -14,46 +14,10 @@ Constraints (Creating a Full-ECS Image from an ECS)
 ---------------------------------------------------
 
 -  When creating a full-ECS image from an ECS, ensure that the ECS has been properly configured, or the image creation may fail.
-
 -  A Windows ECS used to create a full-ECS image cannot have a spanned volume, or data may be lost when ECSs are created from that image.
-
--  A Linux ECS used to create a full-ECS image cannot have a disk group or logical disk that contains multiple physical disks, or data may be lost when ECSs are created from that image.
-
+-  A Linux ECS used to create a full-ECS image cannot have a physical disk group or a logical disk that contains multiple physical disks, or data may be lost when ECSs are created from that image.
 -  A full-ECS image cannot be exported or replicated.
-
--  When creating a full-ECS image from a Windows ECS, you need to change the SAN policy of the ECS to OnlineAll. Otherwise, EVS disks attached to the ECSs created from the image may be offline.
-
-   Windows has three types of SAN policies: **OnlineAll**, **OfflineShared**, and **OfflineInternal**.
-
-   .. table:: **Table 1** SAN policies in Windows
-
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------+
-      | Type            | Description                                                                                                                        |
-      +=================+====================================================================================================================================+
-      | OnlineAll       | All newly detected disks are automatically brought online.                                                                         |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------+
-      | OfflineShared   | All disks on sharable buses, such as iSCSI and FC, are left offline by default, while disks on non-sharable buses are kept online. |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------+
-      | OfflineInternal | All newly detected disks are left offline.                                                                                         |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------+
-
-   #. Execute **cmd.exe** and run the following command to query the current SAN policy of the ECS:
-
-      **diskpart**
-
-   #. Run the following command to view the SAN policy of the ECS:
-
-      **san**
-
-      -  If the SAN policy is **OnlineAll**, run the **exit** command to exit DiskPart.
-
-      -  If the SAN policy is not **OnlineAll**, go to :ref:`3 <en-us_topic_0092380109__en-us_topic_0116125142_en-us_topic_0089178278_li15110228143312>`.
-
-   #. .. _en-us_topic_0092380109__en-us_topic_0116125142_en-us_topic_0089178278_li15110228143312:
-
-      Run the following command to change the SAN policy of the ECS to **OnlineAll**:
-
-      **san policy=onlineall**
+-  When creating a full-ECS image from a Windows ECS, you need to set the SAN policy of the ECS to **OnlineAll**. Otherwise, EVS disks attached to the ECSs created from the image may be offline. For details, see "Creating a Full-ECS Image from an ECS" > "Setting the ECS SAN Policy to OnlineAll" in *Image Management Service User Guide*.
 
 Constraints (Creating a Full-ECS Image from a CSBS Backup)
 ----------------------------------------------------------
@@ -98,13 +62,13 @@ Request
    |                       |                 |                  |                                                                                                                                                                                                                                        |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                                                                 |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
-   |                       |                 |                  | For details about **image_tags**, see :ref:`Table 2 <en-us_topic_0092380109__table1394012426522>`.                                                                                                                                     |
+   |                       |                 |                  | For details about **image_tags**, see :ref:`Table 1 <en-us_topic_0092380109__table1394012426522>`.                                                                                                                                     |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | instance_id           | Yes             | String           | Specifies the ECS ID. This parameter is required when an ECS is used to create a full-ECS image.                                                                                                                                       |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
    |                       |                 |                  | To obtain the ECS ID, perform the following operations:                                                                                                                                                                                |
    |                       |                 |                  |                                                                                                                                                                                                                                        |
-   |                       |                 |                  | #. Log in to management console.                                                                                                                                                                                                       |
+   |                       |                 |                  | #. Log in to the management console.                                                                                                                                                                                                   |
    |                       |                 |                  | #. Under **Computing**, click **Elastic Cloud Server**.                                                                                                                                                                                |
    |                       |                 |                  | #. In the ECS list, click the name of the ECS and view its ID.                                                                                                                                                                         |
    +-----------------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -144,7 +108,7 @@ Request
    |                       |                 |                  |                                                                                                                                                                                          |
    |                       |                 |                  | Use either **tags** or **image_tags**.                                                                                                                                                   |
    |                       |                 |                  |                                                                                                                                                                                          |
-   |                       |                 |                  | For details about **image_tags**, see :ref:`Table 2 <en-us_topic_0092380109__table1394012426522>`.                                                                                       |
+   |                       |                 |                  | For details about **image_tags**, see :ref:`Table 1 <en-us_topic_0092380109__table1394012426522>`.                                                                                       |
    +-----------------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | backup_id             | Yes             | String           | Specifies the CSBS backup ID or CBR backup ID.                                                                                                                                           |
    |                       |                 |                  |                                                                                                                                                                                          |
@@ -180,7 +144,7 @@ Request
 
 .. _en-us_topic_0092380109__table1394012426522:
 
-.. table:: **Table 2** Data structure of the image_tags field
+.. table:: **Table 1** Data structure of the image_tags field
 
    ========= ========= ====== ========================
    Parameter Mandatory Type   Description
