@@ -118,11 +118,7 @@ Response
       |                       |                         | -  imsNativeExportImageJob                                                                                         |
       |                       |                         | -  imsCopyImageInRegionJob                                                                                         |
       +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
-      | current_task          | String                  | Specifies the job name.                                                                                            |
-      +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
       | image_name            | String                  | Specifies the image name.                                                                                          |
-      +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
-      | process_percent       | Double                  | Specifies the job progress.                                                                                        |
       +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
       | results               | Array of result objects | Specifies job execution results. For details, see :ref:`Table 3 <en-us_topic_0022473688__table12914173422713>`.    |
       +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -148,6 +144,13 @@ Response
       | project_id            | String                | Specifies the project ID.                                                               |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
       | status                | String                | Specifies the job status.                                                               |
+      |                       |                       |                                                                                         |
+      |                       |                       | The value can be:                                                                       |
+      |                       |                       |                                                                                         |
+      |                       |                       | -  **SUCCESS**: The job is successfully executed.                                       |
+      |                       |                       | -  **FAIL**: The job failed to be executed.                                             |
+      |                       |                       | -  **RUNNING**: The job is in progress.                                                 |
+      |                       |                       | -  **INIT**: The job is being initialized.                                              |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0022473688__table1966074735019:
@@ -167,6 +170,24 @@ Response
       | job_id                | String                | Specifies a sub-job ID.                                                                                                      |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
       | job_type              | String                | Specifies the sub-job type.                                                                                                  |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | The value can be:                                                                                                            |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsGoofysImportImageJob**: importing an image                                                                              |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsGoofysImportImageWithoutconfigJob**: importing an image                                                                 |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsGoofysUploadImageJob**: importing an image                                                                              |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsGoofysExportImageJob**: exporting an image                                                                              |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsImportBigFileImageJob**: importing an image                                                                             |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsQuickExportImageJob**: fast export of an image                                                                          |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsImportIsoFileImageJob**: creating an ISO image                                                                          |
+      |                       |                       |                                                                                                                              |
+      |                       |                       | **imsImportDataImageJob**: creating a data disk image                                                                        |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
       | begin_time            | String                | Specifies the start time of the sub-job. The value is in UTC format.                                                         |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+

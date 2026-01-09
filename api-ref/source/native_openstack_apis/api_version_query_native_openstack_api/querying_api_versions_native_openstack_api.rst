@@ -52,6 +52,12 @@ Response
       | Parameter             | Type                  | Description                                                                   |
       +=======================+=======================+===============================================================================+
       | status                | String                | Specifies the API status.                                                     |
+      |                       |                       |                                                                               |
+      |                       |                       | The value can be:                                                             |
+      |                       |                       |                                                                               |
+      |                       |                       | -  **CURRENT**: This is the preferred API version.                            |
+      |                       |                       | -  **SUPPORTED**: This is an old but still available API version.             |
+      |                       |                       | -  **DEPRECATED**: This is a deprecated API version that will be removed.     |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------+
       | id                    | String                | Specifies the API ID.                                                         |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------+

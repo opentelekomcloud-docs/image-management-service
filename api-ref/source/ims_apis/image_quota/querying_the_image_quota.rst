@@ -60,15 +60,25 @@ Response
 
    .. table:: **Table 2** Data structure description of the quotas.resources field
 
-      ========= ======= =================================================
-      Parameter Type    Description
-      ========= ======= =================================================
-      type      String  Specifies the type of the resource to be queried.
-      used      Integer Specifies the used quota.
-      quota     Integer Specifies the total quota.
-      min       Integer Specifies the minimum quota.
-      max       Integer Specifies the maximum quota.
-      ========= ======= =================================================
+      +-----------------------+-----------------------+---------------------------------------------------+
+      | Parameter             | Type                  | Description                                       |
+      +=======================+=======================+===================================================+
+      | type                  | String                | Specifies the type of the resource to be queried. |
+      |                       |                       |                                                   |
+      |                       |                       | The value can be:                                 |
+      |                       |                       |                                                   |
+      |                       |                       | -  **image**: private image                       |
+      |                       |                       | -  **image_shared**: shared image                 |
+      |                       |                       | -  **image_member**: image member                 |
+      +-----------------------+-----------------------+---------------------------------------------------+
+      | used                  | Integer               | Specifies the used quota.                         |
+      +-----------------------+-----------------------+---------------------------------------------------+
+      | quota                 | Integer               | Specifies the total quota.                        |
+      +-----------------------+-----------------------+---------------------------------------------------+
+      | min                   | Integer               | Specifies the minimum quota.                      |
+      +-----------------------+-----------------------+---------------------------------------------------+
+      | max                   | Integer               | Specifies the maximum quota.                      |
+      +-----------------------+-----------------------+---------------------------------------------------+
 
 -  Example response
 

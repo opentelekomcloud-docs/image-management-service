@@ -13,7 +13,7 @@ This API is used to query a specified API version, such as version compatibility
 URI
 ---
 
-GET /{api_version}
+GET /{version}
 
 :ref:`Table 1 <en-us_topic_0170918588__table6209770492526>` lists the parameters in the URI.
 
@@ -21,11 +21,11 @@ GET /{api_version}
 
 .. table:: **Table 1** Parameter description
 
-   +-------------+-----------+--------+----------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                  |
-   +=============+===========+========+==============================================+
-   | api_version | Yes       | String | Specifies the API version, for example v2.0. |
-   +-------------+-----------+--------+----------------------------------------------+
+   ========= ========= ====== ============================================
+   Parameter Mandatory Type   Description
+   ========= ========= ====== ============================================
+   version   Yes       String Specifies the API version, for example v2.0.
+   ========= ========= ====== ============================================
 
 Request
 -------
@@ -64,6 +64,12 @@ Response
       | Parameter             | Type                  | Description                                                                   |
       +=======================+=======================+===============================================================================+
       | status                | String                | Specifies the API status.                                                     |
+      |                       |                       |                                                                               |
+      |                       |                       | The value can be:                                                             |
+      |                       |                       |                                                                               |
+      |                       |                       | -  **CURRENT**: This is the preferred API version.                            |
+      |                       |                       | -  **SUPPORTED**: This is an old but still available API version.             |
+      |                       |                       | -  **DEPRECATED**: This is a deprecated API version that will be removed.     |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------+
       | id                    | String                | Specifies the API ID.                                                         |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------+

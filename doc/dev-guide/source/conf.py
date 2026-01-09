@@ -32,12 +32,13 @@ otcdocs_repo_name = 'opentelekomcloud-docs/image-management-service'
 
 # Those variables are needed for indexing into OpenSearch
 otcdocs_doc_environment = 'public'
-otcdocs_doc_link = '/image-management-service/best-practice/'
-otcdocs_doc_title = 'Best Practice'
-otcdocs_doc_type = 'best-practice'
+otcdocs_doc_link = '/image-management-service/dev-guide/'
+otcdocs_doc_title = 'Developer Guide'
+otcdocs_doc_type = 'dev-guide'
 otcdocs_service_category = 'compute'
 otcdocs_service_title = 'Image Management Service'
 otcdocs_service_type = 'ims'
+otcdocs_service_environment = 'public'
 otcdocs_cloud_environment = 'eu_de'
 otcdocs_search_environment = 'hc_de'
 otcdocs_search_index = 'search_index_de'
@@ -97,7 +98,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Image Management Service - Best Practice"
+html_title = "Image Management Service - Developer Guide"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -112,8 +113,8 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'ims-best-practice.tex',
-    u'Image Management Service - Best Practice',
+     'ims-dev-guide.tex',
+    u'Image Management Service - Developer Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 

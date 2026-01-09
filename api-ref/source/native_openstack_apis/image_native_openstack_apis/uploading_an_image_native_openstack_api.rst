@@ -44,7 +44,8 @@ PUT /v2/images/{image_id}/file
 
 .. note::
 
-   AK/SK authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, token authentication is recommended.
+   -  AK/SK authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, token authentication is recommended.
+   -  API Gateway checks the time format and compares the request time with the time when API Gateway received the request. If the time difference exceeds 15 minutes, API Gateway will reject the request. So, the local time on the client must be synchronized with the clock server to avoid a large offset in the value of **X-Sdk-Date** in the request header.
 
 Request
 -------
