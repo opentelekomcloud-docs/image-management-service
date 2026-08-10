@@ -8,7 +8,7 @@ Querying the Status of an Asynchronous Job
 Function
 --------
 
-This is an extension API. It is used to query for the execution status of an asynchronous job, for example, querying for the execution status of an image exporting job.
+This is an extension API. It is used to query the execution status of an asynchronous job, for example, querying the status of an image exporting job.
 
 URI
 ---
@@ -77,9 +77,9 @@ Response
    |                       |                       | -  **imsCreateWholeImageByBackupJob**: Creating a full-ECS image from a CBR or CSBS backup                                         |
    |                       |                       | -  **imsNativeImportImageJob**: Registering an image                                                                               |
    |                       |                       | -  **imsNativeExportImageJob**: Exporting an image                                                                                 |
-   |                       |                       | -  **imsAddImageMembersJob**: Adding tenants that can use a shared image                                                           |
-   |                       |                       | -  **imsDelImageMembersJob**: Deleting tenants that can use a shared image                                                         |
-   |                       |                       | -  **imsUpdateImageMembersJob**: Updating status of tenants who will accept or reject shared images                                |
+   |                       |                       | -  **imsAddImageMembersJob**: Adding image recipients                                                                              |
+   |                       |                       | -  **imsDelImageMembersJob**: Deleting image recipients                                                                            |
+   |                       |                       | -  **imsUpdateImageMembersJob**: Updating the image sharing status of a recipient                                                  |
    |                       |                       | -  **imsCopyImageInRegionJob**: Replicating images                                                                                 |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
    | begin_time            | String                | Specifies the start time of the job. The value is in UTC format.                                                                   |
@@ -90,7 +90,7 @@ Response
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
    | fail_reason           | String                | Specifies the failure cause.                                                                                                       |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
-   | entities              | Object                | Specifies the custom attributes of the job.                                                                                        |
+   | entities              | Object                | Specifies custom attributes of the job.                                                                                            |
    |                       |                       |                                                                                                                                    |
    |                       |                       | If the job status is normal, the image ID will be returned. If the status is abnormal, an error code and details will be returned. |
    |                       |                       |                                                                                                                                    |
@@ -118,7 +118,11 @@ Response
       |                       |                         | -  imsNativeExportImageJob                                                                                         |
       |                       |                         | -  imsCopyImageInRegionJob                                                                                         |
       +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
+      | current_task          | String                  | This is a reserved field.                                                                                          |
+      +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
       | image_name            | String                  | Specifies the image name.                                                                                          |
+      +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
+      | process_percent       | Double                  | This is a reserved field.                                                                                          |
       +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
       | results               | Array of result objects | Specifies job execution results. For details, see :ref:`Table 3 <en-us_topic_0022473688__table12914173422713>`.    |
       +-----------------------+-------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -157,51 +161,51 @@ Response
 
    .. table:: **Table 4** Data structure description of the sub_jobs_result field
 
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter             | Type                  | Description                                                                                                                  |
-      +=======================+=======================+==============================================================================================================================+
-      | status                | String                | Specifies the sub-job status. The value can be:                                                                              |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | -  **SUCCESS**: The sub-job is successfully executed.                                                                        |
-      |                       |                       | -  **FAIL**: The sub-job failed to be executed.                                                                              |
-      |                       |                       | -  **RUNNING**: The sub-job is in progress.                                                                                  |
-      |                       |                       | -  **INIT**: The sub-job is being initialized.                                                                               |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | job_id                | String                | Specifies a sub-job ID.                                                                                                      |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | job_type              | String                | Specifies the sub-job type.                                                                                                  |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | The value can be:                                                                                                            |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsGoofysImportImageJob**: importing an image                                                                              |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsGoofysImportImageWithoutconfigJob**: importing an image                                                                 |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsGoofysUploadImageJob**: importing an image                                                                              |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsGoofysExportImageJob**: exporting an image                                                                              |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsImportBigFileImageJob**: importing an image                                                                             |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsQuickExportImageJob**: fast export of an image                                                                          |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsImportIsoFileImageJob**: creating an ISO image                                                                          |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | **imsImportDataImageJob**: creating a data disk image                                                                        |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | begin_time            | String                | Specifies the start time of the sub-job. The value is in UTC format.                                                         |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | end_time              | String                | Specifies the end time of the sub-job. The value is in UTC format.                                                           |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | error_code            | String                | Specifies the error code.                                                                                                    |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | fail_reason           | String                | Specifies the failure cause.                                                                                                 |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
-      | entities              | Object                | Specifies the custom attributes of the sub-job. For details, see :ref:`Table 5 <en-us_topic_0022473688__table294510331539>`. |
-      |                       |                       |                                                                                                                              |
-      |                       |                       | -  If a sub-job is properly executed, an image ID is returned.                                                               |
-      |                       |                       | -  If an exception occurs on the sub-job, an error code and associated information are returned.                             |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Type                  | Description                                                                                                              |
+      +=======================+=======================+==========================================================================================================================+
+      | status                | String                | Specifies the sub-job status. The value can be:                                                                          |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | -  **SUCCESS**: The sub-job is successfully executed.                                                                    |
+      |                       |                       | -  **FAIL**: The sub-job failed to be executed.                                                                          |
+      |                       |                       | -  **RUNNING**: The sub-job is in progress.                                                                              |
+      |                       |                       | -  **INIT**: The sub-job is being initialized.                                                                           |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | job_id                | String                | Specifies the sub-job ID.                                                                                                |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | job_type              | String                | Specifies the sub-job type.                                                                                              |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | The value can be:                                                                                                        |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsGoofysImportImageJob**: importing an image                                                                          |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsGoofysImportImageWithoutconfigJob**: importing an image                                                             |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsGoofysUploadImageJob**: importing an image                                                                          |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsGoofysExportImageJob**: exporting an image                                                                          |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsImportBigFileImageJob**: importing an image                                                                         |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsQuickExportImageJob**: fast export of an image                                                                      |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsImportIsoFileImageJob**: creating an ISO image                                                                      |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | **imsImportDataImageJob**: creating a data disk image                                                                    |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | begin_time            | String                | Specifies the start time of the sub-job. The value is in UTC format.                                                     |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | end_time              | String                | Specifies the end time of the sub-job. The value is in UTC format.                                                       |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | error_code            | String                | Specifies the error code.                                                                                                |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | fail_reason           | String                | Specifies the failure cause.                                                                                             |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+      | entities              | Object                | Specifies custom attributes of the sub-job. For details, see :ref:`Table 5 <en-us_topic_0022473688__table294510331539>`. |
+      |                       |                       |                                                                                                                          |
+      |                       |                       | -  If the sub-job is normal, the image ID will be returned.                                                              |
+      |                       |                       | -  If the sub-job is abnormal, an error code and details will be returned.                                               |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0022473688__table294510331539:
 

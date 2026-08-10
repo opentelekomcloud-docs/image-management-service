@@ -10,7 +10,7 @@ Function
 
 This API is used to query image metadata.
 
-This API has been deprecated. Use the API in :ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0020091566>`.
+This API has been deprecated. You are advised to use the API in :ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0020091566>`.
 
 URI
 ---

@@ -69,7 +69,7 @@ Response
       |                       |                       |                                                   |
       |                       |                       | -  **image**: private image                       |
       |                       |                       | -  **image_shared**: shared image                 |
-      |                       |                       | -  **image_member**: image member                 |
+      |                       |                       | -  **image_member**: image recipient              |
       +-----------------------+-----------------------+---------------------------------------------------+
       | used                  | Integer               | Specifies the used quota.                         |
       +-----------------------+-----------------------+---------------------------------------------------+

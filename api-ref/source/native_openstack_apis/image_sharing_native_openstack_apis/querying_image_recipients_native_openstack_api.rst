@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0036994320:
 
-Querying Image Sharing Members (Native OpenStack API)
-=====================================================
+Querying Image Recipients (Native OpenStack API)
+================================================
 
 Function
 --------
@@ -37,7 +37,7 @@ None
 Example Request
 ---------------
 
-Querying image sharing members
+Querying image recipients
 
 .. code-block:: text
 
@@ -51,7 +51,7 @@ Response
    +-----------------------+-----------------------+-----------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                 |
    +=======================+=======================+=============================================================================+
-   | members               | Array of objects      | Specifies the members.                                                      |
+   | members               | Array of objects      | Specifies the recipients.                                                   |
    |                       |                       |                                                                             |
    |                       |                       | For details, see :ref:`Table 2 <en-us_topic_0036994320__table47745347163>`. |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------+
@@ -73,7 +73,7 @@ Response
       +------------+--------+---------------------------------------------------------------------------------+
       | image_id   | String | Specifies the image ID.                                                         |
       +------------+--------+---------------------------------------------------------------------------------+
-      | member_id  | String | Specifies the member ID.                                                        |
+      | member_id  | String | Specifies the recipient ID.                                                     |
       +------------+--------+---------------------------------------------------------------------------------+
       | schema     | String | Specifies the sharing schema.                                                   |
       +------------+--------+---------------------------------------------------------------------------------+

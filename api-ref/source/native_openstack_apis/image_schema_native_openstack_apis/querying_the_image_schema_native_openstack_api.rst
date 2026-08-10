@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0020091555:
 
-Querying an Image Schema (Native OpenStack API)
-===============================================
+Querying the Image Schema (Native OpenStack API)
+================================================
 
 Function
 --------

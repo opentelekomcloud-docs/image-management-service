@@ -20,9 +20,9 @@ The following describes how to use this API:
 
 #. Use the API for registering images and the image ID obtained in :ref:`2 <en-us_topic_0037131984__li40093194>` to register the image file as a private image.
 
-#. After the API is successfully invoked as an asynchronous one, the cloud service system receives a request. Query the image status using the image ID and check whether the image file is successfully registered. When the image status changes to **active**, the image file is successfully registered as a private image.
+#. After this asynchronous API is successfully called, the backend receives a request. Query the image status using the image ID and check whether the image file is successfully registered. When the image status changes to **active**, the image file is successfully registered as a private image.
 
-   For details about how to query the status of an asynchronous task, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`.
+   For details about how to query an asynchronous job, see :ref:`Querying the Progress of an Asynchronous Job <en-us_topic_0000001263414852>`.
 
 .. note::
 
@@ -42,10 +42,24 @@ PUT /v1/cloudimages/{image_id}/upload
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                             |
    +=================+=================+=================+=========================================================================================================================================================================================================================================================================+
-   | image_id        | Yes             | String          | Specifies the image ID.                                                                                                                                                                                                                                                 |
+   | image_id        | Yes             | String          | **Definition**                                                                                                                                                                                                                                                          |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | Image ID.                                                                                                                                                                                                                                                               |
    |                 |                 |                 |                                                                                                                                                                                                                                                                         |
    |                 |                 |                 | -  **image_id** is the ID of the image you created by invoking the API for creating image metadata. Registration may fail if you use other image IDs.                                                                                                                   |
    |                 |                 |                 | -  After this API is invoked, you can check the image status with the image ID. When the image status changes to **active**, the image file is successfully registered. For details, see :ref:`Querying Image Details (Native OpenStack API) <en-us_topic_0020091566>`. |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | **Constraints**                                                                                                                                                                                                                                                         |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | N/A                                                                                                                                                                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | **Range**                                                                                                                                                                                                                                                               |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | N/A                                                                                                                                                                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | **Default Value**                                                                                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                                                                                         |
+   |                 |                 |                 | N/A                                                                                                                                                                                                                                                                     |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
@@ -56,13 +70,21 @@ Request
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                             |
    +=================+=================+=================+=========================================================================================================+
-   | image_url       | Yes             | String          | Specifies the URL of the image file in the format of *Bucket name*:*File name*.                         |
+   | image_url       | Yes             | String          | **Definition**                                                                                          |
+   |                 |                 |                 |                                                                                                         |
+   |                 |                 |                 | URL of the image file, in the format of *<bucket>*:*<file>*.                                            |
+   |                 |                 |                 |                                                                                                         |
+   |                 |                 |                 | **Constraints**                                                                                         |
+   |                 |                 |                 |                                                                                                         |
+   |                 |                 |                 | The storage class of the OBS bucket and image file must be **Standard**.                                |
+   |                 |                 |                 |                                                                                                         |
+   |                 |                 |                 | **Range**                                                                                               |
    |                 |                 |                 |                                                                                                         |
    |                 |                 |                 | Image files in the bucket can be in ZVHD, QCOW2, VHD, RAW, VHDX, QED, VDI, QCOW, ZVHD2, or VMDK format. |
    |                 |                 |                 |                                                                                                         |
-   |                 |                 |                 | .. note::                                                                                               |
+   |                 |                 |                 | **Default Value**                                                                                       |
    |                 |                 |                 |                                                                                                         |
-   |                 |                 |                 |    The storage class of the OBS bucket must be **Standard**.                                            |
+   |                 |                 |                 | N/A                                                                                                     |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+
 
 Example Request
@@ -82,13 +104,19 @@ Response
 
 -  Response parameters
 
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                                  |
-   +=======================+=======================+==============================================================================================+
-   | job_id                | String                | Specifies the asynchronous job ID.                                                           |
-   |                       |                       |                                                                                              |
-   |                       |                       | For details, see :ref:`Querying the Status of an Asynchronous Job <en-us_topic_0022473688>`. |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                          |
+   +=======================+=======================+======================================================================================================+
+   | job_id                | String                | **Definition**                                                                                       |
+   |                       |                       |                                                                                                      |
+   |                       |                       | Asynchronous job ID.                                                                                 |
+   |                       |                       |                                                                                                      |
+   |                       |                       | For details, see :ref:`Querying the Progress of an Asynchronous Job <en-us_topic_0000001263414852>`. |
+   |                       |                       |                                                                                                      |
+   |                       |                       | **Range**                                                                                            |
+   |                       |                       |                                                                                                      |
+   |                       |                       | N/A                                                                                                  |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------+
 
 -  Example response
 
@@ -118,7 +146,7 @@ Returned Values
 +------------------+------------------------------------------------------------------------------------------------------------+
 | 401 Unauthorized | Authentication failed.                                                                                     |
 +------------------+------------------------------------------------------------------------------------------------------------+
-| 403 Forbidden    | You do not have the rights to perform the operation.                                                       |
+| 403 Forbidden    | Insufficient permissions.                                                                                  |
 +------------------+------------------------------------------------------------------------------------------------------------+
-| 404 Not Found    | The requested resource was not found.                                                                      |
+| 404 Not Found    | Requested resource not found.                                                                              |
 +------------------+------------------------------------------------------------------------------------------------------------+
