@@ -12,9 +12,9 @@ x86 ECSs
 
 -  :ref:`Table 1 <en-us_topic_0030713142__table124398125555>` lists the OSs supported by the following ECSs:
 
-   General computing S7n, S2, S3
+   General computing S7n, S2, S3, X1
 
-   Dedicated general-purpose C7n, C3, C4
+   Dedicated general-purpose C7n, C3, C4, X1e
 
    Memory-optimized M7n, M3, M4
 
@@ -24,7 +24,7 @@ x86 ECSs
 
 -  :ref:`Table 2 <en-us_topic_0030713142__table14709182711556>` lists the OSs supported by large-memory ECSs (E6 and E3).
 
--  :ref:`Table 3 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G7, G6, P3, P2s, P2v and Pi2).
+-  :ref:`Table 3 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G7, G6, P3, P2s, P2v, Pi2, and Pi5e).
 
 .. note::
 
@@ -231,10 +231,17 @@ x86 ECSs
    +-----------------------+-----------------------+------------------------------------------+
    | Type                  | Series                | Supported Image                          |
    +=======================+=======================+==========================================+
+   | Graphics-accelerated  | G7v                   | -  CentOS 8.2 64bit                      |
+   |                       |                       | -  CentOS 7.6 64bit                      |
+   |                       |                       | -  Ubuntu 20.04 server 64bit             |
+   |                       |                       | -  Ubuntu 18.04 server 64bit             |
+   |                       |                       | -  Windows Server 2019 Standard 64bit    |
+   |                       |                       | -  Windows Server 2016 Standard 64bit    |
+   +-----------------------+-----------------------+------------------------------------------+
    | Graphics-accelerated  | G7                    | -  CentOS 8.2 64bit                      |
    |                       |                       | -  CentOS 7.6 64bit                      |
-   |                       |                       | -  Ubuntu 20.04 Server 64bit             |
-   |                       |                       | -  Ubuntu 18.04 Server 64bit             |
+   |                       |                       | -  Ubuntu 20.04 server 64bit             |
+   |                       |                       | -  Ubuntu 18.04 server 64bit             |
    |                       |                       | -  Windows Server 2019 Standard 64bit    |
    |                       |                       | -  Windows Server 2016 Standard 64bit    |
    +-----------------------+-----------------------+------------------------------------------+
@@ -265,8 +272,8 @@ x86 ECSs
    | Computing-accelerated | P2s                   | -  CentOS 7.9 64bit                      |
    |                       |                       | -  EulerOS 2.5 64bit                     |
    |                       |                       | -  Oracle Linux Server release 7.6 64bit |
-   |                       |                       | -  Ubuntu 20.04 Server 64bit             |
-   |                       |                       | -  Ubuntu 18.04 Server 64bit             |
+   |                       |                       | -  Ubuntu 20.04 server 64bit             |
+   |                       |                       | -  Ubuntu 18.04 server 64bit             |
    |                       |                       | -  Windows Server 2019 Standard 64bit    |
    |                       |                       | -  Windows Server 2016 Standard 64bit    |
    |                       |                       | -  Windows Server 2012 R2 Standard 64bit |
@@ -274,16 +281,26 @@ x86 ECSs
    | Computing-accelerated | P2v                   | -  CentOS 7.9 64bit                      |
    |                       |                       | -  EulerOS 2.5 64bit                     |
    |                       |                       | -  Oracle Linux Server release 7.6 64bit |
-   |                       |                       | -  Ubuntu 20.04 Server 64bit             |
-   |                       |                       | -  Ubuntu 18.04 Server 64bit             |
+   |                       |                       | -  Ubuntu 20.04 server 64bit             |
+   |                       |                       | -  Ubuntu 18.04 server 64bit             |
    |                       |                       | -  Windows Server 2019 Standard 64bit    |
    |                       |                       | -  Windows Server 2016 Standard 64bit    |
    |                       |                       | -  Windows Server 2012 R2 Standard 64bit |
    +-----------------------+-----------------------+------------------------------------------+
+   | Inference-accelerated | Pi5e                  | -  CentOS 7.9 64bit                      |
+   |                       |                       | -  CentOS 7.8 64bit                      |
+   |                       |                       | -  CentOS 7.7 64bit                      |
+   |                       |                       | -  CentOS 7.6 64bit                      |
+   |                       |                       | -  Ubuntu 22.04 server 64bit             |
+   |                       |                       | -  Ubuntu 20.04 server 64bit             |
+   |                       |                       | -  Ubuntu 18.04 server 64bit             |
+   |                       |                       | -  Ubuntu 16.04 server 64bit             |
+   |                       |                       | -  EulerOS 2.0 64bit                     |
+   +-----------------------+-----------------------+------------------------------------------+
    | Inference-accelerated | Pi2                   | -  CentOS 7.9 64bit                      |
    |                       |                       | -  Oracle Linux Server release 7.6 64bit |
-   |                       |                       | -  Ubuntu 20.04 Server 64bit             |
-   |                       |                       | -  Ubuntu 18.04 Server 64bit             |
+   |                       |                       | -  Ubuntu 20.04 server 64bit             |
+   |                       |                       | -  Ubuntu 18.04 server 64bit             |
    |                       |                       | -  Windows Server 2019 Standard 64bit    |
    |                       |                       | -  Windows Server 2016 Standard 64bit    |
    |                       |                       | -  Windows Server 2012 R2 Standard 64bit |
