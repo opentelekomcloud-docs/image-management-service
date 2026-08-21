@@ -14,17 +14,17 @@ x86 ECSs
 
    General computing S7n, S2, S3, X1
 
-   Dedicated general-purpose C7n, C3, C4, X1e
+   Dedicated general-purpose C7n, C7t, C3, C4, X1e, C9
 
-   Memory-optimized M7n, M3, M4
+   Memory-optimized M7n, M3, M4, M9
 
    Disk-intensive D2
 
-   Ultra-high I/O I3
+   Ultra-high I/O I3, I3m
 
 -  :ref:`Table 2 <en-us_topic_0030713142__table14709182711556>` lists the OSs supported by large-memory ECSs (E6 and E3).
 
--  :ref:`Table 3 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G7, G6, P3, P2s, P2v, Pi2, and Pi5e).
+-  :ref:`Table 3 <en-us_topic_0030713142__table3436728145315>` lists the OSs supported by GPU-accelerated ECSs (G7v, G7, G6, P5s, P3, P2s, P2v, Pi2, and Pi5e).
 
 .. note::
 
