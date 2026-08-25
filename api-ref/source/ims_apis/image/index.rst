@@ -13,6 +13,7 @@ Image
 -  :ref:`Creating a Full-ECS Image <en-us_topic_0092380109>`
 -  :ref:`Registering an Image <en-us_topic_0037131984>`
 -  :ref:`Exporting an Image <en-us_topic_0036994315>`
+-  :ref:`Querying Supported Image OSs <en-us_topic_0165822629>`
 
 .. toctree::
    :maxdepth: 1
@@ -26,3 +27,4 @@ Image
    creating_a_full-ecs_image
    registering_an_image
    exporting_an_image
+   querying_supported_image_oss

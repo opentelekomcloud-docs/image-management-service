@@ -10,7 +10,7 @@ Function
 
 This API is used to delete an image. If you soft delete the image with a specified ID, the image persists in the database, but in the **deleted** status.
 
-This API has been deprecated. :ref:`Deleting an Image (Native OpenStack API) <en-us_topic_0020092108>` is recommended.
+This API has been deprecated. You are advised to use the API in :ref:`Deleting an Image (Native OpenStack API) <en-us_topic_0020092108>`.
 
 URI
 ---

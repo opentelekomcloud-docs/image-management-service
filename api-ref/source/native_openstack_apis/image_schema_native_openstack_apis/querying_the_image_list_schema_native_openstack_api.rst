@@ -2,13 +2,13 @@
 
 .. _en-us_topic_0020091556:
 
-Querying an Image List Schema (Native OpenStack API)
-====================================================
+Querying the Image List Schema (Native OpenStack API)
+=====================================================
 
 Function
 --------
 
-This API is used to query an image list schema, which allows you to know details about and the data structure of the image list.
+This API is used to query the image list schema, which allows you to know details about and the data structure of the image list.
 
 URI
 ---

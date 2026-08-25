@@ -10,6 +10,8 @@ Description
 
 You can attach a custom tag to a private image to facilitate private image management.
 
+A maximum of 10 tags can be added to an image. You can check on the console how many tags you can add.
+
 Format
 ------
 

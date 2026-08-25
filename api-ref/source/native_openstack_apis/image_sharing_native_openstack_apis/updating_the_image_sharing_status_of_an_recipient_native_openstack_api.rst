@@ -2,13 +2,13 @@
 
 .. _en-us_topic_0036994318:
 
-Updating the Image Sharing Status (Native OpenStack API)
-========================================================
+Updating the Image Sharing Status of an Recipient (Native OpenStack API)
+========================================================================
 
 Function
 --------
 
-This API is used to update the image sharing status when a tenant accepts or rejects a shared image.
+This API is an extension one and used to accept or reject images shared with a user in a batch.
 
 URI
 ---
@@ -34,22 +34,22 @@ Request
 
 -  Request parameters
 
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                |
-   +=================+=================+=================+============================================================================================================================================================================================+
-   | status          | Yes             | String          | Specifies whether a shared image will be accepted or declined.                                                                                                                             |
-   |                 |                 |                 |                                                                                                                                                                                            |
-   |                 |                 |                 | Available values include:                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                            |
-   |                 |                 |                 | -  **accepted**: indicates that a shared image is accepted. After an image is accepted, the image is displayed in the image list. You can use the image to create ECSs.                    |
-   |                 |                 |                 | -  **rejected**: indicates that a shared image is declined. After an image is rejected, the image is not displayed in the image list. However, you can still use the image to create ECSs. |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | vault_id        | No              | String          | Specifies the ID of a vault.                                                                                                                                                               |
-   |                 |                 |                 |                                                                                                                                                                                            |
-   |                 |                 |                 | This parameter is mandatory if you want to accept a shared full-ECS image created from a CBR backup.                                                                                       |
-   |                 |                 |                 |                                                                                                                                                                                            |
-   |                 |                 |                 | You can obtain the vault ID from the CBR console or section "Querying the Vault List" in *Cloud Backup and Recovery API Reference*.                                                        |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                        |
+   +=================+=================+=================+====================================================================================================================================================================================================+
+   | status          | Yes             | String          | Specifies whether images shared with a recipient will be accepted or rejected.                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | Available values include:                                                                                                                                                                          |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | -  **accepted**: indicates that the shared images will be accepted. After an image is accepted, the image is displayed in the image list. You can use the image to create ECSs.                    |
+   |                 |                 |                 | -  **rejected**: indicates that the shared images will be rejected. After an image is rejected, the image is not displayed in the image list. However, you can still use the image to create ECSs. |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | vault_id        | No              | String          | Specifies the ID of a vault.                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | This parameter is mandatory if you want to accept a shared full-ECS image created from a CBR backup.                                                                                               |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | You can obtain the vault ID from the CBR console or section "Querying the Vault List" in *Cloud Backup and Recovery API Reference*.                                                                |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------

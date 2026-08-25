@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0036994321:
 
-Deleting an Image Sharing Member (Native OpenStack API)
-=======================================================
+Deleting an Image Recipient (Native OpenStack API)
+==================================================
 
 Function
 --------
@@ -21,12 +21,12 @@ DELETE /v2/images/{image_id}/members/{member_id}
 
 .. table:: **Table 1** Parameter description
 
-   ========= ========= ====== ========================
+   ========= ========= ====== ===========================
    Parameter Mandatory Type   Description
-   ========= ========= ====== ========================
+   ========= ========= ====== ===========================
    image_id  Yes       String Specifies the image ID.
-   member_id Yes       String Specifies the member ID.
-   ========= ========= ====== ========================
+   member_id Yes       String Specifies the recipient ID.
+   ========= ========= ====== ===========================
 
 Request
 -------
@@ -38,7 +38,7 @@ None
 Example Request
 ---------------
 
-Deleting an image sharing member
+Deleting an image recipient
 
 .. code-block:: text
 
