@@ -82,5 +82,5 @@ Procedure
 Related Operations
 ------------------
 
--  After you share images with a tenant, the tenant can accept the shared images on the **Images Shared with Me** page on the IMS console. For detailed operations, see :ref:`Accepting or Rejecting Shared Images <en-us_topic_0032042420>`.
+-  After you share images with a tenant, the tenant can accept the shared images on the **Images Shared with Me** page on the IMS console. For details, see :ref:`Accepting or Rejecting Shared Images <en-us_topic_0032042420>`.
 -  If the shared image is an encrypted image and is accepted by a tenant, the tenant can use this image to apply for ECSs or replace the key of this image with its own by replicating the shared image. If the tenant has accepted the shared image but have not performed any other operations, do not cancel the authorization of the key. Otherwise, the shared image will be unavailable to the tenant.
