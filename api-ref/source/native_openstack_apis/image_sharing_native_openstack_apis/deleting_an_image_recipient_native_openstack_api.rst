@@ -21,12 +21,12 @@ DELETE /v2/images/{image_id}/members/{member_id}
 
 .. table:: **Table 1** Parameter description
 
-   ========= ========= ====== ===========================
+   ========= ========= ====== =============
    Parameter Mandatory Type   Description
-   ========= ========= ====== ===========================
-   image_id  Yes       String Specifies the image ID.
-   member_id Yes       String Specifies the recipient ID.
-   ========= ========= ====== ===========================
+   ========= ========= ====== =============
+   image_id  Yes       String Image ID.
+   member_id Yes       String Recipient ID.
+   ========= ========= ====== =============
 
 Request
 -------
