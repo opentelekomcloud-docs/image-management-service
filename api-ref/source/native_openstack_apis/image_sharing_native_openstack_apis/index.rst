@@ -5,8 +5,8 @@
 Image Sharing (Native OpenStack APIs)
 =====================================
 
--  :ref:`Adding Image Recipients (Native OpenStack API) <en-us_topic_0036994317>`
--  :ref:`Updating the Image Sharing Status of an Recipient (Native OpenStack API) <en-us_topic_0036994318>`
+-  :ref:`Adding an Image Recipient (Native OpenStack API) <en-us_topic_0036994317>`
+-  :ref:`Updating the Image Sharing Status of a Recipient (Native OpenStack API) <en-us_topic_0036994318>`
 -  :ref:`Querying Details About an Image Recipient (Native OpenStack API) <en-us_topic_0036994319>`
 -  :ref:`Querying Image Recipients (Native OpenStack API) <en-us_topic_0036994320>`
 -  :ref:`Deleting an Image Recipient (Native OpenStack API) <en-us_topic_0036994321>`
@@ -15,8 +15,8 @@ Image Sharing (Native OpenStack APIs)
    :maxdepth: 1
    :hidden: 
 
-   adding_image_recipients_native_openstack_api
-   updating_the_image_sharing_status_of_an_recipient_native_openstack_api
+   adding_an_image_recipient_native_openstack_api
+   updating_the_image_sharing_status_of_a_recipient_native_openstack_api
    querying_details_about_an_image_recipient_native_openstack_api
    querying_image_recipients_native_openstack_api
    deleting_an_image_recipient_native_openstack_api

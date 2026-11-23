@@ -6,10 +6,11 @@ Image Management Service - API Reference
    :maxdepth: 1
 
    api_usage_guidelines
-   ims_apis/index
+   apis/index
    native_openstack_apis/index
    permissions_and_supported_actions/index
    common_parameters/index
+   historical_apis/index
    status_codes
    error_codes
    change_history

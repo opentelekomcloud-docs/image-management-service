@@ -8,7 +8,7 @@ Querying Details About an Image Recipient (Native OpenStack API)
 Function
 --------
 
-This API is used to query details about a tenant with whom the image is shared.
+This API is used to query details about an image recipient.
 
 URI
 ---
@@ -21,12 +21,12 @@ GET /v2/images/{image_id}/members/{member_id}
 
 .. table:: **Table 1** Parameter description
 
-   ========= ========= ====== ===========================
+   ========= ========= ====== =============
    Parameter Mandatory Type   Description
-   ========= ========= ====== ===========================
-   image_id  Yes       String Specifies the image ID.
-   member_id Yes       String Specifies the recipient ID.
-   ========= ========= ====== ===========================
+   ========= ========= ====== =============
+   image_id  Yes       String Image ID.
+   member_id Yes       String Recipient ID.
+   ========= ========= ====== =============
 
 Request
 -------
@@ -52,22 +52,22 @@ Response
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                                                                                                       |
    +=======================+=======================+===================================================================================================================================================================================+
-   | status                | String                | Specifies the image sharing status.                                                                                                                                               |
+   | status                | String                | Image sharing status.                                                                                                                                                             |
    |                       |                       |                                                                                                                                                                                   |
    |                       |                       | The value can be:                                                                                                                                                                 |
    |                       |                       |                                                                                                                                                                                   |
    |                       |                       | -  **accepted**: The shared image is accepted. After you accept an image, the image will be displayed in your image list. You can use the image to create cloud servers.          |
    |                       |                       | -  **rejected**: The shared image is rejected. After you reject an image, the image will disappear from your image list, but you can still use the image to create cloud servers. |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | created_at            | String                | Specifies the time when a shared image was created. The value is in UTC format.                                                                                                   |
+   | created_at            | String                | Time when the sharing was performed. The value is in UTC format.                                                                                                                  |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | updated_at            | String                | Specifies the time when a shared image was updated. The value is in UTC format.                                                                                                   |
+   | updated_at            | String                | Time when the sharing status was updated. The value is in UTC format.                                                                                                             |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | image_id              | String                | Specifies the image ID.                                                                                                                                                           |
+   | image_id              | String                | Image ID.                                                                                                                                                                         |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | member_id             | String                | Specifies the recipient ID.                                                                                                                                                       |
+   | member_id             | String                | Recipient ID.                                                                                                                                                                     |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | schema                | String                | Specifies the sharing schema.                                                                                                                                                     |
+   | schema                | String                | Sharing schema.                                                                                                                                                                   |
    +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example response
