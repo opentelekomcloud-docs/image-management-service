@@ -43,15 +43,15 @@ Procedure
 
 #. Install growpart.
 
-   **zypper install http://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/SLE_11_SP4/noarch/growpart-0.27-1.1.noarch.rpm**
+   **zypper install https://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/SLE_11_SP4/noarch/growpart-0.27-1.1.noarch.rpm**
 
 #. Install python-oauth.
 
-   **zypper install http://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/SLE_11_SP4/x86_64/python-oauth-1.0.1-35.1.x86_64.rpm**
+   **zypper install https://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/SLE_11_SP4/x86_64/python-oauth-1.0.1-35.1.x86_64.rpm**
 
 #. Install Cloud-Init.
 
-   **zypper install http://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/SLE_11_SP4/x86_64/cloud-init-0.7.6-27.23.1.x86_64.rpm**
+   **zypper install https://download.opensuse.org/repositories/home:/garloff:/OTC:/cloudinit/SLE_11_SP4/x86_64/cloud-init-0.7.6-27.23.1.x86_64.rpm**
 
 #. Check whether growpart, python-oauth, and Cloud-Init are installed successfully.
 

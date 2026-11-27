@@ -7,9 +7,7 @@ Cloud-Init Installation FAQ
 
 You are advised to install Cloud-Init on the ECS that will be used to create a private image so that new ECSs created from the private image support custom configurations (for example, changing the ECS login password).
 
-For details about how to install Cloud-Init, see :ref:`Installing Cloud-Init <en-us_topic_0030730603>`.
-
-For details about how to configure Cloud-Init, see :ref:`Configuring Cloud-Init <en-us_topic_0122876047>`.
+For details about how to install and configure Cloud-Init, see :ref:`Installing and Configuring Cloud-Init <en-us_topic_0030730603>`.
 
 The following describes common problems you may encounter when installing Cloud-Init and their solutions.
 
@@ -22,7 +20,7 @@ Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 
    **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
-   Information similar to the following is displayed:
+   Information similar to the following is displayed.
 
 
    .. figure:: /_static/images/en-us_image_0137066322.png
@@ -36,7 +34,7 @@ Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 
       **systemctl unmask cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
-   #. Run the following command to configure automatic start again:
+   #. Run the following command to set automatic start again:
 
       **systemctl enable cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
@@ -60,7 +58,7 @@ Ubuntu 16.04/CentOS 7: Failed to Set Cloud-Init Automatic Start
 
       This is because the address that the system uses to access Cloud-Init is redirected to **/usr/bin/**, but the actual installation path is **/usr/local/bin**.
 
-   #. Run the following command to copy Cloud-Init to the **usr/bin** directory:
+   #. Run the following command to copy Cloud-Init to the **/usr/bin** directory:
 
       **cp /usr/local/cloud-init /usr/bin/**
 
@@ -105,9 +103,9 @@ Ubuntu 14.04: chkconfig and systemctl Not Installed
 
       -bash:/usr/bin/cloud-init:not found this command
 
-   Run the following command to copy Cloud-Init to the **usr/bin** directory:
+   Run the following command to copy Cloud-Init to the **/usr/bin** directory:
 
-   **cp /usr/local/bin/cloud-init /usr/bin**/
+   **cp /usr/local/bin/cloud-init /usr/bin/**
 
 Debian 9.5: Failed to Query the Cloud-Init Version and Configure Automatic Start
 --------------------------------------------------------------------------------
@@ -122,11 +120,11 @@ Debian 9.5: Failed to Query the Cloud-Init Version and Configure Automatic Start
 
       -bash:/usr/bin/cloud-init:not found this command
 
-   Run the **cp /usr/local/bin/cloud-init /usr/bin/** command to copy Cloud-Init to the **usr/bin** directory.
+   Run the **cp /usr/local/bin/cloud-init /usr/bin/** command to copy Cloud-Init to the **/usr/bin** directory.
 
 #. Run the **cloud-init init --local** command.
 
-   Information similar to the following is displayed:
+   Information similar to the following is displayed.
 
 
    .. figure:: /_static/images/en-us_image_0000001954451565.png
@@ -168,7 +166,7 @@ Debian 9.5: Failed to Query the Cloud-Init Version and Configure Automatic Start
 
       **systemctl restart cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
-      Run the **systemctl status** command to check the Cloud-Init status. Information similar to the following is displayed:
+      Run the **systemctl status** command to check the Cloud-Init status. Information similar to the following is displayed.
 
 
       .. figure:: /_static/images/en-us_image_0137069967.png

@@ -8,7 +8,7 @@ Creating a Custom Policy
 Scenarios
 ---------
 
-Custom policies can be created as a supplement to the system permissions of IMS. For the actions supported for custom policies, see "Permissions Policies and Supported Actions" in *Image Management Service API Reference*.
+Custom policies can be created as a supplement to the system permissions of IMS. For the actions supported for custom policies, see "Permissions and Supported Actions" in *Image Management Service API Reference*.
 
 You can create custom policies in either of the following two ways:
 

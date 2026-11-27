@@ -5,4 +5,4 @@
 Can I Change the Specifications Defined by a Private Image When I Use the Image to Create an ECS?
 =================================================================================================
 
-Yes. You can specify the CPU, memory, bandwidth, system and data disks of the ECS you are creating. The system disk must be smaller than 1,024 GB but no less than the system disk capacity in the image.
+Yes. You can specify the CPU, memory, bandwidth, system disk, and data disks of the ECS you are creating. The system disk must be at least as large as the system disk capacity in the image, and must be smaller than 1,024 GiB.

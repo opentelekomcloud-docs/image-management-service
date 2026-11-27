@@ -55,7 +55,7 @@ Solution
 
          **Figure 3** Deleting the RunSynchronous snippet
 
-#. Run Sysprep. For details, see :ref:`Running Sysprep <en-us_topic_0093887081>`.
+#. Run Sysprep. For details, see :ref:`(Optional) Running Sysprep <en-us_topic_0093887081>`.
 
    .. important::
 

@@ -12,13 +12,9 @@ How Do I Search for Private Images by Tag?
 Search for Private Images by Tag
 --------------------------------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab and then **Search by Tag**.
 
@@ -34,7 +30,7 @@ Search for Private Images by Tag
 
 #. Click |image1| to add a tag.
 
-   You can add multiple tags to search for shared images. The system will display private images that match all tags.
+   You can add multiple tags to search for private images. The system will display private images that match all tags.
 
 
    .. figure:: /_static/images/en-us_image_0000001697456602.png

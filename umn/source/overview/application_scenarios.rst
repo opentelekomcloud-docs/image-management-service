@@ -9,6 +9,8 @@ Application Scenarios
 
    You can import local images in various formats such as VHD, VMDK, QCOW2, and RAW to the cloud platform and use the images to quickly create cloud servers for service migration to the cloud.
 
+   You can also share or replicate images across regions to migrate cloud servers between accounts and regions.
+
 -  Deploying a specific software environment
 
    Use shared images to quickly build custom software environments without having to manually configure environments or install any software. This is especially useful for Internet startups.

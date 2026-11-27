@@ -17,10 +17,8 @@ You are advised to install Cloud-Init or Cloudbase-Init on the ECS to be used to
 
 -  For Windows, download and install Cloudbase-Init.
 
-   For details, see :ref:`Installing and Configuring Cloudbase-Init <en-us_topic_0030730602>`.
+   For details, see :ref:`(Optional) Installing and Configuring Cloudbase-Init <en-us_topic_0030730602>`.
 
 -  For Linux, download and install Cloud-Init.
 
-   For how to install Cloud-Init, see :ref:`Installing Cloud-Init <en-us_topic_0030730603>`.
-
-   For how to configure Cloud-Init, see :ref:`Configuring Cloud-Init <en-us_topic_0122876047>`.
+   For how to install and configure Cloud-Init, see :ref:`(Optional) Installing and Configuring Cloud-Init <en-us_topic_0030730603>`.

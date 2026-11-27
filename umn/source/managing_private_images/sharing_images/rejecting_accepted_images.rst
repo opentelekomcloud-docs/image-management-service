@@ -20,16 +20,13 @@ You have accepted images shared by other users.
 Procedure
 ---------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Images Shared with Me** tab.
 #. Determine the next step based on how many images you are to reject.
 
-   -  To reject multiple images: select the images to be rejected and click **Reject** above the image list. In the displayed dialog box, click **Yes**.
-   -  To reject a specific image: locate the image to be rejected and click **Reject** in the **Operation** column. In the displayed dialog box, click **Yes**.
+   -  To reject a specific image: locate the image to be rejected and click **Reject** in the **Operation** column. In the displayed dialog box, click **OK**.
+
+   -  To reject multiple images: select the images to be rejected and click **Reject** above the image list. In the displayed dialog box, click **OK**.

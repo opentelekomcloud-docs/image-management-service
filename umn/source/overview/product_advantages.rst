@@ -5,19 +5,19 @@
 Product Advantages
 ==================
 
-IMS provides convenient, secure, flexible, and efficient image management. Images allow you to deploy services faster, more easily and more securely.
+IMS provides convenient, secure, flexible, and unified image lifecycle management. Images allow you to deploy services faster, more easily and more securely.
 
-Saving Time and Effort
-----------------------
+Convenient
+----------
 
--  Deploying services on cloud servers is much faster and easier when you use images.
--  A private image can be created from an ECS or an external image file. It can be a system disk, data disk, or full-ECS image that suites your different needs.
+-  You can batch create ECSs using public images or private images to simply deployment.
+-  A private image can be created from an ECS or an external image file. It can be a system disk, data disk, or full-ECS image that suits your different needs.
 -  Private images can be transferred between accounts, regions, or cloud platforms through image sharing, replication, and export.
 
 Secure
 ------
 
--  Public images use mainstream OSs such as Ubuntu and CentOS. These OSs have been thoroughly tested to provide secure and stable services.
+-  Public images use mainstream OSs such as Ubuntu, CentOS, and Debian. These OSs have been strictly tested to provide secure and stable services.
 -  Multiple copies of image files are stored on Object Storage Service (OBS), which provides excellent data reliability and durability.
 -  Private images can be encrypted for data security by using envelope encryption provided by Key Management Service (KMS).
 
@@ -38,7 +38,7 @@ Unified
 Comparison Between Image-based Deployment and Manual Deployment
 ---------------------------------------------------------------
 
-.. table:: **Table 1** Image-based deployment and manual deployment
+.. table:: **Table 1** Comparison between image-based deployment and manual deployment
 
    +---------------+---------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | Item          | Image-based Deployment                                                                                                                      | Manual Deployment                                                                                                                        |

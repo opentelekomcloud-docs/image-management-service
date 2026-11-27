@@ -19,4 +19,4 @@ When you inject VirtIO drivers into the image for a Windows ECS, note that:
 -  Disable Group Policy Object (GPO) because some policies may cause offline VirtIO driver injection to fail.
 -  Stop any installed antivirus software. They may cause offline VirtIO driver injection to fail.
 
-To install VirtIO drivers, see :ref:`Optimizing a Windows Private Image <en-us_topic_0130878748>`.
+To install VirtIO drivers, see :ref:`Windows Private Images <en-us_topic_0130878748>`.

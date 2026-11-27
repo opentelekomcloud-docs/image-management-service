@@ -14,29 +14,22 @@ You can delete private images that will no longer be used.
 -  After a private image is deleted, it cannot be used to create ECSs or EVS disks.
 -  After a private image is deleted, ECSs created from the image can still be used and are still billed. However, the OS cannot be reinstalled for the ECSs and ECSs with the same configuration cannot be created.
 -  Deleting the source image of a replicated image has no effect on the replicated image. Similarly, deleting a replicated image has no effect on its source.
--  If a full-ECS image is still being created when you delete it, some intermediate backups may fail to be deleted. To avoid generating any unnecessary expenditures, you can delete them on the CSBS or CBR console.
+-  If a full-ECS image is still being created when you delete it, some intermediate backups may fail to be deleted. To avoid generating any unnecessary expenditures, you can delete them on the CBR or CSBS console.
 
 Procedure
 ---------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab to display the image list.
 
-#. Locate the row that contains the image, choose **More** > **Delete** in the **Operation** column.
+#. Delete images.
 
-   .. note::
+   To delete a single image, locate the target image and choose **More** > **Delete** in the **Operation** column.
 
-      To delete multiple images:
-
-      a. Select the images you want to delete in the image list.
-      b. Click **Delete** above the image list.
+   To delete multiple images in a batch, select the images to be deleted and click **Delete** above the image list.
 
 #. (Optional) Select **Delete CSBS backups or cloud server backups of the full-ECS images**.
 
@@ -50,4 +43,4 @@ Procedure
 
       If CSBS or CBR backups failed to be deleted, the cause may be that these backups are being created and cannot be deleted. In this case, manually delete them as prompted.
 
-#. Enter **DELETE** to confirm the deletion. Click **OK**.
+#. Enter **DELETE** to confirm the deletion. Click **OK**. The images and associated resources (if any) are deleted immediately.

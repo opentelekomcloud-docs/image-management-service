@@ -15,4 +15,4 @@ Solution
 
 Uninstall the current Cloud-Init and install Cloud-Init 0.7.6 or an earlier version.
 
-For details about how to install Cloud-Init, see :ref:`Installing Cloud-Init <en-us_topic_0030730603>`.
+For details about how to install Cloud-Init, see :ref:`(Optional) Installing and Configuring Cloud-Init <en-us_topic_0030730603>`.

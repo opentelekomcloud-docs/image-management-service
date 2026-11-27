@@ -22,13 +22,9 @@ An image can have a maximum of 10 tags.
 Add, Delete, and Modify Image Tags
 ----------------------------------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab and click the image name to display the image details.
 
@@ -42,7 +38,7 @@ Add, Delete, and Modify Image Tags
 
 #. .. _en-us_topic_0068002265__li29841739193722:
 
-   Click the **Tags** tab, locate the target tag, and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
+   Click the **Tags** tab, locate the target tag, and click **Delete** in the **Operation** column. In the displayed dialog box, click **OK**.
 
 #. .. _en-us_topic_0068002265__li185112015308:
 
@@ -51,13 +47,9 @@ Add, Delete, and Modify Image Tags
 Search for Private Images by Tag
 --------------------------------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab and then **Search by Tag**.
 

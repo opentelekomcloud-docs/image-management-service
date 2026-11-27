@@ -7,7 +7,7 @@ What Are the Differences Between Sharing Images and Replicating Images?
 
 -  Sharing images:
 
-   You can only share images within a region with other users. To share an image across regions, replicate the image to the target region and then share it. For details, see :ref:`Overview <en-us_topic_0032042417>`.
+   You can only share images within a region with other users. If you want to share images across regions, replicate them to the target region and then share them. For details, see :ref:`Overview <en-us_topic_0032042417>`.
 
 -  Replicating images:
 

@@ -30,9 +30,9 @@ No.
 Where Can I View the Images Shared with Me?
 -------------------------------------------
 
-Switch to the region where the shared image is, and choose **Service List** > **Computing** > **Image Management Service** > **Images Shared with Me**.
+Log in to the management console, switch to the region where the shared image is located, and choose **Service List** > **Computing** > **Image Management Service** > **Images Shared with Me**.
 
-If you are a multi-project user, make clear which of your projects will receive the shared image. Switch to the region where the project is and select the project. Then, choose **Service List** > **Computing** > **Image Management Service** > **Images Shared with Me**.
+If you have multiple projects, verify the project where the shared image is located. Log in to the management console, switch to that project in the corresponding region, and choose **Service List** > **Computing** > **Image Management Service** > **Images Shared with Me**.
 
 If the image is not accepted, a red dot is displayed on the **Images Shared with Me** tab page and a message is displayed, asking you whether to accept the shared image. After the image is accepted, it is displayed in the list on the **Images Shared with Me** tab page.
 
@@ -85,7 +85,7 @@ If you have rejected an image shared by another tenant, but now want to use it, 
 
 -  Method 1
 
-   Ask the image owner to share the image with you again. For details, see :ref:`Adding Tenants Who Can Use Shared Images <en-us_topic_0032042423>`.
+   Ask the image owner to share the image with you again. For details, see :ref:`Adding Image Recipients <en-us_topic_0032042423>`.
 
 -  Method 2
 
