@@ -13,7 +13,7 @@ Some public images can be used to create an ECS and based on that a private Imag
 
 Helpful links:
 
--  :ref:`Creating a System Disk Image from a Windows ECS <en-us_topic_0030713149>` or :ref:`Creating a System Disk Image from a Linux ECS <en-us_topic_0030713180>`
+-  :ref:`Creating a Windows System Disk Image from an ECS <en-us_topic_0030713149>`
 -  :ref:`Exporting an Image <en-us_topic_0034011241>`
 
 .. note::

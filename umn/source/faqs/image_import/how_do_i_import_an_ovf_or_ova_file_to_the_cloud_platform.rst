@@ -44,7 +44,7 @@ Manually extract VMDK files from an OVF or OVA template and upload them to an OB
 
          You can import an image file in VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVHD, or ZVHD2 format to create a private image.
 
-   For details, see :ref:`Creating a Windows System Disk Image from an External Image File <en-us_topic_0030713181>` or :ref:`Creating a Data Disk Image from an External Image File <en-us_topic_0084064672>`.
+   For details, see :ref:`Creating a Windows System Disk Image from an Image File <en-us_topic_0000002214579410>`, :ref:`Creating a Linux System Disk Image from an Image File <en-us_topic_0030713190>`, or :ref:`Creating a Data Disk Image from an External Image File <en-us_topic_0084064672>`.
 
 -  The source VM runs Linux.
 
@@ -86,4 +86,4 @@ Manually extract VMDK files from an OVF or OVA template and upload them to an OB
 
             You can import an image file in the VHD, VMDK, QCOW2, RAW, VHDX, QCOW, VDI, QED, ZVHD, or ZVHD2 format to create a private image.
 
-   For details, see :ref:`Creating a Linux System Disk Image from an External Image File <en-us_topic_0030713190>` or :ref:`Creating a Data Disk Image from an External Image File <en-us_topic_0084064672>`.
+   For details, see :ref:`Creating a Linux System Disk Image from an Image File <en-us_topic_0030713190>` or :ref:`Creating a Data Disk Image from an External Image File <en-us_topic_0084064672>`.

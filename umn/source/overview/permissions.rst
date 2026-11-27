@@ -5,7 +5,7 @@
 Permissions
 ===========
 
-If you need to assign different permissions to personnel in your enterprise to access your images, Identity and Access Management (IAM) is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you secure access to your resources.
+If you need to assign different permissions to personnel in your enterprise to access your images, Identity and Access Management (IAM) is a good choice for fine-grained permissions management. IAM provides identity authentication, fine-grained permissions management, and access control. IAM helps you secure access to your resources.
 
 With IAM, you can create IAM users and assign permissions to control their access to specific resources. For example, if you want some software developers in your enterprise to use images but do not want them to delete the images or perform any other high-risk operations, you can create IAM users and grant permission to use the images but not permission to delete them.
 
@@ -20,7 +20,7 @@ IMS Permissions
 
 New IAM users do not have any permissions assigned by default. You need to first add them to one or more groups and attach policies or roles to these groups. The users then inherit permissions from the groups and can perform specified operations on cloud services based on the permissions they have been assigned.
 
-IMS is a project-level service deployed for specific regions. When you set **Scope** to **Region-specific projects** and select the specified projects in the specified regions, the users only have permissions for images in the selected projects. If you set **Scope** to **All resources**, the users have permissions for images in all region-specific projects. When accessing IMS, the users need to switch to the authorized region.
+IMS is a project-level service deployed in specific physical regions. When you set **Scope** to **Region-specific projects** and select the specified projects in the specified regions, IAM users only have permissions for images in the selected projects. If you set **Scope** to **All resources**, the users have permissions for images in all region-specific projects. When accessing IMS, the users need to switch to a region where they have been authorized to use this service.
 
 You can grant permissions by using roles and policies.
 
@@ -38,7 +38,7 @@ You can grant permissions by using roles and policies.
 
 -  Policies (recommended): A fine-grained authorization strategy that defines permissions required to perform operations on specific cloud resources under certain conditions. This type of authorization is more flexible and is ideal for least privilege access. For example, you can grant users only the permission to manage images of a certain type.
 
-   A majority of fine-grained policies contain permissions for specific APIs, and permissions are defined using API actions. For the API actions supported by IMS, see "Permissions and Supported Actions" in *Elastic Cloud Server API Reference*.
+   A majority of fine-grained policies contain permissions for specific APIs, and permissions are defined using API actions. For the API actions supported by IMS, see "Permissions and Supported Actions" in *Image Management Service API Reference*.
 
    .. table:: **Table 2** System-defined policies for IMS
 
@@ -71,4 +71,4 @@ You can grant permissions by using roles and policies.
 Helpful Links
 -------------
 
--  `What Is IAM? <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html#iam-01-0026>`__
+-  `IAM Service Overview <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html#iam-01-0026>`__

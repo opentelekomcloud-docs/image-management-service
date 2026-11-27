@@ -23,13 +23,11 @@ Prerequisites
 Procedure
 ---------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
+#. Choose **Computing** > **Image Management Service**.
 
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   The IMS console is displayed.
 
 #. In the upper left corner, switch to the region where the target project is and then select the project.
 
@@ -45,15 +43,9 @@ Procedure
 
       If no message is displayed, check whether you have selected a correct region.
 
-#. (Optional) In the **Accept Full-ECS Image** dialog box, select a server backup vault with the **Backup** protection type and click **OK**.
+#. (Optional) In the **Accept Full-ECS Image** dialog box, select a server backup vault with the **Backup** protection type and click **OK**. This dialog box is displayed when the full-ECS image is shared with a project.
 
-   This dialog box is displayed when the shared image is a full-ECS image.
-
-   When accepting a full-ECS image, you must specify a vault for storing the CBR backups associated with the full-ECS image. The vault capacity must be no less than the total capacities of the system disk and data disk backups.
-
-   .. note::
-
-      For more information about server backup vaults, see *Cloud Backup and Recovery User Guide*.
+   When accepting a full-ECS image, you must specify a vault for storing the CBR backups associated with the full-ECS image. The vault capacity must be no less than the total capacities of the system disk and data disk backups. For details about how to determine the vault capacity, see :ref:`Check the Disk Capacity of a Full-ECS Image <en-us_topic_0300978092__section712514158290>`. For more information about server backup vaults, see *Cloud Backup and Recovery User Guide*.
 
 Results
 -------
@@ -72,7 +64,7 @@ Follow-up Procedure
 After accepting a system disk image or full-ECS image shared by another tenant, you can:
 
 -  Use the image to create one or more ECSs (select **Shared Image** during ECS creation).
--  Use the image to change the OS of existing ECSs. For details, see "Changing the OS" in *Elastic Cloud Server User Guide*.
+-  Use the image to change the OS of existing ECSs. For details, see "Changing the OS" in the *Elastic Cloud Server User Guide*.
 
 After accepting a data disk image shared by another tenant, you can use the image to create EVS disks (locate the row that contains the image and click **Create Data Disk** in the **Operation** column).
 

@@ -8,22 +8,25 @@ Viewing Traces
 Scenarios
 ---------
 
-After you enable CTS and the management tracker is created, CTS starts recording operations on cloud resources. Cloud Trace Service (CTS) stores operation records (traces) generated in the last seven days.
+Cloud Trace Service (CTS) records operations performed on cloud service resources. A record contains information such as the user who performed the operation, IP address, operation content, and returned response message. These records facilitate security auditing, issue tracking, and resource locating. They also help you plan and use resources, and identify high-risk or non-compliant operations.
 
-.. note::
+This section describes how to query or export operation records of the last seven days on the CTS console.
 
-   These operation records are retained for seven days on the CTS console and are automatically deleted upon expiration. Manual deletion is not supported.
+What Is a Trace?
+----------------
 
-Viewing Real-Time Traces
-------------------------
+A trace is an operation log for a cloud service resource, tracked and stored by CTS. Traces record operations such as adding, modifying, or deleting cloud service resources. You can view them to identify who performed operations and when for detailed tracking.
 
-#. Log in to the management console.
+Viewing Traces in the Trace List
+--------------------------------
 
-#. Click |image1| in the upper left corner and choose **Management & Deployment** > **Cloud Trace Service**. The CTS console is displayed.
+#. Log in to the management console, click |image1| in the upper left corner, and choose **Management & Deployment** > **Cloud Trace Service**.
 
-#. Choose **Trace List** in the navigation pane on the left.
+#. In the navigation pane, choose **Trace List**.
 
-#. Set filters to search for your desired traces, as shown in :ref:`Figure 1 <en-us_topic_0107462582__en-us_topic_0179639644_fig139361441134311>`. The following filters are available.
+#. In the upper right corner of the page, select a desired query time range: **Last 1 hour**, **Last 1 day**, or **Last 1 week**. You can also specify a custom time range within the last seven days.
+
+#. Set filters to search for your desired traces, as shown in :ref:`Figure 1 <en-us_topic_0107462582__en-us_topic_0179639644_fig139361441134311>`.
 
    .. _en-us_topic_0107462582__en-us_topic_0179639644_fig139361441134311:
 
@@ -32,15 +35,48 @@ Viewing Real-Time Traces
 
       **Figure 1** Filters
 
-   -  **Trace Type**, **Trace Source**, **Resource Type**, and **Search By**: Select a filter from the drop-down list.
+   .. table:: **Table 1** Trace filtering parameters
 
-      -  If you select **Resource ID** for **Search By**, specify a resource ID.
-      -  If you select **Trace name** for **Search By**, specify a trace name.
-      -  If you select **Resource name** for **Search By**, specify a resource name.
-
-   -  **Operator**: Select a user.
-   -  **Trace Status**: Select **All trace statuses**, **Normal**, **Warning**, or **Incident**.
-   -  Time range: Select **Last 1 hour**, **Last 1 day**, or **Last 1 week**, or specify a custom time range within the last seven days.
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                                                           |
+      +===================================+=======================================================================================================================================================================================+
+      | Trace Type                        | Select **Management** or **Data**.                                                                                                                                                    |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | -  Management traces record operations performed by users on cloud service resources, including creation, modification, and deletion.                                                 |
+      |                                   | -  Data traces are reported by OBS and record operations performed on data in OBS buckets, including uploads and downloads.                                                           |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Trace Source                      | Select the name of the cloud service that triggers a trace from the drop-down list.                                                                                                   |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Resource type                     | Select the type of the resource involved in a trace from the drop-down list.                                                                                                          |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | For details about the resource types of each cloud service, see "Supported Services and Operations" in *CTS User Guide*.                                                              |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Search By                         | Select one of the following options:                                                                                                                                                  |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | -  **Resource ID**: ID of the cloud resource involved in a trace.                                                                                                                     |
+      |                                   |                                                                                                                                                                                       |
+      |                                   |    Leave this field empty if the resource has no resource ID or if resource creation failed.                                                                                          |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | -  **Trace name**: name of a trace.                                                                                                                                                   |
+      |                                   |                                                                                                                                                                                       |
+      |                                   |    For details about the operations that can be audited for each cloud service, see "Supported Services and Operations" in *CTS User Guide*.                                          |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | -  **Resource name**: name of the cloud resource involved in a trace.                                                                                                                 |
+      |                                   |                                                                                                                                                                                       |
+      |                                   |    If the cloud resource involved in the trace does not have a resource name or the corresponding API operation does not involve the resource name parameter, leave this field empty. |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Operator                          | User who triggers a trace.                                                                                                                                                            |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | Select one or more operators from the drop-down list.                                                                                                                                 |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | If the value of **trace_type** in a trace is **SystemAction**, the operation is triggered by the service and the trace's operator may be empty.                                       |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Trace Status                      | Select one of the following options:                                                                                                                                                  |
+      |                                   |                                                                                                                                                                                       |
+      |                                   | -  **Normal**: The operation succeeded.                                                                                                                                               |
+      |                                   | -  **Warning**: The operation failed.                                                                                                                                                 |
+      |                                   | -  **Incident**: The operation caused a fault that is more serious than a normal failure, for example, causing other faults.                                                          |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **Query**.
 
@@ -57,9 +93,12 @@ Viewing Real-Time Traces
 
    |image5|
 
-#. For details about key fields in the trace structure, see section "Trace References" > "Trace Structure" and section "Trace References" > "Example Traces" in the *CTS User Guide*.
+Helpful Links
+-------------
 
-.. |image1| image:: /_static/images/en-us_image_0000001696838310.png
+-  For details about the key fields in the trace structure, see `Trace Structure <https://docs.otc.t-systems.com/cloud-trace-service/umn/user_guide/trace_references/trace_structure.html#cts-03-0010>`__ and `Example Traces <https://docs.otc.t-systems.com/cloud-trace-service/umn/user_guide/trace_references/example_traces.html>`__.
+
+.. |image1| image:: /_static/images/en-us_image_0000002359774578.png
 .. |image2| image:: /_static/images/en-us_image_0000001696678850.png
 .. |image3| image:: /_static/images/en-us_image_0000001744678489.jpg
 .. |image4| image:: /_static/images/en-us_image_0000001942942816.png

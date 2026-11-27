@@ -7,6 +7,6 @@ Can I Download My Private Images to a Local PC?
 
 Yes. You can download private images as instructed in :ref:`Exporting an Image <en-us_topic_0034011241>`.
 
-Currently, only images in VMDK, VHD, QCOW2, or ZVHD format can be exported.
+Currently, images can only be exported to the VMDK, VHD, QCOW2, or ZVHD format.
 
-The default format of a private image is ZVHD2. Images exported in different formats may vary in size.
+By default, a private image is created in ZVHD2 format. The size of an exported image may vary depending on the export format you select.

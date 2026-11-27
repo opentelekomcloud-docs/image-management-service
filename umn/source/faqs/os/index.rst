@@ -11,6 +11,8 @@ OS
 -  :ref:`What Do I Do If an ECS Starts Slowly? <en-us_topic_0117142739>`
 -  :ref:`What Do I Do If a Windows 7 ECS Equipped with an Intel 82599 NIC Reports an Error in SR-IOV Scenarios? <en-us_topic_0081802526>`
 -  :ref:`Why Can't I Find My Private Image When I Want to Use It to Create an ECS or Change the OS of an ECS? <en-us_topic_0290353431>`
+-  :ref:`How Do I Enable NIC Multi-Queue for an Image? <en-us_topic_0085214115>`
+-  :ref:`How Do I Configure an ECS to Use DHCPv6? <en-us_topic_0129883696>`
 
 .. toctree::
    :maxdepth: 1
@@ -22,3 +24,5 @@ OS
    what_do_i_do_if_an_ecs_starts_slowly
    what_do_i_do_if_a_windows_7_ecs_equipped_with_an_intel_82599_nic_reports_an_error_in_sr-iov_scenarios
    why_cant_i_find_my_private_image_when_i_want_to_use_it_to_create_an_ecs_or_change_the_os_of_an_ecs
+   how_do_i_enable_nic_multi-queue_for_an_image
+   how_do_i_configure_an_ecs_to_use_dhcpv6

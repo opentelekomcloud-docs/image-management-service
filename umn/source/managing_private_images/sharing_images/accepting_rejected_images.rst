@@ -19,13 +19,9 @@ Prerequisites
 Procedure
 ---------
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Images Shared with Me** tab.
 #. Click **Rejected Images**. All the rejected images are displayed.

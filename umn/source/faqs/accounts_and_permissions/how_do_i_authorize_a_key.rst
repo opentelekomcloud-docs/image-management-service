@@ -27,6 +27,7 @@ Procedure
 #. On the **Grants** tab, click **Create Grant**, and set the following parameters.
 
    -  **User or Tenant**: Select **Tenant** and enter the tenant ID. You can obtain the tenant ID from **Account ID** on the **My Credentials** page.
+   -  **Name**: Enter the name of the account to authorize.
    -  **Granted Operations**: **Decrypt Data Key** and **Describe Key** are mandatory. Others are optional.
 
 #. Click **OK**.

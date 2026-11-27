@@ -9,13 +9,12 @@ How Do I Add, Delete, and Modify Image Tags?
 
    -  When adding predefined tags to an image or searching for an image using predefined tags, you must have permission to access the Tag Management Service (TMS).
 
-#. Access the IMS console.
+Add, Delete, and Modify Image Tags
+----------------------------------
 
-   a. Log in to the management console.
+#. Log in to the management console.
 
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab and click the image name to display the image details.
 
@@ -29,7 +28,7 @@ How Do I Add, Delete, and Modify Image Tags?
 
 #. .. _en-us_topic_0000001398421074__en-us_topic_0068002265_li29841739193722:
 
-   Click the **Tags** tab, locate the target tag, and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
+   Click the **Tags** tab, locate the target tag, and click **Delete** in the **Operation** column. In the displayed dialog box, click **OK**.
 
 #. .. _en-us_topic_0000001398421074__en-us_topic_0068002265_li185112015308:
 

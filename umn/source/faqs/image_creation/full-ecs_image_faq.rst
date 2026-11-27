@@ -18,7 +18,7 @@ Why Do I Have to Select a Vault When Creating a Full-ECS Image? Do I Need to Pay
 
 When creating a full-ECS image from a CBR backup, you must select a vault. The vault is where your image and backup are stored. You need to pay for the vault.
 
-When creating a full-ECS image from a CSBS backup, the space used to store the image and CSBS backup is not open to users but still need to be billed.
+When creating a full-ECS image from a CSBS backup, the space used to store the image and CSBS backup is not open to users but still needs to be billed.
 
 So, no matter which backup type you select, you need to pay for the storage. Selecting a vault does not mean that you need to pay extra fees.
 

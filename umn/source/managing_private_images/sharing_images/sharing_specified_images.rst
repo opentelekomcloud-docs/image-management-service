@@ -21,63 +21,61 @@ Prerequisites
 Procedure
 ---------
 
--  Share multiple images.
+You can share a single image or multiple images in a batch.
 
-   #. Access the IMS console.
+Sharing a Single Image
+----------------------
 
-      a. Log in to the management console.
+#. Choose **Computing** > **Image Management Service**.
 
-      b. Under **Computing**, click **Image Management Service**.
+   The IMS console is displayed.
 
-         The IMS console is displayed.
+#. Click the **Private Images** tab.
 
-   #. Click the **Private Images** tab.
+#. Locate the row that contains the private image you are to share, click **More** in the **Operation** column, and select **Share** from the drop-down list.
 
-   #. Select the private images to share and click **Share** above the image list.
+#. In the **Share Image** dialog box, enter the project ID of the target tenant.
 
-   #. In the **Share Image** dialog box, enter the project ID of the target tenant.
+   To share an image with more than one tenant, separate their project IDs with commas (,).
 
-      To share images with more than one tenant, separate their project IDs with commas (,).
+   .. note::
 
-      .. note::
-
-         -  You can enter a maximum of 100 project IDs at a time.
-         -  You can share images only within the region where they reside.
-         -  If the target tenant is a multi-project user, you can share images to any project of the tenant.
-
-   #. Click **OK**.
-
--  Share a single image.
-
-   #. Access the IMS console.
-
-      a. Log in to the management console.
-
-      b. Under **Computing**, click **Image Management Service**.
-
-         The IMS console is displayed.
-
-   #. Click the **Private Images** tab.
-
-   #. Locate the row that contains the private image you are to share, click **More** in the **Operation** column, and select **Share** from the drop-down list.
-
-   #. In the **Share Image** dialog box, enter the project ID of the target tenant.
-
-      To share an image with more than one tenant, separate their project IDs with commas (,).
-
-      .. note::
-
-         -  You can enter a maximum of 100 project IDs at a time.
-         -  You can share images only within the region where they reside.
-         -  If the target tenant is a multi-project user, you can share images to any project of the tenant.
+      -  You can enter a maximum of 100 project IDs at a time.
+      -  Images can only be shared within the region where they reside.
+      -  If the target tenant is a multi-project user, you can share images to any project of the tenant.
 
 
-      .. figure:: /_static/images/en-us_image_0000001538100365.png
-         :alt: **Figure 1** Sharing an image
+   .. figure:: /_static/images/en-us_image_0000001538100365.png
+      :alt: **Figure 1** Sharing an image
 
-         **Figure 1** Sharing an image
+      **Figure 1** Sharing an image
 
-   #. Click **OK**.
+#. Click **OK**.
+
+Sharing Multiple Images in a Batch
+----------------------------------
+
+#. Log in to the management console.
+
+#. Choose **Computing** > **Image Management Service**.
+
+   The IMS console is displayed.
+
+#. Click the **Private Images** tab.
+
+#. Select the private images to share and click **Share** above the image list.
+
+#. In the **Share Image** dialog box, enter the project ID of the target tenant.
+
+   To share images with more than one tenant, separate their project IDs with commas (,).
+
+   .. note::
+
+      -  You can enter a maximum of 100 project IDs at a time.
+      -  Images can only be shared within the region where they reside.
+      -  If the target tenant is a multi-project user, you can share images to any project of the tenant.
+
+#. Click **OK**.
 
 Related Operations
 ------------------

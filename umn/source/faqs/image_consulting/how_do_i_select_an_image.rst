@@ -34,21 +34,21 @@ When selecting an OS, consider the following factors:
 
 -  Architecture types
 
-   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------+
-   | System Architecture   | Applicable Memory     | Constraints                                                                                                                     |
-   +=======================+=======================+=================================================================================================================================+
-   | 32-bit                | Smaller than 4 GB     | -  If the instance memory is greater than 4 GB, a 32-bit OS cannot be used.                                                     |
-   |                       |                       | -  A 32-bit OS only allows addressing within a 4 GB memory range. An OS with more than 4 GB memory cannot be accessed.          |
-   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------+
-   | 64-bit                | 4 GB or larger        | If your application requires more than 4 GB of memory or the memory may need to be expanded to more than 4 GB, use a 64-bit OS. |
-   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+   | System Architecture   | Applicable Memory     | Constraints                                                                                                                       |
+   +=======================+=======================+===================================================================================================================================+
+   | 32-bit                | Smaller than 4 GiB    | -  If the instance memory is greater than 4 GiB, a 32-bit OS cannot be used.                                                      |
+   |                       |                       | -  A 32-bit OS only allows addressing within a 4 GiB memory range. An OS with more than 4 GiB memory cannot be accessed.          |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+   | 64-bit                | 4 GiB or larger       | If your application requires more than 4 GiB of memory or the memory may need to be expanded to more than 4 GiB, use a 64-bit OS. |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 -  OS types
 
    +-----------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | OS Type               | Applicable Scenario                                                                                                | Constraints                                                                         |
    +=======================+====================================================================================================================+=====================================================================================+
-   | Windows               | -  Programs developed for Windows (for example, .NET).                                                             | The system disk must be at least 1 GB, and there must be at least 1 GB of memory.   |
+   | Windows               | -  Programs developed for Windows (for example, .NET).                                                             | The system disk must be at least 1 GiB, and there must be at least 1 GiB of memory. |
    |                       | -  Databases such as SQL Server. (You need to install the database.)                                               |                                                                                     |
    +-----------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | Linux                 | -  High-performance server applications (for example, Web) and common programming languages such as PHP and Python | The system disk must be at least 1 GB, and there must be at least 512 MB of memory. |

@@ -20,17 +20,13 @@ Check the Disk Capacity of a System Disk Image, Data Disk Image, or ISO Image
 
 Check the disk capacity in the **Disk Capacity** column of the private image list.
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab to display the image list.
 
-#. Check the value in the **Disk Capacity** column. The unit is **GB**.
+#. Check the value in the **Disk Capacity** column. The unit is **GiB**.
 
 
    .. figure:: /_static/images/en-us_image_0000001537790897.png
@@ -45,13 +41,9 @@ Check the Disk Capacity of a Full-ECS Image
 
 The disk capacity of a full-ECS image is the sum of the system disk capacity and data disk capacity in the backup from which the full-ECS image is created.
 
-#. Access the IMS console.
+#. Log in to the management console.
 
-   a. Log in to the management console.
-
-   b. Under **Computing**, click **Image Management Service**.
-
-      The IMS console is displayed.
+   a. Under **Computing**, click **Image Management Service**. The IMS console is displayed.
 
 #. Click the **Private Images** tab to display the image list.
 
@@ -65,5 +57,6 @@ The disk capacity of a full-ECS image is the sum of the system disk capacity and
 
    For example:
 
-   -  If the system disk capacity is 40 GB and no data disk is attached, the capacity of the full-ECS image disk is 40 GB.
-   -  If the system disk capacity is 40 GB and data disk capacity is 40 GB, the full-ECS image disk capacity is 80 GB.
+   -  If the system disk capacity is 40 GiB and no data disk is attached, the capacity of the full-ECS image disk is 40 GiB.
+
+   -  If the system disk capacity is 40 GiB and data disk capacity is 40 GiB, the full-ECS image disk capacity is 80 GiB.
